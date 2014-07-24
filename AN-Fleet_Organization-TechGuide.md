@@ -1,4 +1,4 @@
-![ATIONET](Content/Images/ATIOnetLogo_250x70.png) 
+![ationetlogo](Content/Images/ATIOnetLogo_250x70.png) 
 
 ***
 
@@ -14,9 +14,6 @@
 			<td colspan="2" class="tablehead">Document Information</td>
 		</tr>
 	</thead>
-	<tfoot>
-		<td colspan="2"> </td>
-	</tfoot>
 	<tbody>
 		<tr>
 			<td width="20%" class="rowhead" align="right">File:</td>
@@ -43,9 +40,6 @@
           	<td colspan="3">Change Log</td>
           </tr>
      </thead>
-     <tfoot>
-          <td colspan="3"> </td>
-     </tfoot>
      <tbody>
         <tr>
           	<td>Ver.</td>
@@ -64,6 +58,24 @@
 </br>
 
 <!--###Table of Content -->
+[Units](#units)
+
+>[Classification and grouping attributes](#classification-and-grouping-attributes)
+
+
+<!-- MarkdownTOC depth=3 -->
+
+- nits##
+	- lassification and grouping attributes###
+- leet organization tips##
+- inance and Administration requirements##
+	- illing###
+	- alances###
+- ser interface features##
+	- utocomplete###
+	- amed Filters###
+
+<!-- /MarkdownTOC -->
 
 
 <!-- Optional Terms & Definition section -->
@@ -77,16 +89,44 @@ Units can be trucks, cars, ships, planes, stationary machinery, generators or an
 
 ###Classification and grouping attributes###
 
-| Attribute                                  | Description                                                          |
-| ------------------------------------------ | -------------------------------------------------------------------- |
-| Code                                       | Main identification key of the Unit, alphanumeric value must be unique on the Company. Should be reserved for the actual number or code for the unit on the organization. |
-| Fleet                                      | Highest level grouping entity. A Unit must belong to a Fleet and to one fleet only.|
-| Vehicle Class                              | Every Unit belogs to a Vehicle Class. The Class resumes some attributes related to the Unit brand/model, like fuel type or fuel capacity|
-| Type (in Vehicle Class)                    | The Type of Unit is a broad classification (Light Truck, Heavy Truck, Car, etc.) |
-| Classification 1 to 4                      | Each Company can define up to 4 named classification attributes according to their own needs and policies. Can be used to describe operational regions, sub-type of units, type of service, cost centers, budgetary class, etc.|
-| Service Type                               | Tipified description of the service to which this Unit is assigned. The Service Type, combined with the Vehicle Class will enable anonymous mileage benchmarking with other ATIOnet subscribers|
-| Service Description                        | Label. Free description of the assigned service (route, schedule, etc.)|
-
+<table>
+	<thead>
+		<tr>
+			<td width="20%" class="rowhead">Attribute</td>
+			<td>Description</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Code</td>                                  
+			<td>Main identification key of the Unit, alphanumeric value must be unique on the Company. Should be reserved for the actual number or code for the unit on the organization.</td>
+		</tr>
+		<tr>
+			<td>Fleet</td>
+			<td>Highest level grouping entity. A Unit must belong to a Fleet and to one fleet only.</td>			
+		</tr>
+		<tr>
+			<td>Vehicle Class</td>
+			<td>Every Unit belogs to a Vehicle Class. The Class resumes some attributes related to the Unit brand/model, like fuel type or fuel capacity</td>
+		</tr>			
+		<tr>
+			<td>Type (in Vehicle Class)</td>                
+			<td>The Type of Unit is a broad classification (Light Truck, Heavy Truck, Car, etc.)</td>			
+		</tr>			
+		<tr>
+			<td>Classification 1 to 4</td>
+			<td>Each Company can define up to 4 named classification attributes according to their own needs and policies. Can be used to describe operational regions, sub-type of units, type of service, cost centers, budgetary class, etc.</td>
+		</tr>
+			<tr>
+			<td>Service Type</td>
+			<td>Tipified description of the service to which this Unit is assigned. The Service Type, combined with the Vehicle Class will enable anonymous mileage benchmarking with other ATIOnet subscribers</td>		
+		</tr>
+		<tr>
+			<td>Service Description</td>
+			<td>Label. Free description of the assigned service (route, schedule, etc.)</td>			
+		</tr>
+	</tbody>			
+</table>
 
 
 ##Fleet organization tips##

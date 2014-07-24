@@ -1,4 +1,4 @@
-![ATIONET](Content/Images/ATIOnetLogo_250x70.png) 
+![ationetlogo](/Content/Images/ATIOnetLogo_250x70.png) 
 
 ***
 
@@ -130,7 +130,7 @@ The Offline Subsystem complies with the following design goals:
 * ATIOnet Local Agent v. 1.0.7885 or later
 
 ###Architecture Diagram
-![Offline Architecture Diagram](Content/Includes/AN-Native_Offline-TechGuide-diagram.png) 
+![Offline Architecture Diagram](/Content/Includes/AN-Native_Offline-TechGuide-diagram.png) 
 
 
 ##Functional Overview
