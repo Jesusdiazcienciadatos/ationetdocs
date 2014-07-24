@@ -58,22 +58,27 @@
 </br>
 
 <!--###Table of Content -->
-[Units](#units)
-
->[Classification and grouping attributes](#classification-and-grouping-attributes)
-
 
 <!-- MarkdownTOC depth=3 -->
 
-[Units](#units)
-	[Classification and grouping attributes](#classification-and-grouping-attributes)
-[Fleet organization tips](#fleet-organization-tips)
-[Finance and Administration requirements](#finance-and-administration-requirements)
-	[Billing](#billing)
-	[Balances](#balances)
-[User interface features](#user-interface-features)
-	[Autocomplete](#autocomplete)
-	[Named Filters](#named-filters)
+- [Units](#units)
+
+	- [Classification and grouping attributes](#classification-and-grouping-attributes)
+
+- [Fleet organization tips](#fleet-organization-tips)
+
+- [Finance and Administration requirements](#finance-and-administration-requirements)
+
+	- [Billing](#billing)
+
+	- [Balances](#balances)
+
+- [User interface features](#user-interface-features)
+
+	- [Autocomplete](#autocomplete)
+
+	- [Named Filters](#named-filters)
+
 
 <!-- /MarkdownTOC -->
 
