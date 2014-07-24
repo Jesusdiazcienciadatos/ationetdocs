@@ -65,15 +65,15 @@
 
 <!-- MarkdownTOC depth=3 -->
 
-- nits##
-	- lassification and grouping attributes###
-- leet organization tips##
-- inance and Administration requirements##
-	- illing###
-	- alances###
-- ser interface features##
-	- utocomplete###
-	- amed Filters###
+[Units](#units)
+	[Classification and grouping attributes](#classification-and-grouping-attributes)
+[Fleet organization tips](#fleet-organization-tips)
+[Finance and Administration requirements](#finance-and-administration-requirements)
+	[Billing](#billing)
+	[Balances](#balances)
+[User interface features](#user-interface-features)
+	[Autocomplete](#autocomplete)
+	[Named Filters](#named-filters)
 
 <!-- /MarkdownTOC -->
 
@@ -82,12 +82,12 @@
         
 
 <!-- Content starts here -->
-##Units##
+## Units 
 ATIOnet recognizes two types of _cardholders_: Persons and Units, usually called Drivers and Vehicles in the retail petroleum industry. Both _persons_ and _units_ can be the subject of a transaction and are considered a _sub-account_, within a contract with a Company.
 Besides the obvious particularities between the configuration attributes of a Person and a Unit, a major difference is that Units can be organized in **Fleets**.   
 Units can be trucks, cars, ships, planes, stationary machinery, generators or any other kind of device that may be identified as the beneficiary (subject) of an ATIOnet transaction.
 
-###Classification and grouping attributes###
+### Classification and grouping attributes
 
 <table>
 	<thead>
@@ -129,7 +129,7 @@ Units can be trucks, cars, ships, planes, stationary machinery, generators or an
 </table>
 
 
-##Fleet organization tips##
+## Fleet organization tips
 
 **_Use Fleets to represent the Operation's structure_**. A Unit belongs only to one Fleet and is the only hierarchical relation on the system, also, the Fleet Admin role can be segregated from the parent Company Admin role allowing the delegation of the administration of groups of Units to different users. These features make the Fleet the ideal tool to map the operation structure, not necessarily the organization's formal structure, but the actual dependency between the Unit and its management center, for example service bases or logistic units. 	
 Fleet Admin users can re-configure the Units, assign rules, assign available Identifiers, assign Drivers, and the rest of the day-to-day functions. Except for widely distributed organizations, where a large number of fleets will be created, the Fleet level is too important to be used just for rules assignment.
@@ -140,7 +140,7 @@ Fleet Admin users can re-configure the Units, assign rules, assign available Ide
 
 **_Use the Service Description as a lower level grouping_** The Service Description field is conceived as a detailed indicator of what a Unit does, or is currently doing for some time. For example "East Highway Construction" or "Door to door delivery"
 
-##Finance and Administration requirements##
+## Finance and Administration requirements
 Budget administration and control usually adds another layer of complexity to the organization of Units in a fleet management system. A common practice is to dedicate one or more tagging resources to represent the organization's budgetary structure. ATIOnet addresses this requirements with specific tools.
 
 The Company Contract in ATIOnet keeps the attributes that describes the financial and billing terms between the Fleet Company and the Subscriber; from global allowances and payment mode to fees and billing parameters, each agreement between a Company and the Subscriber is represented as a Contract; a Company may have many Contracts to accomodate different terms (i.e.: Debit and Credit), temporary operation (i.e.: seasonal contractors) or budget segmentation (by Division purchase orders).
@@ -151,11 +151,11 @@ Cardholders (Units or Persons) are bound to a Contract through their Identificat
 
 ![Fleet Administration Diagram](/Content/Includes/AN-Fleet_Organization-TechGuide-diagram.png)
 
-###Billing###
+### Billing
 
 Billing configuration on the Contract governs how, when and what to include in the Contract Statement. Although a Contract is bound to a Company, a different Billing entity can be specified only for this purpose. This is useful when the operating company needs to forward the bills to a parent or consolidating company.	
 
-###Balances###
+### Balances
 The _Balance_ of an account is the amount of money or product volume available for authorization at a given time -other restrictions and conditions may modify the actual authorized amount or volume-.
 
 Each Contract maintains a Sub-Account for each member cardholder (Person or Unit). On the above example of the Unit with two identifications, when the primary TAG is used, the transaction will be authorized against balance of the main Contract, but when the contingency Identification is presented, the the secondary Contract will be charged.
@@ -163,22 +163,14 @@ Each Contract maintains a Sub-Account for each member cardholder (Person or Unit
 > On any case, every transaction for the Unit will update the Unit's statistics (consumption history, quotas, mileage, etc.) which are maintained at the Unit level, regardless of what sub-account and contract is charged.
 
 
-##User interface features##
+## User interface features
 ATIOnet's user interface has advanced searching and filtering features that also contribute to managing a large number or Units. 
 
-###Autocomplete###
+### Autocomplete
 In Search and Filter boxes, text fields connected to an ATIOnet entity like Code, Fleet or a CCF have autocomplete capability. Typing a few characters of a value will automatically present a drop-down list will all matching values to select from. Also accept multiple values, to search for any value of a list (for example: Fleet=```North x``` ```South x``` will return all Units for the North AND South fleets). 
 
 Autocomplete simplify entering complex text values, reducing typing errors and saving time. Also leverages the use of complex, multi-segment values on CCF lists, reducing the need to dedicate more than one CCF to represent a structured code. A typical example is the Division and Department tagging of Units. Instead of dedicating CCF1 to Divisions and CCF2 to Departments, a single field Division-Department could be implemented.
 
-###Named Filters###
+### Named Filters
 Any search criteria on any on-screen view in ATIOnet can be saved as a named filter. Filters not only let reuse previous search criteria, but also work as a user-defined site navigation tool, users can jump from anywhere on the site to the target view selecting the desired filter from the ```My Filters``` list. Saved Filters can be private, or shared with other users.
-
- 
-
-
-
-
-
-
 
