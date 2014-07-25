@@ -1,4 +1,4 @@
-![ationetlogo](https://raw.githubusercontent.com/atioint/ationetdocs/master/Content/Images/Logo.png)
+![ationetlogo](https://raw.githubusercontent.com/atioint/ationetdocs/master/Content/Images/Logo.png?token=8061190__eyJzY29wZSI6IlJhd0Jsb2I6YXRpb2ludC9hdGlvbmV0ZG9jcy9tYXN0ZXIvQ29udGVudC9JbWFnZXMvTG9nby5wbmciLCJleHBpcmVzIjoxNDA2OTE3MTE4fQ%3D%3D--95d604a73781cb93ceaf425a3f3009a4af4f5314)
 
 ##ATIONet Native Interface API Protocol Specification##
 
