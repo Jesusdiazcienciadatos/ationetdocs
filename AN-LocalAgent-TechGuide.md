@@ -100,7 +100,7 @@ This document provides the following information about ATIOnet Local Agent softw
 - Deployment scenarios
 - Systems requirements
 - Software download instructions
-- Setup instructions
+- Installation instructions
 - Troubleshooting
 - Problem reporting requirements
 
@@ -119,12 +119,16 @@ For a first time installation you´ll need to download all prerequisites. Check 
 Save the zip file into your computer.
 
 ##Install instructions
-To install the Local Agent follo the procedure above.
+To install the **ATIOnet Local Agent** follow the procedure above.
 
 1. Unzip the file on your computer.
-2. Run the Setup. exe file.
-
+2. Run the Setup. exe file as an administrator. (Figure 1)
+3. Follow Setup intructions
+4. After installation is finished configure ATIOnet LA.
+5. 
 ![inst_1](/Content/Images/ATIOnetLogo_250x70.png)
+Figure 1.
+
 
 
 ##Troubleshooting
