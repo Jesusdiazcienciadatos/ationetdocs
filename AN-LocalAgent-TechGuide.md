@@ -117,11 +117,11 @@ explicar que se puede instalar local en el sitio o en un servidor central y que 
 
 ##Software download instructions
 Download the Local Agent installer from our [Download Center](http://vm-atioapps1.cloudapp.net/downloadcenter).
-For a first time installation you´ll need to download all prerequisites. Check the option "Include Prerequisites" as shown in the picture above.
+For a first time installation you´ll need to download all prerequisites. Check the option "Include Prerequisites" as shown in the picture bellow.
 Save the zip file into your computer.
 
 ##Install instructions
-To install the **ATIOnet Local Agent** follow the procedure above.
+To install the **ATIOnet Local Agent** follow the procedure bellow.
 
 1. Unzip the file on your computer.
 2. Configure install.config file.
