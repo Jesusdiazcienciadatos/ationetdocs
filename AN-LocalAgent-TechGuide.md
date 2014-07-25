@@ -114,12 +114,17 @@ explicar que se puede instalar local en el sitio o en un servidor central y que 
 | ...                      |                    |
 
 ##Software download instructions
-You can download the Local Agent installer from our Donwload Center. You'll need login credentials.
+Download the Local Agent installer from our [Download Center](http://vm-atioapps1.cloudapp.net/downloadcenter).
 Link: http://vm-atioapps1.cloudapp.net/downloadcenter
-For the first installation you´ll need to add all prerequisites for a correct installation. Check the option "Include Prerequisites" as shown in the **picture**.
+For the first installation you´ll need to add all prerequisites for a correct installation. Check the option "Include Prerequisites" as shown in the picture above.
+Save the zip file into your computer.
 
+##Install instructions
+To install the Local Agent follo the procedure above.
 
-##Setup instructions
+1. Unzip the file on your computer.
+2. Run the Setup. exe file.
+
 
 ##Troubleshooting
 detección de problemas
