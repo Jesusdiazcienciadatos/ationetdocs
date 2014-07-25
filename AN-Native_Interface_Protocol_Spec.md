@@ -1,4 +1,4 @@
-![ationetlogo](/Content/Images/Logo.png)
+![ationetlogo](https://raw.githubusercontent.com/atioint/ationetdocs/master/Content/Images/Logo.png)
 
 ##ATIONet Native Interface API Protocol Specification##
 
