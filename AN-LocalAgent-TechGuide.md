@@ -108,10 +108,10 @@ This document provides the following information about ATIOnet Local Agent softw
 explicar que se puede instalar local en el sitio o en un servidor central y que puede atender a una o más terminales
 
 ##Systems requirements
-| Requirement          | Description        |                                |
-| -------------------- | ------------       |
+| Requirement          | Description                                         |
+| -------------------- | ------------                                        |
 | Operating System     | Windows 7 or later - Windows server 2012 or later - |
-| Memory RAM           | 1 Gb               |                                |
+| Memory RAM           | 1 Gb                                                |
 | Disk space           | 15 Mb - Extra space for logs and sales files        | 
 
 
