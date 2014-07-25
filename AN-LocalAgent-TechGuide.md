@@ -124,18 +124,27 @@ Save the zip file into your computer.
 To install the **ATIOnet Local Agent** follow the procedure above.
 
 1. Unzip the file on your computer.
-2. Run the Setup. exe file as an administrator. (Figure 1)
-3. Follow Setup intructions
-4. After installation is finished configure ATIOnet LA.
-5. 
+2. Configure install.config file.
+3. Run the Setup. exe file as an administrator. (Figure 1)
+4. Follow Setup intructions
+5. After installation is finished configure ATIOnet LA.
+6. 
 ![inst_1](/Content/Images/ATIOnetLogo_250x70.png)
 Figure 1.
 
 
 
 ##Troubleshooting
+For troubleshooting solutions check this FAQ. If you don't solve the problem [Contact Us](mailto:supprt@atioinc.com).
+
+| Problem                                                   | Solution                                       |
+|----------                                                 |----------                                      |
+| Local Agent can´t connect to ATIOnet server               | - Check network communications (ping server)   |
+|                                                           | - Check LA configuration file                  |
+
+
 detección de problemas
-donde están los logs
+donde es tán los logs
 como reinstalo
 
 ##Problem reporting requirements
