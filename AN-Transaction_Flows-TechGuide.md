@@ -174,4 +174,6 @@ Refunds proceed exactly in the same way than a Post-paid Sale transaction, Regul
 </table>
 
 
+
+
 	
