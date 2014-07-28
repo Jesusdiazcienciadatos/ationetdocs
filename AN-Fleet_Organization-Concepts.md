@@ -17,7 +17,7 @@
 	<tbody>
 		<tr>
 			<td width="20%" class="rowhead" align="right">File:</td>
-			<td>AN-Fleet_Organization-TechGuide.en.md</td>
+			<td>AN-Fleet_Organization-Concepts</td>
 		</tr>
 		<tr>
 			<td align="right">Doc. Version:</td>
@@ -146,7 +146,7 @@ Cardholders (Units or Persons) are bound to a Contract through their Identificat
 
 >Please refer to the document: AN-Company_Contract-Concepts for details about Contract features and configuration.
 
-![Fleet Administration Diagram](/Content/Includes/AN-Fleet_Organization-TechGuide-diagram.png)
+![Fleet Administration Diagram](/Content/Includes/AN-Fleet_Organization-Concepts-diagram.png)
 
 ### Billing
 

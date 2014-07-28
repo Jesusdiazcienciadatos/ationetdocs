@@ -1,4 +1,4 @@
-![ationetlogo](Content/Images/ATIOnetLogo_250x70.png) 
+![ationetlogo](/Content/Images/ATIOnetLogo_250x70.png) 
 
 ***
 
@@ -20,7 +20,7 @@
 	<tbody>
 		<tr>
 			<td width="20%" class="rowhead" align="right">File:</td>
-			<td>AN-Rules_Restrictions_Balances-TechGuide.en</td>
+			<td>AN-Rules_Restrictions_Balances-Concepts</td>
 		</tr>
 		<tr>
 			<td align="right">Doc. Version:</td>

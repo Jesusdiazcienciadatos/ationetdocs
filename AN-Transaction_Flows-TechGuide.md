@@ -59,6 +59,16 @@ The information contained here is complementary of the Protocol manuals and it i
 </br>
 
 <!-- ###Table of Content -->
+<!-- MarkdownTOC depth=3 -->
+
+- [Definitions](#definitions)
+- [Scope](#scope)
+- [Pre-Authorization & Completion](#preauthorization-completion)
+- [Post-paid Sale](#postpaid-sale)
+- [Refunds](#refunds)
+- [Batch Close](#batch-close)
+
+<!-- /MarkdownTOC -->
 
 
 <!-- Optional Terms & Definition section -->

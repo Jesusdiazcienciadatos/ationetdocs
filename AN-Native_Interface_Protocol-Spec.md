@@ -1,4 +1,4 @@
-![ationetlogo](/Content/Images/Logo.png)
+![ationetlogo](/Content/Images/ATIOnetLogo_250x70.png)
 
 #ATIONet Native Interface API Protocol Specification#
 
@@ -13,7 +13,7 @@
 			File:
 		</td>
 		<td>
-			ATIONet-Native_Interface_Protocol_Spec-v1.3
+			ATIONet-Native_Interface_Protocol-Spec-v1.3
 		</td>
 	</tr>
 	<tr>

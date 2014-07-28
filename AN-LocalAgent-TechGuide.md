@@ -14,9 +14,6 @@
 			<td colspan="2" class="tablehead">Document Information</td>
 		</tr>
 	</thead>
-	<tfoot>
-		<td colspan="2"> </td>
-	</tfoot>
 	<tbody>
 		<tr>
 			<td width="20%" class="rowhead" align="right">File:</td>
@@ -43,9 +40,6 @@
           	<td colspan="3">Change Log</td>
           </tr>
      </thead>
-     <tfoot>
-          <td colspan="3"> </td>
-     </tfoot>
      <tbody>
         <tr>
           	<td>Ver.</td>
