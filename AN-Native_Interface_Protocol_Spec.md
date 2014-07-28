@@ -134,59 +134,59 @@
 	</tr>
 </table>
 
-**Contents**
+##Contents##
 
-[1 Scope](#1-scope)
+- [1 Scope](#1-scope)
 
->[1.1 Scope details](#11-scope-details)
+	- [1.1 Scope details](#11-scope-details)
 
-[2 System Interface API](#2-system-interface-api)
+- [2 System Interface API](#2-system-interface-api)
 
->[2.1 Interface API Messages](#21-interface-api-messages)
+	- [2.1 Interface API Messages](#21-interface-api-messages)
 
-[3 Data security](#3-data-security)
+- [3 Data security](#3-data-security)
 
-[4 Message Structure](#4-message-structure)
+- [4 Message Structure](#4-message-structure)
 
-[5 Error handling](#5-error-handling)
+- [5 Error handling](#5-error-handling)
 
-[6 Statement Charges Interface](#6-statement-charges-interface)
+- [6 Statement Charges Interface](#6-statement-charges-interface)
 
->[6.1 Action Codes](#61-action-codes)
+	- [6.1 Action Codes](#61-action-codes)
 
->[6.2 Identification](#62-identification)
+	- [6.2 Identification](#62-identification)
 
->[6.3 Statement Charge (POST) – Body Section Record Format](#63-statement-charge-post--body-section-record-format)
+	- [6.3 Statement Charge (POST) – Body Section Record Format](#63-statement-charge-post--body-section-record-format)
 
-[7 Transactions Download Interface](#7-transactions-download-interface)
+- [7 Transactions Download Interface](#7-transactions-download-interface)
 
->[7.1 Action Codes](#71-action-codes)
+	- [7.1 Action Codes](#71-action-codes)
 
->[7.2 Transactions Download (POST) – Body Section Format Request](#72-transactions-download-post--body-section-format-request)
+	- [7.2 Transactions Download (POST) – Body Section Format Request](#72-transactions-download-post--body-section-format-request)
 
->[7.3 Transactions Download (POST) – Body Section Format Response](#73-transactions-download-post--body-section-format-response)
+	- [7.3 Transactions Download (POST) – Body Section Format Response](#73-transactions-download-post--body-section-format-response)
 
-[8 Account Enquiries](#8-account-enquiries)
+- [8 Account Enquiries](#8-account-enquiries)
 
->[8.1 Action Codes](#81-action-codes)
+	- [8.1 Action Codes](#81-action-codes)
 
->[8.2 Identification](#82-identification)
+	- [8.2 Identification](#82-identification)
 
->[8.3 Account Enquiry (POST) – Body Section Record Format Request](#83-account-enquiry-post--body-section-record-format-request)
+	- [8.3 Account Enquiry (POST) – Body Section Record Format Request](#83-account-enquiry-post--body-section-record-format-request)
 
->[8.4 Account Enquiry (POST) – Body Section Record Format Response](#84-account-enquiry-post--body-section-record-format-response)
+	- [8.4 Account Enquiry (POST) – Body Section Record Format Response](#84-account-enquiry-post--body-section-record-format-response)
 
-[9 Account Downloads](#9-account-downloads)
+- [9 Account Downloads](#9-account-downloads)
 
->[9.1 Action Codes](#91-action-codes)
+	- [9.1 Action Codes](#91-action-codes)
 
->[9.2 Account Download (POST) – Body Section Format Request](#92-account-download-post--body-section-format-request)
+	- [9.2 Account Download (POST) – Body Section Format Request](#92-account-download-post--body-section-format-request)
 
->[9.3 Account Download (POST) – Body Section Format Response](#93-account-download-post--body-section-format-response)
+	- [9.3 Account Download (POST) – Body Section Format Response](#93-account-download-post--body-section-format-response)
 
-[10 Examples](#10-examples)
+- [10 Examples](#10-examples)
 
->[10.1 C# example](#101-c-example)
+	- [10.1 C# example](#101-c-example)
 
 ##Overview##
 
