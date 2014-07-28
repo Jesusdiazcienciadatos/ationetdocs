@@ -158,7 +158,7 @@ Refunds proceed exactly in the same way than a Post-paid Sale transaction, Regul
 	</tr>
 	<tr>
 		<td width=50%>
-			<img src="AN-Transaction_Flows-BatchClose-Normal.png"/>
+			<img src="/Content/Includes/AN-Transaction_Flows-BatchClose-Normal.png"/>
 		</td>
 		<td>Batch Close is not mandatory in ATIOnet, its use and opportunity depends on the integration process with each Terminal, or its use is up to the end-user.</br> Batch Close message sends counters and totalizers for each type of transaction sent by the Terminal. Triggered by the message, ATIOnet processes its own counters and totalizers and Approves the Batch or Declined with or without the instruction to perform a Batch Upload, this will depend on the Terminal type configured for the site.</td>
 	</tr>
@@ -167,7 +167,7 @@ Refunds proceed exactly in the same way than a Post-paid Sale transaction, Regul
 	</tr>
 	<tr>
 		<td width=40%>
-			<img src="AN-Transaction_Flows-BatchClose-Upload.png"/>
+			<img src="/Content/Includes/AN-Transaction_Flows-BatchClose-Upload.png"/>
 		</td>
 		<td>In case the Terminal's figures don't match ATIOnet's calculations and an Upload is required, the Terminal must re-send requests for each transaction included in the failed Batch. Transactions must be sent with a ProcessingCode indicating that is a BatchUpload. All firm transactions must be sent: Completions, Sales and Refunds, both Approved and Declined. Pre-Authorization are not accepted. </br>New transactions from the next (current) batch can be sent during a Batch Upload sequence. </br>Batch Upload sequence ends with a new Batch Close message (retry of the rejected original). ATIOnet will always approve this Batch with a special response code "Approved pending review"</td>
 	</tr>
