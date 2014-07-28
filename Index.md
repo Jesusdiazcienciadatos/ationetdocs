@@ -15,7 +15,7 @@
 	* [About ATIOnet](https://github.com/atioint/ationetdocs/blob/master/dummy.md)
 	* [Subscription Models](https://github.com/atioint/ationetdocs/blob/master/dummy.md)
 	* [Feature List](https://github.com/atioint/ationetdocs/blob/master/dummy.md)
-	* [Supported Terminals](https://github.com/atioint/ationetdocs/blob/master/dummy.md)
+	* [Supported Terminals](https://github.com/atioint/ationetdocs/blob/master/AN-Supported_Terminals-TechGuide.md)
 * Administrator Guide
 	* Strategy
 		* [Roles & Responsibilities](https://github.com/atioint/ationetdocs/blob/master/dummy.md)
@@ -31,5 +31,5 @@
   	* [Identification Scenarios](https://github.com/atioint/ationetdocs/blob/master/AN-Identification_Scenarios-Concepts.md)
   	* [Local Agent Service Guide](https://github.com/atioint/ationetdocs/blob/master/AN-LocalAgent-TechGuide.md)
 * Development & Integration
-  * [Native Interface API Protocol](https://github.com/atioint/ationetdocs/blob/master/AN-Native_Interface_Protocol-Spec.md)
-  * [Transaction Flows](https://github.com/atioint/ationetdocs/blob/master/AN-Transaction_Flows-TechGuide.md)
+	* [Native Interface API Protocol](https://github.com/atioint/ationetdocs/blob/master/AN-Native_Interface_Protocol-Spec.md)
+	* [Transaction Flows](https://github.com/atioint/ationetdocs/blob/master/AN-Transaction_Flows-TechGuide.md)
