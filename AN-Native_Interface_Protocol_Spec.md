@@ -1,6 +1,6 @@
 ![ationetlogo](/Content/Images/Logo.png)
 
-##ATIONet Native Interface API Protocol Specification##
+#ATIONet Native Interface API Protocol Specification#
 
 <table>
 	<tr>
@@ -134,63 +134,47 @@
 	</tr>
 </table>
 
-**Contents**
+##Contents##
 
-[1 Scope](#1-scope)
+- [1 Scope](#1-scope)
+	- [1.1 Scope details](#11-scope-details)
 
->[1.1 Scope details](#11-scope-details)
+- [2 System Interface API](#2-system-interface-api)
+	- [2.1 Interface API Messages](#21-interface-api-messages)
 
-[2 System Interface API](#2-system-interface-api)
+- [3 Data security](#3-data-security)
 
->[2.1 Interface API Messages](#21-interface-api-messages)
+- [4 Message Structure](#4-message-structure)
 
-[3 Data security](#3-data-security)
+- [5 Error handling](#5-error-handling)
 
-[4 Message Structure](#4-message-structure)
+- [6 Statement Charges Interface](#6-statement-charges-interface)
+	- [6.1 Action Codes](#61-action-codes)
+	- [6.2 Identification](#62-identification)
+	- [6.3 Statement Charge (POST) – Body Section Record Format](#63-statement-charge-post--body-section-record-format)
 
-[5 Error handling](#5-error-handling)
+- [7 Transactions Download Interface](#7-transactions-download-interface)
+	- [7.1 Action Codes](#71-action-codes)
+	- [7.2 Transactions Download (POST) – Body Section Format Request](#72-transactions-download-post--body-section-format-request)
+	- [7.3 Transactions Download (POST) – Body Section Format Response](#73-transactions-download-post--body-section-format-response)
 
-[6 Statement Charges Interface](#6-statement-charges-interface)
+- [8 Account Enquiries](#8-account-enquiries)
+	- [8.1 Action Codes](#81-action-codes)
+	- [8.2 Identification](#82-identification)
+	- [8.3 Account Enquiry (POST) – Body Section Record Format Request](#83-account-enquiry-post--body-section-record-format-request)
+	- [8.4 Account Enquiry (POST) – Body Section Record Format Response](#84-account-enquiry-post--body-section-record-format-response)
 
->[6.1 Action Codes](#61-action-codes)
+- [9 Account Downloads](#9-account-downloads)
+	- [9.1 Action Codes](#91-action-codes)
+	- [9.2 Account Download (POST) – Body Section Format Request](#92-account-download-post--body-section-format-request)
+	- [9.3 Account Download (POST) – Body Section Format Response](#93-account-download-post--body-section-format-response)
 
->[6.2 Identification](#62-identification)
+- [10 Examples](#10-examples)
+	- [10.1 C# example](#101-c-example)
 
->[6.3 Statement Charge (POST) – Body Section Record Format](#63-statement-charge-post--body-section-record-format)
+##Overview##
 
-[7 Transactions Download Interface](#7-transactions-download-interface)
-
->[7.1 Action Codes](#71-action-codes)
-
->[7.2 Transactions Download (POST) – Body Section Format Request](#72-transactions-download-post--body-section-format-request)
-
->[7.3 Transactions Download (POST) – Body Section Format Response](#73-transactions-download-post--body-section-format-response)
-
-[8 Account Enquiries](#8-account-enquiries)
-
->[8.1 Action Codes](#81-action-codes)
-
->[8.2 Identification](#82-identification)
-
->[8.3 Account Enquiry (POST) – Body Section Record Format Request](#83-account-enquiry-post--body-section-record-format-request)
-
->[8.4 Account Enquiry (POST) – Body Section Record Format Response](#84-account-enquiry-post--body-section-record-format-response)
-
-[9 Account Downloads](#9-account-downloads)
-
->[9.1 Action Codes](#91-action-codes)
-
->[9.2 Account Download (POST) – Body Section Format Request](#92-account-download-post--body-section-format-request)
-
->[9.3 Account Download (POST) – Body Section Format Response](#93-account-download-post--body-section-format-response)
-
-[10 Examples](#10-examples)
-
->[10.1 C# example](#101-c-example)
-
-####Overview####
-
-#####Introduction#####
+###Introduction###
 
 This specification is intended to document ATIONet’s Native Interface
 API messaging format and related features required for the systems
@@ -201,39 +185,39 @@ of the messages themselves, the expected behaviour for each supported
 action type and a common ground for the functionality of each relevant
 item.
 
-#####Definitions#####
+###Definitions###
 
-######Subscriber.######
+####Subscriber.####
 ATIONet’s subscription owner. The person or company who
 runs the service.
 
-######Homebase.######
+####Homebase.####
 A type of ATIONet subscription where the subscriber owns
 the site(s) but also the fleet(s) of vehicles.
 
-######Network.######
+####Network.####
 A type of ATIONet subscription where the subscriber enrolls
 Fleet Companies and retail or commercial sites to operate with its own
 method-of-payment. The Network company doesn’t own the site(s) or the
 vehicles.
 
-######Retail.######
+####Retail.####
 A type of ATIONet subscription where the subscriber owns the
 sites and enrolls Fleet Companies to operate with its own
 method-of-payment.
 
-######Merchant.######
+####Merchant.####
 On a Network type subscription, the Merchant is the
 company who own the sites.
 
-######Company.######
+####Company.####
 On a Network or Retail type subscription, the Company is
 the company who own the fleet.
 
-######Terminal.######
+####Terminal.####
 Transaction capture device at the site.
 
-####1 Scope####
+##1 Scope##
 
 Version 1.3 of this document covers a particular version of ATIONet’s
 Host protocol. Although feature’s descriptions are generally not related
@@ -241,7 +225,7 @@ to a particular version of the protocol, some changes may apply which
 would be specifically commented and identified on each feature’s
 description paragraph.
 
-#####1.1 Scope details#####
+###1.1 Scope details###
 
 Protocol: ATIONet Native Interface API
 
@@ -249,7 +233,7 @@ Version: Version 1.3
 
 API URI: native.ationet.com/v1/interface
 
-####2 System Interface API####
+##2 System Interface API##
 
 The Interface API provide system-to-system access to certain features of
 ATIONet otherwise only available via the ATIONet Console, and it’s
@@ -260,7 +244,7 @@ Availability of part or all the functionality of the Interface API is
 subject to the business type and contract terms of the ATIONet
 subscriber.
 
-#####2.1 Interface API Messages#####
+###2.1 Interface API Messages###
 
 <table>
 	<thead>
@@ -423,7 +407,7 @@ subscriber.
 	</tbody>
 </table>
 
-####3 Data security####
+##3 Data security##
 
 The Interface API requires an SSL connection between both parties. The
 SSL connection is established for each request/response pair, using a
@@ -441,7 +425,7 @@ At this time there is no provisioning to distribute or update
 certificates or thumbprint thru a system interface. This information
 will be provided at request of the Subscriber.
 
-####4 Message Structure####
+##4 Message Structure##
 
 All Interface API messages share the same structure, what change from
 message to message are the Action Code, which indicates the actual
@@ -453,7 +437,7 @@ Both, requests and responses use a JSON format.
 Only one request is accepted on each message, although some requests and
 many responses will contain multiple records.
 
-#####Request Format#####
+###Request Format###
 
 *Header:*
 
@@ -465,7 +449,7 @@ many responses will contain multiple records.
 
 	{“ActionCode”:”nnn”,”FieldName”:”StringValue”,”FieldName”:Value}
 
-#####Response#####
+###Response###
 
 *Header:*
 
@@ -485,7 +469,7 @@ below show the maximum possible length as the Size, although in
 JSON-formatted strings they will be represented with trailing spaces
 trimmed.
 
-####5 Error handling#####
+##5 Error handling###
 
 Success/failure exits on the Interface API will be handled via HTTP
 status codes.
@@ -508,7 +492,7 @@ Failure to process the request will be indicated by an HTTP 400’s range
 status code. The body will contain a single JSON-formatted item with the
 “ResponseCode”, “ResponseMessage” and “ResponseError” fields.
 
-####6 Statement Charges Interface####
+##6 Statement Charges Interface##
 
 The Statement Charge message sends an instruction to ATIONet to apply a
 well-defined action on the current account subsystem, the subject of the
@@ -518,7 +502,7 @@ Driver account.
 Depending on the type of charge, this message might be used by one or
 the other party of the contract (the subscriber or the fleet company).
 
-#####6.1 Action Codes#####
+###6.1 Action Codes###
 
 The Action Code specifies the type of accounting transactions requested
 by a Statement Charge Message. The submitted code must match one of the
@@ -645,7 +629,7 @@ subscription types but also on contract terms with ATIONet.
 	</tr>
 </table>
 
-#####6.2 Identification#####
+###6.2 Identification###
 
 When a Statement Charge is received, ATIONet will try to identify the
 Subscriber, the Species (Currency Code or Master Fuel Code) and the
@@ -662,7 +646,7 @@ the message:
 3.  Company Code + Contract Code + (Driver Code or Vehicle Code or
     Vehicle Plate)
 
-#####6.3 Statement Charge (POST) – Body Section Record Format#####
+###6.3 Statement Charge (POST) – Body Section Record Format###
 
 <table>
 	<thead>
@@ -1033,7 +1017,7 @@ the message:
 	</tbody>
 </table>
 
-####7 Transactions Download Interface####
+##7 Transactions Download Interface##
 
 The Transactions Download Interface are POST actions to recover all the
 payment transactions processed by ATIONet for a given Terminal, Contract
@@ -1046,7 +1030,7 @@ rejected.
 The download will be limited by dates (from and to), which must be
 included in the request
 
-#####7.1 Action Codes#####
+###7.1 Action Codes###
 
 The Action Code specifies the type of record transaction to be
 retrieved; this differentiation is based on the different roles on an
@@ -1141,7 +1125,7 @@ transactions to download.
 	</tr>
 </table>
 
-#####7.2 Transactions Download (POST) – Body Section Format *Request*#####
+###7.2 Transactions Download (POST) – Body Section Format *Request*###
 
 <table>
 	<thead>
@@ -1465,7 +1449,7 @@ transactions to download.
 	</tbody>
 </table>
 
-#####7.3 Transactions Download (POST) – Body Section Format *Response*#####
+###7.3 Transactions Download (POST) – Body Section Format *Response*###
 
 <table>
 	<thead>
@@ -2620,7 +2604,7 @@ transactions to download.
 	</tbody>
 </table>
 
-####8 Account Enquiries####
+##8 Account Enquiries##
 
 The Account Enquiries messages retrieve data from ATIONet, specific to a
 Contract or Sub-Account (Vehicle or Driver types).
@@ -2628,7 +2612,7 @@ Contract or Sub-Account (Vehicle or Driver types).
 Depending on the type of enquiry, this message might be used by one or
 the other party of the contract (the subscriber or the fleet company).
 
-#####8.1 Action Codes#####
+###8.1 Action Codes###
 
 The Action Code specifies the type of enquiry requested. The submitted
 code must match one of the pre-defined operation types. Not all
@@ -2667,7 +2651,7 @@ contract terms with ATIONet.
 	</tr>
 </table>
 
-#####8.2 Identification#####
+###8.2 Identification###
 
 When an Account Enquiry is received, ATIONet will try to identify the
 Company and the Identifier of the sub-account (Vehicle or Driver), this
@@ -2683,7 +2667,7 @@ on the body of the message:
 3.  Company Code + Contract Code + (Driver Code or Vehicle Code or
     Vehicle Plate)
 
-#####8.3 Account Enquiry (POST) – Body Section Record Format *Request*#####
+###8.3 Account Enquiry (POST) – Body Section Record Format *Request*###
 
 <table>
 	<thead>
@@ -2881,7 +2865,7 @@ on the body of the message:
 	</tbody>
 </table>
 
-#####8.4 Account Enquiry (POST) – Body Section Record Format *Response*#####
+###8.4 Account Enquiry (POST) – Body Section Record Format *Response*###
 
 <table>
 	<thead>
@@ -3117,7 +3101,7 @@ on the body of the message:
 	</tbody>
 </table>
 
-####9 Account Downloads####
+##9 Account Downloads##
 
 The Account Download messages are POST actions to recover all the
 currents accounts movements processed by ATIONet for a given Company
@@ -3130,7 +3114,7 @@ rejected.
 The download will be limited by dates (from and to), which must be
 included in the request
 
-#####9.1 Action Codes#####
+###9.1 Action Codes###
 
 The Action Code specifies the type of record transaction to be
 retrieved; this differentiation is based on the different roles on an
@@ -3185,7 +3169,7 @@ transactions to download.
 	</tr>
 </table>
 
-#####9.2 Account Download (POST) – Body Section Format *Request*#####
+###9.2 Account Download (POST) – Body Section Format *Request*###
 
 <table>
 	<thead>
@@ -3298,7 +3282,7 @@ transactions to download.
 	</tbody>
 </table>
 
-#####9.3 Account Download (POST) – Body Section Format *Response*#####
+###9.3 Account Download (POST) – Body Section Format *Response*###
 
 <table>
 	<thead>
@@ -3633,9 +3617,9 @@ transactions to download.
 	</tbody>
 </table>
 
-####10 Examples####
+##10 Examples##
 
-#####10.1 C# example#####
+###10.1 C# example###
 
 ```C#
 using System.IO;

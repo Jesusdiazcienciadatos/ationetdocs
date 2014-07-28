@@ -100,7 +100,7 @@ This document provides the following information about ATIOnet Local Agent softw
 - Deployment scenarios
 - Systems requirements
 - Software download instructions
-- Setup instructions
+- Installation instructions
 - Troubleshooting
 - Problem reporting requirements
 
@@ -108,22 +108,43 @@ This document provides the following information about ATIOnet Local Agent softw
 explicar que se puede instalar local en el sitio o en un servidor central y que puede atender a una o más terminales
 
 ##Systems requirements
-| Requirement          | Description        |
-| -------------------- | ------------       |
+| Requirement          | Description                                         |
+| -------------------- | ------------                                        |
 | Operating System     | Windows 7 or later - Windows server 2012 or later - |
-| ...                      |                    |
+| Memory RAM           | 1 Gb                                                |
+| Disk space           | 15 Mb - Extra space for logs and sales files        | 
+
 
 ##Software download instructions
-You can download the Local Agent installer from our Donwload Center. You'll need login credentials.
-Link: http://vm-atioapps1.cloudapp.net/downloadcenter
-For the first installation you´ll need to add all prerequisites for a correct installation. Check the option "Include Prerequisites" as shown in the **picture**.
+Download the Local Agent installer from our [Download Center](http://vm-atioapps1.cloudapp.net/downloadcenter).
+For a first time installation you´ll need to download all prerequisites. Check the option "Include Prerequisites" as shown in the picture bellow.
+Save the zip file into your computer.
+
+##Install instructions
+To install the **ATIOnet Local Agent** follow the procedure bellow.
+
+1. Unzip the file on your computer.
+2. Configure install.config file.
+3. Run the Setup. exe file as an administrator. (Figure 1)
+4. Follow Setup intructions
+5. After installation is finished configure ATIOnet LA.
+6. 
+![inst_1](/Content/Images/ATIOnetLogo_250x70.png)
+Figure 1.
 
 
-##Setup instructions
 
 ##Troubleshooting
+For troubleshooting solutions check this FAQ. If you don't solve the problem [Contact Us](mailto:supprt@atioinc.com).
+
+| Problem                                                   | Solution                                       |
+|----------                                                 |----------                                      |
+| Local Agent can´t connect to ATIOnet server               | - Check network communications (ping server)   |
+|                                                           | - Check LA configuration file                  |
+
+
 detección de problemas
-donde están los logs
+donde es tán los logs
 como reinstalo
 
 ##Problem reporting requirements
