@@ -12,6 +12,6 @@ The Configuration Health Status shows the all required configuration steps to ru
 Once all the configuration steps shows the correct status, you have the minimum required configuration to run.
 After that you can choose to keep or remove the Configuration Health widget from your dashboard.
 
-[link](docs.ationet.com/docs/AN-Fleet_Organization-Concepts)
+[link](http://docs.ationet.com/Docs/Index/AN-Fleet_Organization-Concepts)
 
 <include>HelpHome_en</include>
