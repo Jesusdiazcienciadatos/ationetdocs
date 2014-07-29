@@ -6,11 +6,7 @@
 ***
 
 
-<!-- ###Table of Content -->
-
 #### Contents
-
-<!-- MarkdownTOC depth=4 -->
 
 - [About ATIO International](#about-atio-international)
 	- [ATIO International solutions cover the following areas:](#atio-international-solutions-cover-the-following-areas)
@@ -19,8 +15,6 @@
 		- [Is my business big enough for **ATIOnet**?](#is-my-business-big-enough-for-ationet)
 		- [What’s in **ATIOnet** for me?](#whats-in-ationet-for-me)
 - [**ATIOnet** Value Proposition](#ationet-value-proposition)
-
-<!-- /MarkdownTOC -->
 
 
 
