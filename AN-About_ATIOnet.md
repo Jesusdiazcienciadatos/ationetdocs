@@ -72,14 +72,15 @@ Other customers have discovered that they are sharing the profit of customers th
 
 #### What size is right for me?
 
-**ATIOnet** basically offers three flavors of subscription modes:
-1. Homebase: targeted on the subscribers that own the three cornerstones of the system: Sites, Fuel and Vehicles. They are basically demanding a tool to improve the control on how their fuel is used in their sites.
-2. Retail: Targeted on subscribers that own the Sites and the Fuel but not the vehicles. Typically a Single Site owner or a Single Owner of multiple sites that offer a pre or post paid service to his local customers who are able to refuel in any of his sites and pay in a single periodical statement.
-3. Network: Targeted for subscribers who only own the private labeled card and use third party stations and offer the service to fleets. This subscribers need the tools to run their core business and therefore are extremely demanding.
+**ATIOnet** basically offers three flavors or subscription modes:
+
+1. **Homebase**: targeted on the subscribers that own the three cornerstones of the system: Sites, Fuel and Vehicles. They are basically demanding a tool to improve the control on how their fuel is used in their sites.
+2. **Retail**: Targeted on subscribers that own the Sites and the Fuel but not the vehicles. Typically a Single Site owner or a Single Owner of multiple sites that offer a pre or post paid service to his local customers who are able to refuel in any of his sites and pay in a single periodical statement.
+3. **Network**: Targeted for subscribers who only own the private labeled card and use third party stations and offer the service to fleets. This subscribers need the tools to run their core business and therefore are extremely demanding.
 
 #### Is my business big enough for **ATIOnet**?	
 
-**ATIOnet** can serve any customer size, from a single site, single fleet business to a multinational retail network with international clearing. No project is too small for **ATIOnet** since its cloud technology allows operating at marginal costs for every subscriber.	
+**ATIOnet** can serve any customer size: from a single-site single-fleet business, to a multinational retail network with international clearing. No project is too small for **ATIOnet** since its cloud technology allows operating at marginal costs for every subscriber.	
 
 #### What’s in **ATIOnet** for me?
 
