@@ -17,6 +17,7 @@
 	* [Feature List](https://github.com/atioint/ationetdocs/blob/master/dummy.md)
 	* [Supported Terminals](https://github.com/atioint/ationetdocs/blob/master/AN-Supported_Terminals-TechGuide.md)
 * Administrator Guide
+	* [Admin's Getting Started](https://github.com/atioint/ationetdocs/blob/master/AN-Administration-GettingStarted.md)
 	* Strategy
 		* [Roles & Responsibilities](https://github.com/atioint/ationetdocs/blob/master/dummy.md)
   		* [Fleet Organization](https://github.com/atioint/ationetdocs/blob/master/AN-Fleet_Organization-Concepts.md)
