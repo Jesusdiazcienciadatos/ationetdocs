@@ -87,7 +87,8 @@ Other customers have discovered that they are sharing the profit of customers th
 **ATIOnet** assists you in every process from Authorization processing to Network Monitoring and maintenance. Including: Card Issuing; Transaction capture and transport; Cardholder statement processing; Site statement processing; Billing processing; Clearing processing; Fraud prevention and control; and Back office operation.
 
 At the same time **ATIOnet**’s open approach protects subscriber investments in site level application by providing processing capabilities for the most popular systems, both in wholesale operations (Gasboy, Petrovend, etc.) and in Retail (ISO 8583, SPDH, Mannatec, etc.).
-Key considerations when implementing **ATIOnet**
+
+### Key considerations when implementing **ATIOnet**
 
 There are several areas of activity that need to be consider in order to deploy the solution successfully:
 
@@ -112,13 +113,13 @@ There are several areas of activity that need to be consider in order to deploy 
 
 ## **ATIOnet** Value Proposition	
 
-Traditionally customers have had two options for implementing private labeled cards: 
+Traditionally customers had two options for implementing private-labeled cards: 
 
 1. Buy a software and run their own operation: which quickly becomes a costly nightmare
 2. Fully outsource the product on a network provider: making it almost impossible to differentiate the product from others and turning the supplier into a partner (they usually charge a percentage of the transaction).
 Many site owners have decided to hand over their private customers to networks just to eliminate the costs of maintaining the systems they put in place a few years before.
 
-**ATIOnet** provides a third approach making possible for a site owner to become a private labeled card owner without any of the associated costs of running complex technologies and avoiding variable costs associated to the transaction. 
+**ATIOnet** provides a third approach making possible for a site owner to become a private-labeled card owner without any of the associated costs of running complex technologies and avoiding variable costs associated to the transaction. 
 
 For a flat fee and after a small start-up process the owner manages his business with no concerns at all on running the technology that makes it possible.
 There are many key processes involved in end-to-end processing of a private card:
