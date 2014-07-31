@@ -11,5 +11,3 @@ El Estado general de configuracion muestra todos los pasos de configuracion requ
 
 Una vez que todos los pasos de configuracion muestran el estado correcto, tiene la configuracion minima requerida para operar.
 Despues de esto, puede optar por mantener o eliminar el widget de Estado general de configuracion de su tablero.
-
-<img src="/Content/Includes/AN-Transaction_Flows-Pre_Compl-Normal.png"/>
