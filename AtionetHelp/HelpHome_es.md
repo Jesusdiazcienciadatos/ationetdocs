@@ -2,12 +2,14 @@
 
 El Tablero es su pagina de inicio personal
 
-You can reconfigure Dashboard adding widgets from the standard collection.
-Widgets give a quick insight on different aspects of your account.
+Puede reconfigurar el Tablero agregando widgets de la colecion estandar.
+Los widgets ofrecen vision rapida de diferentes aspectos de su cuenta.
 
-**Configuration Health Status**
+**Estado general de configuracion**
 
-The Configuration Health Status shows the all required configuration steps to run your account.
+El Estado general de configuracion muestra todos los pasos de configuracion requeridos para operar su cuenta.
 
-Once all the configuration steps shows the correct status, you have the minimum required configuration to run.
-After that you can choose to keep or remove the Configuration Health widget from your dashboard.
+Una vez que todos los pasos de configuracion muestran el estado correcto, tiene la configuracion minima requerida para operar.
+Despues de esto, puede optar por mantener o eliminar el widget de Estado general de configuracion de su tablero.
+
+<img src="/Content/Includes/AN-Transaction_Flows-Pre_Compl-Normal.png"/>
