@@ -1,4 +1,4 @@
-![ationetlogo](/Content/Images/ATIOnetLogo_250x70.png) 
+![ationetlogo](Content/Images/ATIOnetLogo_250x70.png) 
 
 ***
 
@@ -61,27 +61,27 @@ ATIOnet's offline authorization functionality requires the ATIOnet Local Agent c
 </table>
 </br>
 
-###Table of Content
+### Table of Content
 <!-- MarkdownTOC depth=3 -->
 
--  Definitions###
-- . Scope of service
-  - .1 Requirements
-  - rchitecture Diagram
-- unctional Overview
-- ffline Catalogs creation
-  - atalog Export Process
-- atalog Download and application
-- ransaction Processing
-- atalog Store
-- alance penalty based on catalog aging
+- [Definitions](#definitions)
+- [Scope of service](#scope-of-service)
+  - [Requirements](#requirements)
+  - [Architecture Diagram](#architecture-diagram)
+- [Functional Overview](#functional-overview)
+- [Offline Catalogs creation](#offline-catalogs-creation)
+  - [Catalog Export Process](#catalog-export-process)
+- [Catalog Download and application](#catalog-download-and-application)
+- [Transaction Processing](#transaction-processing)
+- [Catalog Store](#catalog-store)
+- [Balance penalty based on catalog aging](#balance-penalty-based-on-catalog-aging)
 
 <!-- /MarkdownTOC -->
 
 
 
 
-###1 Definitions###
+### Definitions
 
 <dl>
   <dt>Capture</dt>
@@ -110,7 +110,7 @@ ATIOnet's offline authorization functionality requires the ATIOnet Local Agent c
 <!--BREAK-->
 </br>
 
-##2. Scope of service
+## Scope of service
 
 The ATIOnet's Native Offline Subsystem enables continuos offline operation for sites equiped with ATIOnet Local Agent. A Site with Offline support can transition back and forth from online to offline operation without user intervention or even notice. Also, if the internet link goes down in-between the authorization and the completion of the fueling, the Local Agent locally stores the transaction to be sent to ATIOnet's Host when the link is restablished.
 
@@ -124,16 +124,16 @@ The Offline Subsystem complies with the following design goals:
 * Authorization penalties based on aging of local catalogs
 * Encrypted storage of local catalogs
 
-###2.1 Requirements
+### Requirements
 
 * ATIOnet Offline Subsystem
 * ATIOnet Local Agent v. 1.0.7885 or later
 
-###Architecture Diagram
-![Offline Architecture Diagram](/Content/Includes/AN-Native_Offline-TechGuide-diagram.png) 
+### Architecture Diagram
+![Offline Architecture Diagram](Content/Includes/AN-Native_Offline-TechGuide-diagram.png) 
 
 
-##Functional Overview
+## Functional Overview
 ATIOnet Offline functionality is comprised of five separate mechanisms, two of them executed on ATIOnet's Host and the rest on the Local Agent at the site.
 The goal of the whole subsystem is to keep the site running when the communication link with the Host is down; those offline transactions are evaluated against a local copy of Host's data which is timely synchronized while the site is online. While offline, the local offline catalogs are maintained by the Local Agent as result of the pre-authorizations and completions or sales. When the link is restablished, the stored offline transactions are sent to the Host and the local catalogs are refreshed with updates received from the Host.
 
@@ -149,11 +149,11 @@ The goal of the whole subsystem is to keep the site running when the communicati
 
 **NOTE:** The Offline Subsystem is an additional module which is enabled/disabled for each Subscriber.
 
-##Offline Catalogs creation
+## Offline Catalogs creation
 The goal of this mechanism is to produce a set of update files for the offline clients (Local Agents).
 Each service in ATIOnet handling data used directly or indirectly by the Authorization Engine or the Current Accounts Subsystem is responsible for creating news records for the Offline Subsystem every time a record is updated.
 
-#####Update sources
+##### Update sources
 * Merchants Contract - Rules
 * Company Contracts - Rules, Limits, Validity
 * Sub-accounts - Vehicle & Driver maintenance
@@ -166,7 +166,7 @@ Each service in ATIOnet handling data used directly or indirectly by the Authori
 * Transactions - Quota counters and accumulators
 * Current Accounts - Movements (Transactions, Deposits, Withdrawals, Transfers)
 
-###Catalog Export Process
+### Catalog Export Process
 By default, every 30 minutes a process service collects news records from the different sources and produces a _Catalog Update File_. Update files are tagged with a consecutive version number; the resulting file is stored in a BLOB storage resource (file oriented storage), and registered on a list. The Update file only contains news, ie since the moment when the previous news collection started.
 
 Each a certain number of iterations, the same process also produces a _Full Catalog File_ in addition to the Update file. The Full file contains the complete set of catalogs needed to populate a Local Agent storage from scratch. By default, a Full file is created daily.
@@ -180,7 +180,7 @@ During the export, source data is pre-processed as follows:
 1. Records are marked as Deletions, Inserts or Updates
 1. Property names are masked with nonsignificant values and sensitive data is encrypted.
 
-##Catalog Download and application
+## Catalog Download and application
 By default, every 5 minutes, a separate thread on the Local Agent sends an HTTP enquiry to ATIOnet's Maintenance API with its _current offline catalogs version_. The Host compares the reported version with the Catalog list and returns a JSON body with the list of files to be downloaded and applied. The list contains the URI to the BLOB storage for each file.
 
 A Host-side logic defines when a Full catalog and or Update file(s) must be processed. When possible the Host will provide a list of Update files, but when the current version is too old (there is a gap between the site's current version and the oldest stored update file), the Host will refer the client to the Full file plus the following list of Update files if there is any.
@@ -194,10 +194,10 @@ For each item in the file list, the Local Agent:
 1. Updates the current offline version
 1. Deletes the file on the disk
 
-##Transaction Processing
+## Transaction Processing
 Capture terminals connected to the Local Agent are always served in the same way, the online / offline processing is transparent to them. Depending on the link status the Local Agent applies different business logics.
 
-####Case I - Full Online
+#### Case I - Full Online
   1. **Pre-Authorization flow**
     1. Terminal sends a pre-authorization (MTI 100)
     1. Local Agent (L.A.) forwards the message to the Host without change (100)
@@ -210,7 +210,7 @@ Capture terminals connected to the Local Agent are always served in the same way
     1. Host responds the message with a completion approval (130)
     1. L.A. forwards the message to the terminal without change (130)
 
-####Case II - Online / Offline
+#### Case II - Online / Offline
   1. **Pre-Authorization flow Online**
   1. **Fueling takes place**
   1. **Completion flow**
@@ -220,7 +220,7 @@ Capture terminals connected to the Local Agent are always served in the same way
   	1. L.A. forwards the message to the terminal without change (130)
   	1. When site is back online, L.A. retries all pending messages on the S&F queue (120)
 
-####Case III - Offline / Offline
+#### Case III - Offline / Offline
   1. **Pre-Authorization**
   	1. Terminal sends a pre-authorization (100)
   	1. L.A. fails to send the message to the Host
@@ -239,7 +239,7 @@ Capture terminals connected to the Local Agent are always served in the same way
 
 NOTE: There is no Offline / Online case. Even if the site is back online when the fueling finish and the Completion is processed, as the authorization was issued with offline catalogs, the sale as a whole is reported as offline, regardless if it was held on the S&F queue or sent immediately.
 
-##Catalog Store
+## Catalog Store
 Local Offline Catalogs are maintained on the Local Agent store. 
 This store is an exclusive instance of MS-SQLServer Express created automatically by the installer. No human intervention is required during the installation to avoid sharing the _sa_ password of the instance. At startup, if the database is corrupt, the Local Agent can automatically trigger a database drop and re-creation. In this situation, the offline catalog version informed to the Host will be 0 (zero), resulting in a full catalog download.
 
@@ -253,7 +253,7 @@ Main tables on the local store related to Offline are:
 * Terminal configuration
 * Offline parameters
 
-##Balance penalty based on catalog aging
+## Balance penalty based on catalog aging
 The local authorization process on the Local Agent can apply a partial restriction rule to the available balances of the sub-accounts based on the aging of the local offline catalogs. This penalty can be used as a risk management measure against the progressive lost of accuracy of the local catalogs due to its aging.
 
 ```Aging (hours) = Current_local_system_time - Time_of_last_catalogs_update```

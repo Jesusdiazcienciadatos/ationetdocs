@@ -58,7 +58,7 @@ The information contained here is complementary of the Protocol manuals and it i
 </table>
 </br>
 
-<!-- ###Table of Content -->
+### Contents
 <!-- MarkdownTOC depth=3 -->
 
 - [Definitions](#definitions)

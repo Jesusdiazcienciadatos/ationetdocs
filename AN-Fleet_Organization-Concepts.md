@@ -145,7 +145,7 @@ Cardholders (Units or Persons) are bound to a Contract through their Identificat
 
 >Please refer to the document: AN-Company_Contract-Concepts for details about Contract features and configuration.
 
-![Fleet Administration Diagram](/Content/Includes/AN-Fleet_Organization-Concepts-diagram.png)
+![Fleet Administration Diagram](Content/Includes/AN-Fleet_Organization-Concepts-diagram.png)
 
 ### Billing
 
