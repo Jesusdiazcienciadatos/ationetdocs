@@ -34,4 +34,3 @@
 * Development & Integration
 	* [Native Interface API Protocol](https://github.com/atioint/ationetdocs/blob/master/AN-Native_Interface_Protocol-Spec.md)
 	* [Transaction Flows](https://github.com/atioint/ationetdocs/blob/master/AN-Transaction_Flows-TechGuide.md)
-	* [Folder Test - Transaction Flows](https://github.com/atioint/ationetdocs/blob/master/DevelopmentIntegration/AN-Transaction_Flows-TechGuide.md)
