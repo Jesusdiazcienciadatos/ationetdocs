@@ -64,7 +64,7 @@ The information contained here is complementary of the Protocol manuals and it i
 - [Definitions](#definitions)
 - [Scope](#scope)
 - [Pre-Authorization & Completion](#pre-authorization--completion)
-- [Post-paid Sale](#pos-tpaid-sale)
+- [Post-paid Sale](#post-paid-sale)
 - [Refunds](#refunds)
 - [Batch Close](#batch-close)
 
