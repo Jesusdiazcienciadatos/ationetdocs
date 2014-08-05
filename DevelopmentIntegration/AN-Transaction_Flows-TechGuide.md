@@ -136,7 +136,7 @@ This document comments the interactions between Terminal and ATIOnet, Regular an
 
 </table>
 
-## Post-paid Sale
+## Post-paid - Sale
 <table>
 	<tr>
 		<td colspan="2" align="left">Regular flow</td>
