@@ -34,5 +34,4 @@
 * Development & Integration
 	* [Native Interface API Protocol](https://github.com/atioint/ationetdocs/blob/master/AN-Native_Interface_Protocol-Spec.md)
 	* [Transaction Flows](https://github.com/atioint/ationetdocs/blob/master/AN-Transaction_Flows-TechGuide.md)
-	* [REST API Documentation](http://ationetapi-test.azurewebsites.net/Help)
 
