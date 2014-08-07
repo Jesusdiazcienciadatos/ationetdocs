@@ -57,7 +57,12 @@ These capabilities may vary according to the capture device, protocol and susbsc
         <tr>
           	<td>1.0</td>
           	<td>20/July/2014</td>
-          	<td>Change description</td>
+          	<td>Initial version</td>
+        </tr>
+        <tr>
+            <td>1.1</td>
+            <td>06/August/2014</td>
+            <td>Splitted some scenarios to clarity</td>
         </tr>
         <!-- End of version table row -->
      </tbody>
