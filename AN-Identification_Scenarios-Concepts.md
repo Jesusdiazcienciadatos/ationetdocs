@@ -65,6 +65,18 @@ These capabilities may vary according to the capture device, protocol and susbsc
 </br>
 
 ### Table of Content
+<!-- MarkdownTOC depth=3 -->
+
+- [Definitions](#definitions)
+- [Overview](#overview)
+- [Relevant Configuration](#relevant-configuration)
+  - [Prompting Rules](#prompting-rules)
+  - [Terminal / Controller Configuration](#terminal-controller-configuration)
+  - [Enforced Vehicle-Driver relation](#enforced-vehicledriver-relation)
+- [Use of PINs](#use-of-pins)
+- [Scenarios](#scenarios)
+
+<!-- /MarkdownTOC -->
 
 
 <!-- Optional Terms & Definition section -->
@@ -95,7 +107,7 @@ It is important to only the sub-account linked to the Primary Identification wil
 ## Relevant Configuration
 
 ### Prompting Rules
-Some prompts when enforced via Rules can help with the Identification.
+Some prompts, when enforced via Rules, can help with the Identification.
 Terminals supporting re-prompt functionality can activate prompts of missing information dinamically reacting to specific decline codes received from the Host.
 
 <dl>
@@ -109,7 +121,7 @@ Terminals supporting re-prompt functionality can activate prompts of missing inf
   <dd>Secure number associated to the Driver</dd>
 </dl>
 
-> Note about Vehicle and Driver ID data-type. ATIOnet supports alphanumeric values in Vehicles and Drivers, but if you plan to use them as IDs, take into consideration that most capture terminals doesn't accept string input at these prompts, so numeric-only values might be used instead.
+> **Note about Vehicle and Driver ID data-type:** ATIOnet supports alphanumeric values in Vehicles and Drivers, but if you plan to use them as IDs, take into consideration that most capture terminals don't accept string input on those prompts, so numeric-only values should be used instead.
 
 ### Terminal / Controller Configuration
 The flag ```Use Driver Id as Driver Card Track``` parameter forces the system to pass the Driver ID prompt as a Secondary Track (secondary identification), instead of taking it as an information-only prompt. This is useful to implement a two-fold authentication on terminals that doesn't accept dual card-swipe.
@@ -127,7 +139,7 @@ Although the parameter is ```Vehicle PIN``` or ```Driver PIN```, the PIN is actu
   <thead>
     <tr>
       <td width=40%>Expected Identification behavior</td>
-      <td>Description / Configuration strategy</td>
+      <td>Description / Configuration strategy & Comments</td>
     </tr>
   </thead>
   <tbody>
@@ -137,18 +149,18 @@ Although the parameter is ```Vehicle PIN``` or ```Driver PIN```, the PIN is actu
     </tr>
     <tr>
       <td>Single Driver</td>
-      <td>Idem to a Driver-type sub-account</td>
+      <td>Assign at least one Identification to a Driver-type sub-account</td>
     </tr>
     <tr>
       <td>Dual ID, Vehicle(s) enabled for a/some Driver(s)</td>
-      <td>Configure a relation between the Vehicle(s) and the Driver(s). The Vehicle balances, cummmulators, counters and mileage will be impacted; to the Drivers, only their cummulators will be affected</td>
+      <td>Configure a relation between the Vehicle(s) and the Driver(s). The Vehicle's balances, cummmulators, counters and mileage will be impacted; for the Driver, only their cummulators will be affected</td>
     </tr>
     <tr>
       <td>Dual ID, Driver(s) authorized for a/some Vehicle(s)</td>
       <td>Configure a relation between the Drivers(s) and the Vehicles(s). The Driver(s) balances, cummmulators and counters will be impacted; to the Vehicles, only their cummulators and mileage will be modified. Only applies to Terminals with dual swipe capability</td>
     </tr>
     <tr>
-      <td>Single Vehicle card with Driver ID manual prompt</td>
+      <td>Single Vehicle card with manual entry of Driver ID</td>
       <td>Transaction is completed against Vehicle's sub-account, Driver ID is informative</td>
     </tr>
     <tr>
@@ -157,11 +169,11 @@ Although the parameter is ```Vehicle PIN``` or ```Driver PIN```, the PIN is actu
     </tr>
     <tr>
       <td>Vehicle ID or Vehicle card plus Vehicle PIN</td>
-      <td>PIN entry used as an entry validation, must match the PIN for the Identification presented for the Vehicle. On a single Driver Identification scenario where the Vehicle ID is not required, if the Vehicle ID prompt is active the content of the field is ignored, as there is no Vehicle ID to validate.</td>
+      <td>PIN entry used as an entry validation, it has to match the PIN for the Identification presented for the Vehicle. On a single Driver Identification scenario, where the Vehicle ID is not required, if the Vehicle ID prompt is active the content of the field is ignored, as there is no Vehicle ID to validate.</td>
     </tr>
     <tr>
       <td>Driver ID or Driver card plus Driver PIN</td>
-      <td>Same as Vehicle case above, but referred to Driver ID</td>
+      <td>Same as Vehicle case above, but applies to a Driver-type ID and sub-accounts</td>
     </tr>
   </tbody>
 </table>
