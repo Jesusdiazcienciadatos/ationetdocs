@@ -167,35 +167,35 @@ This specification is intended to document ATIONet’s Native Protocol messaging
 
 ###Definitions###
 
-####Host.#### 
+####Host
 A computer system that is accessed by a user working at a remote location. In this document, Host is always the ATIONet Host.
 
-####Terminal.#### 
+####Terminal
 An electronic merchant card processing device responsible for transaction capture, display output to the cashier and/or to the cardholder on screen and/or print format.
 
-####Controller####. 
+####Controller
 A client system that can send or receive data to and from ATIONet’s Host. A Controller controls or includes one or more terminal. When there is only one Terminal connected to a Controller, Terminal and Controller are equivalent.
 
-####TREQ#### 
+####TREQ
 Transaction Request.
 
-####TRESP#### 
+####TRESP
 Transaction Response.
 
 ##1 ATIOnet Integration Documentation Scope##
 
 Third-party systems integrate with ATIOnet via a set of APIs (Application Programming Interfaces). Each ATIOnet’s API is described on a separate Protocol Specification. The complete documentation of ATIOnet API’s is comprised of:
 
-####ATIOnet Native Transactions Protocol Specification####: 
+####ATIOnet Native Transactions Protocol Specification: 
 Covers financial transactions for transaction capture systems (payment terminals, site controllers and point of sale systems), including sales and refunds.
 
-####ATIOnet Administrative Transactions Protocol Specification####: 
+####ATIOnet Administrative Transactions Protocol Specification: 
 Describes a set of functions complementing the transaction-capture business, for example Batch or Shift Close. These functions enhance the capabilities of the integration but their implementation is not mandatory.
 
-####ATIOnet Native Interface Protocol Specification####: 
+####ATIOnet Native Interface Protocol Specification: 
 Covers system-to-system integration capabilities of ATIOnet, designed to interact with third-party back-end systems, for example downloading transactions data or sending current-accounts movements to ATIOnet. This API is reserved and requires ATIOnet and Subscriber permissions.
 
-####ATIOnet Maintenance Interface Protocol Specification####: 
+####ATIOnet Maintenance Interface Protocol Specification: 
 List a set of functions designed to help in the maintenance and support of a network of capture terminals, for example checking terminal’s status via a Keep-alive message. This API is designed to support ATIOnet’s own line of capture and gateway devices and thus is a reserved protocol.
 
 In addition to one or more protocol specifications, Integration Projects must have an “Integration Scope Document” detailing the feature-set to be implemented by the capture system, which also defines the acceptance criteria for the project.
