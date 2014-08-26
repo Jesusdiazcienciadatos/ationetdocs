@@ -79,11 +79,11 @@
 ## Overview
 ATIOnet Authorization Engine evaluates authorization requests using a three-step process:
 
-- Validations. First transaction requests are inspected against formatting defects, attack intents, and data integrity issues.
-- Rules processing. The engine checks whether the transaction can happen based on restrictions configured directly to to the sub-account or inherited from the location, the contract, the classification or the groups to which the sub-account belongs to. These set of rules might restrict the execution of the transaction but also the amount and product to be served.
-- If the transaction can happen, the amount or volume resulting after rules processing is sent to the current accounts sub-system to check if it can be approved based on the contract's or the sub-account's balance.
+- Validations: First, transaction requests are inspected against formatting defects, attack intents, and data integrity issues.
+- Rules processing: Following, the engine checks whether the transaction can happen based on restrictions configured directly to the sub-account or inherited from the location, the contract, the classification or the groups to which the sub-account belongs to. These set of rules might restrict the execution of the transaction but also the amount and product to be served.
+- Finally, if the transaction can happen, the amount or volume resulting after rules processing is sent to the current accounts sub-system, to check if it can be approved based on the contract's or the sub-account's balance.
 
-As a result of the evaluation process, a transaction can be _declined_, _approved_, or _partially approved_. Depending on the Terminal's and protocol's capabilities a partial approval could be converted on a decline response. Also, there is a special decline situation called **Re-prompt**. Able Terminals can understand a re-prompt decline and just have the user enter an addtional piece of data, instead of completely failing the sale, whith this new prompt the transaction is re-sent to the host to be re-evaluated.
+As a result of the evaluation process, a transaction can be _declined_, _approved_, or _partially approved_. Depending on the Terminal's and protocol's capabilities a partial approval could be converted on a decline response. Also, there is a special decline situation called **Re-prompt**. Some Terminals can understand a re-prompt decline and just have the user enter an addtional piece of data, instead of completely rejecting the sale, whith this new prompt the transaction is re-sent to the host to be re-evaluated.
 
 > ATIOnet always approves using the most restricting criteria 
 
@@ -93,7 +93,7 @@ Let's define _Restriction_ as any system behavior that limits some dimension of 
 The _dimensions_ of the restrictions are:
 
 - Location: **Where** a transaction can be performed
-- Temporal: **When**, certan days, days/time, fixed from/to dates.
+- Temporal: **When**, certain days, days/time, fixed from/to dates.
 - Value: **How much** money or product volume can be authorized
 - Object: **What** product(s) and services can be charged
 - Cualification: complementary **data** included during transaction capture (prompting) plus the operative **condition** (for example: offline or contingency entry method)
@@ -150,7 +150,7 @@ The Balance is the available purchase limit of a Contract or sub-account (Vehicl
 A Company contract can be Credit or Debit, but also may have three possible ways to maintain the balance.
 
 - **Balance Dispersion Mode**: In this mode, the effective balance is maintained at the sub-account level (each Vehicle or each Driver); meaning that no matter the balance of the Contract, the authorization request will be evaluated against the sub-account balance. This implies that after depositing values on the Contract -or renewing the period credit allowance- the Contract balance must be distributed to the sub-accounts by the Company via an automatic or manual Balance Dispersion transaction.
-- **Contract Balance**: Is the opposite of the Dispersion Mode. In this mode, the balance is maintained at the Contract level, all sub-account consume from the global balance and no dispersion operation is needed.
+- **Contract Balance**: Is the opposite of the Dispersion Mode. In this mode, the balance is maintained at the Contract level, all sub-accounts consume from the global balance and no dispersion operation is needed.
 - **Autofill**: This is a special mode, only available for Homebase subscription. In this mode, the current accounts sub-system is virtually nullified. Each time a transaction authorizaiton is requested the subsystem triggers an automatic deposit to the Contract or sub-account to compensate for the consumption. This mode is not available on Retail and Network subscribers.
 
 Please refer to the document AN-Company_Contract-TechGuide.en for further information on Balances and Contracts.
