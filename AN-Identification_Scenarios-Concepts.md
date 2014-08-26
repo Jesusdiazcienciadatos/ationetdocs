@@ -4,7 +4,7 @@
 
 # ATIOnet Identification Scenarios
 
-> **About:** This document describes the different possible combination of steps and data request procedures to identify a cardholder that can be implemented on ATIOnet.
+> **About:** This document describes the different possible combinations of steps and data request procedures to identify a cardholder that can be implemented on ATIOnet.
 These capabilities may vary according to the capture device, protocol and susbscription model.  		
 
 </br>
@@ -90,24 +90,24 @@ These capabilities may vary according to the capture device, protocol and susbsc
 
 <dl>
   <dt>Terminal</dt>
-  <dd>Te device or system in charge of handling the interaction with the cardholder and/or the attendant</dd>
-  <dt>Carholder</dt>
-  <dd>The person, vehilce or unit who is identified as the subject of the transaction</dd>
+  <dd>The device or system in charge of handling the interaction with the cardholder and/or the attendant and, eventually, controlling the fuel delivery.</dd>
+  <dt>Cardholder</dt>
+  <dd>The person, vehicle or unit that is identified as the subject of the transaction</dd>
   <dt>Sub-account</dt>
   <dd>A particular account whithin a Contract with an assigned balance</dd>
   <dt>Identification</dt>
-  <dd>Device, media support or piece of information presented to a capture device in order to identify a cardholder</dd>
+  <dd>Any mean to identify a cardholder regardless of the technology involved. It can be any type of media support or piece of information presented to a capture device in order to identify a cardholder</dd>
 
 </dl>
 
 <!-- Content starts here -->
 ## Overview
-Every transaction on ATIOnet start with a secure identification of a sub-account to be debited or credit by the transaction. A sub-account can be a Vehicle -or broadly a Unit- or a Driver -broadly a Person.
-On ATIOnet, every transaction impact to a one sub-account and one sub-account only, it is called a sub-account because it is always part of a Contrat (its parent account), but it is common to request two Identifications on the same transaction, usually to identify the Vehicle and the Driver or viceversa.
+Every transaction on ATIOnet starts with a secure identification of a sub-account to be affected (debit or credit) by the transaction. A sub-account can be a Vehicle -or broadly a Unit- or a Driver -broadly a Person.
+On ATIOnet, every transaction impacts a single sub-account, it is called a sub-account because it is always part of a Contrat (its parent account). It is common to request two Identifications on the same transaction, usually to identify the Vehicle and the Driver or viceversa.
 
-On ATIOnet Native Transaction Protocol, there are two Identification set of fields, a Primary ID and a Secondary ID, is up to the Terminal to decide which one is Primary or Secondary but the common practice is to send the ID presented first as the Primary. Most of the Terminals have the capability to capture a second ID and send it as a prompt on the authorization request, ATIOnet is capable of taking such prompt and processing it as a the secondary Identification.
+On ATIOnet Native Transaction Protocol, there are two sets of Identification fields, a Primary ID and a Secondary ID; it is up to the Terminal to decide which one is Primary or Secondary but the common practice is to send the ID presented first as the Primary. Most of the Terminals have the capability to capture a second ID and send it as a prompt on the authorization request. ATIOnet is capable of taking such prompt and processing it as a the secondary Identification.
 
-It is important to only the sub-account linked to the Primary Identification will have their balance impacted for the transaction, the Secondary Identification will be used to perform a two-fold identification capture and may have the related entity affected on its statistics and counters, like quotas or mileage calculation but the money or volume sold will accounted to the Primary sub-account only.
+It is important to note that only the sub-account linked to the Primary Identification will have their balance affected by the transaction; the Secondary Identification will be used to perform a two-fold identification capture and may have the related entities affected on its statistics and counters (like quotas or mileage calculation) but the money or volume sold will be accounted to the Primary sub-account only.
 
 ## Relevant Configuration
 
@@ -132,7 +132,7 @@ Terminals supporting re-prompt functionality can activate prompts of missing inf
 The flag ```Use Driver Id as Driver Card Track``` parameter forces the system to pass the Driver ID prompt as a Secondary Track (secondary identification), instead of taking it as an information-only prompt. This is useful to implement a two-fold authentication on terminals that doesn't accept dual card-swipe.
 
 ### Enforced Vehicle-Driver relation
-Vehicle can be linked to one or more Drivers and viceversa from the Vehicle and Driver administration tools. When the Primary sub-account is linked to another, ATIOnet will automatically enforce a two-fold authentication, meaning that both the Vehicle and the Driver should be identified successfully at capture time and the relation must be satisfied in order to the the transaction approved.
+Vehicle can be linked to one or more Drivers and viceversa from the Vehicle and Driver administration tools. When the Primary sub-account is linked to another, ATIOnet will automatically enforce a two-fold authentication, meaning that both the Vehicle and the Driver should be identified successfully at capture time and the relation must be satisfied in order for the transaction to be approved.
 
 ## Use of PINs
 PINs are not an identification per-se, they are supporting mechanisms to validate that the individual present at capture time is rightfully in posession of the Vehicle and/or Driver ID numbers. Meaning that the actual data to be used as the record locators are the Vehicle ID or the Driver ID, the PINs only add a security layer on top of a solely manual entry.
