@@ -74,6 +74,7 @@ These capabilities may vary according to the capture device, protocol and susbsc
 
 - [Definitions](#definitions)
 - [Overview](#overview)
+- [Identifications and Prompts](#identifications-and-prompts)
 - [Relevant Configuration](#relevant-configuration)
   - [Prompting Rules](#prompting-rules)
   - [Terminal / Controller Configuration](#terminal-controller-configuration)
@@ -109,6 +110,18 @@ On ATIOnet Native Transaction Protocol, there are two Identification set of fiel
 
 It is important to only the sub-account linked to the Primary Identification will have their balance impacted for the transaction, the Secondary Identification will be used to perform a two-fold identification capture and may have the related entity affected on its statistics and counters, like quotas or mileage calculation but the money or volume sold will accounted to the Primary sub-account only.
 
+## Identifications and Prompts
+
+In ATIOnet's language, an **Identification** is the generic name given to any media support, device, or piece of information that could be used to identify a card-holder at transaction-capture time, for example magnetic cards, chipkeys, read-only TAGs, smart-cards, read/write TAGs, 1D and 2D bardcodes, eButtons, and manually-entered codes.</br>
+ATIOnet implements specific features for certain identification technologies, like the Vehicle Installation Flow for AVI's ring TAGs, or reusable and embossable attributes; but the minimum common functionality is that the Terminal is responsible to capture and send the proper Identification ID.
+
+A **Prompt** is a piece of data captured at the site during transaction capture. Prompts are conditional, meaning that can be required or not by ATIOnet to process a transaction request, depending on a combination of configuration and/or business rules. If the Terminal fails to send all required Prompts for a given transaction request, ATIOnet responds with a specific decline code and message, also including the list of prompts that must be sent for the transaction. The Terminal should process the response and re-send the request with the complete information. Prompts usually are codes or values manually entered at the Terminal, but could be preconfigured or calculated values at the Terminal, or directly captured from the Identification media or device.</br>
+Common prompts include Truck ID, Trailer ID, Odometer and Engine hours, known as _Customer data_. But some prompts are related to the identification of the cardholder, as Driver ID and Vehicle ID. 
+
+Certain combinations of operation conditions and a business rules cause that a Prompt is treated as an Identification or a part of an Identification. For example, if a Vehicle is configured to require dual identification (Vehicle plus Driver), ATIOnet expects both the Primary and Secondary tracks to be present on the request or the transaction. But if the terminal system does not support two card swipes, the Terminal in ATIOnet may be configured to use the ```Driver ID``` prompt as the Driver's Identification Track.
+
+
+
 ## Relevant Configuration
 
 ### Prompting Rules
@@ -143,14 +156,14 @@ Although the parameter is ```Vehicle PIN``` or ```Driver PIN```, the PIN is actu
 <table>
   <thead>
     <tr>
-      <td width=40%>Expected Identification behavior</td>
+      <td width=40%>Scenario</td>
       <td>Description / Configuration strategy & Comments</td>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>Single Vehicle</td>
-      <td>Assign at least one Identification to a Vehicle-type sub-account</td>
+      <td>Only the Vehicle Identification is required.Assign at least one Identification to a Vehicle-type sub-account</td>
     </tr>
     <tr>
       <td>Single Driver</td>
