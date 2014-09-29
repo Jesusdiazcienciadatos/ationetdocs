@@ -102,7 +102,7 @@ This document comments the interactions between Terminal and ATIOnet, Regular an
 	</tr>
 	<tr>
 		<td width=50%>
-			<img src="/Content/Includes/AN-Transaction_Flows-Pre_Compl-Normal.png"/>
+			<img src="Content/Includes/AN-Transaction_Flows-Pre_Compl-Normal.png"/>
 		</td>
 		<td>After a local process of capturing transaction and card data, the Terminal sends a Pre-Authorization request to ATIOnet.</br>Request may include an amount or volume and product code; zero requests are also allowed. </br>On Response, ATIOnet sends the authorized amount or volume, authorized product and Authorization Code, which must be reserved and re-sent on the Completion Request.</br>After fuel sale is complete, the Terminal sends a Completion with the actual value and data of the sale, including the Authorization Code received on the Pre-Auth response. </br>Authorization Code is the key to recover the pre-authorization on ATIOnet, and therefore no Completion would be accepted without a valid AuthCode.</td>
 	</tr>
@@ -111,7 +111,7 @@ This document comments the interactions between Terminal and ATIOnet, Regular an
 	</tr>
 	<tr>
 		<td width=40%>
-			<img src="/Content/Includes/AN-Transaction_Flows-Pre_Compl-PreFails.png"/>
+			<img src="Content/Includes/AN-Transaction_Flows-Pre_Compl-PreFails.png"/>
 		</td>
 		<td>In case the Terminal does not receive a Pre-authorizaton response from ATIOnet, approved or declined, the Terminal must send a Zero Completion request to ATIOnet. A Zero Completion is a regular with zero values. </br>As the Pre-Authorization response was never received, and the AuthCode is unknown, the Terminal must include a structure with part of the Pre-Auth request data called OriginalData </br>Terminal may then automatically retry the Pre-Authorization or completely fail the transaction and run a new capture flow. </td>
 	</tr>
@@ -120,7 +120,7 @@ This document comments the interactions between Terminal and ATIOnet, Regular an
 	</tr>
 	<tr>
 		<td width=40%>
-			<img src="/Content/Includes/AN-Transaction_Flows-Pre_Compl-SaleFail.png"/>
+			<img src="Content/Includes/AN-Transaction_Flows-Pre_Compl-SaleFail.png"/>
 		</td>
 		<td>When the sale process fails or is cancelled before reaching the point to send the Completion, a Zero Completion must be sent to release the balance retention set by the Pre-Auth. </br>In this case, as the Pre-Auth was received, the Zero Completion would use the AuthCode instead of the OriginalData</td>
 	</tr>
@@ -129,7 +129,7 @@ This document comments the interactions between Terminal and ATIOnet, Regular an
 	</tr>
 	<tr>
 		<td width=40%>
-			<img src="/Content/Includes/AN-Transaction_Flows-Pre_Compl-Retries.png"/>
+			<img src="Content/Includes/AN-Transaction_Flows-Pre_Compl-Retries.png"/>
 		</td>
 		<td>When the Terminal fails to get a response a Completion request, this must be retried; there is no maximum number of retries from ATIOnet side.</br>ATIONet will process the requirement only once and will automatically repeat the same response to any following request with the same TSN and AuthCode coming from the same Terminal.  </br>When a Completion request is successfully processed, ATIOnet assignes the Completed status, and when is responded the status is changed to Confirmed. Transactions Completed (not sent), are shown on the Exceptions Report, because the Host can't confirm that the Terminal received them correctly.</td>
 	</tr>
@@ -143,7 +143,7 @@ This document comments the interactions between Terminal and ATIOnet, Regular an
 	</tr>
 	<tr>
 		<td width=50%>
-			<img src="/Content/Includes/AN-Transaction_Flows-Sale-Normal.png"/>
+			<img src="Content/Includes/AN-Transaction_Flows-Sale-Normal.png"/>
 		</td>
 		<td>Once the Terminal reached the Totalize step of the sale transaction, sends a Sale request to ATIOnet.</br>ATIOnet answer with a HTTP Response</td>
 	</tr>
@@ -152,7 +152,7 @@ This document comments the interactions between Terminal and ATIOnet, Regular an
 	</tr>
 	<tr>
 		<td width=40%>
-			<img src="/Content/Includes/AN-Transaction_Flows-Sale-Retry.png"/>
+			<img src="Content/Includes/AN-Transaction_Flows-Sale-Retry.png"/>
 		</td>
 		<td>In case the Terminal doesn't receive the response from ATIOnet, approved or declined, it may retry following its own business rules. </br> If the Sales request was already received and processed, ATIOnet will keep repeating the same response message to each request with the same TSN sent by the Terminal.</td>
 	</tr>
@@ -168,7 +168,7 @@ Refunds proceed exactly in the same way than a Post-paid Sale transaction, Regul
 	</tr>
 	<tr>
 		<td width=50%>
-			<img src="/Content/Includes/AN-Transaction_Flows-BatchClose-Normal.png"/>
+			<img src="Content/Includes/AN-Transaction_Flows-BatchClose-Normal.png"/>
 		</td>
 		<td>Batch Close is not mandatory in ATIOnet, its use and opportunity depends on the integration process with each Terminal, or its use is up to the end-user.</br> Batch Close message sends counters and totalizers for each type of transaction sent by the Terminal. Triggered by the message, ATIOnet processes its own counters and totalizers and Approves the Batch or Declined with or without the instruction to perform a Batch Upload, this will depend on the Terminal type configured for the site.</td>
 	</tr>
@@ -177,7 +177,7 @@ Refunds proceed exactly in the same way than a Post-paid Sale transaction, Regul
 	</tr>
 	<tr>
 		<td width=40%>
-			<img src="/Content/Includes/AN-Transaction_Flows-BatchClose-Upload.png"/>
+			<img src="Content/Includes/AN-Transaction_Flows-BatchClose-Upload.png"/>
 		</td>
 		<td>In case the Terminal's figures don't match ATIOnet's calculations and an Upload is required, the Terminal must re-send requests for each transaction included in the failed Batch. Transactions must be sent with a ProcessingCode indicating that is a BatchUpload. All firm transactions must be sent: Completions, Sales and Refunds, both Approved and Declined. Pre-Authorization are not accepted. </br>New transactions from the next (current) batch can be sent during a Batch Upload sequence. </br>Batch Upload sequence ends with a new Batch Close message (retry of the rejected original). ATIOnet will always approve this Batch with a special response code "Approved pending review"</td>
 	</tr>
