@@ -36,5 +36,9 @@
 	* [Native Interface API Protocol](https://github.com/atioint/ationetdocs/blob/master/AN-Native_Interface_Protocol-Spec.md)
 	* [Transaction Flows](https://github.com/atioint/ationetdocs/blob/master/AN-Transaction_Flows-TechGuide.md)
 	* [REST API Documentation](https://github.com/atioint/ationetdocs/blob/master/dummy.md)
+	* [Native Loyalty Protocol](https://github.com/atioint/ationetdocs/blob/master/AN-Native_Loyalty_Protocol-Spec.md)
+* Loyalty
+	* [Accumulation Logic](https://github.com/atioint/ationetdocs/blob/master/AN-LTY-Accumulation_Logic.md)
+
 
 
