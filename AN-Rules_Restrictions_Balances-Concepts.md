@@ -1,4 +1,4 @@
-![ationetlogo](Content/Images/ATIOnetLogo_250x70.png) 
+![](Content/Images/ATIOnetLogo_250x70.png) 
 
 ***
 
@@ -60,12 +60,12 @@
 ### Contents
 <!-- MarkdownTOC depth=3 -->
 
-- [Overview](#overview)
-- [Restrictions](#restrictions)
-- [Rules](#rules)
-	- [Types of Rules](#types-of-rules)
-	- [Subjects for Rules](#subjects-for-rules)
-- [Balances](#balances)
+- Overview
+- Restrictions
+- Rules
+	- Types of Rules
+	- Subjects for Rules
+- Balances
 
 <!-- /MarkdownTOC -->
 

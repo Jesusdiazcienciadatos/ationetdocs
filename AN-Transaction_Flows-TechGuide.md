@@ -1,4 +1,4 @@
-![ationetlogo](/Content/Images/ATIOnetLogo_250x70.png) 
+![](Content/Images/ATIOnetLogo_250x70.png) 
 
 ***
 
@@ -61,12 +61,12 @@ The information contained here is complementary of the Protocol manuals and it i
 ### Contents
 <!-- MarkdownTOC depth=3 -->
 
-- [Definitions](#definitions)
-- [Scope](#scope)
-- [Pre-Authorization & Completion](#preauthorization-completion)
-- [Post-paid Sale](#postpaid-sale)
-- [Refunds](#refunds)
-- [Batch Close](#batch-close)
+- Definitions
+- Scope
+- Pre-Authorization & Completion
+- Post-paid Sale
+- Refunds
+- Batch Close
 
 <!-- /MarkdownTOC -->
 

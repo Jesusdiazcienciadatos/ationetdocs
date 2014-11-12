@@ -1,4 +1,4 @@
-![ationetlogo](/Content/Images/ATIOnetLogo_250x70.png) 
+![](Content/Images/ATIOnetLogo_250x70.png) 
 
 ***
 
@@ -123,7 +123,7 @@ To install the **ATIOnet Local Agent** follow the procedure bellow.
 4. Follow Setup intructions
 5. After installation is finished configure ATIOnet LA.
 6. 
-![inst_1](/Content/Images/ATIOnetLogo_250x70.png)
+![inst_1](Content/Images/ATIOnetLogo_250x70.png)
 Figure 1.
 
 

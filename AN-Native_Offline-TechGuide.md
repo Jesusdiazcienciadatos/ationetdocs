@@ -1,4 +1,4 @@
-![ationetlogo](Content/Images/ATIOnetLogo_250x70.png) 
+![](Content/Images/ATIOnetLogo_250x70.png) 
 
 ***
 
@@ -64,17 +64,17 @@ ATIOnet's offline authorization functionality requires the ATIOnet Local Agent c
 ### Table of Content
 <!-- MarkdownTOC depth=3 -->
 
-- [Definitions](#definitions)
-- [Scope of service](#scope-of-service)
-  - [Requirements](#requirements)
-  - [Architecture Diagram](#architecture-diagram)
-- [Functional Overview](#functional-overview)
-- [Offline Catalogs creation](#offline-catalogs-creation)
-  - [Catalog Export Process](#catalog-export-process)
-- [Catalog Download and application](#catalog-download-and-application)
-- [Transaction Processing](#transaction-processing)
-- [Catalog Store](#catalog-store)
-- [Balance penalty based on catalog aging](#balance-penalty-based-on-catalog-aging)
+- Definitions
+- Scope of service
+  - Requirements
+  - Architecture Diagram
+- Functional Overview
+- Offline Catalogs creation
+  - Catalog Export Process
+- Catalog Download and application
+- Transaction Processing
+- Catalog Store
+- Balance penalty based on catalog aging
 
 <!-- /MarkdownTOC -->
 

@@ -1,4 +1,4 @@
-![ationetlogo](Content/Images/ATIOnetLogo_250x70.png) 
+![](Content/Images/ATIOnetLogo_250x70.png) 
 
 ***
 
@@ -72,15 +72,15 @@ These capabilities may vary according to the capture device, protocol and susbsc
 ### Table of Content
 <!-- MarkdownTOC depth=3 -->
 
-- [Definitions](#definitions)
-- [Overview](#overview)
-- [Identifications and Prompts](#identifications-and-prompts)
-- [Relevant Configuration](#relevant-configuration)
-  - [Prompting Rules](#prompting-rules)
-  - [Terminal / Controller Configuration](#terminal-controller-configuration)
-  - [Enforced Vehicle-Driver relation](#enforced-vehicledriver-relation)
-- [Use of PINs](#use-of-pins)
-- [Scenarios](#scenarios)
+- Definitions
+- Overview
+- Identifications and Prompts
+- Relevant Configuration
+  - Prompting Rules
+  - Terminal / Controller Configuration
+  - Enforced Vehicle-Driver relation
+- Use of PINs
+- Scenarios
 
 <!-- /MarkdownTOC -->
 
