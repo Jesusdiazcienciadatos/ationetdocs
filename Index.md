@@ -39,6 +39,7 @@
 	* [Native Loyalty Protocol](https://github.com/atioint/ationetdocs/blob/master/AN-Native_Loyalty_Protocol-Spec.md)
 * Loyalty
 	* [Accumulation Logic](https://github.com/atioint/ationetdocs/blob/master/AN-LTY-Accumulation_Logic.md)
+	* [Expiration Logic](https://github.com/atioint/ationetdocs/blob/master/AN-LTY-Expiration_Logic.md)
 
 
 
