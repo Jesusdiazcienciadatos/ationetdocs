@@ -1,6 +1,5 @@
 ![ationetlogo](Content/Images/ATIOnetLogo_250x70.png)
-
-#ATIONet - Native Transaction Protocol Specification v1.2#
+# ATIONet - Native Transaction Protocol Specification v1.2 #
 
 <table>
 	<tr>

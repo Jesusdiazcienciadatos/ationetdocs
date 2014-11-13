@@ -1,8 +1,6 @@
 ![ationetlogo](Content/Images/ATIOnetLogo_250x70.png) 
+# ATIOnet Native Offline Technical Guide
 
-***
-
-#ATIOnet Native Offline Technical Guide
 > **About:** This document describes the complete scope for ATIOnet's Offline Subsystem.	
 ATIOnet's offline authorization functionality requires the ATIOnet Local Agent component; please refer to the Local Agent documentation for more details about it.	
 

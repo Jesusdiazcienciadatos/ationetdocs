@@ -1,8 +1,5 @@
 ![ationetlogo](Content/Images/ATIOnetLogo_250x70.png) 
-
-***
-
-#ATIOnet Fleet Organization
+# ATIOnet Fleet Organization
 
 > **About:** This document explains the different criteria and tools to map a complex or large fleet of vehicles to ATIOnet, to simplify its administration and control.   	
 

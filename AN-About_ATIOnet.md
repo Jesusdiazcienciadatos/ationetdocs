@@ -1,21 +1,20 @@
 ![ationetlogo](Content/Images/ATIOnetLogo_250x70.png) 
-
-***
-
 # About **ATIOnet**
-***
-
 
 #### Contents
 
-- [About ATIO International](#about-atio-international)
-	- [ATIO International solutions cover the following areas:](#atio-international-solutions-cover-the-following-areas)
-	- [About **ATIOnet**](#about-ationet)
-		- [What size is right for me?](#what-size-is-right-for-me)
-		- [Is my business big enough for **ATIOnet**?](#is-my-business-big-enough-for-ationet)
-		- [What’s in **ATIOnet** for me?](#whats-in-ationet-for-me)
-- [**ATIOnet** Value Proposition](#ationet-value-proposition)
+<!-- MarkdownTOC depth=4 -->
 
+- About ATIO International
+	- ATIO International solutions cover the following areas:
+	- About **ATIOnet**
+		- What size is right for me?
+		- Is my business big enough for **ATIOnet**?
+		- What’s in **ATIOnet** for me?
+	- Key considerations when implementing **ATIOnet**
+- **ATIOnet** Value Proposition
+
+<!-- /MarkdownTOC -->
 
 
 <!-- Optional Terms & Definition section -->

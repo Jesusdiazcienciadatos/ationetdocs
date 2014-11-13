@@ -1,9 +1,5 @@
 ![ationetlogo](Content/Images/ATIOnetLogo_250x70.png) 
-
-***
-
 # ATIOnet Administrator's Getting Started
-
 
 
 #### About ATIOnet

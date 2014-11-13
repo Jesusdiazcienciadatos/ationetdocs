@@ -1,7 +1,4 @@
 ![ationetlogo](Content/Images/ATIOnetLogo_250x70.png) 
-
-***
-
 # ATIOnet Local Agent Technical Guide
 
 > **About:** This document provides setup and service instructions and background for the ATIOnet Local Agent, software-only version.    	

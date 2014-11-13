@@ -1,5 +1,4 @@
 ![ationetlogo](Content/Images/ATIOnetLogo_250x70.png)
-
 # ATIONet - Native Loyalty Protocol Specification v1.0
 
 <table>

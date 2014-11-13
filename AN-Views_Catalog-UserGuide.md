@@ -1,7 +1,4 @@
 ![ationetlogo](Content/Images/ATIOnetLogo_250x70.png) 
-
-***
-
 #ATIOnet Views & Reports User Guide
 
 > **About:** This document lists the full catalog of Views and Reports available on ATIOnet. For information about Administrative resources please check the Administrative Guides, the focus of this document is data reporting.

@@ -1,6 +1,4 @@
-![ationetlogo](https://github.com/atioint/ationetdocs/blob/master/Content/Images/ATIOnetLogo_250x70.png)
-<!-- ![ationetlogo abc](Content/Images/ATIOnetLogo_250x70.png) -->
-
+![ationetlogo abc](Content/Images/ATIOnetLogo_250x70.png)
 # ATIONet - Logic of Expiration of Points
 
 <table>

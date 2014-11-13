@@ -1,6 +1,5 @@
 ![ationetlogo](Content/Images/ATIOnetLogo_250x70.png)
-
-#ATIONet Native Interface API Protocol Specification#
+# ATIONet Native Interface API Protocol Specification
 
 <table>
 	<tr>

@@ -1,7 +1,4 @@
 ![ationetlogo](Content/Images/ATIOnetLogo_250x70.png) 
-
-***
-
 # ATIOnet Identification Scenarios
 
 > **About:** This document describes the different possible combinations of steps and data request procedures to identify a cardholder that can be implemented on ATIOnet.

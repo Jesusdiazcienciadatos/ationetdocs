@@ -1,7 +1,4 @@
 ![ationetlogo](Content/Images/ATIOnetLogo_250x70.png) 
-
-***
-
 # ATIOnet Supported Terminals List
 
 > **About:** This documents list the Capture Terminals and Systems officially supported by ATIOnet.
