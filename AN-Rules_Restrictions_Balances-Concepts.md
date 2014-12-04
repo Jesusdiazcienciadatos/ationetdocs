@@ -1,5 +1,5 @@
 ![ationetlogo](Content/Images/ATIOnetLogo_250x70.png) 
-#ATIOnet Rules, Restrictions and Balances
+# ATIOnet Rules, Restrictions and Balances
 
 > **About:** This document discusses the available rules types and their interaction with sub-account balances and contract balance processing configuration at transaction authorization time. ATIOnet supports different ways to implement restrictions and limits; this information should be useful to plan ahead the best suited alternative for each case. 	
 
