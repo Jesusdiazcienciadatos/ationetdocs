@@ -106,8 +106,8 @@ d) Display
 
 <table>
 	<tr>
-		<td>Imagen</td>
-		<td>Descripcion</td>
+		<td width=50%>Imagen</td>
+		<td width=50%>Descripcion</td>
 	</tr>
 		<tr>
 			<td><img src="Content/Images/standAloneTerminal/2.png"></td>
@@ -183,8 +183,8 @@ En general toda la operación de la terminal se realiza con caracteres numérico
 
 <table>
 	<tr>
-		<td>Imagen</td>
-		<td>Descripcion</td>
+		<td width=50%>Imagen</td>
+		<td width=50%>Descripcion</td>
 	</tr>
 	<tr>
 		<td>
@@ -252,8 +252,8 @@ Durante toda la operación de la TPV se utilizan las teclas inferiores de color 
 
 <table>
 	<tr>
-		<td>Imagen</td>
-		<td>Descripcion</td>
+		<td width=50%>Imagen</td>
+		<td width=50%>Descripcion</td>
 	</tr>
 	<tr>
 		<td><img src="Content/Images/standAloneTerminal/3.png"></td>
