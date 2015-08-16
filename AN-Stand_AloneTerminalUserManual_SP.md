@@ -293,8 +293,8 @@ Durante toda la operación de la TPV se utilizan las teclas inferiores de color 
 
 <table>
 	<tr>
-		<td>Imagen</td>
-		<td>Descripcion</td>
+		<td width=50%>Imagen</td>
+		<td width=50%>Descripcion</td>
 	</tr>
 	<tr>
 		<td><img src="Content/Images/standAloneTerminal/19.png"></td>
@@ -349,8 +349,8 @@ Durante toda la operación de la TPV se utilizan las teclas inferiores de color 
 
 <table>
 	<tr>
-		<td>Imagen</td>
-		<td>Descripcion</td>
+		<td width=50%>Imagen</td>
+		<td width=50%>Descripcion</td>
 	</tr>
 	<tr>
 		<td><img src="Content/Images/standAloneTerminal/26.png"></td>
@@ -386,8 +386,8 @@ Durante toda la operación de la TPV se utilizan las teclas inferiores de color 
 
 <table>
 	<tr>
-		<td>Imagen</td>
-		<td>Descripcion</td>
+		<td width=50%>Imagen</td>
+		<td width=50%>Descripcion</td>
 	</tr>
 	<tr>
 		<td><img src="Content/Images/standAloneTerminal/29.png"></td>
@@ -422,8 +422,8 @@ Durante toda la operación de la TPV se utilizan las teclas inferiores de color 
 
 <table>
 	<tr>
-		<td>Imagen</td>
-		<td>Descripcion</td>
+		<td width=50%>Imagen</td>
+		<td width=50%>Descripcion</td>
 	</tr>
 	<tr>
 		<td><img src="Content/Images/standAloneTerminal/29.png"></td>
@@ -481,8 +481,8 @@ Durante toda la operación de la TPV se utilizan las teclas inferiores de color 
 
 <table>
 	<tr>
-		<td>Imagen</td>
-		<td>Descripcion</td>
+		<td width=50%>Imagen</td>
+		<td width=50%>Descripcion</td>
 	</tr>
 	<tr>
 		<td><img src="Content/Images/standAloneTerminal/29.png"></td>
@@ -522,8 +522,8 @@ Durante toda la operación de la TPV se utilizan las teclas inferiores de color 
 
 <table>
 	<tr>
-		<td>Imagen</td>
-		<td>Descripcion</td>
+		<td width=50%>Imagen</td>
+		<td width=50%>Descripcion</td>
 	</tr>
 	<tr>
 		<td><img src="Content/Images/standAloneTerminal/44.png"></td>
@@ -538,8 +538,8 @@ Durante toda la operación de la TPV se utilizan las teclas inferiores de color 
 
 <table>
 	<tr>
-		<td>Imagen</td>
-		<td>Descripcion</td>
+		<td width=50%>Imagen</td>
+		<td width=50%>Descripcion</td>
 	</tr>
 	<tr>
 		<td><img src="Content/Images/standAloneTerminal/45.png"></td>
@@ -573,8 +573,8 @@ Durante toda la operación de la TPV se utilizan las teclas inferiores de color 
 
 <table>
 	<tr>
-		<td>Imagen</td>
-		<td>Descripcion</td>
+		<td width=50%>Imagen</td>
+		<td width=50%>Descripcion</td>
 	</tr>
 	<tr>
 		<td><img src="Content/Images/standAloneTerminal/49.png"></td>
@@ -596,8 +596,8 @@ Durante toda la operación de la TPV se utilizan las teclas inferiores de color 
 
 <table>
 	<tr>
-		<td>Imagen</td>
-		<td>Descripcion</td>
+		<td width=50%>Imagen</td>
+		<td width=50%>Descripcion</td>
 	</tr>
 	<tr>
 		<td><img src="Content/Images/standAloneTerminal/51.png"></td>
@@ -632,8 +632,8 @@ Para ingresar al Menú de Configuración presione la opción (8) en el menú de 
 
 <table>
 	<tr>
-		<td>Imagen</td>
-		<td>Descripcion</td>
+		<td width=50%>Imagen</td>
+		<td width=50%>Descripcion</td>
 	</tr>
 	<tr>
 		<td><img src="Content/Images/standAloneTerminal/54.png"></td>
@@ -664,8 +664,8 @@ Para ingresar al Menú de Configuración presione la opción (8) en el menú de 
 
 <table>
 	<tr>
-		<td>Imagen</td>
-		<td>Descripcion</td>
+		<td width=50%>Imagen</td>
+		<td width=50%>Descripcion</td>
 	</tr>
 	<tr>
 		<td><img src="Content/Images/standAloneTerminal/57.png"></td>
@@ -684,8 +684,8 @@ Para ingresar al Menú de Configuración presione la opción (8) en el menú de 
 
 <table>
 	<tr>
-		<td>Imagen</td>
-		<td>Descripcion</td>
+		<td width=50%>Imagen</td>
+		<td width=50%>Descripcion</td>
 	</tr>
 	<tr>
 		<td><img src="Content/Images/standAloneTerminal/58.png"></td>
@@ -718,8 +718,8 @@ Para ingresar al Menú de Configuración presione la opción (8) en el menú de 
 
 <table>
 	<tr>
-		<td>Imagen</td>
-		<td>Descripcion</td>
+		<td width=50%>Imagen</td>
+		<td width=50%>Descripcion</td>
 	</tr>
 	<tr>
 		<td><img src="Content/Images/standAloneTerminal/62.png"></td>
@@ -740,8 +740,8 @@ Para ingresar al Menú de Configuración presione la opción (8) en el menú de 
 
 <table>
 	<tr>
-		<td>Imagen</td>
-		<td>Descripcion</td>
+		<td width=50%>Imagen</td>
+		<td width=50%>Descripcion</td>
 	</tr>
 	<tr>
 		<td><img src="Content/Images/standAloneTerminal/64.png"></td>
