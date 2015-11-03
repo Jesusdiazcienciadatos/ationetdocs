@@ -3,71 +3,39 @@
 
 <table>
 	<tr>
-		<th colspan="2" align="left">
-			Document Information
-		</th>
+		<th colspan="2" align="left">Document Information</th>
 	</tr>
 	<tr>
-		<td>
-			File:
-		</td>
-		<td>
-			ATIONet-Native_Retail_Protocol-Spec-v1
-		</td>
+		<td>File:</td>
+		<td>ATIONet-Native_Retail_Protocol-Spec-v1</td>
 	</tr>
 	<tr>
-		<td>
-			Doc Version:
-		</td>
-		<td>
-			1.0
-		</td>
+		<td>Doc Version:</td>
+		<td>1.0</td>
 	</tr>
 	<tr>
-		<td>
-			Release Date:
-		</td>
-		<td>
-			20, March 2015
-		</td>
+		<td>Release Date:</td>
+		<td>20, March 2015</td>
 	</tr>
 	<tr>
-		<td>
-			Author:
-		</td>
-		<td>
-			ATIO International LLC
-		</td>
+		<td>Author:</td>
+		<td>ATIO International LLC</td>
 	</tr>
 </table>
 
 <table>
 	<tr>
-		<th colspan="3" align="left">
-			Change Log
-		</th>
+		<th colspan="3" align="left">Change Log</th>
 	</tr>
 	<tr>
-		<td>
-			Ver.
-		</td>
-		<td>
-			Date
-		</td>
-		<td>
-			Change Summary
-		</td>
+		<td>Ver.</td>
+		<td>Date</td>
+		<td>Change Summary</td>
 	</tr>
 	<tr valign="top">
-		<td>
-			<p>1.0</p>
-		</td>
-		<td>
-			<p>20/March/2015</p>
-		</td>
-		<td>
-			<p>Initial version.</p>
-		</td>
+		<td>1.0</td>
+		<td>20/March/2015</td>
+		<td>Initial version.</td>
 	</tr>
 </table>
 
@@ -90,8 +58,9 @@
 - Field Descriptions
 - Retail Transaction Request (RREQ) Message Format
 - Retail Transaction Response (RRESP) Message Format
+- Retail Summary Movements Request (RSUMREQ) Message Format
+- Retail Summary Movements Response (RSUMRESP) Message Format
 - Transaction Data Structures
-	- Customer Data
 - Reference Tables
 	- Transaction Codes
 	- Currency Codes
@@ -157,37 +126,27 @@ API URI: native.ationet.com/v1/retail
 <table>
 	<thead>
 		<tr valign="center">
-			<th rowspan="2" width="250" align="left">
-				Name
-			</th>
-			<th colspan="2" align="center">
-				Protocol Ver.
-			</th>
-			<th rowspan="2" align="left">
-				Description
-			</th>
+			<th rowspan="2" width="250" align="left">Name</th>
+			<th colspan="2" align="center">Protocol Ver.</th>
+			<th rowspan="2" align="left">Description</th>
 		</tr>
-		 <tr valign="top">
-			  <th align="center">
-					Initial
-			  </th>
-			  <th align="center">
-					Change
-			  </th>
+		<tr valign="top">
+			<th align="center">	Initial</th>
+			<th align="center">Change</th>
 		 </tr>
 	</thead>
 	<tbody>
 		 <tr valign="top">
-			<td>
-				<p align="left">Sale Records Upload</p>
-			</td>
-			<td>
-				<p align="center">1.0</p>
-			</td>
+			<td align="left">Sale Records Upload</td>
+			<td align="center">1.0</td>
 			<td></td>
-			<td>
-				<p align="left">Used to post a sale by sale POS data.</p>
-			</td>
+			<td align="left">Used to post a sale by sale POS data.</td>
+		 </tr>
+		 <tr valign="top">
+			<td align="left">Movements Summary Upload</td>
+			<td align="center">1.0</td>
+			<td></td>
+			<td align="left">Used to post summary shift data from POS.</td>
 		 </tr>
 	</tbody>
 </table>
@@ -280,229 +239,100 @@ The Host will return the Authorization Code on all approved transactions.
 <table>
 	<thead>
 		<tr valign="top">
-			<th align="left">
-				Field Name
-			</th>
-			<th align="center">
-				Size
-			</th>
-			<th align="left" width="200">
-				Type
-			</th>
-			<th align="left">
-				Condition
-			</th>
-			<th align="left">
-				Descriptions/Field Value(s)
-			</th>
+			<th align="left">Field Name</th>
+			<th align="center">Size</th>
+			<th align="left" width="200">Type</th>
+			<th align="left">Condition</th>
+			<th align="left">Descriptions/Field Value(s)</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr valign="top">
-			<td>
-				<p align="left">ApplicationType</p>
-			</td>
-			<td>
-				<p align="left">4</p>
-			</td>
-			<td>
-				<p align="left">string</p>
-			</td>
-			<td>
-				<p align="left">Required</p>
-			</td>
-			<td>
-				<p align="left">Always “LTY” Loyalty System</p>
-			</td>
+			<td align="left">ApplicationType</td>
+			<td align="left">4</td>
+			<td align="left">string</td>
+			<td align="left">Required</td>
+			<td align="left">Always “LTY” Loyalty System</td>
 		</tr>
 		<tr valign="top">
-			<td>
-				<p align="left">ProcessingMode</p>
-			</td>
-			<td>
-				<p align="left">1</p>
-			</td>
-			<td>
-				<p align="left">string</p>
-			</td>
-			<td>
-				<p align="left">Required</p>
-			</td>
-			<td>
-				<p align="left">Always “0” = Host Capture Only in this version.</p>
-			</td>
+			<td align="left">ProcessingMode</td>
+			<td align="left">1</td>
+			<td align="left">string</td>
+			<td align="left">Required</td>
+			<td align="left">Always “0” = Host Capture Only in this version.</td>
 		</tr>
 		<tr valign="top">
-			<td>
-				<p align="left">MessageFormatVersion</p>
-			</td>
-			<td>
-				<p align="left">3</p>
-			</td>
-			<td>
-				<p align="left">string</p>
-			</td>
-			<td>
-				<p align="left">Required</p>
-			</td>
-			<td>
-				<p align="left">Current Host Message Version = “1.0”</p>
-			</td>
+			<td align="left">MessageFormatVersion</td>
+			<td align="left">3</td>
+			<td align="left">string</td>
+			<td align="left">Required</td>
+			<td align="left">Current Host Message Version = “1.0”</td>
 		</tr>
 		<tr valign="top">
-			<td>
-				<p align="left">TerminalIdentification</p>
-			</td>
-			<td>
-				<p align="left">Var</p>
-			</td>
-			<td>
-				<p align="left">string</p>
-			</td>
-			<td>
-				<p align="left">Required</p>
-			</td>
-			<td>
-				<p align="left">Terminal Identification</p>
-			</td>
+			<td align="left">TerminalIdentification</td>
+			<td align="left">Var</td>
+			<td align="left">string</td>
+			<td align="left">Required</td>
+			<td align="left">Terminal Identification</td>
 		</tr>
 		<tr valign="top">
-			<td>
-				<p align="left">DeviceTypeIdentifier</p>
-			</td>
-			<td>
-				<p align="left">1</p>
-			</td>
-			<td>
-				<p align="left">string</p>
-			</td>
-			<td>
-				<p align="left">Required</p>
-			</td>
-			<td>
-				<p align="left">“1” = Indoor Payment Terminal
+			<td align="left">DeviceTypeIdentifier</td>
+			<td align="left">1</td>
+			<td align="left">string</td>
+			<td align="left">Required</td>
+			<td align="left">“1” = Indoor Payment Terminal
 				<br>“2” = Outdoor Payment Terminal
 				<br>“3” = Card Reader in Dispenser
-				<br>“4” = Other Self-Service</p>
-			</td>
+				<br>“4” = Other Self-Service</td>
 		</tr>
 		<tr valign="top">
-			<td>
-				<p align="left">SystemModel</p>
-			</td>
-			<td>
-				<p align="left">10</p>
-			</td>
-			<td>
-				<p align="left">string</p>
-			</td>
-			<td>
-				<p align="left">Required</p>
-			</td>
-			<td>
-				<p align="left">Refer to System Model and System Version in Field Description section</p>
-			</td>
+			<td align="left">SystemModel</td>
+			<td align="left">10</td>
+			<td align="left">string</td>
+			<td align="left">Required</td>
+			<td align="left">Refer to System Model and System Version in Field Description section</td>
 		</tr>
 		<tr valign="top">
-			<td>
-				<p align="left">SystemVersion</p>
-			</td>
-			<td>
-				<p align="left">10</p>
-			</td>
-			<td>
-				<p align="left">string</p>
-			</td>
-			<td>
-				<p align="left">Required</p>
-			</td>
-			<td>
-				<p align="left">Refer to System Model and System Version in Field Description section</p>
-			</td>
+			<td align="left">SystemVersion</td>
+			<td align="left">10</td>
+			<td align="left">string</td>
+			<td align="left">Required</td>
+			<td align="left">Refer to System Model and System Version in Field Description section</td>
 		</tr>
 		<tr valign="top">
-			<td>
-				<p align="left">TransactionSequenceNumber</p>
-			</td>
-			<td>
-				<p align="left">Var</p>
-			</td>
-			<td>
-				<p align="left">int</p>
-			</td>
-			<td>
-				<p align="left">Required</p>
-			</td>
-			<td>
-				<p align="left">Refer to Transaction Sequence Number in Field Description section</p>
-			</td>
+			<td align="left">TransactionSequenceNumber</td>
+			<td align="left">Var</td>
+			<td align="left">int</td>
+			<td align="left">Required</td>
+			<td align="left">Refer to Transaction Sequence Number in Field Description section</td>
 		</tr>
 		<tr valign="top">
-			<td>
-				<p align="left">TransactionCode</p>
-			</td>
-			<td>
-				<p align="left">3</p>
-			</td>
-			<td>
-				<p align="left">string</p>
-			</td>
-			<td>
-				<p align="left">Required</p>
-			</td>
-			<td>
-				<p align="left">Refer to Transaction Codes in Reference Tables Section</p>
-			</td>
+			<td align="left">TransactionCode</td>
+			<td align="left">3</td>
+			<td align="left">string</td>
+			<td align="left">Required</td>
+			<td align="left">Refer to Transaction Codes in Reference Tables Section</td>
 		</tr>
 		<tr valign="top">
-			<td>
-				<p align="left">SiteCode</p>
-			</td>
-			<td>
-				<p align="left">10</p>
-			</td>
-			<td>
-				<p align="left">string</p>
-			</td>
-			<td>
-				<p align="left">Required</p>
-			</td>
-			<td>
-				<p align="left">Site ID. Does not need to match an ATIOnet Site in this version</p>
-			</td>
+			<td align="left">SiteCode</td>
+			<td align="left">10</td>
+			<td align="left">string</td>
+			<td align="left">Required</td>
+			<td align="left">Site ID. Does not need to match an ATIOnet Site in this version</td>
 		</tr>
 		<tr valign="top">
-			<td>
-				<p align="left">RegisterCode</p>
-			</td>
-			<td>
-				<p align="left">10</p>
-			</td>
-			<td>
-				<p align="left">string</p>
-			</td>
-			<td>
-				<p align="left">Required</p>
-			</td>
-			<td>
-				<p align="left">Register or Point of Sale ID</p>
-			</td>
+			<td align="left">RegisterCode</td>
+			<td align="left">10</td>
+			<td align="left">string</td>
+			<td align="left">Required</td>
+			<td align="left">Register or Point of Sale ID</td>
 		</tr>
 		<tr valign="top">
-			<td>
-				<p align="left">TransactionTypeCode</p>
-			</td>
-			<td>
-				<p align="left">3</p>
-			</td>
-			<td>
-				<p align="left">string</p>
-			</td>
-			<td>
-				<p align="left">Required</p>
-			</td>
-			<td>
-				<p align="left">“101” = Sale, taxable document
+			<td align="left">TransactionTypeCode</td>
+			<td align="left">3</td>
+			<td align="left">string</td>
+			<td align="left">Required</td>
+			<td align="left">“101” = Sale, taxable document
 				<br>“101” = Sale, non-taxable document
 				<br>“110” = Automatic receipt taxable
 				<br>“111” = Automatic receipt non-taxable
@@ -519,276 +349,113 @@ The Host will return the Authorization Code on all approved transactions.
 			</td>
 		</tr>
 		<tr valign="top">
-			<td>
-				<p align="left">FullDocumentNumber</p>
-			</td>
-			<td>
-				<p align="left">30</p>
-			</td>
-			<td>
-				<p align="left">string</p>
-			</td>
-			<td>
-				<p align="left">Required</p>
-			</td>
-			<td>
-				<p align="left">Transaction's receipt complete numeration, including masking characters if any, as mandated by fiscal regulations</p>
-			</td>
+			<td align="left">FullDocumentNumber</td>
+			<td align="left">30</td>
+			<td align="left">string</td>
+			<td align="left">Required</td>
+			<td align="left">Transaction's receipt complete numeration, including masking characters if any, as mandated by fiscal regulations</td>
+		<tr valign="top">
+			<td align="left">ReferencedFullDocumentNumber</td>
+			<td align="left">30</td>
+			<td align="left">string</td>
+			<td align="left">Conditional</td>
+			<td align="left">When transaction is a Refund, this field must contain the original sale or delivery note being voided, including masking characters if any, as mandated by fiscal regulations</td>
+		<tr valign="top">
+			<td align="left">CashierCode</td>
+			<td align="left">10</td>
+			<td align="left">string</td>
+			<td align="left">Optional</td>
+			<td align="left">Code of user or employee who ringed the sale</td>
 		</tr>
 		<tr valign="top">
-			<td>
-				<p align="left">ReferencedFullDocumentNumber</p>
-			</td>
-			<td>
-				<p align="left">30</p>
-			</td>
-			<td>
-				<p align="left">string</p>
-			</td>
-			<td>
-				<p align="left">Conditional</p>
-			</td>
-			<td>
-				<p align="left">When transaction is a Refund, this field must contain the original sale or delivery note being voided, including masking characters if any, as mandated by fiscal regulations</p>
-			</td>
+			<td align="left">CustomerCode</td>
+			<td align="left">10</td>
+			<td align="left">string</td>
+			<td align="left">Optional</td>
+			<td align="left">Transaction's customer code matching a valid ATIOnet Company Code. When using ATIOnet Companies as customers, Company Data section is not mandatory.</td>
+		<tr valign="top">
+			<td align="left">TransactionAmount</td>
+			<td align="left">Var</td>
+			<td align="left">decimal, signed</td>
+			<td align="left">Required</td>
+			<td align="left">xxxxxxx.xx </br>Grand Total of the transaction</td>
 		</tr>
 		<tr valign="top">
-			<td>
-				<p align="left">CashierCode</p>
-			</td>
-			<td>
-				<p align="left">10</p>
-			</td>
-			<td>
-				<p align="left">string</p>
-			</td>
-			<td>
-				<p align="left">Optional</p>
-			</td>
-			<td>
-				<p align="left">Code of user or employee who ringed the sale</p>
-			</td>
+			<td align="left">CurrencyCode</td>
+			<td align="left">3</td>
+			<td align="left">string</td>
+			<td align="left">Optional</td>
+			<td align="left">Refer to Currency Codes in Reference Tables Section</td>
 		</tr>
 		<tr valign="top">
-			<td>
-				<p align="left">CustomerCode</p>
-			</td>
-			<td>
-				<p align="left">10</p>
-			</td>
-			<td>
-				<p align="left">string</p>
-			</td>
-			<td>
-				<p align="left">Optional</p>
-			</td>
-			<td>
-				<p align="left">Transaction's customer code matching a valid ATIOnet Company Code. When using ATIOnet Companies as customers, Company Data section is not mandatory.</p>
-			</td>
+			<td align="left">ShiftNumber</td>
+			<td align="left">Var</td>
+			<td align="left">string</td>
+			<td align="left">Optional</td>
+			<td align="left">Refer to Shift Number in Field Description section</td>
 		</tr>
 		<tr valign="top">
-			<td>
-				<p align="left">TransactionAmount</p>
-			</td>
-			<td>
-				<p align="left">Var</p>
-			</td>
-			<td>
-				<p align="left">decimal, signed</p>
-			</td>
-			<td>
-				<p align="left">Required</p>
-			</td>
-			<td>
-				<p align="left">xxxxxxx.xx </br>Grand Total of the transaction</p>
-			</td>
+			<td align="left">LocalTransactionDate</td>
+			<td align="left">8</td>
+			<td align="left">int</td>
+			<td align="left">Required</td>
+			<td align="left">Local Transaction Date: yyyymmdd</td>
 		</tr>
 		<tr valign="top">
-			<td>
-				<p align="left">CurrencyCode</p>
-			</td>
-			<td>
-				<p align="left">3</p>
-			</td>
-			<td>
-				<p align="left">string</p>
-			</td>
-			<td>
-				<p align="left">Optional</p>
-			</td>
-			<td>
-				<p align="left">Refer to Currency Codes in Reference Tables Section</p>
-			</td>
+			<td align="left">LocalTransactionTime</td>
+			<td align="left">6</td>
+			<td align="left">int</td>
+			<td align="left">Required</td>
+			<td align="left">Local Transaction Time: hhmmss</td>
 		</tr>
 		<tr valign="top">
-			<td>
-				<p align="left">ShiftNumber</p>
-			</td>
-			<td>
-				<p align="left">Var</p>
-			</td>
-			<td>
-				<p align="left">string</p>
-			</td>
-			<td>
-				<p align="left">Optional</p>
-			</td>
-			<td>
-				<p align="left">Refer to Shift Number in Field Description section</p>
-			</td>
+			<td align="left">ItemsData</td>
+			<td align="left">Var</td>
+			<td align="left">String < ItemsData > </td>
+			<td align="left">Required</td>
+			<td align="left">Refer to Item Data  in the Transaction Data Structures section</td>
 		</tr>
 		<tr valign="top">
-			<td>
-				<p align="left">LocalTransactionDate</p>
-			</td>
-			<td>
-				<p align="left">8</p>
-			</td>
-			<td>
-				<p align="left">int</p>
-			</td>
-			<td>
-				<p align="left">Required</p>
-			</td>
-			<td>
-				<p align="left">Local Transaction Date: yyyymmdd</p>
-			</td>
+			<td align="left">CompanyData</td>
+			<td align="left">Var</td>
+			<td align="left">Dictionary string, string</td>
+			<td align="left">Conditional</td>
+			<td align="left">Refer to Company Data in the Transaction Data Structures section</td>
 		</tr>
 		<tr valign="top">
-			<td>
-				<p align="left">LocalTransactionTime</p>
-			</td>
-			<td>
-				<p align="left">6</p>
-			</td>
-			<td>
-				<p align="left">int</p>
-			</td>
-			<td>
-				<p align="left">Required</p>
-			</td>
-			<td>
-				<p align="left">Local Transaction Time: hhmmss</p>
-			</td>
+			<td align="left">LoyaltyData</td>
+			<td align="left">Var</td>
+			<td align="left">Dictionary string, string</td>
+			<td align="left">Conditional</td>
+			<td align="left">Refer to Loyalty Data in the Transaction Data Structures section</td>
 		</tr>
 		<tr valign="top">
-			<td>
-				<p align="left">ItemsData</p>
-			</td>
-			<td>
-				<p align="left">Var</p>
-			</td>
-			<td>
-				<p align="left">String < ItemsData ></p>
-			</td>
-			<td>
-				<p align="left">Required</p>
-			</td>
-			<td>
-				<p align="left">Refer to Item Data  in the Transaction Data Structures section</p>
-			</td>
+			<td align="left">CustomerData</td>
+			<td align="left">Var</td>
+			<td align="left">Dictionary string, string</td>
+			<td align="left">Conditional</td>
+			<td align="left">Refer to Customer Data in the Transaction Data Structures section</td>
 		</tr>
 		<tr valign="top">
-			<td>
-				<p align="left">CompanyData</p>
-			</td>
-			<td>
-				<p align="left">Var</p>
-			</td>
-			<td>
-				<p align="left">Dictionary<string, string></p>
-			</td>
-			<td>
-				<p align="left">Conditional</p>
-			</td>
-			<td>
-				<p align="left">Refer to Company Data in the Transaction Data Structures section</p>
-			</td>
+			<td align="left">DocumentData</td>
+			<td align="left">Var</td>
+			<td align="left">Dictionary string, string</td>
+			<td align="left">Required</td>
+			<td align="left">Refer to Document Data in the Transaction Data Structures section</td>
 		</tr>
 		<tr valign="top">
-			<td>
-				<p align="left">LoyaltyData</p>
-			</td>
-			<td>
-				<p align="left">Var</p>
-			</td>
-			<td>
-				<p align="left">Dictionary<string, string></p>
-			</td>
-			<td>
-				<p align="left">Conditional</p>
-			</td>
-			<td>
-				<p align="left">Refer to Loyalty Data in the Transaction Data Structures section</p>
-			</td>
+			<td align="left">TaxesData</td>
+			<td align="left">Var</td>
+			<td align="left">Dictionary string, string</td>
+			<td align="left">Conditional</td>
+			<td align="left">Refer to Taxes Data in the Transaction Data Structures section</td>
 		</tr>
 		<tr valign="top">
-			<td>
-				<p align="left">CustomerData</p>
-			</td>
-			<td>
-				<p align="left">Var</p>
-			</td>
-			<td>
-				<p align="left">Dictionary<string, string></p>
-			</td>
-			<td>
-				<p align="left">Conditional</p>
-			</td>
-			<td>
-				<p align="left">Refer to Customer Data in the Transaction Data Structures section</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">DocumentData</p>
-			</td>
-			<td>
-				<p align="left">Var</p>
-			</td>
-			<td>
-				<p align="left">Dictionary<string, string></p>
-			</td>
-			<td>
-				<p align="left">Required</p>
-			</td>
-			<td>
-				<p align="left">Refer to Document Data in the Transaction Data Structures section</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">TaxesData</p>
-			</td>
-			<td>
-				<p align="left">Var</p>
-			</td>
-			<td>
-				<p align="left">Dictionary<string, string></p>
-			</td>
-			<td>
-				<p align="left">Conditional</p>
-			</td>
-			<td>
-				<p align="left">Refer to Taxes Data in the Transaction Data Structures section</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">MoPData</p>
-			</td>
-			<td>
-				<p align="left">Var</p>
-			</td>
-			<td>
-				<p align="left">Dictionary<string, string></p>
-			</td>
-			<td>
-				<p align="left">Optional</p>
-			</td>
-			<td>
-				<p align="left">Refer to Method-of-Payment Data in the Transaction Data Structures section</p>
-			</td>
+			<td align="left">MoPData</td>
+			<td align="left">Var</td>
+			<td align="left">Dictionary string, string</td>
+			<td align="left">Optional</td>
+			<td align="left">Refer to Method-of-Payment Data in the Transaction Data Structures section</td>
 		</tr>
 	</tbody>
 </table>	
@@ -798,505 +465,726 @@ The Host will return the Authorization Code on all approved transactions.
 <table>
 	<thead>
 		<tr valign="top">
-			<th align="left">
-				Field Name
-			</th>
-			<th align="left">
-				Size
-			</th>
-			<th align="left">
-				Type
-			</th>
-			<th align="left">
-				Condition
-			</th>
-			<th align="left">
-				Descriptions/Field Value(s)
-			</th>
+			<th align="left">Field Name</th>
+			<th align="left">Size</th>
+			<th align="left">Type</th>
+			<th align="left">Condition</th>
+			<th align="left">Descriptions/Field Value(s)</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr valign="top">
-			<td>
-				<p align="left">ApplicationType</p>
+			<td align="left">ApplicationType</td>
+			<td align="left">3</td>
+			<td align="left">string</td>
+			<td align="left">Required</td>
+			<td align="left">Echoed from LREQ</td>
+		</tr>
+		<tr valign="top">
+			<td align="left">ProcessingMode</td>
+			<td align="left">1</td>
+			<td align="left">string</td>
+			<td align="left">Required</td>
+			<td align="left">Echoed from LREQ</td>
+		</tr>
+		<tr valign="top">
+			<td align="left">MessageFormatVersion</td>
+			<td align="left">3</td>
+			<td align="left">string</td>
+			<td align="left">Required</td>
+			<td align="left">Echoed from LREQ</td>
+		</tr>
+		<tr valign="top">
+			<td align="left">TerminalIdentification</td>
+			<td align="left">Var</td>
+			<td align="left">string</td>
+			<td align="left">Required</td>
+			<td align="left">Echoed from LREQ</td>
+		</tr>
+		<tr valign="top">
+			<td align="left">DeviceTypeIdentifier</td>
+			<td align="left">1</td>
+			<td align="left">string</td>
+			<td align="left">Required</td>
+			<td align="left">Echoed from LREQ</td>
+		</tr>
+		<tr valign="top">
+			<td align="left">TransactionCode</td>
+			<td align="left">3</td>
+			<td align="left">string</td>
+			<td align="left">Required</td>
+			<td align="left">Refer to Transaction Codes in Reference Tables Section</td>
+		</tr>
+		<tr valign="top">
+			<td align="left">TransactionSequenceNumber</td>
+			<td align="left">Var</td>
+			<td align="left">int</td>
+			<td align="left">Required</td>
+			<td align="left">Echoed from LREQ</td>
+		</tr>
+		<tr valign="top">
+			<td align="left">AuthorizationCode</td>
+			<td align="left">Var</td>
+			<td align="left">string</td>
+			<td align="left">Conditional</td>
+			<td align="left">Refer to Authorization Code in Field Description section</td>
+		</tr>
+		<tr valign="top">
+			<td align="left">ResponseCode</td>
+			<td align="left">5</td>
+			<td align="left">string</td>
+			<td align="left">Required</td>
+			<td align="left">“0” = Authorized, !”0” = Not Authorized</td>
+		</tr>
+		<tr valign="top">
+			<td align="left">ResponseText</td>
+			<td align="left">20</td>
+			<td align="left">string</td>
+			<td align="left">Required</td>
+			<td align="left">Message from the Network</td>
+		</tr>
+	</tbody>
+</table>	
+
+
+## Retail Summary Movements Request (RSUMREQ) Message Format
+
+<table>
+	<thead>
+		<tr valign="top">
+			<th align="left">Field Name</th>
+			<th align="center">Size</th>
+			<th align="left" width="200">Type</th>
+			<th align="left">Condition</th>
+			<th align="left">Descriptions/Field Value(s)</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr valign="top">
+			<td align="left">ApplicationType</td>
+			<td align="left">4</td>
+			<td align="left">string</td>
+			<td align="left">Required</td>
+			<td align="left">Always “RTL” Retail System</td>
+		</tr>
+		<tr valign="top">
+			<td align="left">ProcessingMode</td>
+			<td align="left">1</td>
+			<td align="left">string</td>
+			<td align="left">Required</td>
+			<td align="left">Always “0” = Host Capture Only in this version.</td>
+		</tr>
+		<tr valign="top">
+			<td align="left">MessageFormatVersion</td>
+			<td align="left">3</td>
+			<td align="left">string</td>
+			<td align="left">Required</td>
+			<td align="left">Current Host Message Version = “1.0”</td>
+		</tr>
+		<tr valign="top">
+			<td align="left">TerminalIdentification</td>
+			<td align="left">Var</td>
+			<td align="left">string</td>
+			<td align="left">Required</td>
+			<td align="left">Terminal Identification</td>
+		</tr>
+		<tr valign="top">
+			<td align="left">DeviceTypeIdentifier</td>
+			<td align="left">1</td>
+			<td align="left">string</td>
+			<td align="left">Required</td>
+			<td align="left">“1” = Indoor Payment Terminal
+				<br>“2” = Outdoor Payment Terminal
+				<br>“3” = Card Reader in Dispenser
+				<br>“4” = Other Self-Service</td>
+		</tr>
+		<tr valign="top">
+			<td align="left">SystemModel</td>
+			<td align="left">10</td>
+			<td align="left">string</td>
+			<td align="left">Required</td>
+			<td align="left">Refer to System Model and System Version in Field Description section</td>
+		</tr>
+		<tr valign="top">
+			<td align="left">SystemVersion</td>
+			<td align="left">10</td>
+			<td align="left">string</td>
+			<td align="left">Required</td>
+			<td align="left">Refer to System Model and System Version in Field Description section</td>
+		</tr>
+		<tr valign="top">
+			<td align="left">TransactionSequenceNumber</td>
+			<td align="left">Var</td>
+			<td align="left">int</td>
+			<td align="left">Required</td>
+			<td align="left">Refer to Transaction Sequence Number in Field Description section</td>
+		</tr>
+		<tr valign="top">
+			<td align="left">TransactionCode</td>
+			<td align="left">3</td>
+			<td align="left">string</td>
+			<td align="left">Required</td>
+			<td align="left">Refer to Transaction Codes in Reference Tables Section</td>
+		</tr>
+		<tr valign="top">
+			<td align="left">SiteCode</td>
+			<td align="left">10</td>
+			<td align="left">string</td>
+			<td align="left">Required</td>
+			<td align="left">Site ID. Does not need to match an ATIOnet Site in this version</td>
+		</tr>
+		<tr valign="top">
+			<td align="left">SiteSubCode</td>
+			<td align="left">10</td>
+			<td align="left">string</td>
+			<td align="left">Optional</td>
+			<td align="left">Business sub-division on the site structure, may represent a business line, store area, forecourt Id on a multi-forecourt site or pumps group on a single-forecourt site.</td>
+		<tr valign="top">
+			<td align="left">ShiftNumber</td>
+			<td align="left">Var</td>
+			<td align="left">string</td>
+			<td align="left">Required</td>
+			<td align="left">Refer to Shift Number in Field Description section</td>
+		</tr>
+		<tr valign="top">
+			<td align="left">ShiftNumberSecondary</td>
+			<td align="left">Var</td>
+			<td align="left">string</td>
+			<td align="left">Optional</td>
+			<td align="left">Refer to Shift Number in Field Description section</td>
+		</tr>
+		<tr valign="top">
+			<td align="left">CurrencyCode</td>
+			<td align="left">3</td>
+			<td align="left">string</td>
+			<td align="left">Optional</td>
+			<td align="left">Refer to Currency Codes in Reference Tables Section</td>
+		</tr>
+		<tr valign="top">
+			<td align="left">BusinessDate</td>
+			<td align="left">8</td>
+			<td align="left">int</td>
+			<td align="left">Optional</td>
+			<td align="left">The accounting date of the reported period: yyyymmdd</td>
+		</tr>
+		<tr valign="top">
+			<td align="left">LocalApprovalDate</td>
+			<td align="left">8</td>
+			<td align="left">int</td>
+			<td align="left">Optional</td>
+			<td align="left">Date of reconciliation or approval of the reported period: yyyymmdd</td>
+		</tr>
+		<tr valign="top">
+			<td align="left">LocalApprovalTime</td>
+			<td align="left">6</td>
+			<td align="left">int</td>
+			<td align="left">Optional</td>
+			<td align="left">Time  of reconciliation or approval of the reported period: hhmmss</td>
+		</tr>
+		<tr valign="top">
+			<td align="left">PeriodStartingDate</td>
+			<td align="left">8</td>
+			<td align="left">int</td>
+			<td align="left">Required</td>
+			<td align="left">From date of the reported period: yyyymmdd</td>
+		</tr>
+		<tr valign="top">
+			<td align="left">PeriodStartingTime</td>
+			<td align="left">6</td>
+			<td align="left">int</td>
+			<td align="left">Required</td>
+			<td align="left">From time of the reported period: hhmmss</td>
+		</tr>
+		<tr valign="top">
+			<td align="left">PeriodEndingDate</td>
+			<td align="left">8</td>
+			<td align="left">int</td>
+			<td align="left">Required</td>
+			<td align="left">To date of the reported period: yyyymmdd</td>
+		</tr>
+		<tr valign="top">
+			<td align="left">PeriodEndingTime</td>
+			<td align="left">6</td>
+			<td align="left">int</td>
+			<td align="left">Required</td>
+			<td align="left">To time of the reported period: hhmmss</td>
+		</tr>
+		<tr valign="top">
+			<td align="left">SalesByMethodOfPaymentData</td>
+			<td align="left">Var</td>
+			<td align="left">Dictionary  string, string</td>
+			<td align="left">Optional</td>
+			<td align="left">List of code and total pairs. One entry for each MethodOfPayment with sales on the reported period
+				<p>Refer to Sales By Method-Of-Payment Data in the Transaction Data Structures section </p>
 			</td>
-			<td>
-				<p align="left">3</p>
+		</tr>
+			<td align="left">SalesByCashierData</td>
+			<td align="left">Var</td>
+			<td align="left">Dictionary  string, string</td>
+			<td align="left">Optional</td>
+			<td align="left">List of code and total pairs. One entry for each Cashier with sales on the reported period
+				<p>Refer to Sales By Cashier Data in the Transaction Data Structures section </p>
 			</td>
-			<td>
-				<p align="left">string</p>
-			</td>
-			<td>
-				<p align="left">Required</p>
-			</td>
-			<td>
-				<p align="left">Echoed from LREQ</p>
+		</tr>
+		<tr>
+			<td align="left">SalesByRegisterData</td>
+			<td align="left">Var</td>
+			<td align="left">Dictionary < string, string ></td>
+			<td align="left">Optional</td>
+			<td align="left">List of code and total pairs. One entry for each Register or POS with sales on the reported period
+				<p>Refer to Sales By Register Data in the Transaction Data Structures section</p>
 			</td>
 		</tr>
 		<tr valign="top">
-			<td>
-				<p align="left">ProcessingMode</p>
-			</td>
-			<td>
-				<p align="left">1</p>
-			</td>
-			<td>
-				<p align="left">string</p>
-			</td>
-			<td>
-				<p align="left">Required</p>
-			</td>
-			<td>
-				<p align="left">Echoed from LREQ</p>
+			<td align="left">SalesByMerchandiseCodeData</td>
+			<td align="left">Var</td>
+			<td align="left">String SalesByMerchandiseData</td>
+			<td align="left">Optional</td>
+			<td align="left">Dry Stock sales by product code.
+				<p>Refer to Sales By Merchandise Code in the Transaction Data Structures section</p>
 			</td>
 		</tr>
 		<tr valign="top">
-			<td>
-				<p align="left">MessageFormatVersion</p>
-			</td>
-			<td>
-				<p align="left">3</p>
-			</td>
-			<td>
-				<p align="left">string</p>
-			</td>
-			<td>
-				<p align="left">Required</p>
-			</td>
-			<td>
-				<p align="left">Echoed from LREQ</p>
+			<td align="left">SalesByFuelGradeData</td>
+			<td align="left">Var</td>
+			<td align="left">String SalesByFuelGradeData</td>
+			<td align="left">Optional</td>
+			<td align="left">Fuel grade sales by grade code
+				<p>Refer to Sales By Fuel Grade in the Transaction Data Structures section</p>
 			</td>
 		</tr>
 		<tr valign="top">
-			<td>
-				<p align="left">TerminalIdentification</p>
-			</td>
-			<td>
-				<p align="left">Var</p>
-			</td>
-			<td>
-				<p align="left">string</p>
-			</td>
-			<td>
-				<p align="left">Required</p>
-			</td>
-			<td>
-				<p align="left">Echoed from LREQ</p>
+			<td align="left">PumpTotalsData</td>
+			<td align="left">Var</td>
+			<td align="left">Dictionary < string, string > </td>
+			<td align="left">Optional</td>
+			<td align="left">One entry for each fueling position active during the period.
+				<p>Refer to Pumps Totals Data in the Transaction Data Structures section</p>
 			</td>
 		</tr>
+	</tbody>
+</table>	
+
+## Retail Summary Movements Response (RSUMRESP) Message Format
+
+<table>
+	<thead>
 		<tr valign="top">
-			<td>
-				<p align="left">DeviceTypeIdentifier</p>
-			</td>
-			<td>
-				<p align="left">1</p>
-			</td>
-			<td>
-				<p align="left">string</p>
-			</td>
-			<td>
-				<p align="left">Required</p>
-			</td>
-			<td>
-				<p align="left">Echoed from LREQ</p>
-			</td>
+			<th align="left">Field Name</th>
+			<th align="left">Size</th>
+			<th align="left">Type</th>
+			<th align="left">Condition</th>
+			<th align="left">Descriptions/Field Value(s)</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr valign="top">
+			<td align="left">ApplicationType</td>
+			<td align="left">3</td>
+			<td align="left">string</td>
+			<td align="left">Required</td>
+			<td align="left">Echoed from LREQ</td>
 		</tr>
 		<tr valign="top">
-			<td>
-				<p align="left">TransactionCode</p>
-			</td>
-			<td>
-				<p align="left">3</p>
-			</td>
-			<td>
-				<p align="left">string</p>
-			</td>
-			<td>
-				<p align="left">Required</p>
-			</td>
-			<td>
-				<p align="left">Refer to Transaction Codes in Reference Tables Section</p>
-			</td>
+			<td align="left">ProcessingMode</td>
+			<td align="left">1</td>
+			<td align="left">string</td>
+			<td align="left">Required</td>
+			<td align="left">Echoed from LREQ</td>
 		</tr>
 		<tr valign="top">
-			<td>
-				<p align="left">TransactionSequenceNumber</p>
-			</td>
-			<td>
-				<p align="left">Var</p>
-			</td>
-			<td>
-				<p align="left">int</p>
-			</td>
-			<td>
-				<p align="left">Required</p>
-			</td>
-			<td>
-				<p align="left">Echoed from LREQ</p>
-			</td>
+			<td align="left">MessageFormatVersion</td>
+			<td align="left">3</td>
+			<td align="left">string</td>
+			<td align="left">Required</td>
+			<td align="left">Echoed from LREQ</td>
 		</tr>
 		<tr valign="top">
-			<td>
-				<p align="left">AuthorizationCode</p>
-			</td>
-			<td>
-				<p align="left">Var</p>
-			</td>
-			<td>
-				<p align="left">string</p>
-			</td>
-			<td>
-				<p align="left">Conditional</p>
-			</td>
-			<td>
-				<p align="left">Refer to Authorization Code in Field Description section</p>
-			</td>
+			<td align="left">TerminalIdentification</td>
+			<td align="left">Var</td>
+			<td align="left">string</td>
+			<td align="left">Required</td>
+			<td align="left">Echoed from LREQ</td>
 		</tr>
 		<tr valign="top">
-			<td>
-				<p align="left">ResponseCode</p>
-			</td>
-			<td>
-				<p align="left">5</p>
-			</td>
-			<td>
-				<p align="left">string</p>
-			</td>
-			<td>
-				<p align="left">Required</p>
-			</td>
-			<td>
-				<p align="left">“0” = Authorized, !”0” = Not Authorized</p>
-			</td>
+			<td align="left">DeviceTypeIdentifier</td>
+			<td align="left">1</td>
+			<td align="left">string</td>
+			<td align="left">Required</td>
+			<td align="left">Echoed from LREQ</td>
 		</tr>
 		<tr valign="top">
-			<td>
-				<p align="left">ResponseText</p>
-			</td>
-			<td>
-				<p align="left">20</p>
-			</td>
-			<td>
-				<p align="left">string</p>
-			</td>
-			<td>
-				<p align="left">Required</p>
-			</td>
-			<td>
-				<p align="left">Message from the Network</p>
-			</td>
+			<td align="left">TransactionCode</td>
+			<td align="left">3</td>
+			<td align="left">string</td>
+			<td align="left">Required</td>
+			<td align="left">Refer to Transaction Codes in Reference Tables Section</td>
+		</tr>
+		<tr valign="top">
+			<td align="left">TransactionSequenceNumber</td>
+			<td align="left">Var</td>
+			<td align="left">int</td>
+			<td align="left">Required</td>
+			<td align="left">Echoed from LREQ</td>
+		</tr>
+		<tr valign="top">
+			<td align="left">AuthorizationCode</td>
+			<td align="left">Var</td>
+			<td align="left">string</td>
+			<td align="left">Conditional</td>
+			<td align="left">Refer to Authorization Code in Field Description section</td>
+		</tr>
+		<tr valign="top">
+			<td align="left">ResponseCode</td>
+			<td align="left">5</td>
+			<td align="left">string</td>
+			<td align="left">Required</td>
+			<td align="left">“0” = Authorized, !”0” = Not Authorized</td>
+		</tr>
+		<tr valign="top">
+			<td align="left">ResponseText</td>
+			<td align="left">20</td>
+			<td align="left">string</td>
+			<td align="left">Required</td>
+			<td align="left">Message from the Network</td>
 		</tr>
 	</tbody>
 </table>	
 
 ## Transaction Data Structures
-
 <table>
-	<tr>
-		<td>lalala</td>
-	</tr>
+	<thead>
+		<tr valign="top">
+			<td align="left">Field Name</td>
+			<td align="left">Size</td>
+			<td align="left">Type</td>
+			<td align="left">Condition</td>
+			<td align="left">Descriptions/Field Value(s)</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td colspan="5" align="left" valign="bottom">
+				<p>Product List section (one per product in transaction)</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td align="left">ServiceCode</td>
+			<td align="left">1</td>
+			<td align="left">string</td>
+			<td align="left">Required</td>
+			<td align="left">Always "0" in this version</td>
+		</tr>
+		<tr valign="top">
+			<td align="left">ItemCode</td>
+			<td align="left">14</td>
+			<td align="left">string</td>
+			<td align="left">Required</td>
+			<td align="left">Code used to ring the item (be it a PLU or a Barcode)</td>
+		</tr>
+		<tr valign="top">
+			<td align="left">SKU</td>
+			<td align="left">14</td>
+			<td align="left">string</td>
+			<td align="left">Required</td>
+			<td align="left">SKU related to the item sold</td>
+		</tr>
+		<tr valign="top">
+			<td align="left">ItemDesc</td>
+			<td align="left">40</td>
+			<td align="left">string</td>
+			<td align="left">Optional</td>
+			<td align="left">Item description as shown on the ticket, truncated to 40 chars if longer</td>
+		</tr>
+		<tr valign="top">		
+			<td align="left">RegularPrice</td>
+			<td align="left">Var</td>
+			<td align="left">decimal</td>
+			<td align="left">Optional</td>
+			<td align="left">xxxx.xxx</td>
+		</tr>
+		<tr valign="top">		
+			<td align="left">ActualSalePrice</td>
+			<td align="left">Var</td>
+			<td align="left">decimal</td>
+			<td align="left">Optional</td>
+			<td align="left">xxxx.xxx</td>
+		</tr>
+		<tr valign="top">		
+			<td align="left">ActualSalePrice</td>
+			<td align="left">Var</td>
+			<td align="left">decimal</td>
+			<td align="left">Optional</td>
+			<td align="left">xxxx.xxx</td>
+		</tr>
+		<tr valign="top">
+			<td align="left">ProductNetAmount</td>
+			<td align="left">Var</td>
+			<td align="left">decimal</td>
+			<td align="left">Optional</td>
+			<td align="left">xxxxxxx.xx</td>
+		</tr>
+		<tr valign="top">
+			<td align="left">ProductTaxes</td>
+			<td align="left">Var</td>
+			<td align="left">Dictionary string, decimal</td>
+			<td align="left">Optional</td>
+			<td align="left">”[Tax Description]”, [Tax Value]</td>
+		</tr>
+		<tr valign="top">
+			<td align="left">ProductAmount</td>
+			<td align="left">Var</td>
+			<td align="left">decimal</td>
+			<td align="left">Optional</td>
+			<td align="left">xxxxxxx.xx</td>
+		</tr>
+		<tr valign="top">
+			<td align="left">ProductQuantity</td>
+			<td align="left">Var</td>
+			<td align="left">decimal</td>
+			<td align="left">Optional</td>
+			<td align="left">xxxxxxx.xx</td>
+		</tr>
+		<tr valign="top">
+			<td align="left">UnitCode</td>
+			<td align="left">Var</td>
+			<td align="left">string</td>
+			<td align="left">Optional</td>
+			<td align="left">Refer to Measurement Unit Codes in Reference Tables Section</td>
+		</tr>
+		<tr>
+			<td colspan="5" align="left" valign="bottom">
+				<p>Method-of-Payment List section (one per MoP in transaction)</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td align="left">MoPCode</td>
+			<td align="left">8</td>
+			<td align="left">string</td>
+			<td align="left">Required</td>
+			<td align="left">“0”-“9999”</td>
+		</tr>
+		<tr valign="top">		
+			<td align="left">Amount</td>
+			<td align="left">Var</td>
+			<td align="left">decimal</td>
+			<td align="left">Required</td>
+			<td align="left">xxxx.xx</td>
+		</tr>
+		<tr>
+			<td colspan="5" align="left" valign="bottom">
+				<p>Sales By Method-of-Payment Data List section</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td align="left">MoPCode</td>
+			<td align="left">Var</td>
+			<td align="left">string</td>
+			<td align="left">Required</td>
+			<td align="left">“0”-“9999”</td>
+		</tr>
+		<tr valign="top">		
+			<td align="left">Amount</td>
+			<td align="left">Var</td>
+			<td align="left">decimal</td>
+			<td align="left">Required</td>
+			<td align="left">xxxx.xx</td>
+		</tr>
+		<tr>
+			<td colspan="5" align="left" valign="bottom">
+				<p>Sales By Cashier Data List section</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td align="left">CashierCode</td>
+			<td align="left">Var</td>
+			<td align="left">string</td>
+			<td align="left">Required</td>
+			<td align="left">“0”-“9999”</td>
+		</tr>
+		<tr valign="top">		
+			<td align="left">Amount</td>
+			<td align="left">Var</td>
+			<td align="left">decimal</td>
+			<td align="left">Required</td>
+			<td align="left">xxxx.xx</td>
+		</tr>
+		<tr>
+			<td colspan="5" align="left" valign="bottom">
+				<p>Sales By Register Data List section</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td align="left">RegisterCode</td>
+			<td align="left">Var</td>
+			<td align="left">string</td>
+			<td align="left">Required</td>
+			<td align="left">“0”-“9999”</td>
+		</tr>
+		<tr valign="top">		
+			<td align="left">Amount</td>
+			<td align="left">Var</td>
+			<td align="left">decimal</td>
+			<td align="left">Required</td>
+			<td align="left">xxxx.xx</td>
+		</tr>
+		<tr>
+			<td colspan="5" align="left" valign="bottom">
+				<p>Sales By Merchandise Data List section</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td align="left">MerchandiseCode</td>
+			<td align="left">Var</td>
+			<td align="left">string</td>
+			<td align="left">Required</td>
+			<td align="left">“0”-“99999999”</td>
+		</tr>
+		<tr valign="top">		
+			<td align="left">Quantity</td>
+			<td align="left">Var</td>
+			<td align="left">decimal</td>
+			<td align="left">Required</td>
+			<td align="left">xxxx.xx</td>
+		</tr>
+		<tr valign="top">		
+			<td align="left">ActualSalePrice</td>
+			<td align="left">Var</td>
+			<td align="left">decimal</td>
+			<td align="left">Required</td>
+			<td align="left">xxxx.xx</td>
+		</tr>
+		<tr valign="top">		
+			<td align="left">Amount</td>
+			<td align="left">Var</td>
+			<td align="left">decimal</td>
+			<td align="left">Required</td>
+			<td align="left">xxxx.xx</td>
+		</tr>
+		<tr>
+			<td colspan="5" align="left" valign="bottom">
+				<p>Sales By Fuel Grade Data List section</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td align="left">FuelGradeCode</td>
+			<td align="left">Var</td>
+			<td align="left">string</td>
+			<td align="left">Required</td>
+			<td align="left">“0”-“99999999”</td>
+		</tr>
+		<tr valign="top">		
+			<td align="left">Volume</td>
+			<td align="left">Var</td>
+			<td align="left">decimal</td>
+			<td align="left">Required</td>
+			<td align="left">xxxx.xxx</td>
+		</tr>
+		<tr valign="top">		
+			<td align="left">ActualSalePrice</td>
+			<td align="left">Var</td>
+			<td align="left">decimal</td>
+			<td align="left">Required</td>
+			<td align="left">xxxx.xx</td>
+		</tr>
+		<tr valign="top">		
+			<td align="left">PriceLevel</td>
+			<td align="left">1</td>
+			<td align="left">Int</td>
+			<td align="left">Required</td>
+			<td align="left">x</td>
+		</tr>
+		<tr valign="top">		
+			<td align="left">Amount</td>
+			<td align="left">Var</td>
+			<td align="left">decimal</td>
+			<td align="left">Required</td>
+			<td align="left">xxxx.xx</td>
+		</tr>
+		<tr>
+			<td colspan="5" align="left" valign="bottom">
+				<p>Pump Totals Data List section</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td align="left">PumpNumber</td>
+			<td align="left">2</td>
+			<td align="left">Int</td>
+			<td align="left">Required</td>
+			<td align="left">“0”-“99”</td>
+		</tr>
+		<tr valign="top">
+			<td align="left">HoseNumber</td>
+			<td align="left">1</td>
+			<td align="left">Int</td>
+			<td align="left">Required</td>
+			<td align="left">“0”-“9”</td>
+		</tr>
+		<tr valign="top">
+			<td align="left">GradeCode</td>
+			<td align="left">2</td>
+			<td align="left">Int</td>
+			<td align="left">Required</td>
+			<td align="left">“0”-“99”</td>
+		</tr>
+		<tr valign="top">		
+			<td align="left">SalesVolume</td>
+			<td align="left">Var</td>
+			<td align="left">decimal</td>
+			<td align="left">Required</td>
+			<td align="left">xxxx.xxx</td>
+		</tr>
+		<tr valign="top">		
+			<td align="left">SalesAmount</td>
+			<td align="left">Var</td>
+			<td align="left">decimal</td>
+			<td align="left">Required</td>
+			<td align="left">xxxx.xx</td>
+		</tr>
+		<tr valign="top">		
+			<td align="left">PumpTestVolume</td>
+			<td align="left">Var</td>
+			<td align="left">decimal</td>
+			<td align="left">Optional</td>
+			<td align="left">xxxx.xxx</td>
+		</tr>
+		<tr valign="top">		
+			<td align="left">PumpTestAmount</td>
+			<td align="left">Var</td>
+			<td align="left">decimal</td>
+			<td align="left">Optional</td>
+			<td align="left">xxxx.xx</td>
+		</tr>
+		<tr valign="top">		
+			<td align="left">NRTotalsVolumeStarting</td>
+			<td align="left">Var</td>
+			<td align="left">decimal</td>
+			<td align="left">Optional</td>
+			<td align="left">xxxx.xxx</td>
+		</tr>
+		<tr valign="top">		
+			<td align="left">NRTotalsAmountStarting</td>
+			<td align="left">Var</td>
+			<td align="left">decimal</td>
+			<td align="left">Optional</td>
+			<td align="left">xxxx.xx</td>
+		</tr>
+		<tr valign="top">		
+			<td align="left">NRTotalsVolumeEnding</td>
+			<td align="left">Var</td>
+			<td align="left">decimal</td>
+			<td align="left">Optional</td>
+			<td align="left">xxxx.xxx</td>
+		</tr>
+		<tr valign="top">		
+			<td align="left">NRTotalsAmountEnding</td>
+			<td align="left">Var</td>
+			<td align="left">decimal</td>
+			<td align="left">Optional</td>
+			<td align="left">xxxx.xx</td>
+		</tr>
+	</tbody>
 </table>
-
-
-
-
-
-<table>
-	<thead>
-		<tr valign="top">
-			<td align="left">
-				Field Name
-			</td>
-			<td align="left">
-				Size
-			</td>
-			<td align="left">
-				Type
-			</td>
-			<td align="left">
-				Condition
-			</td>
-			<td align="left">
-				Descriptions/Field Value(s)
-			</td>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td colspan="5" align="left">
-				Product List section (one per product in transaction)
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">ServiceCode</p>
-			</td>
-			<td>
-				<p align="left">1</p>
-			</td>
-			<td>
-				<p align="left">string</p>
-			</td>
-			<td>	
-				<p align="left">Required</p>
-			</td>
-			<td>
-				<p align="left">Always "0" in this version</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>    
-				<p align="left">ItemCode</p>
-			</td>
-			<td>	
-				<p align="left">14</p>
-			</td>
-			<td>
-				<p align="left">string</p>
-			</td>
-			<td>
-				<p align="left">Required</p>
-			</td>
-			<td>
-				<p align="left">Code used to ring the item (be it a PLU or a Barcode)</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>    
-				<p align="left">SKU</p>
-			</td>
-			<td>	
-				<p align="left">14</p>
-			</td>
-			<td>
-				<p align="left">string</p>
-			</td>
-			<td>
-				<p align="left">Required</p>
-			</td>
-			<td>
-				<p align="left">SKU related to the item sold</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>    
-				<p align="left">ItemDesc</p>
-			</td>
-			<td>	
-				<p align="left">40</p>
-			</td>
-			<td>
-				<p align="left">string</p>
-			</td>
-			<td>
-				<p align="left">Optional</p>
-			</td>
-			<td>
-				<p align="left">Item description as shown on the ticket, truncated to 40 chars if longer</p>
-			</td>
-		</tr>
-		<tr valign="top">		
-			<td>	
-				<p align="left">RegularPrice</p>
-			</td>
-			<td>
-				<p align="left">Var</p>
-			</td>
-			<td>
-				<p align="left">decimal</p>
-			</td>
-			<td>
-				<p align="left">Optional</p>
-			</td>
-			<td>
-				<p align="left">xxxx.xxx</p>
-			</td>
-		</tr>
-		<tr valign="top">		
-			<td>	
-				<p align="left">ActualSalePrice</p>
-			</td>
-			<td>
-				<p align="left">Var</p>
-			</td>
-			<td>
-				<p align="left">decimal</p>
-			</td>
-			<td>
-				<p align="left">Optional</p>
-			</td>
-			<td>
-				<p align="left">xxxx.xxx</p>
-			</td>
-		</tr>
-		<tr valign="top">		
-			<td>	
-				<p align="left">ActualSalePrice</p>
-			</td>
-			<td>
-				<p align="left">Var</p>
-			</td>
-			<td>
-				<p align="left">decimal</p>	
-			</td>
-			<td>
-				<p align="left">Optional</p>
-			</td>
-			<td>
-				<p align="left">xxxx.xxx</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">ProductNetAmount</p>
-			</td>
-			<td>
-				<p align="left">Var</p>
-			</td>
-			<td>
-				<p align="left">decimal</p>
-			</td>
-			<td>
-				<p align="left">Optional</p>
-			</td>
-			<td>
-				<p align="left">xxxxxxx.xx</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">ProductTaxes</p>
-			</td>
-			<td>
-				<p align="left">Var</p>
-			</td>
-			<td>
-				<p align="left">Dictionary<string, decimal></p>
-			</td>
-			<td>
-				<p align="left">Optional</p>
-			</td>
-			<td>
-				<p align="left">”[Tax Description]”, [Tax Value]</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">ProductAmount</p>
-			</td>
-			<td>
-				<p align="left">Var</p>
-			</td>
-			<td>
-				<p align="left">decimal</p>
-			</td>
-			<td>
-				<p align="left">Optional</p>
-			</td>
-			<td>
-				<p align="left">xxxxxxx.xx</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">ProductQuantity</p>
-			</td>
-			<td>
-				<p align="left">Var</p>
-			</td>
-			<td>
-				<p align="left">decimal</p>
-			</td>
-			<td>
-				<p align="left">Optional</p>
-			</td>
-			<td>
-				<p align="left">xxxxxxx.xx</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">UnitCode</p>
-			</td>
-			<td>
-				<p align="left">Var</p>
-			</td>
-			<td>
-				<p align="left">string</p>
-			</td>
-			<td>
-				<p align="left">Optional</p>
-			</td>
-			<td>
-				<p align="left">Refer to Measurement Unit Codes in Reference Tables Section</p>
-			</td>
-		</tr>
-		<tr>
-			<td colspan="5" align="left">
-				Method-of-Payment List section (one per MoP in transaction)
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>    
-				<p align="left">MoPCode</p>
-			</td>
-			<td>	
-				<p align="left">4</p>
-			</td>
-			<td>
-				<p align="left">string</p>
-			</td>
-			<td>
-				<p align="left">Required</p>
-			</td>
-			<td>
-				<p align="left">“0”-“9999”</p>
-			</td>
-		</tr>
-		<tr valign="top">		
-			<td>	
-				<p align="left">Amount</p>
-			</td>
-			<td>
-				<p align="left">Var</p>
-			</td>
-			<td>
-				<p align="left">decimal</p>
-			</td>
-			<td>
-				<p align="left">Required</p>
-			</td>
-			<td>
-				<p align="left">xxxx.xx</p>
-			</td>
-		</tr>
-	</tbody>
-</table>	
-
-### Customer Data
-
-*Prompt elements*
-<table>
-	<thead>
-		<tr valign="top">
-			<th align="left">
-				Field Name
-			</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr valign="top">
-			<td>
-				<p align="left">PromptOdometer</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">PromptMiscellaneous</p>
-			</td>
-		</tr>
-	</tbody>
-</table>	
 
 ## Reference Tables
 
@@ -1307,39 +1195,31 @@ This section brings together the code tables and reference values used in messag
 <table>
 	<thead>
 		<tr valign="top">
-			<th align="left">
-				Code
-			</th>
-			<th align="left">
-				Message
-			</th>
-			<th align="left">
-				Description
-			</th>
+			<th align="left">Code</th>
+			<th align="left">Message</th>
+			<th align="left">Description</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr valign="top">
-			<td>
-				<p align="left">“610”</p>
-			</td>
-			<td>
-				<p align="left">RREQ</p>
-			</td>
-			<td>
-				<p align="left">Sale Records Upload REQ</p>
-			</td>
+			<td align="left">“610”</td>
+			<td align="left">RREQ</td>
+			<td align="left">Sale Records Upload REQ</td>
 		</tr>
 		<tr valign="top">
-			<td>
-				<p align="left">“611”</p>
-			</td>
-			<td>
-				<p align="left">RRESP</p>
-			</td>
-			<td>
-				<p align="left">Sale Records Upload RESP</p>
-			</td>
+			<td align="left">“611”</td>
+			<td align="left">RRESP</td>
+			<td align="left">Sale Records Upload RESP</td>
+		</tr>
+		<tr valign="top">
+			<td align="left">“620”</td>
+			<td align="left">RSUMREQ</td>
+			<td align="left">Movements Summary Upload REQ</td>
+		</tr>
+		<tr valign="top">
+			<td align="left">“621”</td>
+			<td align="left">RRESP</td>
+			<td align="left">Movements Summary Upload RESP</td>
 		</tr>
 	</tbody>
 </table>
@@ -1351,4 +1231,3 @@ Refer to ISO 4217 Currency Codes standard (<http://en.wikipedia.org/wiki/ISO_421
 ### Authorization Codes
 
 Refer to AN-Native_Response_Codes-Spec document for a complete list of ATIOnet Host Response Codes and Texts.
-
