@@ -1,6 +1,9 @@
 ![ationetlogo](Content/Images/ATIOnetLogo_250x70.png) 
-# ATIONet .NET SDK Development Guide
-> **About:** This document describes and explains how to consume the .NET SDK for all Ationet APIs.	
+
+***
+
+#ATIONet Logs
+> **About:** This document describes how the Log framework works in ATIONet
 
 </br>
 
@@ -21,7 +24,7 @@
 		</tr>
 		<tr>
 			<td align="right">Release Date:</td>
-			<td>02, September 2014</td>
+			<td>28, September 2015</td>
 		</tr>
 		<tr>
 			<td align="right">Author:</td>
