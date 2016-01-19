@@ -131,8 +131,8 @@ La lista completa de widgets disponibles para las suscripciones "Autoconsumo" es
 Este widget es de suma importancia al poner en marcha la red. Este widget nos da información de que parámetros necesitamos configurar para quedar operativos. Nos advierte cuando por ejemplo no tenemos vehículos o identificaciones creadas entre otros parámetros.
 Este widget puede mostrar "Advertencias" (icono amarillo)cuando no esta en juego la operación de la red, pero si muestra una cruz roja indica que la red no esta operativa. 
 
-![](Content/Includes/AN-HomeBase-UserManal-SP/estadoGeneral.png)
-![ationetlogo](Content/Includes/AN-HomeBase-UserManal-SP/estadoGeneral2.png)
+![Estado General](Content/Includes/AN-HomeBase-UserManal-SP/estadoGeneral.png)
+![Estado General](Content/Includes/AN-HomeBase-UserManal-SP/estadoGeneral2.png)
 
 #### Litros/Mes
 El widget "Litros/Mes indica la cantidad que se despacho de cada combustible en el ultimo mes. Como ultimo mes se entiende a los últimos 30 días contando desde el día de la fecha. Este widget posee la capacidad de filtrar por Sitio, Ciudad y Flota. Se debe seleccionar el filtro y después se tipea el valor por el cual se debe filtrar. Este ultimo campo es del tipo "auto complete".
