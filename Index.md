@@ -33,7 +33,9 @@
   	* [Local Agent Service Guide](https://github.com/atioint/ationetdocs/blob/master/AN-LocalAgent-TechGuide.md)
   	* User Manuals
 	  	* [ATIONet Console Home Base User Manual](https://github.com/atioint/ationetdocs/blob/master/AN-HomeBase-UserManal-SP.md)
-	  	* [ATIONet Stand Alone Terminal User Manual](https://github.com/atioint/ationetdocs/blob/master/AN-Stand_AloneTerminalUserManual_SP.md)
+	  	* [ATIONet Stand Alone Terminal User Manual (Spanish)](https://github.com/atioint/ationetdocs/blob/master/AN-Stand_AloneTerminalUserManual_SP.md)
+	  	* [ATIONet Stand Alone Terminal User Manual (English)](https://github.com/atioint/ationetdocs/blob/master/AN-Stand_AloneTerminalUserManual_EN.md)
+
 * Development & Integration
 	* [Native Transaction Protocol](https://github.com/atioint/ationetdocs/blob/master/AN-Native_Transaction_Protocol-Spec.md)
 	* [Native Interface API Protocol](https://github.com/atioint/ationetdocs/blob/master/AN-Native_Interface_Protocol-Spec.md)
