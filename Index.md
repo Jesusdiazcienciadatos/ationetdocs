@@ -32,7 +32,7 @@
   	* [Identification Scenarios](https://github.com/atioint/ationetdocs/blob/master/AN-Identification_Scenarios-Concepts.md)
   	* [Local Agent Service Guide](https://github.com/atioint/ationetdocs/blob/master/AN-LocalAgent-TechGuide.md)
   	* User Manuals
-	  	* [ATIONet Console Home Base User Manual](https://github.com/atioint/ationetdocs/blob/master/AN-HomeBase-UserManal-SP.md)
+	  	* [ATIONet Console Home Base User Manual (Spanish)](https://github.com/atioint/ationetdocs/blob/master/AN-HomeBase-UserManal-SP.md)
 	  	* [ATIONet Stand Alone Terminal User Manual (Spanish)](https://github.com/atioint/ationetdocs/blob/master/AN-Stand_AloneTerminalUserManual_SP.md)
 	  	* [ATIONet Stand Alone Terminal User Manual (English)](https://github.com/atioint/ationetdocs/blob/master/AN-Stand_AloneTerminalUserManual_EN.md)
 
