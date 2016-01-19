@@ -131,7 +131,7 @@ La lista completa de widgets disponibles para las suscripciones "Autoconsumo" es
 Este widget es de suma importancia al poner en marcha la red. Este widget nos da información de que parámetros necesitamos configurar para quedar operativos. Nos advierte cuando por ejemplo no tenemos vehículos o identificaciones creadas entre otros parámetros.
 Este widget puede mostrar "Advertencias" (icono amarillo)cuando no esta en juego la operación de la red, pero si muestra una cruz roja indica que la red no esta operativa. 
 
-![ationetlogo](Content/Images/AN-HomeBase-UserManal-SP/estadoGeneral.png)
+![](Content/Images/AN-HomeBase-UserManal-SP/estadoGeneral.png)
 ![ationetlogo](Content/Images/AN-HomeBase-UserManal-SP/estadoGeneral2.png)
 
 #### Litros/Mes
