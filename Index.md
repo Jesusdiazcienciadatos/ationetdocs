@@ -31,6 +31,8 @@
 * Support
   	* [Identification Scenarios](https://github.com/atioint/ationetdocs/blob/master/AN-Identification_Scenarios-Concepts.md)
   	* [Local Agent Service Guide](https://github.com/atioint/ationetdocs/blob/master/AN-LocalAgent-TechGuide.md)
+  	* User Manuals
+	  	* [ATIONet Console - Home Base User Manual](https://github.com/atioint/ationetdocs/blob/master/AN-HomeBase-UserManal-SP.md)
 * Development & Integration
 	* [Native Transaction Protocol](https://github.com/atioint/ationetdocs/blob/master/AN-Native_Transaction_Protocol-Spec.md)
 	* [Native Interface API Protocol](https://github.com/atioint/ationetdocs/blob/master/AN-Native_Interface_Protocol-Spec.md)
