@@ -139,7 +139,7 @@ El widget "Litros/Mes indica la cantidad que se despacho de cada combustible en 
 
 ![Litros Mes](Content/Includes/AN-HomeBase-UserManal-SP/litrosMes.png)
 
-#### Transacciones del Día
+#### Transacciones del Dia
 Este widget contiene un gráfico de torta que en forma muy rápida se pueden ver cuantas transacciones se aprobaron y cuantas se rechazaron en el día.
 
 ![Transacciones Día](Content/Includes/AN-HomeBase-UserManal-SP/transaccionesDia.png)
