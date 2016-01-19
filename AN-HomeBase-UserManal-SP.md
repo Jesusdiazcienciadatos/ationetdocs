@@ -137,12 +137,12 @@ Este widget puede mostrar "Advertencias" (icono amarillo)cuando no esta en juego
 #### Litros/Mes
 El widget "Litros/Mes indica la cantidad que se despacho de cada combustible en el ultimo mes. Como ultimo mes se entiende a los últimos 30 días contando desde el día de la fecha. Este widget posee la capacidad de filtrar por Sitio, Ciudad y Flota. Se debe seleccionar el filtro y después se tipea el valor por el cual se debe filtrar. Este ultimo campo es del tipo "auto complete".
 
-![ationetlogo](Content/Includes/AN-HomeBase-UserManal-SP/litrosMes.png)
+![Litros Mes](Content/Includes/AN-HomeBase-UserManal-SP/litrosMes.png)
 
 #### Transacciones del Día
 Este widget contiene un gráfico de torta que en forma muy rápida se pueden ver cuantas transacciones se aprobaron y cuantas se rechazaron en el día.
 
-![ationetlogo](Content/Includes/AN-HomeBase-UserManal-SP/transaccionesDia.png)
+![Transacciones Día](Content/Includes/AN-HomeBase-UserManal-SP/transaccionesDia.png)
 
 #### Lista de Pre-Autorizaciones Pendientes
 Este widget del tipo lista, muestra todas las pre autorizaciones que todavía no recibieron la transacción de finalización. (para mas detalles sobre el flujo de transacciones consulte este documento: [TODO](#todo)).
@@ -158,17 +158,17 @@ Este widget muestra 7 columnas:
 
 Las pre autorizaciones pendientes deberían ser despachos en curso, si hay registros en este widget con un Age alto, significa que el punto de venta o controlador no enviaron la transacción de finalización o la transacción de cancelación en el caso que no se haya despachado combustible.
 
-![ationetlogo](Content/Includes/AN-HomeBase-UserManal-SP/preauthPendientes.png)
+![Pre Auth Pendientes](Content/Includes/AN-HomeBase-UserManal-SP/preauthPendientes.png)
 
 #### Transacciones marcadas en ultimo mes
 Este widget muestra todas las transacciones que fueron rechazadas por cualquiera de las validaciones que hace Ationet en el proceso de autorización. Ya sean por falta de saldo o reglas entre otras validaciones. Para mas detalles sobre "Transacciones Rechazadas" consulte este documento: [TODO](#todo) 
 
-![ationetlogo](Content/Includes/AN-HomeBase-UserManal-SP/transaccionesMarcadasUltimoMes.png)
+![Transacciones Marcadas](Content/Includes/AN-HomeBase-UserManal-SP/transaccionesMarcadasUltimoMes.png)
 
 #### Instalaciones
 Cuando la red utiliza algún medio de identificación que requiera ser instalado (como por ejemplo un anillo o ring tag), Ationet administra la lista de instalaciones. Este widget muestra las instalaciones realizadas en las ultimas 5 semanas
 
-![ationetlogo](Content/Includes/AN-HomeBase-UserManal-SP/instalaciones.png)
+![Instalaciones](Content/Includes/AN-HomeBase-UserManal-SP/instalaciones.png)
 
 #### Sub-cuentas con excepciones
 Para mas detalles sobre sub cuentas consulte este documento: [TODO](#todo)
@@ -179,7 +179,7 @@ Este widget muestra todas las sub cuentas que tengan algo que prestarle atenció
 3. **Con Identificadores suspendidos:** Son subcuentas que que tienen un identificador que ha sido suspendido. ***Solo Ationet puede suspender un identificador***.
 4. **Con conductores o vehículos inactivos:** Son subcuentas que que tienen un vehículo o conductor que no ha sido desactivado desde el portal
 
-![ationetlogo](Content/Includes/AN-HomeBase-UserManal-SP/subcuentasConExcepciones.png)
+![sub Cuentas con Excepciones](Content/Includes/AN-HomeBase-UserManal-SP/subcuentasConExcepciones.png)
 
 #### Actualizaciones de Identificador en ultimo mes
 Este widget muestra la actividad de la administración de los identificadores, muestra la cantidad de identificadores que fueron modificados agrupado por estado.
@@ -190,34 +190,34 @@ Este widget muestra la actividad de la administración de los identificadores, m
 4. **Denunciada:** La cantidad de identificadores que cambiaron al estado "Denunciada"
 5. **Suspendida:** La cantidad de identificadores que cambiaron al estado "Suspendida"
 
-![ationetlogo](Content/Includes/AN-HomeBase-UserManal-SP/actualizacionIdentificadoresUltimoMes.png)
+![Actualizaciones de Identificadores](Content/Includes/AN-HomeBase-UserManal-SP/actualizacionIdentificadoresUltimoMes.png)
 
 #### Transacciones recientes
 Este widget muestra las ultimas 20 transacciones finalizadas. Se muestran los datos mas relevantes para poder identificarla, en el caso de necesitar mas información sobre la transacción se puede hacer click sobre el código de autorización, eso lo llevara a la vista de detalles de la transacción.
 
-![ationetlogo](Content/Includes/AN-HomeBase-UserManal-SP/transaccionesRecientes.png)
+![Transacciones Recientes](Content/Includes/AN-HomeBase-UserManal-SP/transaccionesRecientes.png)
 
 #### Listado de Sub-cuentas con bajo saldo
 Este widget muestra la lista de sub cuentas que contengan bajo saldo para operar 4 días mas. Este calculo se hace en base al uso de cada sub cuenta. La columna "Días disponibles" muestra cantidad de días que le quedan a la sub cuenta basada en el análisis de uso. Este numero no es exacto y podría variar si el patrón de uso cambia.
 
-![ationetlogo](Content/Includes/AN-HomeBase-UserManal-SP/subcuentasBajoSaldo.png)
+![Sub Cuentas Bajo Saldo](Content/Includes/AN-HomeBase-UserManal-SP/subcuentasBajoSaldo.png)
 
 #### Estado de Terminales
 Todas las terminales que estén conectadas en forma nativa a ATIONet, envían en forma regular un mensaje indicando que están activas. Si la terminal reporto el estado en las ultimas 5 horas, la terminal se mostrara con el icono verde, sino se reporto en las ultimas 5 horas el icono sera rojo.
 La columna ***"Age"*** muestra la cantidad de minutos que pasaron desde la ultima vez que se reporta la terminal. 
 
-![ationetlogo](Content/Includes/AN-HomeBase-UserManal-SP/estadoTerminales1.png)
-![ationetlogo](Content/Includes/AN-HomeBase-UserManal-SP/estadoTerminales2.png)
+![Estado Terminales](Content/Includes/AN-HomeBase-UserManal-SP/estadoTerminales1.png)
+![Estado Terminales](Content/Includes/AN-HomeBase-UserManal-SP/estadoTerminales2.png)
 
 #### Contratos sin actividad
 Este widget muestra la lista de contratos que nunca tuvieron actividad.
 
-![ationetlogo](Content/Includes/AN-HomeBase-UserManal-SP/contratosSinActividad.png)
+![Contrato Sin Actividad](Content/Includes/AN-HomeBase-UserManal-SP/contratosSinActividad.png)
 
 #### Listado de contratos con bajo saldo
 Este widget muestra la lista de contratos que contengan bajo saldo para operar 4 días mas. Este calculo se hace en base al uso. La columna "Días disponibles" muestra cantidad de días que le quedan al contrato basada en el análisis de uso. Este numero no es exacto y podría variar si el patrón de uso cambia.
 
-![ationetlogo](Content/Includes/AN-HomeBase-UserManal-SP/contratoBajoSaldo.png)
+![Contrato Bajo Saldo](Content/Includes/AN-HomeBase-UserManal-SP/contratoBajoSaldo.png)
 
 ## Solución de Problemas
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
