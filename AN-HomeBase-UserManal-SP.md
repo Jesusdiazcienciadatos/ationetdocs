@@ -45,7 +45,7 @@
 
 - Visión general
 - Menú de Navegación
-	- Tablero
+	- [Tablero](#tablero)
 		- Estado General
 		- Litros / Mes
 		- Transacciones del Día
