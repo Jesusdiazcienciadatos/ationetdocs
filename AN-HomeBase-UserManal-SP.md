@@ -49,9 +49,9 @@
 		- [Estado General](#estado-general)
 		- [Litros/Mes](#litras/mes)
 		- [Transacciones del Día](#transacciones-del-dia)
-		- [Lista de Pre-Autorizaciones Pendientes](#lista-de-pre-autorizaciones)
-		- [Transacciones marcadas en ultimo mes](#Transacciones-marcadas-en-ultimo-mes)
-		- [Instalaciones](instalaciones)
+		- [Lista de Pre-Autorizaciones Pendientes](#lista-de-pre-autorizaciones-pendientes)
+		- [Transacciones marcadas en ultimo mes](#transacciones-marcadas-en-ultimo-mes)
+		- [Instalaciones](#instalaciones)
 		- [Sub-cuentas con excepciones](#sub-cuentas-con-excepciones)
 		- [Actualizaciones de Identificador en ultimo mes](#actualizaciones-de-identificador-en-ultimo-mes)
 		- [Transacciones recientes](#transacciones-recientes)
@@ -127,7 +127,7 @@ Ationet posee un menú de acceso rápido ubicado en la parte izquierda de la pag
 El Tablero es una pagina donde usted tendrá una visión global de la operación de su red. El tablero posee widgets específicos que lo ayudaran a tomar decisiones preventiva o correctivas según la información y los datos que muestren. Los datos que se muestran en el Tablero, son datos en tiempo real. Algunos de los widgets se refrescan automáticamente.
 Los widgets se pueden quitar o agregar según las necesidades del usuario. También se pueden acomodar en el tablero según el nivel de visibilidad que le quiera dar a cada uno.
 La lista completa de widgets disponibles para las suscripciones "Autoconsumo" es la siguiente:
-#### Estado General
+#### Estado General ####
 Este widget es de suma importancia al poner en marcha la red. Este widget nos da información de que parámetros necesitamos configurar para quedar operativos. Nos advierte cuando por ejemplo no tenemos vehículos o identificaciones creadas entre otros parámetros.
 Este widget puede mostrar "Advertencias" (icono amarillo)cuando no esta en juego la operación de la red, pero si muestra una cruz roja indica que la red no esta operativa. 
 
@@ -160,7 +160,7 @@ Las pre autorizaciones pendientes deberían ser despachos en curso, si hay regis
 
 ![Pre Auth Pendientes](Content/Includes/AN-HomeBase-UserManal-SP/preauthPendientes.png)
 
-#### Transacciones marcadas en ultimo mes
+#### Transacciones marcadas en ultimo mes ####
 Este widget muestra todas las transacciones que fueron rechazadas por cualquiera de las validaciones que hace Ationet en el proceso de autorización. Ya sean por falta de saldo o reglas entre otras validaciones. Para mas detalles sobre "Transacciones Rechazadas" consulte este documento: [TODO](#todo) 
 
 ![Transacciones Marcadas](Content/Includes/AN-HomeBase-UserManal-SP/transaccionesMarcadasUltimoMes.png)
