@@ -46,19 +46,19 @@
 - Visión general
 - Menú de Navegación
 	- [Tablero](#tablero)
-		- Estado General
-		- Litros / Mes
-		- Transacciones del Día
-		- Lista de Pre-Autorizaciones Pendientes
-		- Transacciones marcadas en ultimo mes
-		- Instalaciones
-		- Sub-cuentas con excepciones
-		- Actualizaciones de Identificador en ultimo mes
-		- Transacciones recientes
-		- Listado de Sub-cuentas con bajo saldo
-		- Estado de Terminales
-		- Contratos sin actividad
-		- Listado de contratos con bajo saldo
+		- [Estado General](#estado-general)
+		- [Litros/Mes](#litras/mes)
+		- [Transacciones del Día](#transacciones-del-dia)
+		- [Lista de Pre-Autorizaciones Pendientes](#lista-de-pre-autorizaciones)
+		- [Transacciones marcadas en ultimo mes](#Transacciones-marcadas-en-ultimo-mes)
+		- [Instalaciones](instalaciones)
+		- [Sub-cuentas con excepciones](#sub-cuentas-con-excepciones)
+		- [Actualizaciones de Identificador en ultimo mes](#actualizaciones-de-identificador-en-ultimo-mes)
+		- [Transacciones recientes](#transacciones-recientes)
+		- [Listado de Sub-cuentas con bajo saldo](#listado-de-sub-cuentas-con-bajo-saldo)
+		- [Estado de Terminales](#estado-de-terminales)
+		- [Contratos sin actividad](#contratos-sin-actividad)
+		- [Listado de contratos con bajo saldo](#listado-de-contratos-con-bajo-saldo)
 	- Vistas
 		- Autorizaciones Pendientes
 		- Batch
