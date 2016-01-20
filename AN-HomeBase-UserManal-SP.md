@@ -59,10 +59,11 @@
 		- [Estado de Terminales](#estado-de-terminales)
 		- [Contratos sin actividad](#contratos-sin-actividad)
 		- [Listado de contratos con bajo saldo](#listado-de-contratos-con-bajo-saldo)
-	- Vistas
-		- Autorizaciones Pendientes
-		- Batch
-		- Conductores
+	- [Favoritos](#tablero)	
+	- [Vistas](#vistas)
+		- [Autorizaciones Pendientes](#autorizaciones-pendientes)
+		- [Batch](#batch)
+		- [Conductores](#conductores)
 		- Cuentas corrientes de Compañia
 		- Excepciones
 		- Rendimiento por Transacción
