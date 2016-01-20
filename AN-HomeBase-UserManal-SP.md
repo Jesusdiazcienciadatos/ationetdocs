@@ -238,10 +238,12 @@ La siguiente es la vista de Vehículos de ATIONet:
 
 #### Autorizaciones Pendientes
 Las autorizaciones pendientes son aquellas transacciones que todavía no recibieron la transacción de finalización. Los registros que se ven en esta vista son despachos que se están llevando a cabo en este momento. Si por alguna razón existen pre autorizaciones viejas, es probable que el POS no haya enviado la transacción de finalización o la de cancelación si el despacho no fue realizado.
+
 Tenga en cuenta que al momento de pre autorizar, ATIONet congelo el monto de la autorización de la cuenta corriente de la sub cuenta.
 Esta vista presenta todos los campos necesarios para poder identificar la transacción y el vehículo. si necesita ver mas detalles, al hacer click en el código de autorización lo llevara a la vista de detalles de la transacción.
 
 ![Autorizaciones Pendientes](Content/Includes/AN-HomeBase-UserManal-SP/autorizacionesPendientes.png)
+
 ![Autorizaciones Pendientes](Content/Includes/AN-HomeBase-UserManal-SP/autorizacionesPendientes2.png)
 
 (para mas detalles sobre el flujo de transacciones consulte este [documento](AN-Transaction_Flows-TechGuide.md))
