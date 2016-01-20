@@ -148,13 +148,13 @@ Este widget contiene un gráfico de torta que en forma muy rápida se pueden ver
 Este widget del tipo lista, muestra todas las pre autorizaciones que todavía no recibieron la transacción de finalización. (para mas detalles sobre el flujo de transacciones consulte este [documento](AN-Transaction_Flows-TechGuide.md)).
 Este widget muestra 7 columnas:
 
-1. Código de Autorización: El código de autorización asignado a la transacción
-2. Compañía: La compañía a la que pertenece el vehículo en cuestión
-3. Patente: La patente del vehículo
-4. Sitio: El sitio donde se llevo a cabo la transacción
-5. Autorizado: el monto que fue autorizado en la pre autorización
-6. Pos: Posición o bomba informada por el punto de venta o controlador
-7. Age: El tiempo en minutos que lleva vigente esa pre autorización
+1. ***Código de Autorización:*** El código de autorización asignado a la transacción
+2. ***Compañía:*** La compañía a la que pertenece el vehículo en cuestión
+3. ***Patente:*** La patente del vehículo
+4. ***Sitio:*** El sitio donde se llevo a cabo la transacción
+5. ***Autorizado:*** El monto que fue autorizado en la pre autorización
+6. ***Pos:*** Posición o bomba informada por el punto de venta o controlador
+7. ***Age:*** El tiempo en minutos que lleva vigente esa pre autorización
 
 Las pre autorizaciones pendientes deberían ser despachos en curso, si hay registros en este widget con un Age alto, significa que el punto de venta o controlador no enviaron la transacción de finalización o la transacción de cancelación en el caso que no se haya despachado combustible.
 
@@ -174,21 +174,21 @@ Cuando la red utiliza algún medio de identificación que requiera ser instalado
 Para mas detalles sobre sub cuentas consulte este documento: [TODO](#todo)
 Este widget muestra todas las sub cuentas que tengan algo que prestarle atención, como por ejemplo:
 
-1. **Sin Identificadores:** Son los vehículos o conductores que no tienen un identificador asociado
-2. **Con Identificadores inactivos:** Son subcuentas que que tienen un identificador asociado que ha sido desactivado desde el portal
-3. **Con Identificadores suspendidos:** Son subcuentas que que tienen un identificador que ha sido suspendido. ***Solo Ationet puede suspender un identificador***.
-4. **Con conductores o vehículos inactivos:** Son subcuentas que que tienen un vehículo o conductor que no ha sido desactivado desde el portal
+1. ***Sin Identificadores:*** Son los vehículos o conductores que no tienen un identificador asociado
+2. ***Con Identificadores inactivos:*** Son subcuentas que que tienen un identificador asociado que ha sido desactivado desde el portal
+3. ***Con Identificadores suspendidos:*** Son subcuentas que que tienen un identificador que ha sido suspendido. ***Solo Ationet puede suspender un identificador***.
+4. ***Con conductores o vehículos inactivos:*** Son subcuentas que que tienen un vehículo o conductor que no ha sido desactivado desde el portal
 
 ![sub Cuentas con Excepciones](Content/Includes/AN-HomeBase-UserManal-SP/subcuentasConExcepciones.png)
 
 #### Actualizaciones de Identificador en ultimo mes
 Este widget muestra la actividad de la administración de los identificadores, muestra la cantidad de identificadores que fueron modificados agrupado por estado.
 
-1. **Asignada:** La cantidad de identificadores que cambiaron al estado "Asignada"
-2. **Disponible:** La cantidad de identificadores que cambiaron al estado "Disponible"
-3. **Cancelada:** La cantidad de identificadores que cambiaron al estado "Cancelada"
-4. **Denunciada:** La cantidad de identificadores que cambiaron al estado "Denunciada"
-5. **Suspendida:** La cantidad de identificadores que cambiaron al estado "Suspendida"
+1. ***Asignada:*** La cantidad de identificadores que cambiaron al estado "Asignada"
+2. ***Disponible:*** La cantidad de identificadores que cambiaron al estado "Disponible"
+3. ***Cancelada:*** La cantidad de identificadores que cambiaron al estado "Cancelada"
+4. ***Denunciada:*** La cantidad de identificadores que cambiaron al estado "Denunciada"
+5. ***Suspendida:*** La cantidad de identificadores que cambiaron al estado "Suspendida"
 
 ![Actualizaciones de Identificadores](Content/Includes/AN-HomeBase-UserManal-SP/actualizacionIdentificadoresUltimoMes.png)
 
@@ -231,12 +231,20 @@ Todas las vistas en ATIONet respetan una consistencia en estética y funcionalid
 4. ***Exportar:*** Al hacer click en esta opción la información mostrada en ese momento en la grilla es exportada a Excel. Se iniciara una descarga automática en su navegador.
 5. ***Actualizar:*** Algunas vistas donde la frecuencia de cambio de información es alta, podría ser de utilidad querer refrescar la grilla. Esta opción refresca los datos en forma inmediata.  
 
+Las vistas también poseen paginación y el usuario podrá definir cuantos registros por pagina se muestran. Esta configuración se realiza desde [***Mis Preferencias***](#mis-preferencias)
 La siguiente es la vista de Vehículos de ATIONet:
 
 ![Vistas](Content/Includes/AN-HomeBase-UserManal-SP/vistas2.png)
 
 #### Autorizaciones Pendientes
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+Las autorizaciones pendientes son aquellas transacciones que todavía no recibieron la transacción de finalización. Los registros que se ven en esta vista son despachos que se están llevando a cabo en este momento. Si por alguna razón existen pre autorizaciones viejas, es probable que el POS no haya enviado la transacción de finalización o la de cancelación si el despacho no fue realizado.
+Tenga en cuenta que al momento de pre autorizar, ATIONet congelo el monto de la autorización de la cuenta corriente de la sub cuenta.
+Esta vista presenta todos los campos necesarios para poder identificar la transacción y el vehículo. si necesita ver mas detalles, al hacer click en el código de autorización lo llevara a la vista de detalles de la transacción.
+
+![Autorizaciones Pendientes](Content/Includes/AN-HomeBase-UserManal-SP/autorizacionesPendientes.png)
+![Autorizaciones Pendientes](Content/Includes/AN-HomeBase-UserManal-SP/autorizacionesPendientes2.png)
+
+(para mas detalles sobre el flujo de transacciones consulte este [documento](AN-Transaction_Flows-TechGuide.md))
 
 #### Batch
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
@@ -284,4 +292,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
 
 ## Solución de Problemas
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+
+## Mis Preferencias
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
