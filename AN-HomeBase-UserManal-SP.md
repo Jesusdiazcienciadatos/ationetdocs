@@ -111,10 +111,11 @@
 		- Transacciones Fuera de Sitio
 		- Usuarios
 		- Vehículos
-- Definiciones
-	- Sub cuenta
-- Solución de Problemas
-
+- [Definiciones](#definiciones)
+	- [Sub cuenta](#sub-cuenta)
+- [Solución de Problemas](#solucion-de-problemas)
+- [Mis Preferencias](#mis-preferencias)
+- [Configuración Nano CPI para ATIONet](#configuración-nano-cpi-para-ationet)
 
 <!-- /MarkdownTOC -->
 
@@ -172,13 +173,14 @@ Cuando la red utiliza algún medio de identificación que requiera ser instalado
 ![Instalaciones](Content/Includes/AN-HomeBase-UserManal-SP/instalaciones.png)
 
 #### Sub-cuentas con excepciones
-Para mas detalles sobre sub cuentas consulte este documento: [TODO](#todo)
 Este widget muestra todas las sub cuentas que tengan algo que prestarle atención, como por ejemplo:
 
 1. ***Sin Identificadores:*** Son los vehículos o conductores que no tienen un identificador asociado
 2. ***Con Identificadores inactivos:*** Son subcuentas que que tienen un identificador asociado que ha sido desactivado desde el portal
 3. ***Con Identificadores suspendidos:*** Son subcuentas que que tienen un identificador que ha sido suspendido. ***Solo Ationet puede suspender un identificador***.
 4. ***Con conductores o vehículos inactivos:*** Son subcuentas que que tienen un vehículo o conductor que no ha sido desactivado desde el portal
+
+Para mas detalles sobre sub cuentas consulte: [Esta sección](#sub-cuentas)
 
 ![sub Cuentas con Excepciones](Content/Includes/AN-HomeBase-UserManal-SP/subcuentasConExcepciones.png)
 
@@ -263,10 +265,11 @@ No todas las terminales tienen la capacidad de implementar este mensaje, si la t
 ![Batch](Content/Includes/AN-HomeBase-UserManal-SP/batch.png)
 
 #### Conductores
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+En esta vista se listan los conductores que han sido dados de alta. Recuerde que no es obligatorio cargar conductores para poder operar, solo es necesario si usted decide asociar los identificadores a conductores.
 
+![Batch](Content/Includes/AN-HomeBase-UserManal-SP/conductores.png)
 #### Cuentas corrientes de Compañia
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+La vista de Cuentas corrientes de compañia es la vista en donde se consultan los saldos disponibles de las sub cuentas (Recuerde que la sub cuenta es la union entre un vehiculo/chofer y un identificador. Para mas detalles sobre sub cuentas consulte: [Esta sección](#sub-cuentas)).
 
 #### Excepciones
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
@@ -304,8 +307,19 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac 
 ### Reportes
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
 
+## Definiciones
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+
+### Sub Cuenta
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula 
+
 ## Solución de Problemas
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
 
 ## Mis Preferencias
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+
+## Configuración Nano CPI para ATIONet
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+
+
