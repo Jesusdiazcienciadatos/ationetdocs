@@ -180,7 +180,7 @@ Este widget muestra todas las sub cuentas que tengan algo que prestarle atenció
 3. ***Con Identificadores suspendidos:*** Son subcuentas que que tienen un identificador que ha sido suspendido. ***Solo Ationet puede suspender un identificador***.
 4. ***Con conductores o vehículos inactivos:*** Son subcuentas que que tienen un vehículo o conductor que no ha sido desactivado desde el portal
 
-Para mas detalles sobre sub cuentas consulte: [Esta sección](#sub-cuentas)
+Para mas detalles sobre sub cuentas consulte: [Esta sección](#sub-cuenta)
 
 ![sub Cuentas con Excepciones](Content/Includes/AN-HomeBase-UserManal-SP/subcuentasConExcepciones.png)
 
@@ -269,7 +269,7 @@ En esta vista se listan los conductores que han sido dados de alta. Recuerde que
 
 ![Batch](Content/Includes/AN-HomeBase-UserManal-SP/conductores.png)
 #### Cuentas corrientes de Compañia
-La vista de Cuentas corrientes de compañia es la vista en donde se consultan los saldos disponibles de las sub cuentas (Recuerde que la sub cuenta es la union entre un vehiculo/chofer y un identificador. Para mas detalles sobre sub cuentas consulte: [Esta sección](#sub-cuentas)).
+La vista de Cuentas corrientes de compañia es la vista en donde se consultan los saldos disponibles de las sub cuentas (Recuerde que la sub cuenta es la union entre un vehiculo/chofer y un identificador. Para mas detalles sobre sub cuentas consulte: [Esta sección](#sub-cuenta)).
 
 #### Excepciones
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
