@@ -274,7 +274,6 @@ La vista de Cuentas corrientes de compañía es la vista en donde se consultan l
 En ATIONet el termino compañía se refiere a la empresa dueña de la flota, en una suscripción del tipo auto consumo (home base) la única compañía es la propia empresa suscriptora. Para mas detalles sobre compañías consulte: [Esta sección](#compañía)
 
 Esta  vista posee al igual que el resto de las vistas un panel de filtros.
-
 La primer opcion en el panel de filtros es el tipo de reporte que queremos ver:
 
 ![Cuentas Corrientes](Content/Includes/AN-HomeBase-UserManal-SP/cuentasCorrientes2.png)
@@ -287,23 +286,36 @@ La primer opcion en el panel de filtros es el tipo de reporte que queremos ver:
 
 	![Cuentas Corrientes](Content/Includes/AN-HomeBase-UserManal-SP/cuentasCorrientes3.png)
 
-Al seleccionar esta segunda opcion se habilitan varios filtros mas:
+Al seleccionar esta segunda opción se habilitan varios filtros mas:
 
-* ***Estado de Cuenta:***
+* ***Estado de Cuenta:*** Numero del extracto de cuenta.
 * ***Subcuenta:*** Ingresando uno o varios nombres de subcuenta, solo se listaran los movimientos de esas subcuentas. Tenga en cuenta que este campo es "autocomplete", se completara a medida que escribe, si presiona la barra espaciadora mostrara todas las subcuentas.
-* ***Fecha Desde / Fecha Hasta:*** Ingresando valores filtrara los movimientos entre ambas fechas.
-* ***Hora Desde / Hora Hasta:*** Ingresando valores filtrara los movimientos entre ambas horas.
-* ***Monto Desde / Monto Hasta:*** Ingresando valores filtrara los movimientos cuyo monto este entre ambos valore.
-* ***Especies:*** Se puede filtrar por el producto
+* ***Fecha Desde / Fecha Hasta:*** Ingresando estos valores, filtrara los movimientos entre ambas fechas.
+* ***Hora Desde / Hora Hasta:*** Ingresando estos valores, filtrara los movimientos entre ambas horas.
+* ***Monto Desde / Monto Hasta:*** Ingresando estos valores filtrara, los movimientos cuyo monto este entre ambos valore.
+* ***Especies:*** Se puede filtrar por la especie (Producto)
 * ***Débito / Crédito:*** Se puede seleccionar que tipo de movimientos se desean ver, si los de débito o los de crédito.
 * ***Tipo:*** Que tipo de movimiento genero el movimiento en la cuenta corriente
 * ***Origen:*** Origen del movimiento, ya sea la consola de ATIONet, una aplicación móvil o una llamada a la API desde una aplicación de terceros.
-* ***Movimientos Transitorios:*** Tildando esta opción mostraremos los movimientos internos que genera ATIONet. Por ejemplo cada vez que se congela saldo después de una pre autorización y se recibe una transacción de finalización, ATIONet devuelve el saldo congelado y posteriormente debita el monto final informado. La devolución del saldo congelado es considerado un movimiento transitorio y no se muestran si esta opción no esta seleccionada.
-
-
+* ***Movimientos Transitorios:*** Tildando esta opción se mostraran los movimientos internos que genera ATIONet. Por ejemplo cada vez que se congela saldo después de una pre autorización y se recibe una transacción de finalización, ATIONet devuelve el saldo congelado y posteriormente debita el monto final informado. La devolución del saldo congelado es considerado un movimiento transitorio y no se muestran si esta opción no esta seleccionada.
 
 #### Excepciones
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+ATIONet separa las transacciones no autorizadas en 2 secciones, las Excepciones y las [Transacciones Rechazadas](#transacciones-rechazadas).
+Las Excepciones son aquellas transacciones que no llegaron a pasar las validaciones duras del sistema o las que se detectan como posibles fraudes.
+
+En la vista de Excepciones podemos filtrar por el tipo de Excepción primero. Los tipo de Excepciones disponibles es la siguiente:
+
+![Cuentas Corrientes](Content/Includes/AN-HomeBase-UserManal-SP/excepciones2.png)
+
+Esta vista también posee el panel de filtros mencionada anteriormente. Vale la pena resaltar el filtro  "Transacciones Off-line", al tildar esta opción, mostrara aquellas transacciones que fueron marcadas como Excepciones en el modulo Offline. 
+(para mas detalles sobre el modulo Offline consulte esta [sección](#modulo-offline))
+
+![Cuentas Corrientes](Content/Includes/AN-HomeBase-UserManal-SP/excepciones4.png)
+
+Una vez que selecciono los filtros, presiona ***"Buscar"*** y se listaran todas las transacciones marcadas como Excepciones.
+
+Algunas transacciones quedan en estado "Revisión" en distintas situaciones, como por ejemplo cuando se despacha mas de lo autorizado (por un error en el controlador o el POS). En estos casos es necesario aprobar  rechazar la transacción mediante una de los 2 iconos a la derecha de cada registro. 
+![Cuentas Corrientes](Content/Includes/AN-HomeBase-UserManal-SP/excepciones.png)
 
 #### Rendimiento por Transacción
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
@@ -347,6 +359,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac 
 ### Compañía 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula
 
+### Modulo Offline 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula
 
 ## Solución de Problemas
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
