@@ -68,7 +68,7 @@
 		- Excepciones
 		- Rendimiento por Transacción
 		- Rendimiento por Vehiculo
-		- Transacciones
+		- [Transacciones](#transacciones)
 		- Transacciones por Conductor
 		- Transacciones por Flota
 		- Transacciones por Sitio
@@ -303,18 +303,19 @@ Al seleccionar esta segunda opción se habilitan varios filtros mas:
 ATIONet separa las transacciones no autorizadas en 2 secciones, las Excepciones y las [Transacciones Rechazadas](#transacciones-rechazadas).
 Las Excepciones son aquellas transacciones que no llegaron a pasar las validaciones duras del sistema o las que se detectan como posibles fraudes.
 
-En la vista de Excepciones podemos filtrar por el tipo de Excepción primero. Los tipo de Excepciones disponibles es la siguiente:
+En la vista de Excepciones podemos filtrar por el tipo de Excepción primero. Los tipo de Excepciones disponibles son los siguientes:
 
 ![Cuentas Corrientes](Content/Includes/AN-HomeBase-UserManal-SP/excepciones2.png)
 
-Esta vista también posee el panel de filtros mencionada anteriormente. Vale la pena resaltar el filtro  "Transacciones Off-line", al tildar esta opción, mostrara aquellas transacciones que fueron marcadas como Excepciones en el modulo Offline. 
+Esta vista también posee el panel de filtros mencionada anteriormente. Vale la pena resaltar el filtro  ***"Transacciones Off-line"***, al tildar esta opción, también se mostraran aquellas transacciones que fueron marcadas como Excepciones en el modulo Offline. 
 (para mas detalles sobre el modulo Offline consulte esta [sección](#modulo-offline))
 
 ![Cuentas Corrientes](Content/Includes/AN-HomeBase-UserManal-SP/excepciones4.png)
 
 Una vez que selecciono los filtros, presiona ***"Buscar"*** y se listaran todas las transacciones marcadas como Excepciones.
 
-Algunas transacciones quedan en estado "Revisión" en distintas situaciones, como por ejemplo cuando se despacha mas de lo autorizado (por un error en el controlador o el POS). En estos casos es necesario aprobar  rechazar la transacción mediante una de los 2 iconos a la derecha de cada registro. 
+Algunas transacciones quedan en estado "Revisión" bajo algunas situaciones, como por ejemplo cuando se despacha mas de lo autorizado (por un error en el controlador o el POS). En estos casos es necesario aprobar o rechazar la transacción mediante uno de los 2 iconos a la derecha de cada registro.
+
 ![Cuentas Corrientes](Content/Includes/AN-HomeBase-UserManal-SP/excepciones.png)
 
 #### Rendimiento por Transacción
@@ -324,7 +325,37 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
 
 #### Transacciones
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+La vista de transacciones es una de las mas importantes en ATIONet. en esta vista se ven las transacciones que se realizaron y fueron aprobadas.
+
+El panel de Filtros posee todos estas posibilidades:
+
+![Transacciones](Content/Includes/AN-HomeBase-UserManal-SP/transactions.png)
+
+* ***Cod. Autoriz.:*** Código de Autorización entregado por ATIONet.
+* ***Vehículo:*** Vehículo o Vehículos (campo autocomplete y de selección múltiple, presionando la barra espaciadora listara los primeros 20 vehículos).
+* ***Flota:*** El nombre de la flota. (campo autocomplete y de selección múltiple)
+* ***Sitio:*** El nombre del sitio. (campo autocomplete y de selección múltiple)
+* ***Fecha Desde / Fecha Hasta:*** Rango de fechas
+* ***Hora Desde / Hora Hasta:*** Rango de horas.
+* ***Rendimiento por Periodo:*** [TODO]
+* ***Transacciones Off-line:*** Tildando esta opción también se listaran las transacciones aprobadas en modo Offline. (para mas detalles sobre el modulo Offline consulte esta [sección](#modulo-offline))
+* ***Turno:*** El turno en el que ocurrió la transacción. (siempre y cuando la terminal o el POS lo informen)
+* ***Conductor:*** El nombre del conductor. (campo autocomplete y de selección múltiple).
+* ***Terminal / Controlador:*** Nombre de la terminal que registro la transacción. (campo autocomplete y de selección múltiple).
+* ***Combustible:***El producto que intervino en la transacción. (campo autocomplete y de selección múltiple).
+* ***Mostrar Transacciones Completas en Cero:*** Tildando esta opción también mostrara las transacciones que se hayan enviado con monto o volumen en 0.
+* ***Transacciones con Producto:*** Tildando esta opción también se mostraran transacciones que contengan productos secos.
+
+Una vez seleccionado el filtro deseado se presiona ***"Buscar"*** y listara las transacciones que cumplan con el filtro.
+
+![Transacciones](Content/Includes/AN-HomeBase-UserManal-SP/transactions2.png)
+
+En la grilla se muestran los datos principales de la transacción, en la columna acciones se puede desconocer una transacción y entrara en el proceso de desconocimiento. (para mas detalles sobre el desconocimiento de transacciones consulte esta [sección](#transacciones-desconocidas)).
+
+Si desea ver el detalle de la transacción, haga click en el Código de Autorización, esto lo llevara a una vista con el detalle de la transacción.
+
+![Transacciones](Content/Includes/AN-HomeBase-UserManal-SP/transactions3.png)
+ 
 
 #### Transacciones por Conductor
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
