@@ -64,7 +64,7 @@
 		- [Autorizaciones Pendientes](#autorizaciones-pendientes)
 		- [Batch](#batch)
 		- [Conductores](#conductores)
-		- Cuentas corrientes de Compañia
+		- [Cuentas corrientes de Compañia](#cuentas-corrientes-de-compañía)
 		- Excepciones
 		- Rendimiento por Transacción
 		- Rendimiento por Vehiculo
@@ -113,6 +113,7 @@
 		- Vehículos
 - [Definiciones](#definiciones)
 	- [Sub cuenta](#sub-cuenta)
+	- [Compañia](#compañia)
 - [Solución de Problemas](#solucion-de-problemas)
 - [Mis Preferencias](#mis-preferencias)
 - [Configuración Nano CPI para ATIONet](#configuración-nano-cpi-para-ationet)
@@ -268,8 +269,38 @@ No todas las terminales tienen la capacidad de implementar este mensaje, si la t
 En esta vista se listan los conductores que han sido dados de alta. Recuerde que no es obligatorio cargar conductores para poder operar, solo es necesario si usted decide asociar los identificadores a conductores.
 
 ![Batch](Content/Includes/AN-HomeBase-UserManal-SP/conductores.png)
-#### Cuentas corrientes de Compañia
-La vista de Cuentas corrientes de compañia es la vista en donde se consultan los saldos disponibles de las sub cuentas (Recuerde que la sub cuenta es la union entre un vehiculo/chofer y un identificador. Para mas detalles sobre sub cuentas consulte: [Esta sección](#sub-cuenta)).
+#### Cuentas corrientes de compañía
+La vista de Cuentas corrientes de compañía es la vista en donde se consultan los saldos disponibles de las sub cuentas (Recuerde que la sub cuenta es la unión entre un vehículo/chofer y un identificador. Para mas detalles sobre sub cuentas consulte: [Esta sección](#sub-cuenta)).
+En ATIONet el termino compañía se refiere a la empresa dueña de la flota, en una suscripción del tipo auto consumo (home base) la única compañía es la propia empresa suscriptora. Para mas detalles sobre compañías consulte: [Esta sección](#compañía)
+
+Esta  vista posee al igual que el resto de las vistas un panel de filtros.
+
+La primer opcion en el panel de filtros es el tipo de reporte que queremos ver:
+
+![Cuentas Corrientes](Content/Includes/AN-HomeBase-UserManal-SP/cuentasCorrientes2.png)
+
+1. ***Lista de Sub-cuentas:*** Esta opción lista las subcuentas con su respectivo saldo, pero no da detalles de los movimientos, es una vista que resume los datos de cada una de las subcuentas.
+
+	![Cuentas Corrientes](Content/Includes/AN-HomeBase-UserManal-SP/cuentasCorrientes.png)
+
+2. ***Movimientos de Sub-cuentas:*** Esta opción de la vista muestra en detalle cada uno de los movimientos de la subcuenta, tanto los créditos como los débitos.   
+
+	![Cuentas Corrientes](Content/Includes/AN-HomeBase-UserManal-SP/cuentasCorrientes3.png)
+
+Al seleccionar esta segunda opcion se habilitan varios filtros mas:
+
+* ***Estado de Cuenta:***
+* ***Subcuenta:*** Ingresando uno o varios nombres de subcuenta, solo se listaran los movimientos de esas subcuentas. Tenga en cuenta que este campo es "autocomplete", se completara a medida que escribe, si presiona la barra espaciadora mostrara todas las subcuentas.
+* ***Fecha Desde / Fecha Hasta:*** Ingresando valores filtrara los movimientos entre ambas fechas.
+* ***Hora Desde / Hora Hasta:*** Ingresando valores filtrara los movimientos entre ambas horas.
+* ***Monto Desde / Monto Hasta:*** Ingresando valores filtrara los movimientos cuyo monto este entre ambos valore.
+* ***Especies:*** Se puede filtrar por el producto
+* ***Débito / Crédito:*** Se puede seleccionar que tipo de movimientos se desean ver, si los de débito o los de crédito.
+* ***Tipo:*** Que tipo de movimiento genero el movimiento en la cuenta corriente
+* ***Origen:*** Origen del movimiento, ya sea la consola de ATIONet, una aplicación móvil o una llamada a la API desde una aplicación de terceros.
+* ***Movimientos Transitorios:*** Tildando esta opción mostraremos los movimientos internos que genera ATIONet. Por ejemplo cada vez que se congela saldo después de una pre autorización y se recibe una transacción de finalización, ATIONet devuelve el saldo congelado y posteriormente debita el monto final informado. La devolución del saldo congelado es considerado un movimiento transitorio y no se muestran si esta opción no esta seleccionada.
+
+
 
 #### Excepciones
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
@@ -310,8 +341,12 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac 
 ## Definiciones
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
 
-### Sub Cuenta
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula 
+### Sub Cuenta 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula
+
+### Compañía 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula
+
 
 ## Solución de Problemas
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
