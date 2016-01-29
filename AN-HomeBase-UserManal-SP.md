@@ -65,7 +65,7 @@
 		- [Batch](#batch)
 		- [Conductores](#conductores)
 		- [Cuentas corrientes de Compañia](#cuentas-corrientes-de-compañía)
-		- Excepciones
+		- [Excepciones](#excepciones)
 		- Rendimiento por Transacción
 		- Rendimiento por Vehiculo
 		- [Transacciones](#transacciones)
@@ -73,8 +73,8 @@
 		- Transacciones por Flota
 		- Transacciones por Sitio
 		- Transacciones por Vehiculo
-		- Transacciones Rechazadas
-		- Transacciones sin Control
+		- [Transacciones Rechazadas](#transacciones-rechazadas)
+		- [Transacciones sin Control](#transacciones-sin-control)
 		- Vehiculos
 	- Reportes
 		- Conductor
