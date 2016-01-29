@@ -386,6 +386,11 @@ Una vez que selecciono los filtros, presiona ***"Buscar"*** y se listaran todas 
 
 ![Transacciones Rechazadas](Content/Includes/AN-HomeBase-UserManal-SP/transaccionesRechazadas2.png)
 
+```Cabe aclarar que existe la posibilidad de que una transacción sea rechazada pero que el combustible haya sido entregado. 
+Esto ocurre cuando el rechazo se produce en la transacción de terminación.
+Algunos de los motivos mas comunes de esta situación los los siguientes:```
+
+
 #### Transacciones sin Control
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
 
