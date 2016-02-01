@@ -75,13 +75,13 @@
 		- Transacciones por Vehiculo
 		- [Transacciones Rechazadas](#transacciones-rechazadas)
 		- [Transacciones sin Control](#transacciones-sin-control)
-		- Vehiculos
+		- [Vehiculos](#vehiculos)
 	- Reportes
-		- Conductor
-		- Detalle de actividad por Vehiculo
-		- Sitios
-		- Transacciones
-		- Vehiculo
+		- [Conductor](#conductor)
+		- [Detalle de actividad por Vehículo](#detalle-de-actividad-por-vehículo)
+		- [Sitios](#sitios)
+		- [Transacciones](#transacciones)
+		- [Vehiculo](#vehiculos)
 	- Inventario
 		- Grafico de Inventarios
 		- Inventario
@@ -248,7 +248,7 @@ La siguiente es la vista de Vehículos de ATIONet:
 Las autorizaciones pendientes son aquellas transacciones que todavía no recibieron la transacción de finalización. Los registros que se ven en esta vista son despachos que se están llevando a cabo en este momento. Si por alguna razón existen pre autorizaciones viejas, es probable que el POS no haya enviado la transacción de finalización o la de cancelación si el despacho no fue realizado.
 
 Tenga en cuenta que al momento de pre autorizar, ATIONet congelo el monto de la autorización de la cuenta corriente de la sub cuenta.
-Esta vista presenta todos los campos necesarios para poder identificar la transacción y el vehículo. si necesita ver mas detalles, al hacer click en el código de autorización lo llevara a la vista de detalles de la transacción.
+Esta vista presenta todos los campos necesarios para poder identificar la transacción y el vehículo. Si necesita ver mas detalles, al hacer click en el código de autorización lo llevara a la vista de detalles de la transacción.
 
 ![Autorizaciones Pendientes](Content/Includes/AN-HomeBase-UserManal-SP/autorizacionesPendientes.png)
 
@@ -270,7 +270,7 @@ En esta vista se listan los conductores que han sido dados de alta. Recuerde que
 
 ![Batch](Content/Includes/AN-HomeBase-UserManal-SP/conductores.png)
 #### Cuentas corrientes de compañía
-La vista de Cuentas corrientes de compañía es la vista en donde se consultan los saldos disponibles de las sub cuentas (Recuerde que la sub cuenta es la unión entre un vehículo/chofer y un identificador. Para mas detalles sobre sub cuentas consulte: [Esta sección](#sub-cuenta)).
+La vista de Cuentas corrientes de compañía es la vista en donde se consultan los saldos disponibles de las sub cuentas (Recuerde que la sub cuenta es la unión entre un vehículo/conductor y un identificador. Para mas detalles sobre sub cuentas consulte: [Esta sección](#sub-cuenta)).
 En ATIONet el termino compañía se refiere a la empresa dueña de la flota, en una suscripción del tipo auto consumo (home base) la única compañía es la propia empresa suscriptora. Para mas detalles sobre compañías consulte: [Esta sección](#compañía)
 
 Esta  vista posee al igual que el resto de las vistas un panel de filtros.
@@ -386,19 +386,44 @@ Una vez que selecciono los filtros, presiona ***"Buscar"*** y se listaran todas 
 
 ![Transacciones Rechazadas](Content/Includes/AN-HomeBase-UserManal-SP/transaccionesRechazadas2.png)
 
-```Cabe aclarar que existe la posibilidad de que una transacción sea rechazada pero que el combustible haya sido entregado. 
-Esto ocurre cuando el rechazo se produce en la transacción de terminación.
-Algunos de los motivos mas comunes de esta situación los los siguientes:```
+Cabe aclarar que existe la posibilidad de que una transacción sea rechazada pero que el combustible haya sido entregado. Esto ocurre cuando el rechazo se produce en la transacción de terminación.
+Algunos de los motivos mas comunes de esta situación los los siguientes:
 
+* La pre autorización esta vencida (mas de 3hs entre la fecha de creación de la pre autorización y la fecha de creación de la terminación. Esto no se relaciona con el tiempo que puede tardar en llegar la terminación en modo offline)
+* No existe una pre autorización existente para esa transacción
+* La pre autorización fue cancelada manualmente
+* La transacción de terminación contiene información invalida (errores en la terminal o controlador)
+* La transacción de terminación se ejecuto con errores en el host
+* La transacción de terminación contiene información diferente a la de pre autorización, como por ejemplo
+* La transacción de terminación informa mas volumen o importe que el que fue autorizado. En este caso se puede aprobar la autorización. 
 
 #### Transacciones sin Control
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+Las transacciones sin control son aquellas transacciones que se generan porque el controlador detecto una diferencia de aforadores y envía una transacción por la diferencia. Estas transacciones no contienen datos sobre el identificador ya que fueron generadas automáticamente y no se iniciaron con la presentación de un identificador. Al no tener un identificador asignado tampoco se impactan en ninguna cuenta corriente ni cuentan para calculo de reglas.
+Esta vista también el panel de filtros para hacer búsquedas mas especificas.
 
-#### Vehiculos
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+![Transacciones Rechazadas](Content/Includes/AN-HomeBase-UserManal-SP/transaccionesfueraDeControl.png)
+
+#### Vehículos
+En esta vista se listan los vehículos que han sido dados de alta. Recuerde que no es obligatorio cargar vehículos para poder operar, solo es necesario si usted decide asociar los identificadores a vehículos.
+
+Esta vista posee  el panel de filtros para poder especificar mas la búsqueda. Cabe destacar el filtro "Sin Identificación", seleccionando esta opción, se mostraran solo aquellos vehículos que no han sido asignados a un identificador. 
+
+![Vehicles](Content/Includes/AN-HomeBase-UserManal-SP/vehicles.png)
+
+Para ver mas detalles del vehículo, haga click en el código:
+
+![Vehicles](Content/Includes/AN-HomeBase-UserManal-SP/vehicles2.png)
+
+Al final de la vista encontrara 3 secciones, ***Conductores***, ***Reglas de Vehículos*** y ***Reglas de Flota***. Si el vehículo posee uno o mas conductores asociados se mostraran en la primer sección, y si el vehículo tiene una regla asociada, ya sea en forma directa a o a través de una flota aparecerán en las ultimas 2 secciones.
 
 ### Reportes
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+En ATIONet los reportes son considerados aquellos listados de información que si o si van a ser impresos y archivados en formato físico. Al ser impresos ATIONet les agrega una cabecera con el logo de la suscripción automáticamente.
+
+#### Conductor
+#### Detalle de actividad por Vehículo
+#### Sitios
+#### Transacciones
+#### Vehículo
 
 ## Definiciones
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
@@ -407,6 +432,18 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula
 
 ### Compañía 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula
+
+### Identificador 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula
+
+### Sitio 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula
+
+### Vehiculo 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula
+
+### Conductor 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula
 
 ### Modulo Offline 
