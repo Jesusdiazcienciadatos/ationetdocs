@@ -401,7 +401,7 @@ Algunos de los motivos mas comunes de esta situación los los siguientes:
 Las transacciones sin control son aquellas transacciones que se generan porque el controlador detecto una diferencia de aforadores y envía una transacción por la diferencia. Estas transacciones no contienen datos sobre el identificador ya que fueron generadas automáticamente y no se iniciaron con la presentación de un identificador. Al no tener un identificador asignado tampoco se impactan en ninguna cuenta corriente ni cuentan para calculo de reglas.
 Esta vista también el panel de filtros para hacer búsquedas mas especificas.
 
-![Transacciones Rechazadas](Content/Includes/AN-HomeBase-UserManal-SP/transaccionesfueraDeControl.png)
+![Transacciones sin Control](Content/Includes/AN-HomeBase-UserManal-SP/transaccionesFueraDeControl.png)
 
 #### Vehículos
 En esta vista se listan los vehículos que han sido dados de alta. Recuerde que no es obligatorio cargar vehículos para poder operar, solo es necesario si usted decide asociar los identificadores a vehículos.
