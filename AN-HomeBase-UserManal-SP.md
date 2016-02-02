@@ -55,7 +55,7 @@
 - Menú de Navegación
 	- [Tablero](#tablero)
 		- [Estado General](#estado-general)
-		- [Litros/Mes](#litros/mes)
+		- [Litros-Mes](#litros-mes)
 		- [Transacciones del Día](#transacciones-del-día)
 		- [Lista de Pre-Autorizaciones Pendientes](#lista-de-pre-autorizaciones-pendientes)
 		- [Transacciones marcadas en ultimo mes](#transacciones-marcadas-en-ultimo-mes)
@@ -166,7 +166,7 @@ Este widget puede mostrar "Advertencias" (icono amarillo)cuando no esta en juego
 ![Estado General](Content/Includes/AN-HomeBase-UserManal-SP/estadoGeneral.png)
 ![Estado General](Content/Includes/AN-HomeBase-UserManal-SP/estadoGeneral2.png)
 
-#### Litros/Mes
+#### Litros-Mes
 El de "Litros/Mes indica la cantidad que se despacho de cada combustible en el ultimo mes. Como ultimo mes se entiende a los últimos 30 días contando desde el día de la fecha. Este widget posee la capacidad de filtrar por Sitio, Ciudad y Flota. Se debe seleccionar el filtro y después se ingresa el valor por el cual se debe filtrar. Este ultimo campo es del tipo "auto complete".
 
 ![Litros Mes](Content/Includes/AN-HomeBase-UserManal-SP/litrosMes.png)
