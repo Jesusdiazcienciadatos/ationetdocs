@@ -420,9 +420,44 @@ Al final de la vista encontrara 3 secciones, ***Conductores***, ***Reglas de Veh
 En ATIONet los reportes son considerados aquellos listados de información que si o si van a ser impresos y archivados en formato físico. Al ser impresos ATIONet les agrega una cabecera con el logo de la suscripción automáticamente.
 
 #### Conductor
+El reporte de Conductor se puede filtrar por nombre / código de conductor o por identificación.
+Una vez seleccionado el filtro se presiona el botón ***Imprimir***, esto desplegara un popup con la información seleccionada.
+La información es mostrada con un formato listo para ser impreso, incluyendo el logo de la suscripción y la fecha y la hora de generación del reporte.
+
+Este popup posee un botón imprimir que al apretarlo se abre la ventana de impresión por defecto del navegador de internet.
+
+![Drivers](Content/Includes/AN-HomeBase-UserManal-SP/driversReport.png)
+
 #### Detalle de actividad por Vehículo
+Este reporte muestra la actividad de cada vehículo. Muestra la lista de transacciones que cada vehículo realizo, ordenadas por fecha. Una vez seleccionado el filtro se presiona el botón ***Imprimir***, esto desplegara un popup con la información seleccionada.
+La información es mostrada con un formato listo para ser impreso, incluyendo el logo de la suscripción y la fecha y la hora de generación del reporte.
+
+Este popup posee un botón imprimir que al apretarlo se abre la ventana de impresión por defecto del navegador de internet.
+ 
+
+![Drivers](Content/Includes/AN-HomeBase-UserManal-SP/vehicleDetailedActivity.png)
+
 #### Sitios
+Este reporte muestra la lista de sitios. Esta vista no posee un panel de filtros. Al presionar el botón ***Imprimir***, esto desplegara un popup con toda la información.
+La información es mostrada con un formato listo para ser impreso, incluyendo el logo de la suscripción y la fecha y la hora de generación del reporte.
+
+Este popup posee un botón imprimir que al apretarlo se abre la ventana de impresión por defecto del navegador de internet.
+
+![Sites](Content/Includes/AN-HomeBase-UserManal-SP/siteReport.png)
+
 #### Transacciones
+Este reporte muestra la lista de transacciones realizadas, ordenadas por fecha. Este reporte posee varios filtros para ajustar la busqueda. El primer campo del panel de filtros  indica porque campo se va a ordenar la lista, el campo seleccionado en esta lista sera mostrado en la primer columna.
+
+![Transactions](Content/Includes/AN-HomeBase-UserManal-SP/transactionReport.png)
+
+Una vez seleccionado el filtro se presiona el botón ***Imprimir***, esto desplegara un popup con la información seleccionada.
+La información es mostrada con un formato listo para ser impreso, incluyendo el logo de la suscripción y la fecha y la hora de generación del reporte.
+
+Este popup posee un botón imprimir que al apretarlo se abre la ventana de impresión por defecto del navegador de internet.
+
+![Transactions](Content/Includes/AN-HomeBase-UserManal-SP/transactionReport2.png)
+
+
 #### Vehículo
 
 ## Definiciones
