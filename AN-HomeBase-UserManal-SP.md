@@ -67,7 +67,7 @@
 		- [Estado de Terminales](#estado-de-terminales)
 		- [Contratos sin actividad](#contratos-sin-actividad)
 		- [Listado de contratos con bajo saldo](#listado-de-contratos-con-bajo-saldo)
-	- [Favoritos](#tablero)	
+	- [Favoritos](#favoritos)	
 	- [Vistas](#vistas)
 		- [Autorizaciones Pendientes](#autorizaciones-pendientes)
 		- [Batch](#batch)
@@ -84,7 +84,7 @@
 		- [Transacciones Rechazadas](#transacciones-rechazadas)
 		- [Transacciones sin Control](#transacciones-sin-control)
 		- [Vehiculos](#vehiculos)
-	- Reportes
+	- [Reportes](#reportes)
 		- [Conductor](#conductor)
 		- [Detalle de actividad por Vehículo](#detalle-de-actividad-por-vehículo)
 		- [Sitios](#sitios)
