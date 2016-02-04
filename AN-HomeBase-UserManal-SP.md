@@ -45,7 +45,7 @@
 
 - Visión general
 - [Definiciones](#definiciones)
-	- [Contratos](#contratos) 
+	- [Contrato](#contrato) 
 	- [Sub cuenta](#sub-cuenta)
 	- [Compañía](#compañía)
 	- [Identificador](#identificador)
