@@ -45,6 +45,7 @@
 
 - Visión general
 - [Definiciones](#definiciones)
+	- [Contratos](#contratos) 
 	- [Sub cuenta](#sub-cuenta)
 	- [Compañía](#compañía)
 	- [Identificador](#identificador)
@@ -132,26 +133,34 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac 
 ## Definiciones
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
 
+### Contrato 
+En el tipo de suscripción auto consumo esta opción no es utilizada y no esta disponible.
+
 ### Sub Cuenta 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula
+Cada vez que se asocia un identificador a un vehículo o un conductor se crea una sub cuenta. La sub cuenta es en definitiva quien va a tener una cuenta corriente, la sub cuenta va a poder recibir depósitos de dinero o producto. Las reglas también impactan a la sub cuenta.
+
+Las sub cuentas dependen jerarquicamente del contrato.
 
 ### Compañía 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula
+En el tipo de suscripción auto consumo esta opción no es utilizada y no esta disponible.
 
 ### Identificador 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula
+El identificador es el medio físico que utiliza ATIONet para poder identificar un vehículo o un conductor. ATIONet soporte varios tipos de identificaciones, como ser tarjeta, tag (anillo), chip, tarjeta ATIONet, entrada manual, código de barras e iButton. Cuando se asocia un identificador a un Vehículo o Conductor se crea una sub cuenta.
 
 ### Sitio 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula
+El Sitio representa a la estación de servicio. A un sitio se le asigna la terminal y también puede tener asociadas reglas de Ubicación.
 
-### Vehiculo 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula
+### Vehículo 
+Los vehículos pueden ser asociados o agrupados por una flota, pueden tener reglas asociadas y al momento de ser relacionados con un identificador se crea una sub cuenta. También pueden tener un conductor asociado.
 
 ### Conductor 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula
+El Conductor es la persona que esta identificado en ATIONet como un conductor. Si a este conductor se le asigna un identificador, se crea una sub cuenta. Los conductores también pueden tener reglas asociadas.
 
 ### Modulo Offline 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula
+El modulo offline de ATIONet se activa automáticamente cuando la estación de servicio se queda sin conexión a internet y las autorizaciones no se pueden procesar online. En este momento entra en juego el modulo offline. Para el controlador Nano CPI es totalmente transparente. Cuando el modulo offline recupera la conectividad envía toda la información procesada localmente y también baja las novedades. Mientras haya conectividad el modulo offline esta continuamente bajando las novedades (saldos, identificadores, reglas, etc) de ATIONet.
+
+### Terminal 
+La terminal (o controlador) es la representación del controlador de surtidores, que necesita parametrizarse de manera particular según el tipo de terminal. Las terminales que ATIONet maneja son ATIO-NanoCPI, ATIO-Standalone, ATIO-CG, VF-Standalone, VF-Sapphire, VF-Ruby, ControlGas y OPW-FSC3000. 
 
 ## Menú de Navegación
 Ationet posee un menú de acceso rápido ubicado en la parte izquierda de la pagina. Desde este menú usted podrá acceder a las distintas opciones. el menú esta dividido en 7 secciones. (Tablero, Favoritos, Vistas, Reportes, Inventario, Administración y Bitácora)
