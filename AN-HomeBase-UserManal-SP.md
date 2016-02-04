@@ -96,30 +96,30 @@
 		- Inventario
 		- Recepciones
 		- Reconciliazión Inventario
-	- Administración
-		- Clases de Vehiculos
-		- Combustibles
-		- Conceptos
-		- Conductores
-		- Configuración
-		- Configuración de Fast Track
-		- Contratos de Compañia
-		- Familias de Conceptos
-		- Flotas
-		- Identificaciones Solicitadas
-		- Identificadores
-		- Impuestos
-		- Metodos de Pago
-		- Modelos de Identificador
-		- Programas
-		- Reglas
-		- Sitios
-		- Terminales / Controladores
-		- Tipos de Documentos
-		- Transacciones Desconocidas
-		- Transacciones Fuera de Sitio
-		- Usuarios
-		- Vehículos
+	- [Administración](#administración)
+		- [Clases de Vehículos](#clases-de-vehículos)
+		- [Combustibles](#combustibles)
+		- [Conceptos](#conceptos)
+		- [Conductores](#conductores)
+		- [Configuración](#configuración)
+		- [Configuración de Fast Track](#configuración-de-fast-track)
+		- [Contratos de Compañía](#Ccontratos-de-Compañia)
+		- [Familias de Conceptos](#familias-de-conceptos)
+		- [Flotas](#flotas)
+		- [Identificaciones Solicitadas](#identificaciones-solicitadas)
+		- [Identificadores](#Identificadores)
+		- [Impuestos](#impuestos)
+		- [Metodos de Pago](#metodos-de-pago)
+		- [Modelos de Identificador](#modelo-de-identificador)
+		- [Programas](#programas)
+		- [Reglas](#reglas)
+		- [Sitios](#Sitios)
+		- [Terminales / Controladores](#Terminales/Controladores)
+		- [Tipos de Documentos](#tipos-de-documentos)
+		- [Transacciones Desconocidas](#transacciones-desconocidas)
+		- [Transacciones Fuera de Sitio](#transacciones-fuera-de-sitio)
+		- [Usuarios](#usuarios)
+		- [Vehículos](#vehículos)
 - [Mis Filtros](#mis-filtros)
 - [Solución de Problemas](#solucion-de-problemas)
 - [Mis Preferencias](#mis-preferencias)
@@ -517,6 +517,34 @@ La información es mostrada con un formato listo para ser impreso, incluyendo el
 Este popup posee un botón imprimir que al apretarlo se abre la ventana de impresión por defecto del navegador de internet.
 
 ![Vehicles](Content/Includes/AN-HomeBase-UserManal-SP/vehiclesReport2.png)
+
+## Reportes
+
+
+### Clases de Vehículos
+### Combustibles
+### Conceptos
+### Conductores
+### Configuración
+### Configuración de Fast Track
+### Contratos de Compañía
+### Familias de Conceptos
+### Flotas
+### Identificaciones Solicitadas
+### Identificadores
+### Impuestos
+### Métodos de Pago
+### Modelos de Identificador
+### Programas
+### Reglas
+### Sitios
+### Terminales / Controladores
+### Tipos de Documentos
+### Transacciones Desconocidas
+### Transacciones Fuera de Sitio
+### Usuarios
+### Vehículos
+
 
 ## Mis Filtros
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
