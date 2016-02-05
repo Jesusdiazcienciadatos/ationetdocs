@@ -542,9 +542,13 @@ Después existe una sección llamada ***"Combustibles"*** en la que se puede ind
 Si un vehículo tiene una clase de vehículo asociada y esa clase de vehículo tiene un combustible asociado con su correspondiente capacidad de tanque de 60 litros y llega una pre autorización para el vehículo por 70 litros, la transacción sera rechazada ya que se podría asumir que es un fraude o que el combustible no va a ser entregado en el vehículo configurado. En esta sección se pueden agregar mas de un combustible ya que algunos vehículos cargan mas de 1, como por ejemplo combustible y GNC.
  
 #### Combustibles
-ATIONet posee una tabla de productos maestros codificada en base al estándar NACS. Llegado el caso que su controlador o POS tenga configurado códigos distintos a los estándar o que su red sea multi marca y para un mismo producto diferentes sitios manejen distintos códigos, ATIONet posee un mecanismo para resolver esta situación. Este mecanismo es el ***"Mapeo de Productos"***. 
-Cuando un sitio necesita mapear códigos de productos deberá editar el sitio y marcar el tilde ***"Requiere Mapeo de Productos"***. 
-Cuando al menos un sitio tiene este parámetro activado se mostrara en el menú de administración la opción ***Combustibles***.
+ATIONet posee una tabla de productos maestros codificada en base al estándar NACS. Llegado el caso que su controlador o POS tenga configurado códigos distintos a los estándar o que su red sea multi marca y para un mismo producto diferentes sitios manejen distintos códigos, ATIONet posee un mecanismo para resolver esta situación. Este mecanismo es el ***"Mapeo de Combustible"***. 
+Cuando un sitio necesita mapear códigos de productos deberá editar el sitio y marcar el tilde ***"Requiere Mapeo de Combustibles"***. 
+Cuando al menos un sitio tiene este parámetro activado se mostrara en el menú de administración la opción ***Combustibles***. 
+
+***Tenga en cuenta que por defecto los sitios no están marcados con esta opción, por consecuencia la opción "Combustible" en el menú de Administración tampoco se mostrara inicialmente.***
+
+![Combustible](Content/Includes/AN-HomeBase-UserManal-SP/combustibles.png)
 
 La tabla de productos maestra de ATIONet es la siguiente:
 
