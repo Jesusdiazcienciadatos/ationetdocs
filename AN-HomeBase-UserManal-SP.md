@@ -522,8 +522,97 @@ Este popup posee un botón imprimir que al apretarlo se abre la ventana de impre
 
 
 #### Clases de Vehículos
-Si usted desea tener su flota organizada por clase de vehículo, puede hacerlo utilizando esta funcionalidad de ATIONet. 
+Si usted desea tener su flota organizada por clase de vehículo, puede hacerlo utilizando esta funcionalidad de ATIONet. Al hacer click en la opción del menú de navegación le mostrara la pagina con la lista de "Clases de Vehículos".
+
+[IMAGEN]
+
+Para crear una nueva clase de vehículo, haga click en ***"Nuevo"*** y navegara hasta la pagina de alta de nueva clase de vehículo. En esta pagina deberá cargar los siguientes campos:
+
+* ***Tipo de Vehículo:*** Una lista pre cargada de los tipos de vehículo que se esta cargando. Este campo es obligatorio.
+* ***Consumo teórico:*** El indice de consumo informado por el fabricante  (galones/litros por kilómetro/milla. Este campo es obligatorio.
+* ***Marca:*** La marca del vehículo. Este campos es obligatorio.
+* Modelo (obligatorio)
+* Kilometraje mínimo (hoy son solo informativos)
+* Kilometraje máximo (hoy son solo informativos)
+
+Después existe una sección llamada ***"Combustibles"*** en la que se puede indicar en tipo de combustible que usa el vehículo y también la capacidad del tanque. Este ultimo valor se valida en cada transacción del vehículo. 
+
+[IMAGEN]
+
+Si un vehículo tiene una clase de vehículo asociada y esa clase de vehículo tiene un combustible asociado con su correspondiente capacidad de tanque de 60 litros y llega una pre autorización para el vehículo por 70 litros, la transacción sera rechazada ya que se podría asumir que es un fraude o que el combustible no va a ser entregado en el vehículo configurado. En esta sección se pueden agregar mas de un combustible ya que algunos vehículos cargan mas de 1, como por ejemplo combustible y GNC.
+ 
 #### Combustibles
+ATIONet posee una tabla de productos maestros codificada en base al estándar NACS. Llegado el caso que su controlador o POS tenga configurado códigos distintos a los estándar o que su red sea multi marca y para un mismo producto diferentes sitios manejen distintos códigos, ATIONet posee un mecanismo para resolver esta situación. Este mecanismo es el ***"Mapeo de Productos"***. 
+Cuando un sitio necesita mapear códigos de productos deberá editar el sitio y marcar el tilde ***"Requiere Mapeo de Productos"***. 
+Cuando al menos un sitio tiene este parámetro activado se mostrara en el menú de administración la opción ***Combustibles***.
+
+La tabla de productos maestra de ATIONet es la siguiente:
+
+<table>
+    <tr>
+        <th>
+            C&#243;digo
+        </th>
+        <th>
+            Descripción
+        </th>
+    </tr>
+        <tr>
+            <td>022
+            </td>
+            <td>Compressed Natural Gas
+            </td>
+        </tr>
+        <tr>
+            <td>019
+            </td>
+            <td>Regular Diesel
+            </td>
+        </tr>
+        <tr>
+            <td>399
+            </td>
+            <td>Other Fuel
+            </td>
+        </tr>
+        <tr>
+            <td>003
+            </td>
+            <td>Unleaded Super
+            </td>
+        </tr>
+        <tr>
+            <td>300
+            </td>
+            <td>Kerosene
+            </td>
+        </tr>
+        <tr>
+            <td>023
+            </td>
+            <td>Liquid Propane Gas
+            </td>
+        </tr>
+        <tr>
+            <td>001
+            </td>
+            <td>Unleaded Regular
+            </td>
+        </tr>
+        <tr>
+            <td>020
+            </td>
+            <td>Premium Diesel
+            </td>
+        </tr>
+        <tr>
+            <td>002
+            </td>
+            <td>Unleaded Plus
+            </td>
+        </tr>
+</table>
+
 #### Conceptos
 #### Conductores
 #### Configuración
