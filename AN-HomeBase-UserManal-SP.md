@@ -53,7 +53,7 @@
 	- [Vehículo](#vehículo)
 	- [Conductor](#conductor)
 	- [Modulo offline](#modulo-offline)
-- Menú de Navegación
+- [Menú de Navegación](#menú-de-navegación)
 	- [Tablero](#tablero)
 		- [Estado General](#estado-general)
 		- [Litros-Mes](#litros-mes)
@@ -518,32 +518,33 @@ Este popup posee un botón imprimir que al apretarlo se abre la ventana de impre
 
 ![Vehicles](Content/Includes/AN-HomeBase-UserManal-SP/vehiclesReport2.png)
 
-## Reportes
+### Administración
 
 
-### Clases de Vehículos
-### Combustibles
-### Conceptos
-### Conductores
-### Configuración
-### Configuración de Fast Track
-### Contratos de Compañía
-### Familias de Conceptos
-### Flotas
-### Identificaciones Solicitadas
-### Identificadores
-### Impuestos
-### Métodos de Pago
-### Modelos de Identificador
-### Programas
-### Reglas
-### Sitios
-### Terminales / Controladores
-### Tipos de Documentos
-### Transacciones Desconocidas
-### Transacciones Fuera de Sitio
-### Usuarios
-### Vehículos
+#### Clases de Vehículos
+Si usted desea tener su flota organizada por clase de vehículo, puede hacerlo utilizando esta funcionalidad de ATIONet. 
+#### Combustibles
+#### Conceptos
+#### Conductores
+#### Configuración
+#### Configuración de Fast Track
+#### Contratos de Compañía
+#### Familias de Conceptos
+#### Flotas
+#### Identificaciones Solicitadas
+#### Identificadores
+#### Impuestos
+#### Métodos de Pago
+#### Modelos de Identificador
+#### Programas
+#### Reglas
+#### Sitios
+#### Terminales / Controladores
+#### Tipos de Documentos
+#### Transacciones Desconocidas
+#### Transacciones Fuera de Sitio
+#### Usuarios
+#### Vehículos
 
 
 ## Mis Filtros
