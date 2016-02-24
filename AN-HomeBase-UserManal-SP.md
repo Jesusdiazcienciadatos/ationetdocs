@@ -11,7 +11,7 @@
 	</tr>
 	<tr>
 		<td>Version documento:</td>
-		<td>1.1</td>
+		<td>1.2</td>
 	</tr>
 	<tr>
 		<td>Fecha:</td>
