@@ -107,13 +107,129 @@ For this example we will use Visual Studio 2013 and we will create a Console App
 
 1.  In the sample below you will see how to download transactions. Open the Program.cs and type the following code:
 
-```c#
+```javascript
 var client = new Ationet.Sdk.Interface.InterfaceOperations("https://native.ationet.com/", 
-  "srenzi@atioinc.com", "seb@re#zi1975");
-var transactions = client.GetTransactions("9JB", "", "", DateTime.Now.AddDays(-1));
+  "[YOUR-USERNAME]", "[YOUR-PASSWORD]");
+var transactions = client.GetTransactions("XYZ", "", "", DateTime.Now.AddDays(-1));
 
 foreach (var tran in transactions.Content)
 {
     Console.WriteLine("{0} - {1} - {2}", tran.AuthorizationCode, tran.TerminalCode, tran.ProductAmountDispensed);
 }
 ```
+
+First, you need an instance of the InterfaceOperations class. the constructor of this class requires 3 parameters, the url, username and password.
+Once you have an instance of the InterfaceOperations class you can start calling the different methods.
+The complete list of methods in InterfaceOperations:
+
+
+<table>
+     <thead>
+        <tr> 
+			<td>Method</td>
+			<td>Parameters</td>
+			<td>Description</td>
+		</tr>
+		
+     </thead>
+     <tbody>
+        <tr>
+          	<td>BalanceTransferContractToSubAccount</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <!-- Insert a table row like this for each version -->
+        <tr>
+          	<td>BalanceTransferSubAccountToContract</td>
+          	<td></td>
+          	<td></td>
+        </tr>
+        <tr>
+          	<td>BalanceTransferSubAccountToSubAccount</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+          	<td>BalanceTransferToContract</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+          	<td>BalanceTransferToSubAccount</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+          	<td>BalanceWithdrawFromContract</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+          	<td>BalanceWithdrawFromSubAccount</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+          	<td>ContractBalanceDownload</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+          	<td>GetDeliveries</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+          	<td>GetExceptions</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+          	<td>GetInventories</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+          	<td>GetMovements</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+          	<td>GetRetailBatchCloses</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+          	<td>GetRetailTransactions</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+          	<td>GetStatements</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+          	<td>GetTransactions</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+          	<td>GetUncontrolledTransactions</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+          	<td>InsertFastTrackOrder</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+          	<td>SubAccountBalanceDownload</td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <!-- End of version table row -->
+     </tbody>
+</table>
