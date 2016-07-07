@@ -107,7 +107,7 @@ For this example we will use Visual Studio 2013 and we will create a Console App
 
 1.  In the sample below you will see how to download transactions. Open the Program.cs and type the following code:
 
-**
+```c#
             var client = new Ationet.Sdk.Interface.InterfaceOperations("https://native.ationet.com/", "srenzi@atioinc.com", "seb@re#zi1975");
 
             var transactions = client.GetTransactions("9JB", "", "", DateTime.Now.AddDays(-1));
@@ -116,4 +116,4 @@ For this example we will use Visual Studio 2013 and we will create a Console App
             {
                 Console.WriteLine("{0} - {1} - {2}", tran.AuthorizationCode, tran.TerminalCode, tran.ProductAmountDispensed);
             }
-**
+```
