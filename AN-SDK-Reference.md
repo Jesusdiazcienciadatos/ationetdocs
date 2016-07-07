@@ -112,7 +112,7 @@ var client = new Ationet.Sdk.Interface.InterfaceOperations("https://native.ation
 var transactions = client.GetTransactions("9JB", "", "", DateTime.Now.AddDays(-1));
 
 foreach (var tran in transactions.Content)
-    {
-        Console.WriteLine("{0} - {1} - {2}", tran.AuthorizationCode, tran.TerminalCode, tran.ProductAmountDispensed);
-    }
+{
+    Console.WriteLine("{0} - {1} - {2}", tran.AuthorizationCode, tran.TerminalCode, tran.ProductAmountDispensed);
+}
 ```
