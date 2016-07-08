@@ -13,7 +13,7 @@
 	<tbody>
 		<tr>
 			<td width="20%" class="rowhead" align="right">File:</td>
-			<td>AN-SDK-Specs</td>
+			<td>AN-SDK-Reference</td>
 		</tr>
 		<tr>
 			<td align="right">Doc. Version:</td>
@@ -21,11 +21,11 @@
 		</tr>
 		<tr>
 			<td align="right">Release Date:</td>
-			<td>02, September 2014</td>
+			<td>10, July 2016</td>
 		</tr>
 		<tr>
 			<td align="right">Author:</td>
-			<td>ATIO International LLC</td>
+			<td>ATIONet LLC</td>
 		</tr>
 	</tbody>
 </table>
@@ -152,32 +152,32 @@ Each Operation Type class has multiple methods to perform specific operation aga
         <tr>
           	<td>SendConfirmation</td>
             <td></td>
-            <td>loren impsum</td>
+            <td>Sends a <i>Confirmation</i> message to the host (learn more about transactions flow here:</td>
         </tr>
         <tr>
           	<td>SendConfirmationAsync</td>
             <td></td>
-            <td>loren impsum</td>
+            <td>Async version of the previous method</td>
         </tr>
         <tr>
           	<td>SendPreAuthorization</td>
             <td></td>
-            <td>loren impsum</td>
+            <td>Sends a <i>Pre Authorization</i> message to the host (learn more about transactions flow here:</td>
         </tr>
         <tr>
           	<td>SendPreAuthorizationAsync</td>
             <td></td>
-            <td>loren impsum</td>
+            <td>Async version of the previous method</td>
         </tr>
         <tr>
           	<td>SendSale</td>
             <td></td>
-            <td>loren impsum</td>
+            <td>Sends a <i>Sale</i> message to the host (learn more about transactions flow here:</td>
         </tr>
         <tr>
           	<td>SendSaleAsync</td>
             <td></td>
-            <td>loren impsum</td>
+            <td>Async version of the previous method</td>
         </tr>
 	</tbody>
 </table>
@@ -231,32 +231,32 @@ Each Operation Type class has multiple methods to perform specific operation aga
         <tr>
           	<td>BalanceTransferContractToSubAccount</td>
             <td></td>
-            <td>This method transfers money from the contract to a sub account</td>
+            <td>Transfers money from the contract to a sub account</td>
         </tr>
         <tr>
           	<td>BalanceTransferSubAccountToContract</td>
           	<td></td>
-          	<td>This method transfers money from the sub account to the contract</td>
+          	<td>Transfers money from the sub account to the contract</td>
         </tr>
         <tr>
           	<td>BalanceTransferSubAccountToSubAccount</td>
             <td></td>
-            <td>This method transfers money between sub accounts</td>
+            <td>Transfers money between sub accounts</td>
         </tr>
         <tr>
           	<td>BalanceTransferToContract</td>
             <td></td>
-            <td>This method transfers (deposit) money to a contract</td>
+            <td>Transfers (deposit) money to a contract</td>
         </tr>
         <tr>
           	<td>BalanceTransferToSubAccount</td>
             <td></td>
-            <td>This method transfers (deposit) money to a sub account</td>
+            <td>Transfers (deposit) money to a sub account</td>
         </tr>
         <tr>
           	<td>BalanceWithdrawFromContract</td>
             <td></td>
-            <td>This method removes (Withdraw) money from a contract</td>
+            <td>Removes (Withdraw) money from a contract</td>
         </tr>
         <tr>
           	<td>BalanceWithdrawFromSubAccount</td>
