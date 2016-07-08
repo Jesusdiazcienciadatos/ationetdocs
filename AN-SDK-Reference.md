@@ -119,8 +119,7 @@ For this example we will use Visual Studio 2013 and we will create a Console App
 ```javascript
 
 
-var client = new Ationet.Sdk.Interface.InterfaceOperations("https://native.ationet.com/", 
-    "[YOUR-USERNAME]", "[YOUR-PASSWORD]");
+var client = new Ationet.Sdk.Interface.InterfaceOperations("https://native.ationet.com/", "[YOUR-USERNAME]", "[YOUR-PASSWORD]");
 var transactions = client.GetTransactions("XYZ", "", "", DateTime.Now.AddDays(-1));
 
 foreach (var tran in transactions.Content)
