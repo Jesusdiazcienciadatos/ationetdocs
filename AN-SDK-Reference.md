@@ -68,6 +68,12 @@
   -  [Loyalty](#loyalty)
   -  [Retail](#retail)
 - [Consuming the SDK](#consuming-the-sdk)
+  -  [Operation Types methods](#operation-types-methods)
+	  -  [Auth Methods](#auth-methods)
+	  -  [FMS Methods](#fms-methods)
+	  -  [Interface Methods](#interface-methods)
+	  -  [Loyalty Methods](#loyalty-methods)
+	  -  [Retail Methods](#retail-methods)
 
 <!-- /MarkdownTOC -->
 
@@ -91,8 +97,11 @@ The FMS Operation Type is the one in charge of interacting with the FMS module. 
 The Interface Operation Type was design to be used by 3rd party software that need to get information from ATIONet. With this Operation Type you can download transactions (fleet, loyalty, retail, rejected, approved and exceptions), current account movements, current account balances and loyalty current account.
 
 ### Loyalty
+The Loyalty Operation Type is the one in charge of interacting with the Loyalty module. Using this Operation Type you will be able to send Loyalty transactions to ATIONet among other features.
 
 ### Retail
+The Retail Operation Type is the one in charge of interacting with the Retail module. Using this Operation Type you will be able to send Retail information (transactions, batch closes, etc) to ATIONet among other features.
+
 
 ## Consuming the SDK
 For this example we will use Visual Studio 2013 and we will create a Console Application.
@@ -108,21 +117,107 @@ For this example we will use Visual Studio 2013 and we will create a Console App
 1.  In the sample below you will see how to download transactions. Open the Program.cs and type the following code:
 
 ```javascript
+
+
 var client = new Ationet.Sdk.Interface.InterfaceOperations("https://native.ationet.com/", 
-  "[YOUR-USERNAME]", "[YOUR-PASSWORD]");
+    "[YOUR-USERNAME]", "[YOUR-PASSWORD]");
 var transactions = client.GetTransactions("XYZ", "", "", DateTime.Now.AddDays(-1));
 
 foreach (var tran in transactions.Content)
 {
     Console.WriteLine("{0} - {1} - {2}", tran.AuthorizationCode, tran.TerminalCode, tran.ProductAmountDispensed);
 }
+
+
 ```
 
-First, you need an instance of the InterfaceOperations class. the constructor of this class requires 3 parameters, the url, username and password.
-Once you have an instance of the InterfaceOperations class you can start calling the different methods.
-The complete list of methods in InterfaceOperations:
+First, you need an instance of the *InterfaceOperations* class. The constructor of this class requires 3 parameters, the url, username and password.
+Once you have an instance of the *InterfaceOperations* class you can start calling the different methods. Find below the list of all the methods by *Operation Type*:
 
 
+## Operation Types methods
+Each Operation Type class has multiple methods to perform specific operation against ATIONet. Each of this methods has a set of parameters, some of them to determine behaviour and others to filter data.
+
+### Auth Methods
+<table>
+     <thead>
+        <tr> 
+			<td>Method</td>
+			<td>Parameters</td>
+			<td>Description</td>
+		</tr>
+		
+     </thead>
+     <tbody>
+        <tr>
+          	<td>SendConfirmation</td>
+            <td></td>
+            <td>loren impsum</td>
+        </tr>
+        <tr>
+          	<td>SendConfirmationAsync</td>
+            <td></td>
+            <td>loren impsum</td>
+        </tr>
+        <tr>
+          	<td>SendPreAuthorization</td>
+            <td></td>
+            <td>loren impsum</td>
+        </tr>
+        <tr>
+          	<td>SendPreAuthorizationAsync</td>
+            <td></td>
+            <td>loren impsum</td>
+        </tr>
+        <tr>
+          	<td>SendSale</td>
+            <td></td>
+            <td>loren impsum</td>
+        </tr>
+        <tr>
+          	<td>SendSaleAsync</td>
+            <td></td>
+            <td>loren impsum</td>
+        </tr>
+	</tbody>
+</table>
+
+### FMS Methods
+<table>
+     <thead>
+        <tr> 
+			<td>Method</td>
+			<td>Parameters</td>
+			<td>Description</td>
+		</tr>
+		
+     </thead>
+     <tbody>
+        <tr>
+          	<td>UploadNativeDeliveries</td>
+            <td></td>
+            <td>loren impsum</td>
+        </tr>
+        <tr>
+          	<td>UploadNativeDelivery</td>
+            <td></td>
+            <td>loren impsum</td>
+        </tr>
+        <tr>
+          	<td>UploadNativeInventories</td>
+            <td></td>
+            <td>loren impsum</td>
+        </tr>
+        <tr>
+          	<td>UploadNativeInventory</td>
+            <td></td>
+            <td>loren impsum</td>
+        </tr>
+
+	</tbody>
+</table>
+
+### Interface Methods
 <table>
      <thead>
         <tr> 
@@ -136,100 +231,166 @@ The complete list of methods in InterfaceOperations:
         <tr>
           	<td>BalanceTransferContractToSubAccount</td>
             <td></td>
-            <td></td>
+            <td>This method transfers money from the contract to a sub account</td>
         </tr>
-        <!-- Insert a table row like this for each version -->
         <tr>
           	<td>BalanceTransferSubAccountToContract</td>
           	<td></td>
-          	<td></td>
+          	<td>This method transfers money from the sub account to the contract</td>
         </tr>
         <tr>
           	<td>BalanceTransferSubAccountToSubAccount</td>
             <td></td>
-            <td></td>
+            <td>This method transfers money between sub accounts</td>
         </tr>
         <tr>
           	<td>BalanceTransferToContract</td>
             <td></td>
-            <td></td>
+            <td>This method transfers (deposit) money to a contract</td>
         </tr>
         <tr>
           	<td>BalanceTransferToSubAccount</td>
             <td></td>
-            <td></td>
+            <td>This method transfers (deposit) money to a sub account</td>
         </tr>
         <tr>
           	<td>BalanceWithdrawFromContract</td>
             <td></td>
-            <td></td>
+            <td>This method removes (Withdraw) money from a contract</td>
         </tr>
         <tr>
           	<td>BalanceWithdrawFromSubAccount</td>
             <td></td>
-            <td></td>
+            <td>This method removes (Withdraw) money from a sub account</td>
         </tr>
         <tr>
           	<td>ContractBalanceDownload</td>
             <td></td>
-            <td></td>
+            <td>This method downloads a contracts balances list</td>
         </tr>
         <tr>
           	<td>GetDeliveries</td>
             <td></td>
-            <td></td>
+            <td>This method downloads a deliveries list</td>
         </tr>
         <tr>
           	<td>GetExceptions</td>
             <td></td>
-            <td></td>
+            <td>This method downloads a transaction exceptions list</td>
         </tr>
         <tr>
           	<td>GetInventories</td>
             <td></td>
-            <td></td>
+            <td>This method downloads an inventories list</td>
         </tr>
         <tr>
           	<td>GetMovements</td>
             <td></td>
-            <td></td>
+            <td>This method downloads current account movements</td>
         </tr>
         <tr>
           	<td>GetRetailBatchCloses</td>
             <td></td>
-            <td></td>
+            <td>This method downloads retail batch closes</td>
         </tr>
         <tr>
           	<td>GetRetailTransactions</td>
             <td></td>
-            <td></td>
+            <td>This method downloads retail transactions</td>
         </tr>
         <tr>
           	<td>GetStatements</td>
             <td></td>
-            <td></td>
+            <td>This method downloads the statements</td>
         </tr>
         <tr>
           	<td>GetTransactions</td>
             <td></td>
-            <td></td>
+            <td>This method downloads fleet transactions</td>
         </tr>
         <tr>
           	<td>GetUncontrolledTransactions</td>
             <td></td>
-            <td></td>
+            <td>This method downloads uncontrolled transactions</td>
         </tr>
         <tr>
           	<td>InsertFastTrackOrder</td>
             <td></td>
-            <td></td>
+            <td>This method inserts fast tracks (trip orders)</td>
         </tr>
         <tr>
           	<td>SubAccountBalanceDownload</td>
             <td></td>
+            <td>This method downloads the balance of the sub accounts</td>
+        </tr>
+     </tbody>
+</table>
+
+### Loyalty Methods
+<table>
+     <thead>
+        <tr> 
+			<td>Method</td>
+			<td>Parameters</td>
+			<td>Description</td>
+		</tr>
+		
+     </thead>
+     <tbody>
+        <tr>
+          	<td>SendLoyaltyAccumulation</td>
             <td></td>
+            <td>loren impsum</td>
+        </tr>
+        <tr>
+          	<td>SendLoyaltyAccumulationAsync</td>
+            <td></td>
+            <td>loren impsum</td>
+        </tr>
+        <tr>
+          	<td>SendLoyaltyBalanceInquiry</td>
+            <td></td>
+            <td>loren impsum</td>
+        </tr>
+        <tr>
+          	<td>SendLoyaltyBalanceInquiryAsync</td>
+            <td></td>
+            <td>loren impsum</td>
         </tr>
 
-        <!-- End of version table row -->
-     </tbody>
+	</tbody>
+</table>
+
+### Retail Methods
+<table>
+     <thead>
+        <tr> 
+			<td>Method</td>
+			<td>Parameters</td>
+			<td>Description</td>
+		</tr>
+		
+     </thead>
+     <tbody>
+        <tr>
+          	<td>SendRetailBatchClose</td>
+            <td></td>
+            <td>loren impsum</td>
+        </tr>
+        <tr>
+          	<td>SendRetailBatchCloseAsync</td>
+            <td></td>
+            <td>loren impsum</td>
+        </tr>
+        <tr>
+          	<td>SendSaleRecordsUpload</td>
+            <td></td>
+            <td>loren impsum</td>
+        </tr>
+        <tr>
+          	<td>SendSaleRecordsUploadAsync</td>
+            <td></td>
+            <td>loren impsum</td>
+        </tr>
+	</tbody>
 </table>
