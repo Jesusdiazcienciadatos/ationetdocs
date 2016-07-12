@@ -1,5 +1,5 @@
 ![ationetlogo](Content/Images/ATIOnetLogo_250x70.png) 
-# ATIONet .NET SDK Development Guide
+# ATIONet .NET SDK Reference
 > **About:** This document describes and explains how to consume the .NET SDK for all Ationet APIs.	
 
 </br>
@@ -45,7 +45,7 @@
         <!-- Insert a table row like this for each version -->
         <tr>
           	<td>1.0</td>
-          	<td>02/Sept/2014</td>
+          	<td>10/July/2016</td>
           	<td>Initial version</td>
         </tr>
         <!-- End of version table row -->

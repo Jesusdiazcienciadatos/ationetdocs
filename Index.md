@@ -42,6 +42,7 @@
 	* [Transaction Flows](https://github.com/atioint/ationetdocs/blob/master/AN-Transaction_Flows-TechGuide.md)
 	* [REST API Documentation](https://github.com/atioint/ationetdocs/blob/master/dummy.md)
 	* [Native Loyalty Protocol](https://github.com/atioint/ationetdocs/blob/master/AN-Native_Loyalty_Protocol-Spec.md)
+	* [ATIONet SDK Reference](https://github.com/atioint/ationetdocs/blob/master/AN-SDK-Reference.md)
 * Loyalty
 	* [Accumulation Logic](https://github.com/atioint/ationetdocs/blob/master/AN-LTY-Accumulation_Logic.md)
 	* [Expiration Logic](https://github.com/atioint/ationetdocs/blob/master/AN-LTY-Expiration_Logic.md)
