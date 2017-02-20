@@ -93,11 +93,11 @@
   -  [Reimprimir Último](#reimprimir-ultimo)
   -  [Anular Transacción](#anular-transacción)
 -  [Menú de Configuración](#menú-de-configuración)
-    -  [Clave Supervisor](#clave-supervisor)
-    -  [Otros Productos](#otros-productos)
-    -  [Crear Nuevos Productos](#crear-nuevos-productos)
-    -  [Editar Productos](#editar-productos)
-    -  [Borrar Productos](#borrar-productos)
+  -  [Clave Supervisor](#clave-supervisor)
+  -  [Otros Productos](#otros-productos)
+  -  [Crear Nuevos Productos](#crear-nuevos-productos)
+  -  [Editar Productos](#editar-productos)
+  -  [Borrar Productos](#borrar-productos)
  
 <!-- /MarkdownTOC -->
 
