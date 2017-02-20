@@ -76,28 +76,28 @@
 
 <!-- MarkdownTOC depth=2 -->
 
-- [Introducción](#introducción)
-- [Componentes](#componentes)
-- [Cambio de Rollo de Papel Térmico](#cambio-de-rollo-de-papel-térmico)
-- [Ingreso de caracteres Alfabéticos (Letras)](#ingreso-de-caracteres-alfabéticos-(Letras))
-- [Teclas de Navegación](#teclas-de-navegación)
-- [Configuración de parámetros](#configuración-de-parámetros)
-- [Procedimiento Operativo](#procedimiento-operativo)
-  -  [Pre-Autorización](#pre-autorización)
-  -  [Confirmación](#confirmación)
-  -  [Borrar Pre Pendiente](#borrar-pre-pendiente)
-  -  [Venta](#venta)
-  -  [Consulta de Saldo](#consulta-de-saldo)
-- [Menú de Mantenimiento](#menú-de-mantenimiento)
-  -  [Cierre de Lote](#cierre-de-Lote)
-  -  [Reimprimir Último](#reimprimir-ultimo)
-  -  [Anular Transacción](#anular-transacción)
-- [Menú de Configuración](#menú-de-configuración)
-  -  [Clave Supervisor](#clave-supervisor)
-  -  [Otros Productos](#otros-productos)
-  -  [Crear Nuevos Productos](#crear-nuevos-productos)
-  -  [Editar Productos](#editar-productos)
-  -  [Borrar Productos](#borrar-productos)
+* [Introducción](#introducción)
+* [Componentes](#componentes)
+* [Cambio de Rollo de Papel Térmico](#cambio-de-rollo-de-papel-térmico)
+* [Ingreso de caracteres Alfabéticos (Letras)](#ingreso-de-caracteres-alfabéticos-(Letras))
+* [Teclas de Navegación](#teclas-de-navegación)
+* [Configuración de parámetros](#configuración-de-parámetros)
+* [Procedimiento Operativo](#procedimiento-operativo)
+  *  [Pre-Autorización](#pre-autorización)
+  *  [Confirmación](#confirmación)
+  *  [Borrar Pre Pendiente](#borrar-pre-pendiente)
+  *  [Venta](#venta)
+  *  [Consulta de Saldo](#consulta-de-saldo)
+* [Menú de Mantenimiento](#menú-de-mantenimiento)
+  *  [Cierre de Lote](#cierre-de-Lote)
+  *  [Reimprimir Último](#reimprimir-ultimo)
+  *  [Anular Transacción](#anular-transacción)
+* [Menú de Configuración](#menú-de-configuración)
+  *  [Clave Supervisor](#clave-supervisor)
+  *  [Otros Productos](#otros-productos)
+  *  [Crear Nuevos Productos](#crear-nuevos-productos)
+  *  [Editar Productos](#editar-productos)
+  *  [Borrar Productos](#borrar-productos)
  
 <!-- /MarkdownTOC -->
 
@@ -525,13 +525,6 @@ Antes de empezar a operar la terminal es necesario configurar algunos parámetro
 		</td>
 	</tr>
 	<tr>
-		<td><img src="Content/Images/standAloneTerminal/22.png"></td>
-		<td> 
-			Complete el precio unitario para el producto. Normalmente la terminal le mostrará el valor al que habitualmente opera la estación con ese producto. Puede editarlo de ser necesario.<br>
-			<br>NOTA: La terminal, dependiendo de la configuración de la tarjeta, podrá repetir este paso pidiendo otros datos. Repita el procedimiento hasta haber respondido todo.
-		</td>
-	</tr>
-	<tr>
 		<td><img src="Content/Images/standAloneTerminal/23.png"></td>
 		<td> 
 			Una vez completos todos los datos la terminal mostrará el mensaje "PROCESANDO…" mientras se comunica con los sistemas centrales para pedir autorización.
@@ -866,6 +859,7 @@ Para ingresar al Menú de Configuración presione la opción (8) en el menú de 
 	</tr>
 </table>
 
+<!---
 ### Otros Productos:
  ATIONET permite trabajar también con productos no combustibles como aditivos, lubricantes, productos secos e incluso adelantos de efectivo. Para poder enviar al Servidor Central transacciones de autorización por estos productos primero hay que crear los mismos en el maestro de productos del TPV y asignarles un código de equivalencia con el código centralizado que se utiliza para ese producto a nivel de red.<br>
  <br> 
@@ -961,3 +955,4 @@ Para ingresar al Menú de Configuración presione la opción (8) en el menú de 
 		</td>
 	</tr>
 </table>
+-->
