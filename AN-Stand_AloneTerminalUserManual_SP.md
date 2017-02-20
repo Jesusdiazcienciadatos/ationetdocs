@@ -74,7 +74,7 @@
 </table>
 
 
-<!-- MarkdownTOC depth=3 -->
+<!-- MarkdownTOC depth=2 -->
 
 - [Introducción](#introducción)
 - [Componentes](#componentes)
@@ -83,21 +83,21 @@
 - [Teclas de Navegación](#teclas-de-navegación)
 - [Configuración de parámetros](#configuración-de-parámetros)
 - [Procedimiento Operativo](#procedimiento-operativo)
-  -  [Pre-Autorización](#pre-autorización)
-  -  [Confirmación](#confirmación)
-  -  [Borrar Pre Pendiente](#borrar-pre-pendiente)
-  -  [Venta](#venta)
-  -  [Consulta de Saldo](#consulta-de-saldo)
--  [Menú de Mantenimiento](#menú-de-mantenimiento)
-  -  [Cierre de Lote](#cierre-de-Lote)
-  -  [Reimprimir Último](#reimprimir-ultimo)
-  -  [Anular Transacción](#anular-transacción)
--  [Menú de Configuración](#menú-de-configuración)
-  -  [Clave Supervisor](#clave-supervisor)
-  -  [Otros Productos](#otros-productos)
-  -  [Crear Nuevos Productos](#crear-nuevos-productos)
-  -  [Editar Productos](#editar-productos)
-  -  [Borrar Productos](#borrar-productos)
+  - [Pre-Autorización](#pre-autorización)
+  - [Confirmación](#confirmación)
+  - [Borrar Pre Pendiente](#borrar-pre-pendiente)
+  - [Venta](#venta)
+  - [Consulta de Saldo](#consulta-de-saldo)
+- [Menú de Mantenimiento](#menú-de-mantenimiento)
+  - [Cierre de Lote](#cierre-de-Lote)
+  - [Reimprimir Último](#reimprimir-ultimo)
+  - [Anular Transacción](#anular-transacción)
+- [Menú de Configuración](#menú-de-configuración)
+  - [Clave Supervisor](#clave-supervisor)
+  - [Otros Productos](#otros-productos)
+  - [Crear Nuevos Productos](#crear-nuevos-productos)
+  - [Editar Productos](#editar-productos)
+  - [Borrar Productos](#borrar-productos)
  
 <!-- /MarkdownTOC -->
 
