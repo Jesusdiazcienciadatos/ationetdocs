@@ -258,8 +258,8 @@ Durante toda la operación de la TPV se utilizan las teclas inferiores de color 
 
 <table>
 	<tr>
-		<td>Imagen</td>
-		<td>Descripción</td>
+		<td width=50%>Imagen</td>
+		<td width=50%>Descripción</td>
 	</tr>
 	<tr>
 		<td><img src="Content/Images/standAloneTerminal/15.png"></td>
