@@ -81,6 +81,7 @@
 - [Cambio de Rollo de Papel Térmico](#cambio-de-rollo-de-papel-térmico)
 - [Ingreso de caracteres Alfabéticos (Letras)](#ingreso-de-caracteres-alfabéticos-(Letras))
 - [Teclas de Navegación](#teclas-de-navegación)
+- [Configuración de parámetros](#configuración-de-parámetros)
 - [Procedimiento Operativo](#procedimiento-operativo)
   -  [Pre-Autorización](#pre-autorización)
   -  [Confirmación](#confirmación)
@@ -270,6 +271,194 @@ Durante toda la operación de la TPV se utilizan las teclas inferiores de color 
 	</tr>
 </table>
 
+
+#Configuración de parámetros
+
+Antes de empezar a operar la terminal es necesario configurar algunos parámetros. Para cambiar los parámetros de la terminal siga estos pasos:
+
+<table>
+	<tr>
+		<td width=50%>Imagen</td>
+		<td width=50%>Descripción</td>
+	</tr>
+	<tr>
+		<td>
+			<img src="Content/Images/standAloneTerminal/64_1.png">
+		</td>
+		<td> 
+			En la pantalla principal de la terminar presione los botones F2 y F4 simultaneamente
+		</td>
+	</tr>	
+	<tr>
+		<td>
+			<img src="Content/Images/standAloneTerminal/65.png">
+		</td>
+		<td> 
+			Ingrese: 284647 + enter
+		</td>
+	</tr>	
+	<tr>
+		<td>
+			<img src="Content/Images/standAloneTerminal/66.png">
+		</td>
+		<td> 
+			Presione F2
+		</td>
+	</tr>	
+	<tr>
+		<td>
+			<img src="Content/Images/standAloneTerminal/67.png">
+		</td>
+		<td> 
+			Presione Enter
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<img src="Content/Images/standAloneTerminal/68.png">
+		</td>
+		<td> 
+			Ingrese: 284647 + enter
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<img src="Content/Images/standAloneTerminal/69.png">
+		</td>
+		<td> 
+			Presiona enter. Navegue con la flecha arriba y abajo los posible parametros. Seleccione el que desea modificar. La lista completa de parametros podra ser encontrada abajo.
+		</td>
+	</tr>
+
+</table>
+
+
+<table>
+	<tr>
+		<td>#TERM_LANGUAGE</td>
+		<td>Determina el lenguaje de la aplicación. Los valores posible son: ENG o SPA</td>
+	</tr>
+	<tr>
+		<td>#TERM_PASSWORD</td>
+		<td>La clave de supervisor</td>
+	</tr>
+	<tr>
+		<td>#TERM_IBUTTON</td>
+		<td>Habilita el lector de iButtons. Los valores posibles son: 1 o 0</td>
+	</tr>
+	<tr>
+		<td>#TERM_BARCODE</td>
+		<td>Habilita el lector de barcode. Los valores posibles son: 1 o 0</td>
+	</tr>
+	<tr>
+		<td>#TERM_PROXIMITY</td>
+		<td>Habilita el lector de proximidad. Los valores posibles son 1 o 0</td>
+	</tr>
+	<tr>
+		<td>#TERM_PINPAD</td>
+		<td>Habilita el pinpad. Los valores posibles son 1 o 0</td>
+	</tr>
+	<tr>
+		<td>#TERM_TRACK1</td>
+		<td>Habilita la impresion del track 1 en el ticket. Los valores posibles son 1 o 0</td>
+	</tr>
+	<tr>
+		<td>#TERM_TRACK1LABEL</td>
+		<td>Rotulo titulo del track 1 en el ticket</td>
+	</tr>
+	<tr>
+		<td>#TERM_DHCP=1</td>
+		<td>Habilita el DHCP. Los valores posibles son 1 o 0</td>
+	</tr>
+	<tr>
+		<td>#TERM_IP</td>
+		<td>IP de la terminal (obvia el DHCP si esto esta configurado)</td>
+	</tr>
+	<tr>
+		<td>#TERM_SUBNETMASK</td>
+		<td>Marcara de subred</td>
+	</tr>
+	<tr>
+		<td>#TERM_GATEWAY</td>
+		<td>Gateway de red</td>
+	</tr>
+	<tr>
+		<td>#TERM_DNSPRI</td>
+		<td>DNS primario</td>
+	</tr>
+	<tr>
+		<td>#TERM_DNSSEC</td>
+		<td>DNS secundario</td>
+	</tr>
+	<tr>
+		<td>#AN_DEFAULTPROMPT</td>
+		<td>Habilita el uso de prompts</td>
+	</tr>
+	<tr>
+		<td>#AN_DRIVERID</td>
+		<td>Activa el prompt de driver id</td>
+	</tr>
+	<tr>
+		<td>#AN_VEHICLEID</td>
+		<td>Activa el prompt de id de vehiculo</td>
+	</tr>
+	<tr>
+		<td>#AN_ODOMETER</td>
+		<td>Activa el prompt de odometro</td>
+	</tr>
+	<tr>
+		<td>#AN_ENGINEHOURS</td>
+		<td>Activa el prompt de horometro</td>
+	</tr>
+	<tr>
+		<td>#AN_TRAILER</td>
+		<td>Activa el prompt de trailer</td>
+	</tr>
+	<tr>
+		<td>#AN_MISCELLANEOUS</td>
+		<td>Activa el prompt de miscelaneo</td>
+	</tr>
+	<tr>
+		<td>#AN_TRUCKUNIT</td>
+		<td>Activa el prompt de truck</td>
+	</tr>
+	<tr>
+		<td>#AN_SECONDARYTRACK</td>
+		<td>Activa el prompt de secondary track</td>
+	</tr>
+	<tr>
+		<td>#AN_PRIMARYPIN</td>
+		<td>Activa el prompt de PIN primario</td>
+	</tr>
+	<tr>
+		<td>#AN_SECONDARYPIN</td>
+		<td>Activa el prompt de PIN secundario</td>
+	</tr>
+	<tr>
+		<td>#AN_URL</td>
+		<td>URL de la API Ationet. Los valores posibles pueden ser native.ationet.com , native-beta.ationet.com o native-test.ationet.com </td>
+	</tr>
+	<tr>
+		<td>#AN_PORT</td>
+		<td>Puerto de la API. Este valor <b>DEBE</b> ser 80</td>
+	</tr>
+	<tr>
+		<td>#AN_TERMINALID</td>
+		<td>El id de la terminal configurado en el portal Ationet</td>
+	</tr>
+	<tr>
+		<td>#AN_LOCALAGENT</td>
+		<td>Habilita la conexion con el Local Agent. Los valores posibles son 1 o 0</td>
+	</tr>
+	<tr>
+		<td>#AN_LAPORT</td>
+		<td>El puerto del Local Agent. Este valor <b>DEBE</b> ser 33173</td>
+	</tr>
+	<tr>
+		<td>#AN_LAIP</td>
+		<td>IP del Local Agent</td>
+	</tr>
+</table>
 
 # Procedimiento Operativo
 
