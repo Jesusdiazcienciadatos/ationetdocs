@@ -101,8 +101,6 @@
  
 <!-- /MarkdownTOC -->
 
-
-
 #Introducción
 
 Este manual está orientado a acompañar al usuario de la terminal autónoma de ATIONET. La terminal autónoma de ATIONET permite al usuario autorizar transacciones de flotilla en los servidores de ATIONET desde una simple terminal similar a las popularizadas por las tarjetas de crédito.
