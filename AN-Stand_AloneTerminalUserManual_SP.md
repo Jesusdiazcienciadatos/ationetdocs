@@ -101,11 +101,11 @@
  
 <!-- /MarkdownTOC -->
 
-#Introducción
+##Introducción
 
 Este manual está orientado a acompañar al usuario de la terminal autónoma de ATIONET. La terminal autónoma de ATIONET permite al usuario autorizar transacciones de flotilla en los servidores de ATIONET desde una simple terminal similar a las popularizadas por las tarjetas de crédito.
 
-#Componentes
+##Componentes
 
 La terminal autónoma de ATIONET consta de un único componente desde donde se realizan todas las operaciones. Se trata de la terminal de operación de ahora en más denominada TPV (Terminal Punto de Venta). Desde esta terminal el operador realizará todas las operaciones necesarias, para autorizar y completar las transacciones de despacho a las flotillas.
 
@@ -125,7 +125,7 @@ d) Display
 
 
 
-# Cambio de Rollo de Papel Térmico
+## Cambio de Rollo de Papel Térmico
 
 <table>
 	<tr>
@@ -200,7 +200,7 @@ d) Display
 </table> 
 
 
-# Ingreso de caracteres Alfabéticos (Letras)
+## Ingreso de caracteres Alfabéticos (Letras)
 
 En general toda la operación de la terminal se realiza con caracteres numéricos de fácil acceso desde el teclado tipo telefónico. Ocasionalmente puede ser necesario ingresar algun carácter alfanumérico (por el ejemplo al ingresar una placa de vehículo), en esas ocasiones por favor siga las siguientes instrucciones:
 
@@ -252,7 +252,7 @@ En general toda la operación de la terminal se realiza con caracteres numérico
 </table>
 
 
-# Teclas de Navegación
+## Teclas de Navegación
 
 Durante toda la operación de la TPV se utilizan las teclas inferiores de color para Confirmar (Verde), Cancelar (Rojo) o Retroceder (Amarillo). Utilice las mismas para volver a la pantalla anterior o confirmar y pasar a la pantalla siguiente en cualquiera de los procesos de la TPV.
 
@@ -270,7 +270,7 @@ Durante toda la operación de la TPV se utilizan las teclas inferiores de color 
 </table>
 
 
-#Configuración de parámetros
+## Configuración de parámetros
 
 Antes de empezar a operar la terminal es necesario configurar algunos parámetros. Para cambiar los parámetros de la terminal siga estos pasos:
 
@@ -458,7 +458,7 @@ Antes de empezar a operar la terminal es necesario configurar algunos parámetro
 	</tr>
 </table>
 
-# Procedimiento Operativo
+## Procedimiento Operativo
 
 <table>
 	<tr>
@@ -497,7 +497,7 @@ Antes de empezar a operar la terminal es necesario configurar algunos parámetro
 	</tr>
 </table>
 
-## Pre-Autorización:
+### Pre-Autorización:
  Durante una operación normal la transacción se divide en dos operaciones. Primero se realiza una pre-autorización desde la TPV para obtener la autorización para realizar el despacho y el monto del máximo a despachar. Después de realizado el despacho se realiza la confirmación en la cual se informa el monto real entregado en la transacción. La pre-autorización implica comunicarse con el sistema central y obtener el saldo que éste autoriza. Implica también capturar dicho saldo para que no pueda ser utilizado simultáneamente desde otro lugar. Esto implica que SIEMPRE, después de una pre-autorización debe realizarse una Confirmación (opción 2 del menú) o bien Borrar Pre Pend (opción 3 del menú) para actualizar el saldo en el sistema central. Comience la Pre-autorización presionando la opción (1) en el teclado y siga las instrucciones a continuación:
 
 
@@ -554,7 +554,7 @@ Antes de empezar a operar la terminal es necesario configurar algunos parámetro
 </table>
 
 
-## Confirmación:
+### Confirmación:
  Una vez completado el despacho es NECESARIO confirmar la transacción en el sistema. Para ello debe elegir la opción 2 el menú principal y seguir las instrucciones. Comience la Confirmación presionando la opción (2) en el teclado y siga las instrucciones a continuación:
 
 <table>
@@ -591,7 +591,7 @@ Antes de empezar a operar la terminal es necesario configurar algunos parámetro
 </table>
 
 
-## Borrar Pre Pendiente:
+### Borrar Pre Pendiente:
  
 Si por alguna circunstancia se ha realizado una o más pre-autorizaciones y no se han realizado los despachos correspondientes, será necesario proceder a liberar el saldo de esas pre-autorizaciones para normalizar el balance de la cuenta. Para hacerlo presione la opción (3) en el menú principal y siga las siguientes instrucciones:    
 
@@ -628,7 +628,7 @@ Si por alguna circunstancia se ha realizado una o más pre-autorizaciones y no s
 	</tr>
 </table>
 
-## Venta:
+### Venta:
  En algunas circunstancias puede darse el caso que la venta ya se haya realizado y el despacho completado sin respetar el flujo normal de Pre-autorización y Confirmación. En ese caso para ingresar dicha venta al sistema será necesario utilizar la opción 4 del menú principal: Venta. Es importante tener en cuenta que al procesar una Venta el sistema aplicará las mismas restricciones que hubiera aplicado en una pre-autorización, por lo tanto, si se intenta ingresar una Venta por un monto, producto o volumen no autorizado para ese identificador en ese momento la Venta será rechazada. Si esto sucede será necesario comunicarse con el centro de ayuda para determinar como proceder con dicha venta. Para ingresar una venta presione la opción (4) en el menú principal y siga las siguientes instrucciones:
 
 <table>
@@ -687,7 +687,7 @@ Si por alguna circunstancia se ha realizado una o más pre-autorizaciones y no s
 
 </table>
 
-## Consulta de Saldo:
+### Consulta de Saldo:
  Esta transacción permite consultar al sistema central cuál es el máximo que puede ser despachado en la siguiente transacción a un determinado identificador. Realice esta consulta cuando no este seguro los límites del vehículo involucrado para evitar realizar múltiples intentos de pre-autorización que puedan ser denegados. En caso que el saldo informado no se corresponda con el que el cliente cree tener, será necesario comunicarse con el centro de ayuda para determinar como proceder con dicha venta. Para realizar una consulta de saldo presione la opción (5) en el menú principal y siga las siguientes instrucciones:
 
 <table>
@@ -721,7 +721,7 @@ Si por alguna circunstancia se ha realizado una o más pre-autorizaciones y no s
 	</tr>
 </table>
 
-## Menú de Mantenimiento:
+### Menú de Mantenimiento:
  El Menú de mantenimiento permite acceder a operaciones del sistema que no están directamente relacionadas con la operación transaccional del mismo. Es decir, operaciones que no se hacen con la misma frecuencia que aquellas destinadas a procesar transacciones en el sistema. En este menú encontramos cuatro opciones:<br>
 <br>
 
@@ -744,7 +744,7 @@ Si por alguna circunstancia se ha realizado una o más pre-autorizaciones y no s
 	</tr>
 </table>
 
-## Cierre de Lote:
+### Cierre de Lote:
  Este concepto permite agrupar un conjunto de transacciones para su posterior análisis y procesamiento conjunto. Habitualmente se recomienda realizar un cierre de lote por cada cierre de turno operativo en la estación. De esta manera se pueden reconciliar fácilmente las transacciones del turno que fueron pagadas con alguno de los medios de pago procesados por ATIONET. Para hacerlo presione la opción (1) en el menú de mantenimiento y siga las siguientes instrucciones:
 
 <table>
@@ -779,7 +779,7 @@ Si por alguna circunstancia se ha realizado una o más pre-autorizaciones y no s
 
 </table>
 
-## Reimprimir Último:
+### Reimprimir Último:
  Si por alguna circunstancia fuera necesario volver a imprimir el último ticket emitido (tipicamente cuando se trabó el papel de la impresora), esto puede ser realizado desde esta opción del menú. Para hacerlo presione la opción (2) en el menú de mantenimiento y siga las siguientes instrucciones:    
 
 <table>
@@ -802,7 +802,7 @@ Si por alguna circunstancia se ha realizado una o más pre-autorizaciones y no s
 </table>
 
 
-## Anular Transacción:
+### Anular Transacción:
  Si se comete un error al procesar una transacción en el sistema y aún no se ha cerrado el turno, puede utilizarse esta opción para anular la misma y volver a procesarla correctamente.Para hacerlo presione la opción (3) en el menú de mantenimiento y siga las siguientes instrucciones: 
 
 <table>
@@ -838,7 +838,7 @@ Si por alguna circunstancia se ha realizado una o más pre-autorizaciones y no s
 
 Para ingresar al Menú de Configuración presione la opción (8) en el menú de mantenimiento.
 
-## Clave Supervisor:
+### Clave Supervisor:
  Si desea cambiar la Clave de Supervisor asignada presione la tecla (1) en el Menú de Configuración y siga las siguientes instrucciones:  
 
 <table>
@@ -866,7 +866,7 @@ Para ingresar al Menú de Configuración presione la opción (8) en el menú de 
 	</tr>
 </table>
 
-## Otros Productos:
+### Otros Productos:
  ATIONET permite trabajar también con productos no combustibles como aditivos, lubricantes, productos secos e incluso adelantos de efectivo. Para poder enviar al Servidor Central transacciones de autorización por estos productos primero hay que crear los mismos en el maestro de productos del TPV y asignarles un código de equivalencia con el código centralizado que se utiliza para ese producto a nivel de red.<br>
  <br> 
  Para dar de alta, modificar o borrar dichos productos a nivel TPV será necesario ingresar a la opción 2 del menú de configuración y mantener desde allí el maestro de otros productos. Es importante resaltar que esta modalidad de servicio depende de que la red a nivel central este configurada para aceptar estos productos y que se conozcan con precisión las equivalencias entre los productos locales en la estación y sus pares centrales a nivel de red.<br> 
@@ -890,7 +890,7 @@ Para ingresar al Menú de Configuración presione la opción (8) en el menú de 
 	</tr>
 </table>
 
-## Crear Nuevos Productos:
+### Crear Nuevos Productos:
  Para crear un nuevo producto en el catálogo local presione la tecla lateral de la pantalla correspondiente y sigas las siguientes instrucciones:  
 
 <table>
@@ -924,7 +924,7 @@ Para ingresar al Menú de Configuración presione la opción (8) en el menú de 
 	</tr>
 </table>
  
-## Editar Productos:
+### Editar Productos:
  Para editar un producto en el catálogo local haga scroll con las teclas inferiores hasta que el producto a modificar se vea en pantalla y luego presione la tecla lateral de la pantalla correspondiente y sigas las instrucciones siguientes:
 
 <table>
@@ -946,7 +946,7 @@ Para ingresar al Menú de Configuración presione la opción (8) en el menú de 
 	</tr>
 </table>
 
-## Borrar Productos:
+### Borrar Productos:
  Para borrar un producto en el catálogo local haga scroll con las teclas inferiores hasta que el producto a modificar se vea en pantalla y luego presione la tecla lateral de la pantalla. Al presionar la tecla lateral el producto que se ve en pantalla es borrado de forma definitiva. VERIFIQUE SIEMPRE ESTAR SOBRE EL PRODUCTO CORRECTO ANTES DE PRESIONAR BORRAR:
 
 <table>
@@ -961,6 +961,3 @@ Para ingresar al Menú de Configuración presione la opción (8) en el menú de 
 		</td>
 	</tr>
 </table>
-
-
-
