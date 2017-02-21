@@ -79,7 +79,7 @@
 			<p>February 21, 2017</p>
 		</td>
 		<td>
-			<p>Updated with new features</p>
+			<p>Added terminal parameters section</p>
 		</td>
 	</tr>
 </table>

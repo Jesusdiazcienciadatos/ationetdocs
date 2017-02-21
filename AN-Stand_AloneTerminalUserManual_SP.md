@@ -71,6 +71,17 @@
 			<p>Version inicial</p>
 		</td>
 	</tr>
+	<tr valign="top">
+		<td>
+			<p>1.1</p>
+		</td>
+		<td>
+			<p>21 Feb 2017</p>
+		</td>
+		<td>
+			<p>Se agrego seccion de parametros de terminal</p>
+		</td>
+	</tr>
 </table>
 
 
