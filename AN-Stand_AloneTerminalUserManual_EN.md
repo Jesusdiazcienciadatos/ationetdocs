@@ -92,7 +92,7 @@
 * [Change Thermal Paper Roll](#change-thermal-paper-roll)
 * [Alphabetic Character Input (Letters)](#alphabetic-character-input-(letters))
 * [Navigation Keys](#navigation-keys)
-* [Configuración de parámetros](#configuración-de-parámetros)
+* [Parameters Configuration](#parameters-configuration)
 * [Operative Procedure](#operative-procedure)
   *  [Pre-Authorization](#pre-authorization)
   *  [Confirmation](#confirmation)
@@ -282,7 +282,7 @@ While operating the POS, you must use the lower color keys for Confirmation (Gre
 	</tr>
 </table>
 
-## Parameters configuration
+## Parameters Configuration
 
 Before start using the terminal, its necessary to configure some parameters. To change these parameters follow theses steps:
 
@@ -520,7 +520,7 @@ Before start using the terminal, its necessary to configure some parameters. To 
 	<tr>
 		<td><img src="Content/Images/standAloneTerminal/19E.png"></td>
 		<td> 
-			Select option 1 form the menu to make a pre-authorization and start operating.
+			Select option 1 form the menu to make a pre-authorization and start operating. Or you can press ALPHA button and type de identification.
 		</td>
 	</tr>
 	<tr>
@@ -605,7 +605,7 @@ Before start using the terminal, its necessary to configure some parameters. To 
 	<tr>
 		<td><img src="Content/Images/standAloneTerminal/19e.png"></td>
 		<td> 
-			The POS will ask to present the identification that is associated to the pre-authorization to be canceled.<br>
+			The POS will ask to present the identification that is associated to the pre-authorization to be canceled. Or you can press the ALPHA button and type the identification<br>
 			<br>
 			Slide through the reader the same card you used to apply for pre-authorization.
 		</td>
@@ -641,7 +641,7 @@ Before start using the terminal, its necessary to configure some parameters. To 
 	<tr>
 		<td><img src="Content/Images/standAloneTerminal/19E.png"></td>
 		<td> 
-			The POS will ask to present the identification associated with the sale to be informed.<br>
+			The POS will ask to present the identification associated with the sale to be informed. Or you can press the ALPHA button and type the identification<br>
 			<br>
 			Slice through the reader the fleet card.
 		</td>
@@ -706,7 +706,7 @@ Before start using the terminal, its necessary to configure some parameters. To 
 	<tr>
 		<td><img src="Content/Images/standAloneTerminal/30.png"></td>
 		<td> 
-			The card whose balance you desire to check should be slided throught the slot reader with the magnetic stripe (brown or black) facing the POS screen.
+			The card whose balance you desire to check should be slided throught the slot reader with the magnetic stripe (brown or black) facing the POS screen. Or press the ALPHA button and type the identification.
 		</td>
 	</tr>
 	<tr>

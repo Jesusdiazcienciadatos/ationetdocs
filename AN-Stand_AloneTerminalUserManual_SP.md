@@ -520,7 +520,7 @@ Antes de empezar a operar la terminal es necesario configurar algunos parámetro
 	<tr>
 		<td><img src="Content/Images/standAloneTerminal/19.png"></td>
 		<td> 
-			Seleccione la opción 1 del Menú para realizar una pre-autorización y comenzar a operar.
+			Seleccione la opción 1 del Menú para realizar una pre-autorización y comenzar a operar. O presione la tecla ALPHA y tipee el identificador.
 		</td>
 	</tr>
 	<tr>
@@ -607,7 +607,7 @@ Si por alguna circunstancia se ha realizado una o más pre-autorizaciones y no s
 	<tr>
 		<td><img src="Content/Images/standAloneTerminal/29.png"></td>
 		<td> 
-			El TPV solicitará que presente la identificación a la que está asociada la pre-autorización que se desea anular.<br>
+			El TPV solicitará que presente la identificación a la que está asociada la pre-autorización que se desea anular. O presione la tecla ALPHA y tipee el identificador.<br>
 			<br>
 			Deslice por el lector la misma tarjeta que utilizó para solicitar la pre-autorización.
 		</td>
@@ -643,7 +643,7 @@ Si por alguna circunstancia se ha realizado una o más pre-autorizaciones y no s
 	<tr>
 		<td><img src="Content/Images/standAloneTerminal/29.png"></td>
 		<td> 
-			El TPV solicitará que presente la identificación a la que está asociada la Venta que se desea informar.<br>
+			El TPV solicitará que presente la identificación a la que está asociada la Venta que se desea informar. O presione la tecla ALPHA y tipee el identificador.<br>
 			<br>
 			Deslice por el lector la tarjeta de flota.
 		</td>
@@ -702,7 +702,7 @@ Si por alguna circunstancia se ha realizado una o más pre-autorizaciones y no s
 	<tr>
 		<td><img src="Content/Images/standAloneTerminal/29.png"></td>
 		<td> 
-			Seleccione la opción 5 del Menú para realizar una consulta de saldo y comenzar a operar.
+			Seleccione la opción 5 del Menú para realizar una consulta de saldo y comenzar a operar. O presione la tecla ALPHA y tipee la identificacion.
 		</td>
 	</tr>
 	<tr>
