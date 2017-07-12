@@ -406,16 +406,30 @@ Si desea ver el detalle de la transacción, haga click en el Código de Autoriza
  
 
 #### Transacciones por Conductor
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+Transacciones agrupadas por conductor
+
+
 
 #### Transacciones por Flota
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+Transacciones agrupadas por flota
 
 #### Transacciones por Sitio
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+
+![Transacciones por Sitio](Content/Includes/AN-HomeBase-UserManal-SP/transaccionesPorSitio.png)
+
+El panel de filtros posee las siguientes posibilidades:
+
+![Transacciones por Sitio](Content/Includes/AN-HomeBase-UserManal-SP/filtrosTransaccionesPorSitio.png)
+
+**Agrupar por:**
+* Combustible
+* Flota
+* Programa
+* Turno
+* Fecha
 
 #### Transacciones por Vehiculo
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+Transacciones agrupadas por vehiculo
 
 #### Transacciones Rechazadas
 ATIONet separa las transacciones NO autorizadas en 2 secciones, las [Excepciones](#excepciones) y las Transacciones Rechazadas.
@@ -633,64 +647,71 @@ La tabla maestra de productos de ATIONet es la siguiente:
 #### Conductores
 Se listan los conductores por código, nombre completo, identificaciones y balance. Por defecto la vista es condensada, como se muestra en la imagen de abajo.
 
-![Batch](Content/Includes/AN-HomeBase-UserManal-SP/conductoresAdministracion.png)
+![Conductores Administracion](Content/Includes/AN-HomeBase-UserManal-SP/conductoresAdministracion.png)
 
 Para cambiar a una vista detallada de la informacion de los conductores, haga click en el ultimo icono de la imagen de abajo.
 
-![Batch](Content/Includes/AN-HomeBase-UserManal-SP/botonVistaDetalladaResaltadoConductoresAdministracion.png)
+![Conductores Administracion](Content/Includes/AN-HomeBase-UserManal-SP/botonVistaDetalladaResaltadoConductoresAdministracion.png)
 
 La vista detallada es la siguiente: 
 
-![Batch](Content/Includes/AN-HomeBase-UserManal-SP/vistaDetallladaConductoresAdministracion.png)
+![Conductores Administracion](Content/Includes/AN-HomeBase-UserManal-SP/vistaDetallladaConductoresAdministracion.png)
 
 
-#####Crear un nuevo conductor
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitiur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+##### Crear un nuevo conductor
+Para crear un nuevo conductor, haga click en el boton "Nuevo"
 
-![Batch](Content/Includes/AN-HomeBase-UserManal-SP/crearNuevoConductorAdministracion.png)
+![Conductores Administracion](Content/Includes/AN-HomeBase-UserManal-SP/botonNuevoResaltadoConductoresAdministracion.png)
 
-#####Columnas de la tabla Conductores
 
-![Batch](Content/Includes/AN-HomeBase-UserManal-SP/columnasConductoresAdministracion.png)
+
+![Conductores Administracion](Content/Includes/AN-HomeBase-UserManal-SP/crearNuevoConductorAdministracion.png)
+
+##### Columnas de la tabla Conductores
+
+![Conductores Administracion](Content/Includes/AN-HomeBase-UserManal-SP/columnasConductoresAdministracion.png)
 
 
 La columna "Habilitado" muestra el estado del conductor; para habilitar o deshabilitar un conductor, haga click en el icono del candado en la columna "Opciones".
 
-![Batch](Content/Includes/AN-HomeBase-UserManal-SP/opcionesConductoresAdministracion.png)
+![Conductores Administracion](Content/Includes/AN-HomeBase-UserManal-SP/opcionesConductoresAdministracion.png)
 
 En la columna opciones tambien puede asignarle una identificacion al conductor, haciendo click en el primer icono, contando de izquierda a derecha; asignarle una regla, haciendo click en el segundo icono; editar la informacion del conductor, haciendo click en el tercer icono, o marcarlo como favorito haciendo click en el ultimo icono de la fila. Los conductores que marque como favoritos apareceran en la seccion favoritos en el apartado de la izquierda de la pagina.
 
-######Asignar Identificacion
+###### Asignar Identificacion
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitiur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
 
-![Batch](Content/Includes/AN-HomeBase-UserManal-SP/asignarIdentificacionConductor.png)
+![Conductores Administracion](Content/Includes/AN-HomeBase-UserManal-SP/asignarIdentificacionConductor.png)
 
-######Asignar una regla
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitiur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
-
-![Batch](Content/Includes/AN-HomeBase-UserManal-SP/asignarReglaConductor.png)
-
-######Editar conductor
+###### Asignar una regla
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitiur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
 
+![Conductores Administracion](Content/Includes/AN-HomeBase-UserManal-SP/asignarReglaConductor.png)
 
-![Batch](Content/Includes/AN-HomeBase-UserManal-SP/editarConductorAdministracion.png)
+###### Editar conductor
 
-
-
-
+![Conductores Administracion](Content/Includes/AN-HomeBase-UserManal-SP/editarConductorAdministracion.png)
 
 #### Configuración
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitiur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
 
+![Configuracion Administracion](Content/Includes/AN-HomeBase-UserManal-SP/configuracionAdministracion.png)
+
 #### Configuración de Fast Track
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
 
+![Configuracion de Fast Track Administracion](Content/Includes/AN-HomeBase-UserManal-SP/configuracionFastTrackAdministracion.png)
+
 #### Contratos de Compañía
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+
+![Contratos de Compañia](Content/Includes/AN-HomeBase-UserManal-SP/contratosDeCompaniaAdministracion.png)
+
+
+
+![Contratos de Compañia](Content/Includes/AN-HomeBase-UserManal-SP/filtrosContratosDeCompaniaAdministracion.png)
 
 #### Familias de Conceptos
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
@@ -698,32 +719,106 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac 
 #### Flotas
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
 
+![Flotas Administracion](Content/Includes/AN-HomeBase-UserManal-SP/flotasAdministracion.png)
+
+###### Crear una nueva flota
+
+Para crear una nueva haga flota click en el boton nuevo que se encuentra en el lado superior derecho.
+
+![Flotas Administracion](Content/Includes/AN-HomeBase-UserManal-SP/crearNuevaFlotaAdministracion.png)
+
 #### Identificaciones Solicitadas
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+
+![Identificaciones Solicitadas Administracion](Content/Includes/AN-HomeBase-UserManal-SP/identificacionesSolicitadasAdministracion.png)
 
 #### Identificadores
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
 
+![Identificadores Administracion](Content/Includes/AN-HomeBase-UserManal-SP/identificadoresAdministracion.png)
+
+###### Crear un nuevo identificador
+
+Para crear un nuevo identificador haga click en el boton nuevo que se encuentra en el lado superior derecho.
+
+![Nuevo Identificador Adminstracion](Content/Includes/AN-HomeBase-UserManal-SP/crearNuevoIdentificadorAdministracion.png)
+
 #### Impuestos
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+
+![Impuestos Administracion](Content/Includes/AN-HomeBase-UserManal-SP/impuestosAdministracion.png)
+
+###### Crear un nuevo impuesto
+
+Para crear un nuevo impuesto haga click en el boton nuevo que se encuentra en el lado superior derecho.
+
+![Nuevo Impuesto Administracion](Content/Includes/AN-HomeBase-UserManal-SP/crearNuevoImpuestoAdministracion.png)
 
 #### Métodos de Pago
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
 
+![Metodos De Pago Administracion](Content/Includes/AN-HomeBase-UserManal-SP/metodosDePagoAdministracion.png)
+
+###### Crear un nuevo metodo de pago
+
+Para crear un nuevo metodo de pago haga click en el boton nuevo que se encuentra en el lado superior derecho.
+
+![Nuevo Metodo De Pago Administracion](Content/Includes/AN-HomeBase-UserManal-SP/crearNuevoMetodoDePagoAdministracion.png)
+
 #### Modelos de Identificador
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+
+![Modelos De Identificador Administracion](Content/Includes/AN-HomeBase-UserManal-SP/modelosDeIdentificadorAdministracion.png)
+
+###### Crear un nuevo modelo de identificador
+
+Para crear un nuevo modelo de identificador haga click en el boton nuevo que se encuentra en el lado superior derecho.
+
+![Nuevo Modelo De Identificador Administracion](Content/Includes/AN-HomeBase-UserManal-SP/nuevoModeloDeIdentificadorAdministracion.png)
 
 #### Programas
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
 
+![Programas Administracion](Content/Includes/AN-HomeBase-UserManal-SP/programasAdministracion.png)
+
+###### Crear un nuevo programa
+
+Para crear un nuevo programa haga click en el boton nuevo que se encuentra en el lado superior derecho.
+
+![Nuevo Programa Administracion](Content/Includes/AN-HomeBase-UserManal-SP/crearNuevoProgramaAdministracion.png)
+
 #### Reglas
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+
+![Reglas Administracion](Content/Includes/AN-HomeBase-UserManal-SP/reglasAdministracion.png)
+
+###### Crear una nueva regla
+
+Para crear una nueva reglahaga click en el boton nuevo que se encuentra en el lado superior derecho.
+
+![Nueva Regla Administracion](Content/Includes/AN-HomeBase-UserManal-SP/crearNuevaReglaAdministracion.png)
 
 #### Sitios
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
 
+![Sitios Administracion](Content/Includes/AN-HomeBase-UserManal-SP/sitiosAdministracion.png)
+
+####### Crear nuevo sitio
+
+Para crear un nuevo sitio haga click en el boton nuevo que se encuentra en el lado superior derecho.
+
+![Nuevo Sitio Administracion](Content/Includes/AN-HomeBase-UserManal-SP/crearNuevoSitioAdministracion.png)
+
 #### Terminales / Controladores
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+
+![Terminales Administracion](Content/Includes/AN-HomeBase-UserManal-SP/terminalesAdministracion.png)
+
+###### Crear una nueva terminal
+
+Para crear una nueva terminal haga click en el boton nuevo que se encuentra en el lado superior derecho.
+
+![Nueva Terminal Administracion](Content/Includes/AN-HomeBase-UserManal-SP/crearNuevaTerminalAdministracion.png)
 
 #### Tipos de Documentos
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
@@ -740,6 +835,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac 
 #### Vehículos
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
 
+![Vehiculos Administracion](Content/Includes/AN-HomeBase-UserManal-SP/vehiculosAdministracion.png)
+
+###### Crear nuevo vehiculo
+
+Para crear un nuevo vehiculo haga click en el boton nuevo que se encuentra en el lado superior derecho.
+
+![Nuevo Vehiculo Administracion](Content/Includes/AN-HomeBase-UserManal-SP/crearNuevoVehiculoAdministracion.png)
 
 ## Mis Filtros
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
