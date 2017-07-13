@@ -744,15 +744,33 @@ Para crear un nuevo identificador haga click en el boton nuevo que se encuentra 
 ![Nuevo Identificador Adminstracion](Content/Includes/AN-HomeBase-UserManal-SP/crearNuevoIdentificadorAdministracion.png)
 
 #### Impuestos
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+La tabla de impuestos muestra:
+* ***Codigo:*** Código del impuesto.
+* ***Descripcion:*** Descripcion del impuesto
+* ***Tipo:*** Tipo de impuesto (Puede ser un impuesto fijo, un impuesto porcentual o un impuesto fijo por unidad)
+* ***Monto:*** El monto del impuesto (En el caso del impuesto porcentual, el porcentaje)
+* ***Fecha Desde / Fecha Hasta:*** Rango de fechas
+* ***Opciones:*** Editar el impuesto.
+
 
 ![Impuestos Administracion](Content/Includes/AN-HomeBase-UserManal-SP/impuestosAdministracion.png)
 
 ###### Crear un nuevo impuesto
 
-Para crear un nuevo impuesto haga click en el boton nuevo que se encuentra en el lado superior derecho.
+Para crear un nuevo impuesto, cliquee el boton "Nuevo".
 
-![Nuevo Impuesto Administracion](Content/Includes/AN-HomeBase-UserManal-SP/crearNuevoImpuestoAdministracion.png)
+El formulario para crear un nuevo impuesto recibe los siguientes parametros:
+* ***Codigo:*** El codigo del nuevo impuesto.
+* ***Descripcion:*** La descripcion del nuevo impuesto.
+* ***Tipo:*** Tipo de impuesto (Puede ser un impuesto fijo, un impuesto porcentual o un impuesto fijo por unidad)
+* ***Fecha desde:*** La fecha de inicio de vigencia del impuesto?
+* ***Monto:*** El monto del impuesto (En el caso del impuesto porcentual, el porcentaje)
+
+?Luego de llenar los campos de ***Fecha desde*** y ***Monto*** cliquee el boton alta. ?
+
+Cuando termine de realizar los cambios, cliquee el boton "Guardar.
+
+![Nuevo Impuesto Administracion](Content/Includes/AN-HomeBase-UserManal-SP/crearNuevoImpuestoAdministracion.png) 
 
 #### Métodos de Pago
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
@@ -761,7 +779,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac 
 
 ###### Crear un nuevo metodo de pago
 
-Para crear un nuevo metodo de pago haga click en el boton nuevo que se encuentra en el lado superior derecho.
+Para crear un nuevo metodo de pago, cliquee el boton "Nuevo".
+
+El formulario para crear un nuevo metodo de pago recibe los siguientes parametros:
+* ***Codigo:*** El codigo del nuevo metodo de pago.
+* ***Descripcion:*** La descripcion del nuevo metodo de pago.
+
+Cuando termine de realizar los cambios, cliquee el boton "Guardar.
 
 ![Nuevo Metodo De Pago Administracion](Content/Includes/AN-HomeBase-UserManal-SP/crearNuevoMetodoDePagoAdministracion.png)
 
@@ -772,9 +796,22 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac 
 
 ###### Crear un nuevo modelo de identificador
 
-Para crear un nuevo modelo de identificador haga click en el boton nuevo que se encuentra en el lado superior derecho.
+Para crear un nuevo modelo de identificador, cliquee el boton "Nuevo".
 
-![Nuevo Modelo De Identificador Administracion](Content/Includes/AN-HomeBase-UserManal-SP/nuevoModeloDeIdentificadorAdministracion.png)
+El formulario para crear un nuevo modelo de identificador recibe los siguientes parametros:
+* ***Tipo:*** Puede ser de tipo Tarjeta, TAG, Chipkey o Entrada Manual.
+* ***Descripcion:*** La descripcion del nuevo modelo de identificador.
+* ***Instalable:*** Si es instalable o no.
+* ***Personalizado:*** Si es personalizado o no.
+* ***Reusable:*** Si es reusable o no.
+* ***Soporta multiples asignaciones:*** Si soporta multiples asignaciones o no.
+* ***Valida fecha de expiracion:*** Si valida la fecha de expiracion o no.
+* ***Ignorar comportamiento de id vehiculo en terminal:*** Si ignora el comportamiento de id vehiculo en terminal o no.
+* ***Requiere PIN:*** Si requiere PIN o no.
+
+Cuando termine de realizar los cambios, cliquee el boton "Guardar.
+
+![Nuevo Modelo De Idcentificador Administracion](Content/Includes/AN-HomeBase-UserManal-SP/crearNuevoModeloDeIdentificadorAdministracion.png)
 
 #### Programas
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
@@ -783,7 +820,20 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac 
 
 ###### Crear un nuevo programa
 
-Para crear un nuevo programa haga click en el boton nuevo que se encuentra en el lado superior derecho.
+Para crear un nuevo programa, cliquee el boton "Nuevo".
+
+El formulario para crear un nuevo programa recibe los siguientes parametros:
+* ***Descripcion:*** La descripcion del nuevo programa.
+* ***Aplicar sitios del Contrato:*** Puede ser no afectado, forzado o no forzado.
+* ***Modo del saldo:*** Puede ser no afectado, dispersado, sin dispersar, sin limite o de llenado automatico.
+* ***Soporta contingencias:*** Puede ser no afectado, forzado o no forzado.
+* ***Soporta offline:*** Puede ser no afectado, forzado o no forzado.
+* ***Tarjeta de regalo:*** Si incluye tarjeta de regalo o no. Si esta opcion es chequeada, apareceran tres parametros mas:
+* ***Monto de tarjeta de regalo:*** El monto de la tarjeta de regalo.
+* ***Recargable:*** Si es recargable.
+* ***Compañia:*** La compañia a la cual se le es asignada.
+
+Cuando termine de realizar los cambios, cliquee el boton "Guardar.
 
 ![Nuevo Programa Administracion](Content/Includes/AN-HomeBase-UserManal-SP/crearNuevoProgramaAdministracion.png)
 
@@ -794,7 +844,14 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac 
 
 ###### Crear una nueva regla
 
-Para crear una nueva reglahaga click en el boton nuevo que se encuentra en el lado superior derecho.
+Para crear una nueva regla, cliquee el boton "Nuevo".
+
+El formulario para crear una nueva regla recibe los siguientes parametros:
+* ***Descripcion:*** La descripcion de la nueva regla
+
+// 	falta terminar regla y distintos tipos de reglas los parametros que recibe
+
+Cuando termine de realizar los cambios, cliquee el boton "Guardar.
 
 ![Nueva Regla Administracion](Content/Includes/AN-HomeBase-UserManal-SP/crearNuevaReglaAdministracion.png)
 
@@ -805,7 +862,30 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac 
 
 ####### Crear nuevo sitio
 
-Para crear un nuevo sitio haga click en el boton nuevo que se encuentra en el lado superior derecho.
+Para crear un nuevo sitio, cliquee el boton "Nuevo".
+
+El formulario para crear un nuevo sitio recibe los siguientes parametros:
+* ***Codigo:*** El codigo que se le quiere asignar al sitio.
+* ***Idioma:*** El lenguaje de mensajeria que se va a usar en el sitio.
+* ***Nombre corto:*** El nombre corto del sitio.
+* ***Nombre completo:*** El nombre completo del sitio.
+* ***Calle:*** La calle donde se encuentra el sitio.
+* ***Calle 2:*** ?
+* ***Zona horaria:*** La zona horaria del sitio.
+* ***Codigo Postal:*** El codigo postal del sitio.
+* ***Ciudad:*** Ciudad donde se encuentra el sitio.
+* ***Pais:*** Pais donde se encuentra el sitio.
+* ***Estado:*** Estado donde se encuentra el sitio.
+* ***Telefono 1:*** Telefono del sitio.
+* ***Telefono 2:*** Otro telefono del sitio.
+* ***Dif. Maxima de volumen permitida:*** La diferencia maxima de volumen permitida entre un despacho y una autorizacion del sitio.
+* ***Dif. Maxima de importe permitida:*** La diferencia maxima de importe permitida entre un despacho y una autorizacion del sitio.
+* ***Requiere mapeo de combustible:*** Si requiere mapeo de combustible o no.
+* ***Latitud:*** La coordenada de latitud del sitio.
+* ***Longitud:*** La coordenada de longitud del sitio.
+
+
+Cuando termine de realizar los cambios, cliquee el boton "Guardar.
 
 ![Nuevo Sitio Administracion](Content/Includes/AN-HomeBase-UserManal-SP/crearNuevoSitioAdministracion.png)
 
@@ -816,7 +896,22 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac 
 
 ###### Crear una nueva terminal
 
-Para crear una nueva terminal haga click en el boton nuevo que se encuentra en el lado superior derecho.
+Para crear una nueva terminal, cliquee el boton "Nuevo".
+
+El formulario para crear una nueva terminal recibe los siguientes parametros:
+* ***Sitio:*** El sitio al cual se le asigna esta terminal.
+* ***Terminal/Tipo de controlador:*** La terminal/tipo de controlador.
+* ***Protocolo:*** El protocolo que va a seguir esta terminal.
+* ***Codigo:*** El codigo de la terminal/tipo de controlador. Es asignado automaticamente dependiendo de la terminal/tipo de controlador que sea.
+* ***Descripcion:*** La descripcion de la terminal/controlador.
+* ***Lector de TAG instalado:*** Si tiene un lector de TAG instalado o no.
+* ***Uso del ID del conductor:*** Puede ser ninguno, track secundario o validacion de codigo.
+* ***Uso del ID del vehiculo:*** Puede ser ninguno, track secundario o validacion de codigo.
+* ***Combustible:*** El combustible de la terminal/controlador.
+* ***Limite maximo de volumen:*** El limite maximo de volumen de la terminal/controlador.
+* ***Limite maximo de monto:*** El limite maximo de monto de la terminal/controlador.
+
+Cuando termine de realizar los cambios, cliquee el boton "Guardar.
 
 ![Nueva Terminal Administracion](Content/Includes/AN-HomeBase-UserManal-SP/crearNuevaTerminalAdministracion.png)
 
@@ -839,7 +934,51 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac 
 
 ###### Crear nuevo vehiculo
 
-Para crear un nuevo vehiculo haga click en el boton nuevo que se encuentra en el lado superior derecho.
+Para crear un nuevo vehiculo, cliquee el boton "Nuevo".
+
+El formulario para crear un nuevo vehiculo recibe los siguientes parametros:
+
+En primera instancia, la informacion del vehiculo.
+
+* ***Codigo:*** El codigo del vehiculo.
+* ***Flota:*** La flota a la cual pertenece el vehiculo.
+* ***Patente:*** La patente del vehiculo.
+* ***Clase de Vehiculo:*** La clase de vehiculo.
+* ***Tipo:*** El tipo de vehiculo (Ej. Auto, Camion, Avioneta).
+* ***Año:*** El año del vehiculo.
+* ***Marca:*** La marca del vehiculo.
+* ***Color:*** El color del vehiculo.
+* ***Tipo de servicio:*** ?.
+* ***Descripcion de servicio:*** La descripcion del servicio.
+* ***Numero de motor:*** El numero de identificacion? del motor.
+* ***Numero de chasis:*** El numero de identificacion? del chasis.
+* ***Odometro inicial:*** La cantidad de kilometros que tiene el vehiculo al momento de darlo de alta.
+* ***Odometro actual:*** La cantidad de kilometros que tiene el vehiculo actualmente. Este campo se va actualizando automaticamente tomando en cuenta los despachos realizados por el vehiculo.
+* ***Fecha de ultimo odometro:*** La fecha de la ultima vez que se sabe cuantos kilometros tiene el vehiculo.
+* ***Horas de motor actuales:*** La cantidad de horas de motor que tiene el vehiculo actualmente. Este campo se va actualizando automaticamente tomando en cuenta los despachos realizados por el vehiculo.
+* ***Fecha de ultima hora de motor:*** La fecha de la ultima vez que se sabe cuantas horas de motor tiene el vehiculo.
+* ***Ventas:*** ?.
+* ***Servicio Tecnico:*** ?.
+* ***Tipo operacion:*** ?.
+* ***Department:*** ?.
+
+En segunda instancia, la identificacion? del vehiculo.
+
+??????????????????????????????
+
+En tercera instancia, los conductores que van a estar asociados al vehiculo.
+
+???????????????????????????????????
+
+En cuarta instancia, las reglas del vehiculo.
+
+????????????????????????
+
+Por ultimo, las reglas de la flota.
+
+????????
+
+Cuando termine de realizar los cambios, cliquee el boton "Guardar.
 
 ![Nuevo Vehiculo Administracion](Content/Includes/AN-HomeBase-UserManal-SP/crearNuevoVehiculoAdministracion.png)
 
