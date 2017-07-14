@@ -663,7 +663,24 @@ Para crear un nuevo conductor, haga click en el boton "Nuevo"
 
 ![Conductores Administracion](Content/Includes/AN-HomeBase-UserManal-SP/botonNuevoResaltadoConductoresAdministracion.png)
 
+El formulario para crear un nuevo conductor recibe los siguientes parametros:
 
+* ***Codigo:*** El codigo de identificacion del conductor.
+* ***Apellidos:*** El apellido o apellidos del conductor.
+* ***Nombre:*** El nombre del conductor.
+* ***Licencia:*** El numero de licencia del conductor.
+* ***Lic. Pais:*** El pais al cual pertenece la licencia.
+* ***Lic. Provincia:*** La provincia a la cual pertenece la licencia.
+* ***Telefono 1:*** El telefono del conductor.
+* ***Telefono 2:*** Otro telefono del conductor.
+* ***Correo:*** El correo electronico del conductor.
+* ***Fecha de nacimiento:*** La fecha de nacimiento del conductor.
+* ***Ventas:*** ?
+* ***Servicio Tecnico:*** ?
+* ***Tipo de operacion:*** ?
+* ***Department:*** ?
+
+Cuando termine de realizar los cambios, cliquee el boton "Guardar.
 
 ![Conductores Administracion](Content/Includes/AN-HomeBase-UserManal-SP/crearNuevoConductorAdministracion.png)
 
@@ -723,7 +740,20 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac 
 
 ###### Crear una nueva flota
 
-Para crear una nueva haga flota click en el boton nuevo que se encuentra en el lado superior derecho.
+Para crear una nueva flota, cliquee el boton "Nuevo".
+
+El formulario para crear una nueva flota recibe los siguientes parametros:
+
+* ***Codigo:*** El codigo de identificacion de la flota.
+* ***Nombre:*** El nombre de la flota.
+* ***Ventas:*** ?.
+* ***Servicio tecnico:*** ?.
+* ***Tipo de operacion:*** ?.
+* ***Department:*** ?.
+
+* ***Reglas:*** ...
+
+Cuando termine de realizar los cambios, cliquee el boton "Guardar.
 
 ![Flotas Administracion](Content/Includes/AN-HomeBase-UserManal-SP/crearNuevaFlotaAdministracion.png)
 
@@ -745,6 +775,7 @@ Para crear un nuevo identificador haga click en el boton nuevo que se encuentra 
 
 #### Impuestos
 La tabla de impuestos muestra:
+
 * ***Codigo:*** Código del impuesto.
 * ***Descripcion:*** Descripcion del impuesto
 * ***Tipo:*** Tipo de impuesto (Puede ser un impuesto fijo, un impuesto porcentual o un impuesto fijo por unidad)
@@ -760,13 +791,14 @@ La tabla de impuestos muestra:
 Para crear un nuevo impuesto, cliquee el boton "Nuevo".
 
 El formulario para crear un nuevo impuesto recibe los siguientes parametros:
+
 * ***Codigo:*** El codigo del nuevo impuesto.
 * ***Descripcion:*** La descripcion del nuevo impuesto.
 * ***Tipo:*** Tipo de impuesto (Puede ser un impuesto fijo, un impuesto porcentual o un impuesto fijo por unidad)
-* ***Fecha desde:*** La fecha de inicio de vigencia del impuesto?
+* ***Fecha desde:*** La fecha en la que entra en vigencia el impuesto.
 * ***Monto:*** El monto del impuesto (En el caso del impuesto porcentual, el porcentaje)
 
-?Luego de llenar los campos de ***Fecha desde*** y ***Monto*** cliquee el boton alta. ?
+Luego de llenar los campos de ***Fecha desde*** y ***Monto*** cliquee el boton alta. 
 
 Cuando termine de realizar los cambios, cliquee el boton "Guardar.
 
@@ -782,6 +814,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac 
 Para crear un nuevo metodo de pago, cliquee el boton "Nuevo".
 
 El formulario para crear un nuevo metodo de pago recibe los siguientes parametros:
+
 * ***Codigo:*** El codigo del nuevo metodo de pago.
 * ***Descripcion:*** La descripcion del nuevo metodo de pago.
 
@@ -799,6 +832,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac 
 Para crear un nuevo modelo de identificador, cliquee el boton "Nuevo".
 
 El formulario para crear un nuevo modelo de identificador recibe los siguientes parametros:
+
 * ***Tipo:*** Puede ser de tipo Tarjeta, TAG, Chipkey o Entrada Manual.
 * ***Descripcion:*** La descripcion del nuevo modelo de identificador.
 * ***Instalable:*** Si es instalable o no.
@@ -823,6 +857,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac 
 Para crear un nuevo programa, cliquee el boton "Nuevo".
 
 El formulario para crear un nuevo programa recibe los siguientes parametros:
+
 * ***Descripcion:*** La descripcion del nuevo programa.
 * ***Aplicar sitios del Contrato:*** Puede ser no afectado, forzado o no forzado.
 * ***Modo del saldo:*** Puede ser no afectado, dispersado, sin dispersar, sin limite o de llenado automatico.
@@ -847,9 +882,10 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac 
 Para crear una nueva regla, cliquee el boton "Nuevo".
 
 El formulario para crear una nueva regla recibe los siguientes parametros:
+
 * ***Descripcion:*** La descripcion de la nueva regla
 
-// 	falta terminar regla y distintos tipos de reglas los parametros que recibe
+???falta terminar regla y distintos tipos de reglas los parametros que recibe
 
 Cuando termine de realizar los cambios, cliquee el boton "Guardar.
 
@@ -865,6 +901,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac 
 Para crear un nuevo sitio, cliquee el boton "Nuevo".
 
 El formulario para crear un nuevo sitio recibe los siguientes parametros:
+
 * ***Codigo:*** El codigo que se le quiere asignar al sitio.
 * ***Idioma:*** El lenguaje de mensajeria que se va a usar en el sitio.
 * ***Nombre corto:*** El nombre corto del sitio.
@@ -899,6 +936,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac 
 Para crear una nueva terminal, cliquee el boton "Nuevo".
 
 El formulario para crear una nueva terminal recibe los siguientes parametros:
+
 * ***Sitio:*** El sitio al cual se le asigna esta terminal.
 * ***Terminal/Tipo de controlador:*** La terminal/tipo de controlador.
 * ***Protocolo:*** El protocolo que va a seguir esta terminal.
@@ -948,7 +986,7 @@ En primera instancia, la informacion del vehiculo.
 * ***Año:*** El año del vehiculo.
 * ***Marca:*** La marca del vehiculo.
 * ***Color:*** El color del vehiculo.
-* ***Tipo de servicio:*** ?.
+* ***Tipo de servicio:*** Se puede seleccionar ruta urbana variable, ruta urbana fija, inter urbana, larga distancia o ninguna.
 * ***Descripcion de servicio:*** La descripcion del servicio.
 * ***Numero de motor:*** El numero de identificacion? del motor.
 * ***Numero de chasis:*** El numero de identificacion? del chasis.
@@ -964,19 +1002,19 @@ En primera instancia, la informacion del vehiculo.
 
 En segunda instancia, la identificacion? del vehiculo.
 
-??????????????????????????????
+???
 
 En tercera instancia, los conductores que van a estar asociados al vehiculo.
 
-???????????????????????????????????
+???
 
 En cuarta instancia, las reglas del vehiculo.
 
-????????????????????????
+???
 
 Por ultimo, las reglas de la flota.
 
-????????
+???
 
 Cuando termine de realizar los cambios, cliquee el boton "Guardar.
 
