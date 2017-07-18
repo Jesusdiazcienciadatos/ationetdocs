@@ -740,11 +740,11 @@ El formulario para crear un nuevo conductor recibe los siguientes parametros:
 * ***Correo:*** El correo electronico del conductor.
 * ***Fecha de nacimiento:*** La fecha de nacimiento del conductor.
 
-* **Identificadores:** Para asignarle un identificador
+* **Identificadores:** Para asignarle un identificador, o, crear uno nuevo si no existe y luego cliquear "Alta rapida"
 
-* **Vehiculo:** Para asignarle un vehiculo.?
+* **Vehiculo:** Para asignarle un vehiculo ya existente.
 
-* **Reglas:** Para asignarle una regla.?
+* **Reglas:** Para asignarle una regla ya existente.
 
 Cuando termine de realizar los cambios, cliquee el boton "Guardar.
 
@@ -934,7 +934,8 @@ El formulario para crear un nuevo programa recibe los siguientes parametros:
 Cuando termine de realizar los cambios, cliquee el boton "Guardar.
 
 #### Reglas
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+
+Las reglas son, basicamente, limitaciones que se le asignan a vehiculos, flotas, combustibles, sitios o conductores. Si no se le aplicara ninguna regla a, por ejemplo, un conductor, el conductor podria, por ejemplo, cargar cualquier combustible en cualquier sitio. En esta seccion ustede puede ver las reglas que ya creo, listadas por Tipo y Descripcion. Si hace click en la descripcion, puede ver el detalle de la regla y a que vehiculos, flotas, combustibles, sitios o conductores se les ha aplicado la regla. Para editar la regla haga click en el icono del lapiz que se encuentra en la columna "Opciones"; para eliminar la regla, haga click en el icono de la cruz que se encuentra en la columna opciones.
 
 ![Reglas Administracion](Content/Includes/AN-HomeBase-UserManal-SP/reglasAdministracion.png)
 
@@ -955,7 +956,7 @@ El formulario para crear una nueva regla de tipo cuota es el siguiente:
 
 ![Nueva Regla Cuota](Content/Includes/AN-HomeBase-UserManal-SP/nuevaReglaCuota.png)
 
-* ***Frecuencia:*** ?
+* ***Frecuencia:*** La frecuencia se compone de valor (numerico) y de unidad de tiempo (Ej. Dias, Semanas). Si, por ejemplo, se introduce 2 - Dias, la frecuencia con la que sera evaluada toda la regla sera de 2 dias.
 
 **Transacciones**
 
@@ -996,11 +997,11 @@ El formulario para crear una nueva regla de tipo Ubicacion es el siguiente:
 
 ![Nueva Regla Ubicacion](Content/Includes/AN-HomeBase-UserManal-SP/nuevaReglaUbicacion.png) 
 
-* ***Sitio:*** ???
+* ***Sitio:*** El sitio (o sitios) donde **solamente** podran cargar las flotas, vehiculos, etc., a las cuales se les aplique esta regla.
 
 **Aplicar a:** Aplicar la regla a cierta flota, vehiculo, conductor o combustible.
 
-Ejemplo: ???
+Ejemplo: Si se le aplica a una flota una regla de tipo ubicacion, siendo el sitio "ABC", esa flota **solamente** podra cargar en el sitio ABC.
 
 Cuando termine, cliquee el boton "Guardar".
 
@@ -1010,11 +1011,11 @@ El formulario para crear una nueva regla de tipo Combustible es el siguiente:
 
 ![Nueva Regla Combustible](Content/Includes/AN-HomeBase-UserManal-SP/nuevaReglaCombustible.png)
 
-* ***Combustible:*** ???
+* ***Combustible:*** El combustible (o combustibles) que **solamente** podran cargar las flotas, vehiculos, etc., a las cuales se les aplique esta regla.
 
 **Aplicar a:** Aplicar la regla a cierta flota, vehiculo, conductor o sitio.
 
-Ejemplo: ???
+Ejemplo: Si se le aplica a un vehiculo una regla de tipo combustible, siendo el combustible "Premium Diesel", ese vehiculo **solamente** podra cargar el combustible "Premium Diesel".
 
 Cuando termine, cliquee el boton "Guardar".
 
@@ -1089,11 +1090,11 @@ El formulario para crear una nueva regla de tipo Limite de Producto por Transacc
 
 **Importe**
 
-* ***Cuota:*** Cantidad maxima de 
+* ***Cuota:*** Cantidad maxima de dinero en productos secos (Ej. Cigarrillos) que puede haber en una unica transaccion.
 
 **Aplicar a:** Aplicar la regla a una flota, vehiculo, conductor o sitio.
 
-Ejemplo: ???
+Ejemplo: Si se le aplica una regla de tipo Limite de Producto por Transaccion a un conductor, con una cuota de $50, en la factura solo puede haber como maximo, $50 correspondientes a productos secos, de lo contrario, la transaccion sera rechazada.
 
 Cuando termine, cliquee el boton "Guardar".
 
@@ -1103,15 +1104,15 @@ El formulario para crear una nueva regla de cuota por producto es el siguiente:
 
 ![Nueva Regla Cuota Por Producto](Content/Includes/AN-HomeBase-UserManal-SP/nuevaReglaCuotaPorProducto.png)
 
-* ***Frecuencia:*** ???
+* ***Frecuencia:*** La frecuencia se compone de valor (numerico) y de unidad de tiempo (Ej. Dias, Semanas). Si, por ejemplo, se introduce 2 - Dias, la frecuencia con la que sera evaluada toda la regla sera de 2 dias.
 
 **Importe**
 
-* ***Cuota:*** ???
+* ***Cuota:*** Cantidad maxima de dinero en productos secos (Ej. Cigarrillos) que puede gastar en el lapso de tiempo especificado en frecuencia.
 
 **Aplicar a:** Aplicar la regla a una flota, vehiculo, conductor o sitio.
 
-Ejemplo: ???
+Ejemplo: Si se le aplica una regla de tipo Cuota por Producto a un conductor, con una cuota de $200, con una frecuencia de 2 semanas, podra gastar como maximo $200 en productos secos (Ej. Cigarrillos) cada 2 semanas.
 
 Cuando termine, cliquee el boton "Guardar".
 
@@ -1220,10 +1221,6 @@ En primera instancia, la informacion del vehiculo.
 * ***Fecha de ultimo odometro:*** La fecha de la ultima vez que se sabe cuantos kilometros tiene el vehiculo.
 * ***Horas de motor actuales:*** La cantidad de horas de motor que tiene el vehiculo actualmente. Este campo se va actualizando automaticamente tomando en cuenta los despachos realizados por el vehiculo.
 * ***Fecha de ultima hora de motor:*** La fecha de la ultima vez que se sabe cuantas horas de motor tiene el vehiculo.
-* ***Ventas:*** ?.
-* ***Servicio Tecnico:*** ?.
-* ***Tipo operacion:*** ?.
-* ***Department:*** ?.
 
 En segunda instancia, la identificacion? del vehiculo.
 
