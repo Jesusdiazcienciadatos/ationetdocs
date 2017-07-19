@@ -407,9 +407,7 @@ Si desea ver el detalle de la transacción, haga click en el Código de Autoriza
 
 #### Transacciones por Conductor
 
-En esta vista se pueden ver las transacciones, agrupadas por  el conductor que la realizo. Los botones que estan colocados en la parte superior izquierda son para imprimir la tabla o crear un archivo Excel de la tabla, respectivamente.
-
-??? Que significa cada columna
+En esta vista se pueden ver las transacciones, agrupadas por  el conductor que la realizó. Los botones que estan colocados en la parte superior izquierda son para imprimir la tabla o crear un archivo Excel de la tabla, respectivamente.
 
 ![Transacciones por Sitio](Content/Includes/AN-HomeBase-UserManal-SP/transaccionesPorConductor.png)
 
@@ -417,13 +415,13 @@ El panel de filtros posee las siguientes posibilidades:
 
 ![Transacciones por Sitio](Content/Includes/AN-HomeBase-UserManal-SP/filtrosTransaccionesPorConductor.png)
 
-* ***Agrupar por:***  Sitio, Flota, Programa, Id Vehiculo y/o Fecha.
-* ***Conductor:*** Filtrar por el conductor que despacho.
-* ***Flota:*** Filtrar por flota a la cual pertenece el vehiculo que realizo el despacho.
-* ***Id Vehiculo:*** Filtrar por el Id del vehiculo que realizo el despacho.
+* ***Agrupar por:***  Sitio, Flota, Programa, Id Vehículo y/o Fecha.
+* ***Conductor:*** Filtrar por el conductor que despachó.
+* ***Flota:*** Filtrar por flota a la cual pertenece el vehículo que realizó el despachó.
+* ***Id Vehiculo:*** Filtrar por el Id del vehiculo que realizó el despachó.
 * ***Sitio:*** Filtrar por sitio donde se realizo el despacho.
-* ***Terminal/Controlador:*** Filtrar por terminal/controlador que despacho.
-* ***Combustible:*** Filtrar por el combustible que se despacho.
+* ***Terminal/Controlador:*** Filtrar por terminal/controlador que despachó.
+* ***Combustible:*** Filtrar por el combustible que se despachó.
 * ***Fecha desde/Fecha hasta:*** Rango de fechas a filtrar.
 * ***Hora desde/Hora hasta:*** Rango de horas a filtrar.
 
@@ -709,9 +707,15 @@ La tabla maestra de productos de ATIONet es la siguiente:
 #### Conductores
 Se listan los conductores por código, nombre completo, identificaciones y balance. Por defecto la vista es condensada, como se muestra en la imagen de abajo.
 
+La columna "Habilitado" muestra el estado del conductor; para habilitar o deshabilitar un conductor, haga click en el ícono del candado en la columna "Opciones".
+
+![Conductores Administracion](Content/Includes/AN-HomeBase-UserManal-SP/opcionesConductoresAdministracion.png)
+
+En la columna opciones también puede asignarle una identificación al conductor, haciendo click en el primer ícono, contando de izquierda a derecha; asignarle una regla, haciendo click en el segundo ícono; editar la información del conductor, haciendo click en el tercer ícono, o marcarlo como favorito haciendo click en el ultimo ícono de la fila. Los conductores que marque como favoritos aparecerán en la sección favoritos en el apartado de la izquierda de la página.
+
 ![Conductores Administracion](Content/Includes/AN-HomeBase-UserManal-SP/conductoresAdministracion.png)
 
-Para cambiar a una vista detallada de la informacion de los conductores, haga click en el ultimo icono de la imagen de abajo.
+Para cambiar a una vista detallada de la información de los conductores, haga click en el ultimo ícono de la imagen de abajo.
 
 ![Conductores Administracion](Content/Includes/AN-HomeBase-UserManal-SP/botonVistaDetalladaResaltadoConductoresAdministracion.png)
 
@@ -721,7 +725,8 @@ La vista detallada es la siguiente:
 
 
 ##### Crear un nuevo conductor
-Para crear un nuevo conductor, haga click en el boton "Nuevo"
+
+Para crear un nuevo conductor, haga click en el botón "Nuevo".
 
 ![Conductores Administracion](Content/Includes/AN-HomeBase-UserManal-SP/botonNuevoResaltadoConductoresAdministracion.png)
 
@@ -729,45 +734,34 @@ El formulario para crear un nuevo conductor recibe los siguientes parametros:
 
 ![Conductores Administracion](Content/Includes/AN-HomeBase-UserManal-SP/crearNuevoConductorAdministracion.png)
 
-* ***Codigo:*** El codigo de identificacion del conductor.
+* ***Código:*** El código de identificacion del conductor.
 * ***Apellidos:*** El apellido o apellidos del conductor.
 * ***Nombre:*** El nombre del conductor.
 * ***Licencia:*** El numero de licencia del conductor.
-* ***Lic. Pais:*** El pais al cual pertenece la licencia.
+* ***Lic. País:*** El país al cual pertenece la licencia.
 * ***Lic. Provincia:*** La provincia a la cual pertenece la licencia.
-* ***Telefono 1:*** El telefono del conductor.
-* ***Telefono 2:*** Otro telefono del conductor.
-* ***Correo:*** El correo electronico del conductor.
+* ***Teléfono 1:*** El teléfono del conductor.
+* ***Teléfono 2:*** Otro teléfono del conductor.
+* ***Correo:*** El correo electrónico del conductor.
 * ***Fecha de nacimiento:*** La fecha de nacimiento del conductor.
 
-* **Identificadores:** Para asignarle un identificador, o, crear uno nuevo si no existe y luego cliquear "Alta rapida"
+* **Identificadores:** Para asignarle un identificador, o, crear uno nuevo si no existe y luego cliquear "Alta rápida"
 
-* **Vehiculo:** Para asignarle un vehiculo ya existente.
+* **Vehículo:** Para asignarle un vehículo ya existente.
 
 * **Reglas:** Para asignarle una regla ya existente.
 
-Cuando termine de realizar los cambios, cliquee el boton "Guardar.
+Cuando termine de realizar los cambios, cliquée el botón "Guardar".
 
-##### Columnas de la tabla Conductores
+###### Asignar Identificación
 
-![Conductores Administracion](Content/Includes/AN-HomeBase-UserManal-SP/columnasConductoresAdministracion.png)
-
-???
-La columna "Habilitado" muestra el estado del conductor; para habilitar o deshabilitar un conductor, haga click en el icono del candado en la columna "Opciones".
-
-![Conductores Administracion](Content/Includes/AN-HomeBase-UserManal-SP/opcionesConductoresAdministracion.png)
-
-En la columna opciones tambien puede asignarle una identificacion al conductor, haciendo click en el primer icono, contando de izquierda a derecha; asignarle una regla, haciendo click en el segundo icono; editar la informacion del conductor, haciendo click en el tercer icono, o marcarlo como favorito haciendo click en el ultimo icono de la fila. Los conductores que marque como favoritos apareceran en la seccion favoritos en el apartado de la izquierda de la pagina.
-
-###### Asignar Identificacion
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitiur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+Que es asignar una identificacion?
 
 ![Conductores Administracion](Content/Includes/AN-HomeBase-UserManal-SP/asignarIdentificacionConductor.png)
 
 ###### Asignar una regla
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitiur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+Que es asignar una regla?
 
 ![Conductores Administracion](Content/Includes/AN-HomeBase-UserManal-SP/asignarReglaConductor.png)
 
@@ -798,24 +792,25 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
 
 #### Flotas
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+
+Las flotas son grupos de vehiculos.?
 
 ![Flotas Administracion](Content/Includes/AN-HomeBase-UserManal-SP/flotasAdministracion.png)
 
 ###### Crear una nueva flota
 
-Para crear una nueva flota, cliquee el boton "Nuevo" que se encuentra en el lado superior izquierdo.
+Para crear una nueva flota, cliquée el botón "Nuevo" que se encuentra en el lado superior izquierdo.
 
-El formulario para crear una nueva flota recibe los siguientes parametros:
+El formulario para crear una nueva flota recibe los siguientes parámetros:
 
 ![Flotas Administracion](Content/Includes/AN-HomeBase-UserManal-SP/crearNuevaFlotaAdministracion.png)
 
-* ***Codigo:*** El codigo de identificacion de la flota.
+* ***Código:*** El código de identificación de la flota.
 * ***Nombre:*** El nombre de la flota.
 
-* ***Reglas:*** ...
+* ***Reglas:*** Asignarle reglas ya creadas a la flota.
 
-Cuando termine de realizar los cambios, cliquee el boton "Guardar.
+Cuando termine de realizar los cambios, cliquée el botón "Guardar".
 
 #### Identificaciones Solicitadas
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
@@ -823,23 +818,36 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac 
 ![Identificaciones Solicitadas Administracion](Content/Includes/AN-HomeBase-UserManal-SP/identificacionesSolicitadasAdministracion.png)
 
 #### Identificadores
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+Que son los identificadores?
 
 ![Identificadores Administracion](Content/Includes/AN-HomeBase-UserManal-SP/identificadoresAdministracion.png)
 
 ###### Crear un nuevo identificador
 
-Para crear un nuevo identificador haga click en el boton nuevo que se encuentra en el lado superior izquierdo.
+Para crear un nuevo identificador haga click en el botón nuevo que se encuentra en el lado superior izquierdo.
+
+El formulario para crear un nuevo identificador recibe los siguientes parametros:
 
 ![Nuevo Identificador Adminstracion](Content/Includes/AN-HomeBase-UserManal-SP/crearNuevoIdentificadorAdministracion.png)
 
-???
+* ***Tipo:*** Puede ser Tarjeta, TAG, Chipkey, Entrada Manual, Tarjeta ATIOnet o ATIOnet TAG.
+* ***Modelo:*** El modelo del tipo de identificador seleccionado en ***Tipo***.
+* ***Tipo de uso:*** Puede ser de flota, fidelidad o dual.
+* ***Programa:*** ?
+* ***Programa de fidelidad:*** ?
+* ***Etiqueta:*** ?
+* ***Track:*** ?
+* ***PAN:*** ?
+* ***PIN:*** ?
+
+En segunda instancia, el formulario se completa asignandole la identificación a un vehículo o conductor.?
+
 
 #### Impuestos
 La tabla de impuestos muestra:
 
-* ***Codigo:*** Código del impuesto.
-* ***Descripcion:*** Descripcion del impuesto
+* ***Código:*** Código del impuesto.
+* ***Descripción:*** Descripción del impuesto
 * ***Tipo:*** Tipo de impuesto (Puede ser un impuesto fijo, un impuesto porcentual o un impuesto fijo por unidad)
 * ***Monto:*** El monto del impuesto (En el caso del impuesto porcentual, el porcentaje)
 * ***Fecha Desde / Fecha Hasta:*** Rango de fechas
@@ -849,105 +857,106 @@ La tabla de impuestos muestra:
 
 ###### Crear un nuevo impuesto
 
-Para crear un nuevo impuesto, cliquee el boton "Nuevo" que se encuentra en el lado superior izquierdo.
+Para crear un nuevo impuesto, cliquée el botón "Nuevo" que se encuentra en el lado superior izquierdo.
 
 El formulario para crear un nuevo impuesto recibe los siguientes parametros:
 
 ![Nuevo Impuesto Administracion](Content/Includes/AN-HomeBase-UserManal-SP/crearNuevoImpuestoAdministracion.png) 
 
-* ***Codigo:*** El codigo del nuevo impuesto.
-* ***Descripcion:*** La descripcion del nuevo impuesto.
+* ***Código:*** El código del nuevo impuesto.
+* ***Descripción:*** La descripción del nuevo impuesto.
 * ***Tipo:*** Tipo de impuesto (Puede ser un impuesto fijo, un impuesto porcentual o un impuesto fijo por unidad)
 * ***Fecha desde:*** La fecha en la que entra en vigencia el impuesto.
 * ***Monto:*** El monto del impuesto (En el caso del impuesto porcentual, el porcentaje)
 
-Luego de llenar los campos de ***Fecha desde*** y ***Monto*** cliquee el boton alta. 
+Luego de llenar los campos de ***Fecha desde*** y ***Monto*** cliquée el botón alta. 
 
-Cuando termine de realizar los cambios, cliquee el boton "Guardar.
+Cuando termine de realizar los cambios, cliquée el botón "Guardar.
 
 #### Métodos de Pago
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+
+Los metodos de pago son las formas en las que el conductor puede pagar.?
 
 ![Metodos De Pago Administracion](Content/Includes/AN-HomeBase-UserManal-SP/metodosDePagoAdministracion.png)
 
-###### Crear un nuevo metodo de pago
+###### Crear un nuevo método de pago
 
-Para crear un nuevo metodo de pago, cliquee el boton "Nuevo" que se encuentra en el lado superior izquierdo.
+Para crear un nuevo método de pago, cliquée el botón "Nuevo" que se encuentra en el lado superior izquierdo.
 
-El formulario para crear un nuevo metodo de pago recibe los siguientes parametros:
+El formulario para crear un nuevo método de pago recibe los siguientes parámetros:
 
 ![Nuevo Metodo De Pago Administracion](Content/Includes/AN-HomeBase-UserManal-SP/crearNuevoMetodoDePagoAdministracion.png)
 
-* ***Codigo:*** El codigo del nuevo metodo de pago.
-* ***Descripcion:*** La descripcion del nuevo metodo de pago.
+* ***Código:*** El código del nuevo método de pago.
+* ***Descripción:*** La descripción del nuevo método de pago.
 
-Cuando termine de realizar los cambios, cliquee el boton "Guardar.
+Cuando termine de realizar los cambios, cliquée el botón "Guardar.
 
 #### Modelos de Identificador
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+Que son los modelos de identificador?
 
 ![Modelos De Identificador Administracion](Content/Includes/AN-HomeBase-UserManal-SP/modelosDeIdentificadorAdministracion.png)
 
 ###### Crear un nuevo modelo de identificador
 
-Para crear un nuevo modelo de identificador, cliquee el boton "Nuevo" que se encuentra en el lado superior izquierdo.
+Para crear un nuevo modelo de identificador, cliquée el botón "Nuevo" que se encuentra en el lado superior izquierdo.
 
-El formulario para crear un nuevo modelo de identificador recibe los siguientes parametros:
+El formulario para crear un nuevo modelo de identificador recibe los siguientes parámetros:
 
 ![Nuevo Modelo De Idcentificador Administracion](Content/Includes/AN-HomeBase-UserManal-SP/crearNuevoModeloDeIdentificadorAdministracion.png)
 
 * ***Tipo:*** Puede ser de tipo Tarjeta, TAG, Chipkey o Entrada Manual.
-* ***Descripcion:*** La descripcion del nuevo modelo de identificador.
+* ***Descripción:*** La descripcion del nuevo modelo de identificador.
 * ***Instalable:*** Si es instalable o no.
 * ***Personalizado:*** Si es personalizado o no.
 * ***Reusable:*** Si es reusable o no.
 * ***Soporta multiples asignaciones:*** Si soporta multiples asignaciones o no.
-* ***Valida fecha de expiracion:*** Si valida la fecha de expiracion o no.
-* ***Ignorar comportamiento de id vehiculo en terminal:*** Si ignora el comportamiento de id vehiculo en terminal o no.
+* ***Valida fecha de expiración:*** Si valida la fecha de expiración o no.
+* ***Ignorar comportamiento de id vehículo en terminal:*** Si ignora el comportamiento de id vehículo en terminal o no.
 * ***Requiere PIN:*** Si requiere PIN o no.
 
-Cuando termine de realizar los cambios, cliquee el boton "Guardar.
+Cuando termine de realizar los cambios, cliquée el botón "Guardar".
 
 #### Programas
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+Que son los programas?
 
 ![Programas Administracion](Content/Includes/AN-HomeBase-UserManal-SP/programasAdministracion.png)
 
 ###### Crear un nuevo programa
 
-Para crear un nuevo programa, cliquee el boton "Nuevo" que se encuentra en el lado superior izquierdo.
+Para crear un nuevo programa, cliquée el botón "Nuevo" que se encuentra en el lado superior izquierdo.
 
-El formulario para crear un nuevo programa recibe los siguientes parametros:
+El formulario para crear un nuevo programa recibe los siguientes parámetros:
 
 ![Nuevo Programa Administracion](Content/Includes/AN-HomeBase-UserManal-SP/crearNuevoProgramaAdministracion.png)
 
-* ***Descripcion:*** La descripcion del nuevo programa.
+* ***Descripción:*** La descripción del nuevo programa.
 * ***Aplicar sitios del Contrato:*** Puede ser no afectado, forzado o no forzado.
-* ***Modo del saldo:*** Puede ser no afectado, dispersado, sin dispersar, sin limite o de llenado automatico.
+* ***Modo del saldo:*** Puede ser no afectado, dispersado, sin dispersar, sin limite o de llenado automático.
 * ***Soporta contingencias:*** Puede ser no afectado, forzado o no forzado.
 * ***Soporta offline:*** Puede ser no afectado, forzado o no forzado.
-* ***Tarjeta de regalo:*** Si incluye tarjeta de regalo o no. Si esta opcion es chequeada, apareceran tres parametros mas:
+* ***Tarjeta de regalo:*** Si incluye tarjeta de regalo o no. Si esta opción es chequeada, aparecerán tres parámetros más:
 * ***Monto de tarjeta de regalo:*** El monto de la tarjeta de regalo.
 * ***Recargable:*** Si es recargable.
-* ***Compañia:*** La compañia a la cual se le es asignada.
+* ***Compañia:*** La compañia a la cuál se le es asignada.
 
-Cuando termine de realizar los cambios, cliquee el boton "Guardar.
+Cuando termine de realizar los cambios, cliquée el botón "Guardar".
 
 #### Reglas
 
-Las reglas son, basicamente, limitaciones que se le asignan a vehiculos, flotas, combustibles, sitios o conductores. Si no se le aplicara ninguna regla a, por ejemplo, un conductor, el conductor podria, por ejemplo, cargar cualquier combustible en cualquier sitio. En esta seccion ustede puede ver las reglas que ya creo, listadas por Tipo y Descripcion. Si hace click en la descripcion, puede ver el detalle de la regla y a que vehiculos, flotas, combustibles, sitios o conductores se les ha aplicado la regla. Para editar la regla haga click en el icono del lapiz que se encuentra en la columna "Opciones"; para eliminar la regla, haga click en el icono de la cruz que se encuentra en la columna opciones.
+Las reglas son, básicamente, limitaciones que se le asignan a vehículos, flotas, combustibles, sitios o conductores. Si no se le aplicara ninguna regla a, por ejemplo, un conductor, el conductor podría, por ejemplo, cargar cualquier combustible en cualquier sitio. En esta sección usted puede ver las reglas que ya creo, listadas por Tipo y Descripción. Si hace click en la descripción, puede ver el detalle de la regla y a que vehículos, flotas, combustibles, sitios o conductores se les ha aplicado la regla. Para editar la regla haga click en el ícono del lápiz que se encuentra en la columna "Opciones"; para eliminar la regla, haga click en el ícono de la cruz que se encuentra en la columna opciones.
 
 ![Reglas Administracion](Content/Includes/AN-HomeBase-UserManal-SP/reglasAdministracion.png)
 
 ##### Crear una nueva regla
 
-Para crear una nueva regla, cliquee el boton "Nuevo" que se encuentra en el lado superior izquierdo.
+Para crear una nueva regla, cliquée el botón "Nuevo" que se encuentra en el lado superior izquierdo.
 
-El formulario para crear una nueva regla recibe los siguientes parametros:
+El formulario para crear una nueva regla recibe los siguientes parámetros:
 
 ![Nueva Regla Administracion](Content/Includes/AN-HomeBase-UserManal-SP/crearNuevaReglaAdministracion.png)
 
-* ***Descripcion:*** La descripcion de la nueva regla
+* ***Descripción:*** La descripción de la nueva regla.
 * ***Tipo:*** El tipo de regla. Dependiendo el tipo de regla que seleccione, se carga un distinto tipo de formulario.
 
 ###### Nueva regla de tipo Cuota
@@ -956,25 +965,25 @@ El formulario para crear una nueva regla de tipo cuota es el siguiente:
 
 ![Nueva Regla Cuota](Content/Includes/AN-HomeBase-UserManal-SP/nuevaReglaCuota.png)
 
-* ***Frecuencia:*** La frecuencia se compone de valor (numerico) y de unidad de tiempo (Ej. Dias, Semanas). Si, por ejemplo, se introduce 2 - Dias, la frecuencia con la que sera evaluada toda la regla sera de 2 dias.
+* ***Frecuencia:*** La frecuencia se compone de valor (numerico) y de unidad de tiempo (Ej. Días, Semanas). Si, por ejemplo, se introduce 2 - Días, la frecuencia con la que será evaluada toda la regla sera de 2 días.
 
 **Transacciones**
 
-* ***Cantidad:*** La cantidad maxima de transacciones que se pueden realizar en el lapso de tiempo especificado en ***Frecuencia***.
+* ***Cantidad:*** La cantidad máxima de transacciones que se pueden realizar en el lapso de tiempo especificado en ***Frecuencia***.
 
 **Volumen**
 
-* ***Cuota:*** La cantidad maxima de combustible que puede cargar en el lapso de tiempo especificado en **Frecuencia**.
+* ***Cuota:*** La cantidad máxima de combustible que puede cargar en el lapso de tiempo especificado en **Frecuencia**.
 
 **Importe**
 
-* ***Cuota:*** La cantidad maxima de dinero que puede gastar en el lapso de tiempo especificado en **Frecuencia**.
+* ***Cuota:*** La cantidad máxima de dinero que puede gastar en el lapso de tiempo especificado en **Frecuencia**.
 
 **Aplicar a:** Aplicar la regla a cierta flota, vehiculo, conductor, sitio y/o combustible.
 
-Ejemplo: Si se le aplica a una flota una regla de tipo cuota, con una frecuencia de dos semanas, y la cantidad maxima de transacciones que pueden realizar es 120, podran realizar como maximo 120 transacciones cada dos semanas.
+Ejemplo: Si se le aplica a una flota una regla de tipo cuota, con una frecuencia de dos semanas, y la cantidad máxima de transacciones que pueden realizar es 120, podrán realizar como máximo 120 transacciones cada dos semanas.
 
-Cuando termine, cliquee el boton "Guardar".
+Cuando termine, cliquée el botón "Guardar".
 
 ###### Nueva Regla de tipo Rango de Fechas
 
@@ -982,28 +991,28 @@ El formulario para crear una nueva regla de tipo Rango de Fechas es el siguiente
 
 ![Nueva Regla Rango de Fechas](Content/Includes/AN-HomeBase-UserManal-SP/nuevaReglaRangoDeFechas.png)
 
-* ***Fecha desde/Fecha hasta:*** Rango de fechas en las que se podra realizar una transaccion.
-* ***Hora desde/Hora Hasta:*** Rango de horas en las que se podra realizar una transaccion.
+* ***Fecha desde/Fecha hasta:*** Rango de fechas en las que se podrá realizar una transacción.
+* ***Hora desde/Hora Hasta:*** Rango de horas en las que se podrá realizar una transacción.
 
 **Aplicar a:** Aplicar la regla a cierta flota, vehiculo, conductor, sitio y/o combustible.
 
-Ejemplo: Si se le aplica a un combustible una regla de tipo rango de fechas, con un rango de fechas del 10 de Junio del 2017 al 17 de Junio del 2017, ese combustible solo se podra despachar en dicho rango de fechas.
+Ejemplo: Si se le aplica a un combustible una regla de tipo rango de fechas, con un rango de fechas del 10 de Junio del 2017 al 17 de Junio del 2017, ese combustible solo se podrá despachar en dicho rango de fechas.
 
-Cuando termine, cliquee el boton "Guardar".
+Cuando termine, cliquée el botón "Guardar".
 
-###### Nueva Regla de tipo Ubicacion
+###### Nueva Regla de tipo Ubicación
 
-El formulario para crear una nueva regla de tipo Ubicacion es el siguiente:
+El formulario para crear una nueva regla de tipo Ubicación es el siguiente:
 
 ![Nueva Regla Ubicacion](Content/Includes/AN-HomeBase-UserManal-SP/nuevaReglaUbicacion.png) 
 
-* ***Sitio:*** El sitio (o sitios) donde **solamente** podran cargar las flotas, vehiculos, etc., a las cuales se les aplique esta regla.
+* ***Sitio:*** El sitio (o sitios) donde **solamente** podrán cargar las flotas, vehículos, etc., a las cuáles se les aplique esta regla.
 
-**Aplicar a:** Aplicar la regla a cierta flota, vehiculo, conductor o combustible.
+**Aplicar a:** Aplicar la regla a cierta flota, vehículo, conductor o combustible.
 
-Ejemplo: Si se le aplica a una flota una regla de tipo ubicacion, siendo el sitio "ABC", esa flota **solamente** podra cargar en el sitio ABC.
+Ejemplo: Si se le aplica a una flota una regla de tipo ubicación, siendo el sitio "ABC", esa flota **solamente** podrá cargar en el sitio ABC.
 
-Cuando termine, cliquee el boton "Guardar".
+Cuando termine, cliquée el botón "Guardar".
 
 ###### Nueva Regla de tipo Combustible
 
@@ -1011,92 +1020,104 @@ El formulario para crear una nueva regla de tipo Combustible es el siguiente:
 
 ![Nueva Regla Combustible](Content/Includes/AN-HomeBase-UserManal-SP/nuevaReglaCombustible.png)
 
-* ***Combustible:*** El combustible (o combustibles) que **solamente** podran cargar las flotas, vehiculos, etc., a las cuales se les aplique esta regla.
+* ***Combustible:*** El combustible (o combustibles) que **solamente** podrán cargar las flotas, vehículos, etc., a las cuáles se les aplique esta regla.
 
-**Aplicar a:** Aplicar la regla a cierta flota, vehiculo, conductor o sitio.
+**Aplicar a:** Aplicar la regla a cierta flota, vehículo, conductor o sitio.
 
-Ejemplo: Si se le aplica a un vehiculo una regla de tipo combustible, siendo el combustible "Premium Diesel", ese vehiculo **solamente** podra cargar el combustible "Premium Diesel".
+Ejemplo: Si se le aplica a un vehículo una regla de tipo combustible, siendo el combustible "Premium Diesel", ese vehículo **solamente** podrá cargar el combustible "Premium Diesel".
 
-Cuando termine, cliquee el boton "Guardar".
+Cuando termine, cliquée el botoón "Guardar".
 
-###### Nueva Regla de tipo Limite por Transaccion
+###### Nueva Regla de tipo Límite por Transacción
 
-El formulario para crear una nueva regla de tipo Limite por Transaccion es el siguiente:
+El formulario para crear una nueva regla de tipo Límite por Transacción es el siguiente:
 
 ![Nueva Regla Limite Por Transaccion](Content/Includes/AN-HomeBase-UserManal-SP/nuevaReglaLimitePorTransaccion.png)
 
 **Volumen:**
 
-* ***Cuota:*** La cantidad maxima de combustible que se podra despachar por transaccion.
+* ***Cuota:*** La cantidad máxima de combustible que se podrá despachar por transacción.
 
 **Importe** 
 
-* ***Cuota:*** La cantidad maxima de dinero que puede costar una transaccion.
+* ***Cuota:*** La cantidad máxima de dinero que puede costar una transacción.
 
-**Aplicar a:** Aplicar la regla a cierta flota, vehiculo, conductor, sitio o combustible.
+**Aplicar a:** Aplicar la regla a cierta flota, vehículo, conductor, sitio o combustible.
 
-Ejemplo: Si un vehiculo tiene un limite por transaccion de 50 litros, solo podra cargar 50 litros como maximo en una sola transaccion.
+Ejemplo: Si un vehículo tiene un límite por transacción de 50 litros, solo podrá cargar 50 litros como máximo en una sola transacción.
 
-Cuando termine, cliquee el boton "Guardar".
+Cuando termine, cliquée el botón "Guardar".
 
-###### Nueva Regla de tipo Dias
+###### Nueva Regla de tipo Días
 
-El formulario para crear una nueva regla de tipo Dias es el siguiente:
+El formulario para crear una nueva regla de tipo Días es el siguiente:
 
 ![Nueva Regla Dias](Content/Includes/AN-HomeBase-UserManal-SP/nuevaReglaDias.png)
 
-* ***Dias de la semana habilitados:*** Los dias de la semana en los que se pueden realizar transacciones.
+* ***Días de la semana habilitados:*** Los días de la semana en los que se pueden realizar transacciones.
 
-**Aplicar a:** Aplicar la regla a una flota, vehiculo, conductor, sitio o combustible.
+**Aplicar a:** Aplicar la regla a una flota, vehículo, conductor, sitio o combustible.
 
-Ejemplo: Si se le aplica una regla de tipo dias a un combustible, siendo Martes, Jueves y Viernes los dias de la semana habilitados, ese combustible solo se podra despachar los Martes, Jueves y Viernes.
+Ejemplo: Si se le aplica una regla de tipo días a un combustible, siendo Martes, Jueves y Viernes los días de la semana habilitados, ese combustible sólo se podrá despachar los Martes, Jueves y Viernes.
 
-Cuando termine, cliquee el boton "Guardar".
+Cuando termine, cliquée el botón "Guardar".
 
-###### Nueva Regla de tipo Dias/Horas
+###### Nueva Regla de tipo Días/Horas
 
-El formulario para crear una nueva regla de tipo Dias/Horas es el siguiente:
+El formulario para crear una nueva regla de tipo Días/Horas es el siguiente:
 
 ![Nueva Regla Dias/Horas](Content/Includes/AN-HomeBase-UserManal-SP/nuevaReglaDiasHoras.png)
 
-* ***Dias de la semana habilitados:*** Los dias de la semana en los que se pueden realizar transacciones.
+* ***Días de la semana habilitados:*** Los días de la semana en los que se pueden realizar transacciones.
 * ***Hora desde/Hora hasta:*** Rango de horas en el cual se pueden realizar transacciones.
 
-**Aplicar a:** Aplicar la regla a una flota, vehiculo, conductor, sitio o combustible.
+**Aplicar a:** Aplicar la regla a una flota, vehículo, conductor, sitio o combustible.
 
-Ejemplo: Si se le aplica una regla de tipo dias/horas a un vehiculo, siendo Martes el dia de la semana habilitado, y 10:50hs a 14:30hs el rango de horas, ese vehiculo solo podra realizar transacciones los dias Martes entre las 10:50hs y las 14:30hs.
+Ejemplo: Si se le aplica una regla de tipo días/horas a un vehículo, siendo Martes el día de la semana habilitado, y 10:50hs a 14:30hs el rango de horas, ese vehículo sólo podrá realizar transacciones los días Martes entre las 10:50hs y las 14:30hs.
 
-Cuando termine, cliquee el boton "Guardar".
+Cuando termine, cliquée el botón "Guardar".
 
 ###### Nueva Regla de tipo Solicitudes
+
+Antes de completar la transacción, la terminal requerirá el ingreso de cierta información para completarla, como por ejemplo el PIN del Conductor.
 
 El formulario para crear una nueva regla de tipo Solicitudes es el siguiente:
 
 ![Nueva Regla Solicitudes](Content/Includes/AN-HomeBase-UserManal-SP/nuevaReglaSolicitudes.png)
 
-???
+* ***Reintentos:*** La cantidad máxima de errores que se le permite al usuario.
 
-**Aplicar a:** Aplicar la regla a una flota, vehiculo, conductor, sitio o combustible.
+* ***Conductor PIN:*** Si quiere que se requiera el PIN del conductor, chequée esta opción.
+* ***Id Conductor:*** Si quiere que se requiera el Id del conductor, chequée esta opción.
+* ***Vehiculo PIN:*** Si quiere que se requiera el PIN del vehiculo, chequée esta opción.
+* ***Id Vehiculo:*** Si quiere que se requiera el Id del vehiculo, chequée esta opción.
+* ***Num. Unidad del camion:*** Si quiere que se requiera el número de unidad del camión, chequée esta opcion.
+* ***Num. del remolque:*** Si quiere que se requiera el número del remolque, chequée esta opción.
+* ***Misceláneo:*** ?
+* ***Odómetro actual:*** ?
+* ***Horas de motor actual:*** ?
 
-Ejemplo: ???
+**Aplicar a:** Aplicar la regla a una flota, vehículo, conductor, sitio o combustible.
 
-Cuando termine, cliquee el boton "Guardar".
+Ejemplo: Si se chequean las opciones de Conductor PIN y Vehiculo PIN, y se ingresa en ***Reintentos*** el valor 2, cuando el conductor quiera realizar la transacción, la terminal le requerirá que ingrese el PIN del conductor y el PIN del vehiculo. Si el conductor ingresa bien estos valores correctamente, errando 2? o menos veces, la transacción se realizara, de errar mas 2 dos veces, la transacción se rechazará.
 
-###### Nueva Regla de tipo Limite de Producto por Transaccion
+Cuando termine, cliquée el botón "Guardar".
 
-El formulario para crear una nueva regla de tipo Limite de Producto por Transaccion es el siguiente:
+###### Nueva Regla de tipo Límite de Producto por Transacción
+
+El formulario para crear una nueva regla de tipo Límite de Producto por Transacción es el siguiente:
 
 ![Nueva Regla Limite De Producto Por Transaccion](Content/Includes/AN-HomeBase-UserManal-SP/nuevaReglaLimiteDeProductoPorTransaccion.png)
 
 **Importe**
 
-* ***Cuota:*** Cantidad maxima de dinero en productos secos (Ej. Cigarrillos) que puede haber en una unica transaccion.
+* ***Cuota:*** Cantidad máxima de dinero en productos secos (Ej. Cigarrillos) que puede haber en una única transacción.
 
-**Aplicar a:** Aplicar la regla a una flota, vehiculo, conductor o sitio.
+**Aplicar a:** Aplicar la regla a una flota, vehículo, conductor o sitio.
 
-Ejemplo: Si se le aplica una regla de tipo Limite de Producto por Transaccion a un conductor, con una cuota de $50, en la factura solo puede haber como maximo, $50 correspondientes a productos secos, de lo contrario, la transaccion sera rechazada.
+Ejemplo: Si se le aplica una regla de tipo Límite de Producto por Transacción a un conductor, con una cuota de $50, en la factura sólo puede haber, como máximo, $50 correspondientes a productos secos, de lo contrario, la transacción sera rechazada.
 
-Cuando termine, cliquee el boton "Guardar".
+Cuando termine, cliquee el botón "Guardar".
 
 ###### Nueva Regla de tipo Cuota por Producto
 
@@ -1104,33 +1125,34 @@ El formulario para crear una nueva regla de cuota por producto es el siguiente:
 
 ![Nueva Regla Cuota Por Producto](Content/Includes/AN-HomeBase-UserManal-SP/nuevaReglaCuotaPorProducto.png)
 
-* ***Frecuencia:*** La frecuencia se compone de valor (numerico) y de unidad de tiempo (Ej. Dias, Semanas). Si, por ejemplo, se introduce 2 - Dias, la frecuencia con la que sera evaluada toda la regla sera de 2 dias.
+* ***Frecuencia:*** La frecuencia se compone de valor (numérico) y de unidad de tiempo (Ej. Días, Semanas). Si, por ejemplo, se introduce 2 - Días, la frecuencia con la que será evaluada toda la regla será de 2 días.
 
 **Importe**
 
-* ***Cuota:*** Cantidad maxima de dinero en productos secos (Ej. Cigarrillos) que puede gastar en el lapso de tiempo especificado en frecuencia.
+* ***Cuota:*** Cantidad máxima de dinero en productos secos (Ej. Cigarrillos) que puede gastar en el lapso de tiempo especificado en frecuencia.
 
-**Aplicar a:** Aplicar la regla a una flota, vehiculo, conductor o sitio.
+**Aplicar a:** Aplicar la regla a una flota, vehículo, conductor o sitio.
 
-Ejemplo: Si se le aplica una regla de tipo Cuota por Producto a un conductor, con una cuota de $200, con una frecuencia de 2 semanas, podra gastar como maximo $200 en productos secos (Ej. Cigarrillos) cada 2 semanas.
+Ejemplo: Si se le aplica una regla de tipo Cuota por Producto a un conductor, con una cuota de $200, con una frecuencia de 2 semanas, podrá gastar como máximo $200 en productos secos (Ej. Cigarrillos) cada 2 semanas.
 
-Cuando termine, cliquee el boton "Guardar".
+Cuando termine, cliquée el botón "Guardar".
 
 #### Sitios
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+
+Los sitios son los lugares donde se carga combustible?
 
 ![Sitios Administracion](Content/Includes/AN-HomeBase-UserManal-SP/sitiosAdministracion.png)
 
 ####### Crear nuevo sitio
 
-Para crear un nuevo sitio, cliquee el boton "Nuevo" que se encuentra en el lado superior izquierdo.
+Para crear un nuevo sitio, cliquée el botón "Nuevo" que se encuentra en el lado superior izquierdo.
 
-El formulario para crear un nuevo sitio recibe los siguientes parametros:
+El formulario para crear un nuevo sitio recibe los siguientes parámetros:
 
 ![Nuevo Sitio Administracion](Content/Includes/AN-HomeBase-UserManal-SP/crearNuevoSitioAdministracion.png)
 
-* ***Codigo:*** El codigo que se le quiere asignar al sitio.
-* ***Idioma:*** El lenguaje de mensajeria que se va a usar en el sitio.
+* ***Código:*** El código que se le quiere asignar al sitio.
+* ***Idioma:*** El lenguaje de mensajería que se va a usar en el sitio.
 * ***Nombre corto:*** El nombre corto del sitio.
 * ***Nombre completo:*** El nombre completo del sitio.
 * ***Calle:*** La calle donde se encuentra el sitio.
@@ -1138,44 +1160,44 @@ El formulario para crear un nuevo sitio recibe los siguientes parametros:
 * ***Zona horaria:*** La zona horaria del sitio.
 * ***Codigo Postal:*** El codigo postal del sitio.
 * ***Ciudad:*** Ciudad donde se encuentra el sitio.
-* ***Pais:*** Pais donde se encuentra el sitio.
+* ***País:*** País donde se encuentra el sitio.
 * ***Estado:*** Estado donde se encuentra el sitio.
-* ***Telefono 1:*** Telefono del sitio.
-* ***Telefono 2:*** Otro telefono del sitio.
-* ***Dif. Maxima de volumen permitida:*** La diferencia maxima de volumen permitida entre un despacho y una autorizacion del sitio.
-* ***Dif. Maxima de importe permitida:*** La diferencia maxima de importe permitida entre un despacho y una autorizacion del sitio.
+* ***Teléfono 1:*** Teléfono del sitio.
+* ***Teléfono 2:*** Otro teléfono del sitio.
+* ***Dif. Máxima de volumen permitida:*** La diferencia máxima de volumen permitida entre un despacho y una autorización del sitio.
+* ***Dif. Máxima de importe permitida:*** La diferencia máxima de importe permitida entre un despacho y una autorización del sitio.
 * ***Requiere mapeo de combustible:*** Si requiere mapeo de combustible o no.
 * ***Latitud:*** La coordenada de latitud del sitio.
 * ***Longitud:*** La coordenada de longitud del sitio.
 
-Cuando termine de realizar los cambios, cliquee el boton "Guardar.
+Cuando termine de realizar los cambios, cliquée el botón "Guardar.
 
 #### Terminales / Controladores
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+Que son las terminales/controladores?
 
 ![Terminales Administracion](Content/Includes/AN-HomeBase-UserManal-SP/terminalesAdministracion.png)
 
 ###### Crear una nueva terminal
 
-Para crear una nueva terminal, cliquee el boton "Nuevo" que se encuentra en el lado superior izquierdo.
+Para crear una nueva terminal, cliquée el botón "Nuevo" que se encuentra en el lado superior izquierdo.
 
-El formulario para crear una nueva terminal recibe los siguientes parametros:
+El formulario para crear una nueva terminal recibe los siguientes parámetros:
 
 ![Nueva Terminal Administracion](Content/Includes/AN-HomeBase-UserManal-SP/crearNuevaTerminalAdministracion.png)
 
-* ***Sitio:*** El sitio al cual se le asigna esta terminal.
+* ***Sitio:*** El sitio al que se le asigna esta terminal.
 * ***Terminal/Tipo de controlador:*** La terminal/tipo de controlador.
 * ***Protocolo:*** El protocolo que va a seguir esta terminal.
-* ***Codigo:*** El codigo de la terminal/tipo de controlador. Es asignado automaticamente dependiendo de la terminal/tipo de controlador que sea.
-* ***Descripcion:*** La descripcion de la terminal/controlador.
+* ***Código:*** El código de la terminal/tipo de controlador. Es asignado automáticamente dependiendo de la terminal/tipo de controlador que sea.
+* ***Descripción:*** La descripción de la terminal/controlador.
 * ***Lector de TAG instalado:*** Si tiene un lector de TAG instalado o no.
-* ***Uso del ID del conductor:*** Puede ser ninguno, track secundario o validacion de codigo.
-* ***Uso del ID del vehiculo:*** Puede ser ninguno, track secundario o validacion de codigo.
+* ***Uso del ID del conductor:*** Puede ser ninguno, track secundario o validación de código.
+* ***Uso del ID del vehiculo:*** Puede ser ninguno, track secundario o validación de código.
 * ***Combustible:*** El combustible de la terminal/controlador.
-* ***Limite maximo de volumen:*** El limite maximo de volumen de la terminal/controlador.
-* ***Limite maximo de monto:*** El limite maximo de monto de la terminal/controlador.
+* ***Límite máximo de volumen:*** El límite máximo de volumen de la terminal/controlador.
+* ***Límite máximo de monto:*** El límite máximo de monto de la terminal/controlador.
 
-Cuando termine de realizar los cambios, cliquee el boton "Guardar.
+Cuando termine de realizar los cambios, cliquée el botón "Guardar.
 
 #### Tipos de Documentos
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
@@ -1190,57 +1212,58 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
 
 #### Vehículos
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+
+Que son los vehiculos?
 
 ![Vehiculos Administracion](Content/Includes/AN-HomeBase-UserManal-SP/vehiculosAdministracion.png)
 
-###### Crear nuevo vehiculo
+###### Crear nuevo vehículo
 
-Para crear un nuevo vehiculo, cliquee el boton "Nuevo" que se encuentra en el lado superior izquierdo.
+Para crear un nuevo vehículo, cliquée el botón "Nuevo" que se encuentra en el lado superior izquierdo.
 
-El formulario para crear un nuevo vehiculo recibe los siguientes parametros:
+El formulario para crear un nuevo vehículo recibe los siguientes parametros:
 
 ![Nuevo Vehiculo Administracion](Content/Includes/AN-HomeBase-UserManal-SP/crearNuevoVehiculoAdministracion.png)
 
-En primera instancia, la informacion del vehiculo.
+En primera instancia, la información del vehículo.
 
-* ***Codigo:*** El codigo del vehiculo.
-* ***Flota:*** La flota a la cual pertenece el vehiculo.
-* ***Patente:*** La patente del vehiculo.
-* ***Clase de Vehiculo:*** La clase de vehiculo.
-* ***Tipo:*** El tipo de vehiculo (Ej. Auto, Camion, Avioneta).
-* ***Año:*** El año del vehiculo.
-* ***Marca:*** La marca del vehiculo.
-* ***Color:*** El color del vehiculo.
+![Nuevo Vehiculo Informacion](Content/Includes/AN-HomeBase-UserManal-SP/crearNuevoVehiculoInformacion.png)
+
+* ***Código:*** El código del vehículo.
+* ***Flota:*** La flota a la cual pertenece el vehículo.
+* ***Patente:*** La patente del vehículo.
+* ***Clase de Vehículo:*** La clase de vehículo.
+* ***Tipo:*** El tipo de vehículo (Ej. Auto, Camión, Avioneta).
+* ***Año:*** El año del vehículo.
+* ***Marca:*** La marca del vehículo.
+* ***Color:*** El color del vehículo.
 * ***Tipo de servicio:*** Se puede seleccionar ruta urbana variable, ruta urbana fija, inter urbana, larga distancia o ninguna.
-* ***Descripcion de servicio:*** La descripcion del servicio.
-* ***Numero de motor:*** El numero de identificacion del motor.
-* ***Numero de chasis:*** El numero de identificacion del chasis.
-* ***Odometro inicial:*** La cantidad de kilometros que tiene el vehiculo al momento de darlo de alta.
-* ***Odometro actual:*** La cantidad de kilometros que tiene el vehiculo actualmente. Este campo se va actualizando automaticamente tomando en cuenta los despachos realizados por el vehiculo.
-* ***Fecha de ultimo odometro:*** La fecha de la ultima vez que se sabe cuantos kilometros tiene el vehiculo.
-* ***Horas de motor actuales:*** La cantidad de horas de motor que tiene el vehiculo actualmente. Este campo se va actualizando automaticamente tomando en cuenta los despachos realizados por el vehiculo.
-* ***Fecha de ultima hora de motor:*** La fecha de la ultima vez que se sabe cuantas horas de motor tiene el vehiculo.
+* ***Descripción de servicio:*** La descripción del servicio.
+* ***Número de motor:*** El número de identificación del motor.
+* ***Número de chasis:*** El número de identificación del chasis.
+* ***Odómetro inicial:*** La cantidad de kilómetros que tiene el vehículo al momento de darlo de alta.
+* ***Odómetro actual:*** La cantidad de kilómetros que tiene el vehículo actualmente. Este campo se va actualizando automáticamente tomando en cuenta los despachos realizados por el vehículo.
+* ***Fecha de último odómetro:*** La fecha de la última vez que se sabe cuantos kilómetros tiene el vehículo.
+* ***Horas de motor actuales:*** La cantidad de horas de motor que tiene el vehículo actualmente. Este campo se va actualizando automáticamente tomando en cuenta los despachos realizados por el vehículo.
+* ***Fecha de ultima hora de motor:*** La fecha de la última vez que se sabe cuántas horas de motor tiene el vehículo.
 
-En segunda instancia, la identificacion? del vehiculo.
+En segunda instancia, los identificadores del vehículo que se le quieran asignar, o, de no existir, crearlos, haciendo luego click en el botón "Alta rápida"
 
-???
+![Nuevo Vehiculo Identificadores](Content/Includes/AN-HomeBase-UserManal-SP/crearNuevoVehiculoIdentificadores.png)
 
-En tercera instancia, los conductores que van a estar asociados al vehiculo.
+En tercera instancia, los conductores que se le quieren asignar al vehículo.
 
-???
+![Nuevo Vehiculo Conductores](Content/Includes/AN-HomeBase-UserManal-SP/crearNuevoVehiculoConductores.png)
 
-En cuarta instancia, las reglas del vehiculo.
+En cuarta instancia, las reglas que se le quieren asignar al vehículo.
 
-???
+![Nuevo Vehiculo Reglas](Content/Includes/AN-HomeBase-UserManal-SP/crearNuevoVehiculoReglasDeVehiculo.png)
 
-Por ultimo, las reglas de la flota.
+Por último, si las hubiera, se listarán las reglas que están asociadas a la flota a la cual pertenece el vehículo, la cual se seleccionó en ***Flota***.
 
-???
+![Nuevo Vehiculo Reglas De Flota](Content/Includes/AN-HomeBase-UserManal-SP/crearNuevoVehiculoReglasDeFlota.png)
 
-Cuando termine de realizar los cambios, cliquee el boton "Guardar.
-
-
+Cuando termine de realizar los cambios, cliquée el botón "Guardar".
 
 ## Mis Filtros
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
