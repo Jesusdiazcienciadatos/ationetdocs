@@ -3,7 +3,7 @@
 
 <table>
 	<tr>
-		<th colspan="2" align="left">Informacion documento</th>
+		<th colspan="2" align="left">Información documento</th>
 	</tr>
 	<tr>
 		<td>Archivo:</td>
@@ -76,12 +76,12 @@
 		- [Cuentas corrientes de Compañia](#cuentas-corrientes-de-compañía)
 		- [Excepciones](#excepciones)
 		- Rendimiento por Transacción
-		- Rendimiento por Vehiculo
+		- Rendimiento por Vehículo
 		- [Transacciones](#transacciones)
 		- Transacciones por Conductor
 		- Transacciones por Flota
 		- Transacciones por Sitio
-		- Transacciones por Vehiculo
+		- Transacciones por Vehículo
 		- [Transacciones Rechazadas](#transacciones-rechazadas)
 		- [Transacciones sin Control](#transacciones-sin-control)
 		- [Vehiculos](#vehiculos)
@@ -128,65 +128,83 @@
 <!-- /MarkdownTOC -->
 
 ## Visión General
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
 
 ## Definiciones
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
 
 ### Contrato 
+
 En el tipo de suscripción auto consumo esta opción no es utilizada y no esta disponible.
 
 ### Sub Cuenta 
+
 Cada vez que se asocia un identificador a un vehículo o un conductor se crea una sub cuenta. La sub cuenta es en definitiva quien va a tener una cuenta corriente, la sub cuenta va a poder recibir depósitos de dinero o producto. Las reglas también impactan a la sub cuenta.
 
 Las sub cuentas dependen jerarquicamente del contrato.
 
 ### Compañía 
+
 En el tipo de suscripción auto consumo esta opción no es utilizada y no esta disponible.
 
 ### Identificador 
+
 El identificador es el medio físico que utiliza ATIONet para poder identificar un vehículo o un conductor. ATIONet soporte varios tipos de identificaciones, como ser tarjeta, tag (anillo), chip, tarjeta ATIONet, entrada manual, código de barras e iButton. Cuando se asocia un identificador a un Vehículo o Conductor se crea una sub cuenta.
 
 ### Sitio 
+
 El Sitio representa a la estación de servicio. A un sitio se le asigna la terminal y también puede tener asociadas reglas de Ubicación.
 
 ### Vehículo 
+
 Los vehículos pueden ser asociados o agrupados por una flota, pueden tener reglas asociadas y al momento de ser relacionados con un identificador se crea una sub cuenta. También pueden tener un conductor asociado.
 
 ### Conductor 
+
 El Conductor es la persona que esta identificado en ATIONet como un conductor. Si a este conductor se le asigna un identificador, se crea una sub cuenta. Los conductores también pueden tener reglas asociadas.
 
 ### Modulo Offline 
+
 El modulo offline de ATIONet se activa automáticamente cuando la estación de servicio se queda sin conexión a internet y las autorizaciones no se pueden procesar online. En este momento entra en juego el modulo offline. Para el controlador Nano CPI es totalmente transparente. Cuando el modulo offline recupera la conectividad envía toda la información procesada localmente y también baja las novedades. Mientras haya conectividad el modulo offline esta continuamente bajando las novedades (saldos, identificadores, reglas, etc) de ATIONet.
 
 ### Terminal 
+
 La terminal (o controlador) es la representación del controlador de surtidores, que necesita parametrizarse de manera particular según el tipo de terminal. Las terminales que ATIONet maneja son ATIO-NanoCPI, ATIO-Standalone, ATIO-CG, VF-Standalone, VF-Sapphire, VF-Ruby, ControlGas y OPW-FSC3000. 
 
 ## Menú de Navegación
+
 Ationet posee un menú de acceso rápido ubicado en la parte izquierda de la pagina. Desde este menú usted podrá acceder a las distintas opciones. el menú esta dividido en 7 secciones. (Tablero, Favoritos, Vistas, Reportes, Inventario, Administración y Bitácora)
 
 ### Tablero
+
 El Tablero es una pagina donde usted tendrá una visión global de la operación de su red. El tablero posee widgets específicos que lo ayudaran a tomar decisiones preventiva o correctivas según la información y los datos que muestren. Los datos que se muestran en el Tablero, son datos en tiempo real. Algunos de los widgets se refrescan automáticamente.
 Estos se pueden quitar o agregar según las necesidades del usuario. También se pueden acomodar en el tablero según el nivel de visibilidad que le quiera dar a cada uno.
 La lista completa de widgets disponibles para las suscripciones "Autoconsumo" es la siguiente:
+
 #### Estado General ####
+
 Este widget es de suma importancia al poner en marcha la red. Este widget nos da información de que parámetros necesitamos configurar para quedar operativos. Nos advierte cuando por ejemplo no tenemos vehículos o identificaciones creadas entre otros parámetros.
-Este widget puede mostrar "Advertencias" (icono amarillo)cuando no esta en juego la operación de la red, pero si muestra una cruz roja indica que la red no esta operativa. 
+Este widget puede mostrar "Advertencias" (ícono amarillo)cuando no esta en juego la operación de la red, pero si muestra una cruz roja indica que la red no esta operativa. 
 
 ![Estado General](Content/Includes/AN-HomeBase-UserManal-SP/estadoGeneral.png)
 ![Estado General](Content/Includes/AN-HomeBase-UserManal-SP/estadoGeneral2.png)
 
 #### Litros-Mes
-El de "Litros/Mes indica la cantidad que se despacho de cada combustible en el ultimo mes. Como ultimo mes se entiende a los últimos 30 días contando desde el día de la fecha. Este widget posee la capacidad de filtrar por Sitio, Ciudad y Flota. Se debe seleccionar el filtro y después se ingresa el valor por el cual se debe filtrar. Este ultimo campo es del tipo "auto complete".
+
+El de "Litros/Mes indica la cantidad que se despachó de cada combustible en el ultimo mes. Como ultimo mes se entiende a los últimos 30 días contando desde el día de la fecha. Este widget posee la capacidad de filtrar por Sitio, Ciudad y Flota. Se debe seleccionar el filtro y después se ingresa el valor por el cual se debe filtrar. Este ultimo campo es del tipo "auto complete".
 
 ![Litros Mes](Content/Includes/AN-HomeBase-UserManal-SP/litrosMes.png)
 
 #### Transacciones del Día
+
 Este widget contiene un gráfico de torta que en forma muy rápida se pueden ver cuantas transacciones se aprobaron y cuantas se rechazaron en el día.
 
 ![Transacciones Día](Content/Includes/AN-HomeBase-UserManal-SP/transaccionesDia.png)
 
 #### Lista de Pre-Autorizaciones Pendientes
+
 Este widget del tipo lista, muestra todas las pre autorizaciones que todavía no recibieron la transacción de finalización. (para mas detalles sobre el flujo de transacciones consulte este [documento](AN-Transaction_Flows-TechGuide.md)).
 Este muestra 7 columnas:
 
@@ -202,17 +220,20 @@ Las pre autorizaciones pendientes deberían ser despachos en curso, si hay regis
 
 ![Pre Auth Pendientes](Content/Includes/AN-HomeBase-UserManal-SP/preauthPendientes.png)
 
-#### Transacciones marcadas en ultimo mes ####
+#### Transacciones marcadas en ultimo mes
+
 El siguiente muestra todas las transacciones que fueron rechazadas por cualquiera de las validaciones que hace Ationet en el proceso de autorización. Ya sean por falta de saldo o reglas entre otras validaciones. Para mas detalles sobre "Transacciones Rechazadas" consulte este documento: [TODO](#todo) 
 
 ![Transacciones Marcadas](Content/Includes/AN-HomeBase-UserManal-SP/transaccionesMarcadasUltimoMes.png)
 
 #### Instalaciones
+
 Cuando la red utiliza algún medio de identificación que requiera ser instalado (como por ejemplo un anillo o ring tag), Ationet administra la lista de instalaciones. Este widget muestra las instalaciones realizadas en las ultimas 5 semanas
 
 ![Instalaciones](Content/Includes/AN-HomeBase-UserManal-SP/instalaciones.png)
 
 #### Sub-cuentas con excepciones
+
 Este muestra todas las sub cuentas que tengan algo que prestarle atención, como por ejemplo:
 
 1. ***Sin Identificadores:*** Son los vehículos o conductores que no tienen un identificador asociado
@@ -225,6 +246,7 @@ Para mas detalles sobre sub cuentas consulte: [Esta sección](#sub-cuenta)
 ![sub Cuentas con Excepciones](Content/Includes/AN-HomeBase-UserManal-SP/subcuentasConExcepciones.png)
 
 #### Actualizaciones de Identificador en ultimo mes
+
 Este widget muestra la actividad de la administración de los identificadores, muestra la cantidad de identificadores que fueron modificados agrupado por estado.
 
 1. ***Asignada:*** La cantidad de identificadores que cambiaron al estado "Asignada"
@@ -236,42 +258,49 @@ Este widget muestra la actividad de la administración de los identificadores, m
 ![Actualizaciones de Identificadores](Content/Includes/AN-HomeBase-UserManal-SP/actualizacionIdentificadoresUltimoMes.png)
 
 #### Transacciones recientes
+
 El siguiente muestra las ultimas 20 transacciones finalizadas. Se muestran los datos mas relevantes para poder identificarla, en el caso de necesitar mas información sobre la transacción se puede hacer click sobre el código de autorización, eso lo llevara a la vista de detalles de la transacción.
 
 ![Transacciones Recientes](Content/Includes/AN-HomeBase-UserManal-SP/transaccionesRecientes.png)
 
 #### Listado de Sub-cuentas con bajo saldo
+
 Muestra la lista de sub cuentas que contengan bajo saldo para operar 4 días mas. Este calculo se hace en base al uso de cada sub cuenta. La columna "Días disponibles" muestra cantidad de días que le quedan a la sub cuenta basada en el análisis de uso. Este numero no es exacto y podría variar si el patrón de uso cambia.
 
 ![Sub Cuentas Bajo Saldo](Content/Includes/AN-HomeBase-UserManal-SP/subcuentasBajoSaldo.png)
 
 #### Estado de Terminales
-Todas las terminales que estén conectadas en forma nativa a ATIONet, envían en forma regular un mensaje indicando que están activas. Si la terminal reporto el estado en las ultimas 5 horas, la terminal se mostrara con el icono verde, sino se reporto en las ultimas 5 horas el icono sera rojo.
+
+Todas las terminales que estén conectadas en forma nativa a ATIONet, envían en forma regular un mensaje indicando que están activas. Si la terminal reporto el estado en las ultimas 5 horas, la terminal se mostrara con el ícono verde, sino se reporto en las ultimas 5 horas el ícono sera rojo.
 La columna ***"Age"*** muestra la cantidad de minutos que pasaron desde la ultima vez que se reporta la terminal. 
 
 ![Estado Terminales](Content/Includes/AN-HomeBase-UserManal-SP/estadoTerminales1.png)
 ![Estado Terminales](Content/Includes/AN-HomeBase-UserManal-SP/estadoTerminales2.png)
 
 #### Contratos sin actividad
+
 Muestra la lista de contratos que nunca tuvieron actividad.
 
 ![Contrato Sin Actividad](Content/Includes/AN-HomeBase-UserManal-SP/contratosSinActividad.png)
 
 #### Listado de contratos con bajo saldo
+
 Muestra la lista de contratos que contengan bajo saldo para operar 4 días mas. Este calculo se hace en base al uso. La columna "Días disponibles" muestra cantidad de días que le quedan al contrato basada en el análisis de uso. Este numero no es exacto y podría variar si el patrón de uso cambia.
 
 ![Contrato Bajo Saldo](Content/Includes/AN-HomeBase-UserManal-SP/contratoBajoSaldo.png)
 
 ### Favoritos
+
 Las entidades Vehículos, Conductores, Sitios y Flotas son entidades que podrían requerir un control diario por parte de ciertos usuarios. Para facilitar esta tarea usted puede agregar alguna de estas entidades a la lista de Favoritos. Una vez ingresada una entidad a esta lista el acceso es mas rápido y directo, sin necesidad de ingresar filtros cada vez que la desea buscar. 
 
 Una vez dentro de la pagina de Favoritos, al hacer click sobre el link de la columna "Tipo", usted sera redireccionado a la vista detallada de esa entidad. 
 
-Si desea remover una entidad de la lista de Favoritos, haga click sobre el icono de la derecha con forma de cruz.
+Si desea remover una entidad de la lista de Favoritos, haga click sobre el ícono de la derecha con forma de cruz.
 
 ![Favoritos](Content/Includes/AN-HomeBase-UserManal-SP/favoritos.png)
 
 ### Vistas
+
 ATIONet dispone de una serie de vistas donde se puede visualizar información de la operación de la red. ATIONet considera una vista a toda aquella pantalla que ademas de poder visualizar información, también es exportable para un post procesamiento. A diferencia de los [***Reportes***](#reportes) que son pantallas que muestran información con un formato pensado para ser impreso y guardado.
 Todas las vistas en ATIONet respetan una consistencia en estética y funcionalidad. Todas las vistas poseen una barra de herramientas con todas estas funciones (o al menos alguna de ellas)
 
@@ -293,6 +322,7 @@ La siguiente es la vista de Vehículos de ATIONet:
 ![Vistas](Content/Includes/AN-HomeBase-UserManal-SP/vistas2.png)
 
 #### Autorizaciones Pendientes
+
 Las autorizaciones pendientes son aquellas transacciones que todavía no recibieron la transacción de finalización. Los registros que se ven en esta vista son despachos que se están llevando a cabo en este momento. Si por alguna razón existen pre autorizaciones viejas, es probable que el POS no haya enviado la transacción de finalización o la de cancelación si el despacho no fue realizado.
 
 Tenga en cuenta que al momento de pre autorizar, ATIONet congelo el monto de la autorización de la cuenta corriente de la sub cuenta.
@@ -301,28 +331,32 @@ Esta vista presenta todos los campos necesarios para poder identificar la transa
 ![Autorizaciones Pendientes](Content/Includes/AN-HomeBase-UserManal-SP/autorizacionesPendientes.png)
 
 Si aparecen transacciones pendientes viejas y usted esta seguro que no es un despacho en curso, puede cancelarlas y devolver el saldo a la cuenta corriente.
-Para hacer esto tiene 2 maneras, en forma individual, haciendo click en el icono de la "X" a la derecha de la grilla o en forma masiva seleccionando las transacciones, desplegar el menú "Acciones en Lote" y seleccionar "Cancelar". Esto cancelara las transacciones y devolverá el saldo a cada una de las cuentas corrientes.
+Para hacer esto tiene 2 maneras, en forma individual, haciendo click en el ícono de la "X" a la derecha de la grilla o en forma masiva seleccionando las transacciones, desplegar el menú "Acciones en Lote" y seleccionar "Cancelar". Esto cancelara las transacciones y devolverá el saldo a cada una de las cuentas corrientes.
 
 ![Autorizaciones Pendientes](Content/Includes/AN-HomeBase-UserManal-SP/autorizacionesPendientes2.png)
 
 (para mas detalles sobre el flujo de transacciones consulte este [documento](AN-Transaction_Flows-TechGuide.md))
 
 #### Batch
+
 El proceso Batch, es un proceso por el cual la terminal se asegura que envió todo lo que proceso y que el host lo recibió. La manera de asegurarse es enviando una transacción de "Cierre de Lote".
 No todas las terminales tienen la capacidad de implementar este mensaje, si la terminal lo soporta en esta vista se listaran todos los  cierres de lote enviados por las terminales. 
 
 ![Batch](Content/Includes/AN-HomeBase-UserManal-SP/batch.png)
 
 #### Conductores
+
 En esta vista se listan los conductores que han sido dados de alta. Recuerde que no es obligatorio cargar conductores para poder operar, solo es necesario si usted decide asociar los identificadores a conductores.
 
 ![Batch](Content/Includes/AN-HomeBase-UserManal-SP/conductores.png)
+
 #### Cuentas corrientes de compañía
+
 La vista de Cuentas corrientes de compañía es la vista en donde se consultan los saldos disponibles de las sub cuentas (Recuerde que la sub cuenta es la unión entre un vehículo/conductor y un identificador. Para mas detalles sobre sub cuentas consulte: [Esta sección](#sub-cuenta)).
 En ATIONet el termino compañía se refiere a la empresa dueña de la flota, en una suscripción del tipo auto consumo (home base) la única compañía es la propia empresa suscriptora. Para mas detalles sobre compañías consulte: [Esta sección](#compañía)
 
 Esta  vista posee al igual que el resto de las vistas un panel de filtros.
-La primer opcion en el panel de filtros es el tipo de reporte que queremos ver:
+La primer opción en el panel de filtros es el tipo de reporte que queremos ver:
 
 ![Cuentas Corrientes](Content/Includes/AN-HomeBase-UserManal-SP/cuentasCorrientes2.png)
 
@@ -348,6 +382,7 @@ Al seleccionar esta segunda opción se habilitan varios filtros mas:
 * ***Movimientos Transitorios:*** Tildando esta opción se mostraran los movimientos internos que genera ATIONet. Por ejemplo cada vez que se congela saldo después de una pre autorización y se recibe una transacción de finalización, ATIONet devuelve el saldo congelado y posteriormente debita el monto final informado. La devolución del saldo congelado es considerado un movimiento transitorio y no se muestran si esta opción no esta seleccionada.
 
 #### Excepciones
+
 ATIONet separa las transacciones no autorizadas en 2 secciones, las Excepciones y las [Transacciones Rechazadas](#transacciones-rechazadas).
 Las Excepciones son aquellas transacciones que no llegaron a pasar las validaciones duras del sistema o las que se detectan como posibles fraudes.
 
@@ -362,17 +397,20 @@ Esta vista también posee el panel de filtros mencionada anteriormente. Vale la 
 
 Una vez que selecciono los filtros, presiona ***"Buscar"*** y se listaran todas las transacciones marcadas como Excepciones.
 
-Algunas transacciones quedan en estado "Revisión" bajo algunas situaciones, como por ejemplo cuando se despacha mas de lo autorizado (por un error en el controlador o el POS). En estos casos es necesario aprobar o rechazar la transacción mediante uno de los 2 iconos a la derecha de cada registro.
+Algunas transacciones quedan en estado "Revisión" bajo algunas situaciones, como por ejemplo cuando se despacha mas de lo autorizado (por un error en el controlador o el POS). En estos casos es necesario aprobar o rechazar la transacción mediante uno de los 2 íconos a la derecha de cada registro.
 
 ![Cuentas Corrientes](Content/Includes/AN-HomeBase-UserManal-SP/excepciones.png)
 
 #### Rendimiento por Transacción
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
 
-#### Rendimiento por Vehiculo
+#### Rendimiento por Vehículo
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
 
 #### Transacciones
+
 La vista de transacciones es una de las mas importantes en ATIONet. en esta vista se ven las transacciones que se realizaron y fueron aprobadas.
 
 El panel de Filtros posee todos estas posibilidades:
@@ -418,8 +456,8 @@ El panel de filtros posee las siguientes posibilidades:
 * ***Agrupar por:***  Sitio, Flota, Programa, Id Vehículo y/o Fecha.
 * ***Conductor:*** Filtrar por el conductor que despachó.
 * ***Flota:*** Filtrar por flota a la cual pertenece el vehículo que realizó el despachó.
-* ***Id Vehiculo:*** Filtrar por el Id del vehiculo que realizó el despachó.
-* ***Sitio:*** Filtrar por sitio donde se realizo el despacho.
+* ***Id Vehículo:*** Filtrar por el Id del vehículo que realizó el despachó.
+* ***Sitio:*** Filtrar por sitio donde se realizó el despacho.
 * ***Terminal/Controlador:*** Filtrar por terminal/controlador que despachó.
 * ***Combustible:*** Filtrar por el combustible que se despachó.
 * ***Fecha desde/Fecha hasta:*** Rango de fechas a filtrar.
@@ -437,13 +475,13 @@ El panel de filtros posee las siguientes posibilidades:
 
 ![Transacciones por Sitio](Content/Includes/AN-HomeBase-UserManal-SP/filtrosTransaccionesPorFlota.png)
 
-* ***Agrupar por:***  Sitio, Vehiculo, Id Conductor y/o Fecha.
-* ***Flota:*** Filtrar por flota a la cual pertenece el vehiculo que realizo el despacho.
-* ***Vehiculo:*** Filtrar por el vehiculo que realizo el despacho.
-* ***Id Conductor:*** Filtrar por el Id del conductor que realizo el despacho.
-* ***Sitio:*** Filtrar por sitio donde se realizo el despacho.
-* ***Combustible:*** Filtrar por el combustible que se despacho.
-* ***Terminal/Controlador:*** Filtrar por terminal/controlador que despacho.
+* ***Agrupar por:***  Sitio, Vehículo, Id Conductor y/o Fecha.
+* ***Flota:*** Filtrar por flota a la cual pertenece el vehículo que realizó el despacho.
+* ***Vehículo:*** Filtrar por el vehículo que realizó el despacho.
+* ***Id Conductor:*** Filtrar por el Id del conductor que realizó el despacho.
+* ***Sitio:*** Filtrar por sitio donde se realizó el despacho.
+* ***Combustible:*** Filtrar por el combustible que se despachó.
+* ***Terminal/Controlador:*** Filtrar por terminal/controlador que despachó.
 * ***Fecha desde/Fecha hasta:*** Rango de fechas a filtrar.
 * ***Hora desde/Hora hasta:*** Rango de horas a filtrar.
 
@@ -460,18 +498,18 @@ El panel de filtros posee las siguientes posibilidades:
 ![Transacciones por Sitio](Content/Includes/AN-HomeBase-UserManal-SP/filtrosTransaccionesPorSitio.png)
 
 * ***Agrupar por:***  Combustible, Flota, Programa, Turno y/o Fecha.
-* ***Sitio:*** Filtrar por sitio donde se realizo el despacho.
-* ***Combustible:*** Filtrar por el combustible que se despacho.
-* ***Flota:*** Filtrar por flota a la cual pertenece el vehiculo que realizo el despacho.
-* ***Terminal/Controlador:*** Filtrar por terminal/controlador que despacho.
+* ***Sitio:*** Filtrar por sitio donde se realizó el despacho.
+* ***Combustible:*** Filtrar por el combustible que se despachó.
+* ***Flota:*** Filtrar por flota a la cual pertenece el vehículo que realizó el despacho.
+* ***Terminal/Controlador:*** Filtrar por terminal/controlador que despachó.
 * ***Fecha desde/Fecha hasta:*** Rango de fechas a filtrar.
 * ***Hora desde/Hora hasta:*** Rango de horas a filtrar.
 
 Cuando termine de llenar el formulario, cliquee "Buscar" para aplicar el filtro, o "Crear filtro" para guardar el filtro hecho.
 
-#### Transacciones por Vehiculo
+#### Transacciones por Vehículo
 
-En esta vista se pueden ver las transacciones, agrupadas por el vehiculo que las realizo. Los botones que estan colocados en la parte superior izquierda son para imprimir la tabla o crear un archivo Excel de la tabla, respectivamente.
+En esta vista se pueden ver las transacciones, agrupadas por el vehículo que las realizó. Los botones que estan colocados en la parte superior izquierda son para imprimir la tabla o crear un archivo Excel de la tabla, respectivamente.
 
 ![Transacciones por Vehiculo](Content/Includes/AN-HomeBase-UserManal-SP/transaccionesPorVehiculo.png)
 
@@ -480,18 +518,19 @@ El panel de filtros posee las siguientes posibilidades:
 ![Transacciones por Sitio](Content/Includes/AN-HomeBase-UserManal-SP/filtrosTransaccionesPorVehiculo.png)
 
 * ***Agrupar por:***  Sitio, Flota, Programa, Id Conductor y/o Fecha.
-* ***Vehiculo:*** Filtrar por vehiculo que realizo el despacho.
-* ***Flota:*** Filtrar por flota a la cual pertenece el vehiculo que realizo el despacho.
-* ***Id Conductor:*** Filtrar por el Id del conductor que realizo el despacho.
-* ***Sitio:*** Filtrar por sitio donde se realizo el despacho.
-* ***Terminal/Controlador:*** Filtrar por terminal/controlador que despacho.
-* ***Combustible:*** Filtrar por el combustible que se despacho.
+* ***Vehículo:*** Filtrar por vehículo que realizó el despacho.
+* ***Flota:*** Filtrar por flota a la cual pertenece el vehículo que realizó el despacho.
+* ***Id Conductor:*** Filtrar por el Id del conductor que realizó el despacho.
+* ***Sitio:*** Filtrar por sitio donde se realizó el despacho.
+* ***Terminal/Controlador:*** Filtrar por terminal/controlador que despachó.
+* ***Combustible:*** Filtrar por el combustible que se despachó.
 * ***Fecha desde/Fecha hasta:*** Rango de fechas a filtrar.
 * ***Hora desde/Hora hasta:*** Rango de horas a filtrar.
 
 Cuando termine de llenar el formulario, cliquee "Buscar" para aplicar el filtro, o "Crear filtro" para guardar el filtro hecho.
 
 #### Transacciones Rechazadas
+
 ATIONet separa las transacciones NO autorizadas en 2 secciones, las [Excepciones](#excepciones) y las Transacciones Rechazadas.
 Las Transacciones Rechazadas son aquellas transacciones que lograron pasar las validaciones duras de ATIONet pero fueron rechazadas por otras validaciones como ser alguna regla no satisfecha o validación de saldo.
 
@@ -520,12 +559,14 @@ Algunos de los motivos mas comunes de esta situación los los siguientes:
 * La transacción de terminación informa mas volumen o importe que el que fue autorizado. En este caso se puede aprobar la autorización. 
 
 #### Transacciones sin Control
+
 Las transacciones sin control son aquellas transacciones que se generan porque el controlador detecto una diferencia de aforadores y envía una transacción por la diferencia. Estas transacciones no contienen datos sobre el identificador ya que fueron generadas automáticamente y no se iniciaron con la presentación de un identificador. Al no tener un identificador asignado tampoco se impactan en ninguna cuenta corriente ni cuentan para calculo de reglas.
 Esta vista también el panel de filtros para hacer búsquedas mas especificas.
 
 ![Transacciones sin Control](Content/Includes/AN-HomeBase-UserManal-SP/transaccionesFueraDeControl.png)
 
 #### Vehículos
+
 En esta vista se listan los vehículos que han sido dados de alta. Recuerde que no es obligatorio cargar vehículos para poder operar, solo es necesario si usted decide asociar los identificadores a vehículos.
 
 Esta vista posee  el panel de filtros para poder especificar mas la búsqueda. Cabe destacar el filtro "Sin Identificación", seleccionando esta opción, se mostraran solo aquellos vehículos que no han sido asignados a un identificador. 
@@ -539,9 +580,11 @@ Para ver mas detalles del vehículo, haga click en el código:
 Al final de la vista encontrara 3 secciones, ***Conductores***, ***Reglas de Vehículos*** y ***Reglas de Flota***. Si el vehículo posee uno o mas conductores asociados se mostraran en la primer sección, y si el vehículo tiene una regla asociada, ya sea en forma directa a o a través de una flota aparecerán en las ultimas 2 secciones.
 
 ### Reportes
+
 En ATIONet los reportes son considerados aquellos listados de información que si o si van a ser impresos y archivados en formato físico. Al ser impresos ATIONet les agrega una cabecera con el logo de la suscripción automáticamente.
 
 #### Conductor
+
 El reporte de Conductor se puede filtrar por nombre / código de conductor o por identificación.
 Una vez seleccionado el filtro se presiona el botón ***Imprimir***, esto desplegara un popup con la información seleccionada.
 La información es mostrada con un formato listo para ser impreso, incluyendo el logo de la suscripción y la fecha y la hora de generación del reporte.
@@ -551,7 +594,8 @@ Este popup posee un botón imprimir que al apretarlo se abre la ventana de impre
 ![Drivers](Content/Includes/AN-HomeBase-UserManal-SP/driversReport.png)
 
 #### Detalle de actividad por Vehículo
-Este reporte muestra la actividad de cada vehículo. Muestra la lista de transacciones que cada vehículo realizo, ordenadas por fecha. Una vez seleccionado el filtro se presiona el botón ***Imprimir***, esto desplegara un popup con la información seleccionada.
+
+Este reporte muestra la actividad de cada vehículo. Muestra la lista de transacciones que cada vehículo realizó, ordenadas por fecha. Una vez seleccionado el filtro se presiona el botón ***Imprimir***, esto desplegara un popup con la información seleccionada.
 La información es mostrada con un formato listo para ser impreso, incluyendo el logo de la suscripción y la fecha y la hora de generación del reporte.
 
 Este popup posee un botón imprimir que al apretarlo se abre la ventana de impresión por defecto del navegador de internet.
@@ -560,6 +604,7 @@ Este popup posee un botón imprimir que al apretarlo se abre la ventana de impre
 ![Drivers](Content/Includes/AN-HomeBase-UserManal-SP/vehicleDetailedActivity.png)
 
 #### Sitios
+
 Este reporte muestra la lista de sitios. Esta vista no posee un panel de filtros. Al presionar el botón ***Imprimir***, esto desplegara un popup con toda la información.
 La información es mostrada con un formato listo para ser impreso, incluyendo el logo de la suscripción y la fecha y la hora de generación del reporte.
 
@@ -568,6 +613,7 @@ Este popup posee un botón imprimir que al apretarlo se abre la ventana de impre
 ![Sites](Content/Includes/AN-HomeBase-UserManal-SP/siteReport.png)
 
 #### Transacciones
+
 Este reporte muestra la lista de transacciones realizadas, ordenadas por fecha. Este reporte posee varios filtros para ajustar la busqueda. El primer campo del panel de filtros  indica porque campo se va a ordenar la lista, el campo seleccionado en esta lista sera mostrado en la primer columna.
 
 ![Transactions](Content/Includes/AN-HomeBase-UserManal-SP/transactionReport.png)
@@ -581,6 +627,7 @@ Este popup posee un botón imprimir que al apretarlo se abre la ventana de impre
 
 
 #### Vehículo
+
 Este reporte muestra la lista de vehículos. Este reporte posee varios filtros para ajustar la búsqueda. El primer campo del panel de filtros  indica porque campo se va a ordenar la lista, el campo seleccionado en esta lista sera mostrado en la primer columna.
 
 ![Vehicles](Content/Includes/AN-HomeBase-UserManal-SP/vehiclesReport.png)
@@ -596,6 +643,7 @@ Este popup posee un botón imprimir que al apretarlo se abre la ventana de impre
 
 
 #### Clases de Vehículos
+
 Si usted desea tener su flota organizada por clase de vehículo, puede hacerlo utilizando esta funcionalidad de ATIONet. Al hacer click en la opción del menú de navegación le mostrara la pagina con la lista de "Clases de Vehículos".
 
 ![Vehicle Class](Content/Includes/AN-HomeBase-UserManal-SP/vehicleClass.png)
@@ -616,6 +664,7 @@ Después existe una sección llamada ***"Combustibles"*** en la que se puede ind
 Si un vehículo tiene una clase de vehículo asociada y esa clase de vehículo tiene un combustible asociado con su correspondiente capacidad de tanque de 60 litros y llega una pre autorización para el vehículo por 70 litros, la transacción sera rechazada ya que se podría asumir que es un fraude o que el combustible no va a ser entregado en el vehículo configurado. En esta sección se pueden agregar mas de un combustible ya que algunos vehículos cargan mas de 1, como por ejemplo combustible y GNC.
  
 #### Combustibles
+
 ATIONet posee una tabla de productos maestros codificada en base al estándar NACS. Llegado el caso que su controlador o POS tenga configurado códigos distintos a los estándar o que su red sea multi marca y para un mismo producto, diferentes sitios manejen distintos códigos, ATIONet posee un mecanismo para resolver esta situación. Este mecanismo es el ***"Mapeo de Combustible"***. 
 Cuando un sitio necesita mapear códigos de productos deberá editar el sitio y marcar el tilde ***"Requiere Mapeo de Combustibles"***. 
 Cuando al menos un sitio tiene este parámetro activado se mostrara en el menú de administración la opción ***Combustibles***. 
@@ -704,7 +753,9 @@ La tabla maestra de productos de ATIONet es la siguiente:
 </table>
 
 #### Conceptos
+
 #### Conductores
+
 Se listan los conductores por código, nombre completo, identificaciones y balance. Por defecto la vista es condensada, como se muestra en la imagen de abajo.
 
 La columna "Habilitado" muestra el estado del conductor; para habilitar o deshabilitar un conductor, haga click en el ícono del candado en la columna "Opciones".
@@ -730,7 +781,7 @@ Para crear un nuevo conductor, haga click en el botón "Nuevo".
 
 ![Conductores Administracion](Content/Includes/AN-HomeBase-UserManal-SP/botonNuevoResaltadoConductoresAdministracion.png)
 
-El formulario para crear un nuevo conductor recibe los siguientes parametros:
+El formulario para crear un nuevo conductor recibe los siguientes parámetros:
 
 ![Conductores Administracion](Content/Includes/AN-HomeBase-UserManal-SP/crearNuevoConductorAdministracion.png)
 
@@ -745,7 +796,7 @@ El formulario para crear un nuevo conductor recibe los siguientes parametros:
 * ***Correo:*** El correo electrónico del conductor.
 * ***Fecha de nacimiento:*** La fecha de nacimiento del conductor.
 
-* **Identificadores:** Para asignarle un identificador, o, crear uno nuevo si no existe y luego cliquear "Alta rápida"
+* **Identificadores:** Para asignarle un identificador, o, crear uno nuevo si no existe y luego cliquear "Alta rápida".
 
 * **Vehículo:** Para asignarle un vehículo ya existente.
 
@@ -770,16 +821,19 @@ Que es asignar una regla?
 ![Conductores Administracion](Content/Includes/AN-HomeBase-UserManal-SP/editarConductorAdministracion.png)
 
 #### Configuración
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitiur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
 
 ![Configuracion Administracion](Content/Includes/AN-HomeBase-UserManal-SP/configuracionAdministracion.png)
 
 #### Configuración de Fast Track
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
 
 ![Configuracion de Fast Track Administracion](Content/Includes/AN-HomeBase-UserManal-SP/configuracionFastTrackAdministracion.png)
 
 #### Contratos de Compañía
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
 
 ![Contratos de Compañia](Content/Includes/AN-HomeBase-UserManal-SP/contratosDeCompaniaAdministracion.png)
@@ -789,11 +843,12 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac 
 ![Contratos de Compañia](Content/Includes/AN-HomeBase-UserManal-SP/filtrosContratosDeCompaniaAdministracion.png)
 
 #### Familias de Conceptos
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
 
 #### Flotas
 
-Las flotas son grupos de vehiculos.?
+Las flotas son los conjuntos de vehículos de los cual dispone la empresa. Abajo se listan por código y nombre las flotas que tiene. En la columna opciones puede asignarle una regla a la flota, o editarla.?
 
 ![Flotas Administracion](Content/Includes/AN-HomeBase-UserManal-SP/flotasAdministracion.png)
 
@@ -813,12 +868,14 @@ El formulario para crear una nueva flota recibe los siguientes parámetros:
 Cuando termine de realizar los cambios, cliquée el botón "Guardar".
 
 #### Identificaciones Solicitadas
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
 
 ![Identificaciones Solicitadas Administracion](Content/Includes/AN-HomeBase-UserManal-SP/identificacionesSolicitadasAdministracion.png)
 
 #### Identificadores
-Que son los identificadores?
+
+El identificador es el medio físico que utiliza ATIONet para poder identificar un vehículo o un conductor. ATIONet soporte varios tipos de identificaciones, como ser tarjeta, tag (anillo), chip, tarjeta ATIONet, entrada manual, código de barras e iButton. Cuando se asocia un identificador a un Vehículo o Conductor se crea una sub cuenta. En esta seccion, se mostraran los identificadores ya creados. En la columna opciones puede editar el identificador, habilitarlo o deshabilitarlo, o libearlo.
 
 ![Identificadores Administracion](Content/Includes/AN-HomeBase-UserManal-SP/identificadoresAdministracion.png)
 
@@ -840,10 +897,11 @@ El formulario para crear un nuevo identificador recibe los siguientes parametros
 * ***PAN:*** ?
 * ***PIN:*** ?
 
-En segunda instancia, el formulario se completa asignandole la identificación a un vehículo o conductor.?
+En segunda instancia, el formulario se completa asignandole la identificación a un vehículo o conductor.
 
 
 #### Impuestos
+
 La tabla de impuestos muestra:
 
 * ***Código:*** Código del impuesto.
@@ -893,6 +951,7 @@ El formulario para crear un nuevo método de pago recibe los siguientes parámet
 Cuando termine de realizar los cambios, cliquée el botón "Guardar.
 
 #### Modelos de Identificador
+
 Que son los modelos de identificador?
 
 ![Modelos De Identificador Administracion](Content/Includes/AN-HomeBase-UserManal-SP/modelosDeIdentificadorAdministracion.png)
@@ -906,11 +965,11 @@ El formulario para crear un nuevo modelo de identificador recibe los siguientes 
 ![Nuevo Modelo De Idcentificador Administracion](Content/Includes/AN-HomeBase-UserManal-SP/crearNuevoModeloDeIdentificadorAdministracion.png)
 
 * ***Tipo:*** Puede ser de tipo Tarjeta, TAG, Chipkey o Entrada Manual.
-* ***Descripción:*** La descripcion del nuevo modelo de identificador.
+* ***Descripción:*** La descripción del nuevo modelo de identificador.
 * ***Instalable:*** Si es instalable o no.
 * ***Personalizado:*** Si es personalizado o no.
 * ***Reusable:*** Si es reusable o no.
-* ***Soporta multiples asignaciones:*** Si soporta multiples asignaciones o no.
+* ***Soporta múltiples asignaciones:*** Si soporta múltiples asignaciones o no.
 * ***Valida fecha de expiración:*** Si valida la fecha de expiración o no.
 * ***Ignorar comportamiento de id vehículo en terminal:*** Si ignora el comportamiento de id vehículo en terminal o no.
 * ***Requiere PIN:*** Si requiere PIN o no.
@@ -918,6 +977,7 @@ El formulario para crear un nuevo modelo de identificador recibe los siguientes 
 Cuando termine de realizar los cambios, cliquée el botón "Guardar".
 
 #### Programas
+
 Que son los programas?
 
 ![Programas Administracion](Content/Includes/AN-HomeBase-UserManal-SP/programasAdministracion.png)
@@ -932,7 +992,7 @@ El formulario para crear un nuevo programa recibe los siguientes parámetros:
 
 * ***Descripción:*** La descripción del nuevo programa.
 * ***Aplicar sitios del Contrato:*** Puede ser no afectado, forzado o no forzado.
-* ***Modo del saldo:*** Puede ser no afectado, dispersado, sin dispersar, sin limite o de llenado automático.
+* ***Modo del saldo:*** Puede ser no afectado, dispersado, sin dispersar, sin límite o de llenado automático.
 * ***Soporta contingencias:*** Puede ser no afectado, forzado o no forzado.
 * ***Soporta offline:*** Puede ser no afectado, forzado o no forzado.
 * ***Tarjeta de regalo:*** Si incluye tarjeta de regalo o no. Si esta opción es chequeada, aparecerán tres parámetros más:
@@ -944,7 +1004,7 @@ Cuando termine de realizar los cambios, cliquée el botón "Guardar".
 
 #### Reglas
 
-Las reglas son, básicamente, limitaciones que se le asignan a vehículos, flotas, combustibles, sitios o conductores. Si no se le aplicara ninguna regla a, por ejemplo, un conductor, el conductor podría, por ejemplo, cargar cualquier combustible en cualquier sitio. En esta sección usted puede ver las reglas que ya creo, listadas por Tipo y Descripción. Si hace click en la descripción, puede ver el detalle de la regla y a que vehículos, flotas, combustibles, sitios o conductores se les ha aplicado la regla. Para editar la regla haga click en el ícono del lápiz que se encuentra en la columna "Opciones"; para eliminar la regla, haga click en el ícono de la cruz que se encuentra en la columna opciones.
+Las reglas son, básicamente, limitaciones que se le asignan a vehículos, flotas, combustibles, sitios o conductores. Si no se le aplicara ninguna regla a, por ejemplo, un conductor, el conductor podría, por ejemplo, cargar cualquier combustible en cualquier sitio. En esta sección usted puede ver las reglas que ya creó, listadas por Tipo y Descripción. Si hace click en la descripción, puede ver el detalle de la regla y a que vehículos, flotas, combustibles, sitios o conductores se les ha aplicado la regla. Para editar la regla haga click en el ícono del lápiz que se encuentra en la columna "Opciones"; para eliminar la regla, haga click en el ícono de la cruz que se encuentra en la columna opciones.
 
 ![Reglas Administracion](Content/Includes/AN-HomeBase-UserManal-SP/reglasAdministracion.png)
 
@@ -965,7 +1025,7 @@ El formulario para crear una nueva regla de tipo cuota es el siguiente:
 
 ![Nueva Regla Cuota](Content/Includes/AN-HomeBase-UserManal-SP/nuevaReglaCuota.png)
 
-* ***Frecuencia:*** La frecuencia se compone de valor (numerico) y de unidad de tiempo (Ej. Días, Semanas). Si, por ejemplo, se introduce 2 - Días, la frecuencia con la que será evaluada toda la regla sera de 2 días.
+* ***Frecuencia:*** La frecuencia se compone de valor (numérico) y de unidad de tiempo (Ej. Días, Semanas). Si, por ejemplo, se introduce 2 - Días, la frecuencia con la que será evaluada toda la regla sera de 2 días.
 
 **Transacciones**
 
@@ -979,7 +1039,7 @@ El formulario para crear una nueva regla de tipo cuota es el siguiente:
 
 * ***Cuota:*** La cantidad máxima de dinero que puede gastar en el lapso de tiempo especificado en **Frecuencia**.
 
-**Aplicar a:** Aplicar la regla a cierta flota, vehiculo, conductor, sitio y/o combustible.
+**Aplicar a:** Aplicar la regla a cierta flota, vehículo, conductor, sitio y/o combustible.
 
 Ejemplo: Si se le aplica a una flota una regla de tipo cuota, con una frecuencia de dos semanas, y la cantidad máxima de transacciones que pueden realizar es 120, podrán realizar como máximo 120 transacciones cada dos semanas.
 
@@ -994,7 +1054,7 @@ El formulario para crear una nueva regla de tipo Rango de Fechas es el siguiente
 * ***Fecha desde/Fecha hasta:*** Rango de fechas en las que se podrá realizar una transacción.
 * ***Hora desde/Hora Hasta:*** Rango de horas en las que se podrá realizar una transacción.
 
-**Aplicar a:** Aplicar la regla a cierta flota, vehiculo, conductor, sitio y/o combustible.
+**Aplicar a:** Aplicar la regla a cierta flota, vehículo, conductor, sitio y/o combustible.
 
 Ejemplo: Si se le aplica a un combustible una regla de tipo rango de fechas, con un rango de fechas del 10 de Junio del 2017 al 17 de Junio del 2017, ese combustible solo se podrá despachar en dicho rango de fechas.
 
@@ -1058,7 +1118,7 @@ El formulario para crear una nueva regla de tipo Días es el siguiente:
 
 **Aplicar a:** Aplicar la regla a una flota, vehículo, conductor, sitio o combustible.
 
-Ejemplo: Si se le aplica una regla de tipo días a un combustible, siendo Martes, Jueves y Viernes los días de la semana habilitados, ese combustible sólo se podrá despachar los Martes, Jueves y Viernes.
+Ejemplo: Si se le aplica una regla de tipo días a un combustible, siendo Martes, Jueves y Viernes los días de la semana habilitados, ese combustible solo se podrá despachar los Martes, Jueves y Viernes.
 
 Cuando termine, cliquée el botón "Guardar".
 
@@ -1073,7 +1133,7 @@ El formulario para crear una nueva regla de tipo Días/Horas es el siguiente:
 
 **Aplicar a:** Aplicar la regla a una flota, vehículo, conductor, sitio o combustible.
 
-Ejemplo: Si se le aplica una regla de tipo días/horas a un vehículo, siendo Martes el día de la semana habilitado, y 10:50hs a 14:30hs el rango de horas, ese vehículo sólo podrá realizar transacciones los días Martes entre las 10:50hs y las 14:30hs.
+Ejemplo: Si se le aplica una regla de tipo días/horas a un vehículo, siendo Martes el día de la semana habilitado, y 10:50hs a 14:30hs el rango de horas, ese vehículo solo podrá realizar transacciones los días Martes entre las 10:50hs y las 14:30hs.
 
 Cuando termine, cliquée el botón "Guardar".
 
@@ -1089,17 +1149,17 @@ El formulario para crear una nueva regla de tipo Solicitudes es el siguiente:
 
 * ***Conductor PIN:*** Si quiere que se requiera el PIN del conductor, chequée esta opción.
 * ***Id Conductor:*** Si quiere que se requiera el Id del conductor, chequée esta opción.
-* ***Vehiculo PIN:*** Si quiere que se requiera el PIN del vehiculo, chequée esta opción.
-* ***Id Vehiculo:*** Si quiere que se requiera el Id del vehiculo, chequée esta opción.
-* ***Num. Unidad del camion:*** Si quiere que se requiera el número de unidad del camión, chequée esta opcion.
+* ***Vehículo PIN:*** Si quiere que se requiera el PIN del vehículo, chequée esta opción.
+* ***Id Vehículo:*** Si quiere que se requiera el Id del vehículo, chequée esta opción.
+* ***Num. Unidad del camión:*** Si quiere que se requiera el número de unidad del camión, chequée esta opción.
 * ***Num. del remolque:*** Si quiere que se requiera el número del remolque, chequée esta opción.
 * ***Misceláneo:*** ?
-* ***Odómetro actual:*** ?
-* ***Horas de motor actual:*** ?
+* ***Odómetro actual:*** La cantidad de horas que tiene el odómetro actualmente.?
+* ***Horas de motor actual:*** La cantidad de horas que tiene el motor actualmente?
 
 **Aplicar a:** Aplicar la regla a una flota, vehículo, conductor, sitio o combustible.
 
-Ejemplo: Si se chequean las opciones de Conductor PIN y Vehiculo PIN, y se ingresa en ***Reintentos*** el valor 2, cuando el conductor quiera realizar la transacción, la terminal le requerirá que ingrese el PIN del conductor y el PIN del vehiculo. Si el conductor ingresa bien estos valores correctamente, errando 2? o menos veces, la transacción se realizara, de errar mas 2 dos veces, la transacción se rechazará.
+Ejemplo: Si se chequean las opciones de Conductor PIN y Vehículo PIN, y se ingresa en ***Reintentos*** el valor 2, cuando el conductor quiera realizar la transacción, la terminal le requerirá que ingrese el PIN del conductor y el PIN del vehículo. Si el conductor ingresa bien estos valores correctamente, errando 2? o menos veces, la transacción se realizara, de errar mas 2 dos veces, la transacción se rechazará.
 
 Cuando termine, cliquée el botón "Guardar".
 
@@ -1115,7 +1175,7 @@ El formulario para crear una nueva regla de tipo Límite de Producto por Transac
 
 **Aplicar a:** Aplicar la regla a una flota, vehículo, conductor o sitio.
 
-Ejemplo: Si se le aplica una regla de tipo Límite de Producto por Transacción a un conductor, con una cuota de $50, en la factura sólo puede haber, como máximo, $50 correspondientes a productos secos, de lo contrario, la transacción sera rechazada.
+Ejemplo: Si se le aplica una regla de tipo Límite de Producto por Transacción a un conductor, con una cuota de $50, en la factura solo puede haber, como máximo, $50 correspondientes a productos secos, de lo contrario, la transacción sera rechazada.
 
 Cuando termine, cliquee el botón "Guardar".
 
@@ -1139,7 +1199,7 @@ Cuando termine, cliquée el botón "Guardar".
 
 #### Sitios
 
-Los sitios son los lugares donde se carga combustible?
+El Sitio representa a la estación de servicio. A un sitio se le asigna la terminal y también puede tener asociadas reglas de Ubicación. En esta sección se listan los sitios ya ingresados en el sistema y sus características. En la columna opciones puede editar el sitio, o asignarle una regla al sitio.
 
 ![Sitios Administracion](Content/Includes/AN-HomeBase-UserManal-SP/sitiosAdministracion.png)
 
@@ -1158,7 +1218,7 @@ El formulario para crear un nuevo sitio recibe los siguientes parámetros:
 * ***Calle:*** La calle donde se encuentra el sitio.
 * ***Calle 2:*** ?
 * ***Zona horaria:*** La zona horaria del sitio.
-* ***Codigo Postal:*** El codigo postal del sitio.
+* ***Código Postal:*** El código postal del sitio.
 * ***Ciudad:*** Ciudad donde se encuentra el sitio.
 * ***País:*** País donde se encuentra el sitio.
 * ***Estado:*** Estado donde se encuentra el sitio.
@@ -1173,7 +1233,8 @@ El formulario para crear un nuevo sitio recibe los siguientes parámetros:
 Cuando termine de realizar los cambios, cliquée el botón "Guardar.
 
 #### Terminales / Controladores
-Que son las terminales/controladores?
+
+La terminal (o controlador) es la representación del controlador de surtidores, que necesita parametrizarse de manera particular según el tipo de terminal. Las terminales que ATIONet maneja son ATIO-NanoCPI, ATIO-Standalone, ATIO-CG, VF-Standalone, VF-Sapphire, VF-Ruby, ControlGas y OPW-FSC3000. En esta seccion se listan las terminales que ya están dadas de alta en el sistema. Puede editarla haciendo click en el ícono del lapiz que se encuentra en la columna opciones.
 
 ![Terminales Administracion](Content/Includes/AN-HomeBase-UserManal-SP/terminalesAdministracion.png)
 
@@ -1192,7 +1253,7 @@ El formulario para crear una nueva terminal recibe los siguientes parámetros:
 * ***Descripción:*** La descripción de la terminal/controlador.
 * ***Lector de TAG instalado:*** Si tiene un lector de TAG instalado o no.
 * ***Uso del ID del conductor:*** Puede ser ninguno, track secundario o validación de código.
-* ***Uso del ID del vehiculo:*** Puede ser ninguno, track secundario o validación de código.
+* ***Uso del ID del vehículo:*** Puede ser ninguno, track secundario o validación de código.
 * ***Combustible:*** El combustible de la terminal/controlador.
 * ***Límite máximo de volumen:*** El límite máximo de volumen de la terminal/controlador.
 * ***Límite máximo de monto:*** El límite máximo de monto de la terminal/controlador.
@@ -1200,20 +1261,24 @@ El formulario para crear una nueva terminal recibe los siguientes parámetros:
 Cuando termine de realizar los cambios, cliquée el botón "Guardar.
 
 #### Tipos de Documentos
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
 
 #### Transacciones Desconocidas
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
 
 #### Transacciones Fuera de Sitio
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
 
 #### Usuarios
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
 
 #### Vehículos
 
-Que son los vehiculos?
+Que son los vehículos?
 
 ![Vehiculos Administracion](Content/Includes/AN-HomeBase-UserManal-SP/vehiculosAdministracion.png)
 
@@ -1266,15 +1331,19 @@ Por último, si las hubiera, se listarán las reglas que están asociadas a la f
 Cuando termine de realizar los cambios, cliquée el botón "Guardar".
 
 ## Mis Filtros
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
 
 ## Solución de Problemas
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
 
 ## Mis Preferencias
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
 
 ## Configuración Nano CPI para ATIONet
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
 
 
