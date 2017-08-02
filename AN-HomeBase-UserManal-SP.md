@@ -95,7 +95,7 @@
 		- Grafico de Inventarios
 		- Inventario
 		- Recepciones
-		- Reconciliazión Inventario
+		- Reconciliazión Inventario 
 	- [Administración](#administración)
 		- [Clases de Vehículos](#clases-de-vehículos)
 		- [Combustibles](#combustibles)
