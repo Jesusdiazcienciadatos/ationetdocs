@@ -804,22 +804,6 @@ El formulario para crear un nuevo conductor recibe los siguientes parámetros:
 
 Cuando termine de realizar los cambios, cliquée el botón "Guardar".
 
-###### Asignar Identificación
-
-Que es asignar una identificacion?
-
-![Conductores Administracion](Content/Includes/AN-HomeBase-UserManal-SP/asignarIdentificacionConductor.png)
-
-###### Asignar una regla
-
-Que es asignar una regla?
-
-![Conductores Administracion](Content/Includes/AN-HomeBase-UserManal-SP/asignarReglaConductor.png)
-
-###### Editar conductor
-
-![Conductores Administracion](Content/Includes/AN-HomeBase-UserManal-SP/editarConductorAdministracion.png)
-
 #### Configuración
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitiur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
@@ -848,7 +832,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac 
 
 #### Flotas
 
-Las flotas son los conjuntos de vehículos de los cual dispone la empresa. Abajo se listan por código y nombre las flotas que tiene. En la columna opciones puede asignarle una regla a la flota, o editarla.?
+Las flotas son los conjuntos de vehículos de los cual dispone la empresa. Abajo se listan por código y nombre las flotas que tiene. En la columna opciones puede asignarle una regla a la flota, o editarla.
 
 ![Flotas Administracion](Content/Includes/AN-HomeBase-UserManal-SP/flotasAdministracion.png)
 
@@ -883,19 +867,21 @@ El identificador es el medio físico que utiliza ATIONet para poder identificar 
 
 Para crear un nuevo identificador haga click en el botón nuevo que se encuentra en el lado superior izquierdo.
 
-El formulario para crear un nuevo identificador recibe los siguientes parametros:
+El formulario para crear un nuevo identificador recibe los siguientes parámetros:
 
 ![Nuevo Identificador Adminstracion](Content/Includes/AN-HomeBase-UserManal-SP/crearNuevoIdentificadorAdministracion.png)
 
 * ***Tipo:*** Puede ser Tarjeta, TAG, Chipkey, Entrada Manual, Tarjeta ATIOnet o ATIOnet TAG.
 * ***Modelo:*** El modelo del tipo de identificador seleccionado en ***Tipo***.
 * ***Tipo de uso:*** Puede ser de flota, fidelidad o dual.
-* ***Programa:*** ?
-* ***Programa de fidelidad:*** ?
-* ***Etiqueta:*** ?
+* ***Programa:*** El programa al cual se le va a asignar este identificador
+* ***Programa de fidelidad:*** El programa de fidelidad al cual se le va a asignar este identificador
+* ***Etiqueta:*** El nombre que lleva la tarjeta (Ej. Pablo Pérez)
 * ***Track:*** ?
-* ***PAN:*** ?
-* ***PIN:*** ?
+* ***PAN:*** Número de entre 1 y 19 caracteres 
+* ***PIN:*** El PIN que 
+
+Notesé que depende el tipo de identificador, pedirá ciertos ítems. Por ejemplo, el TAG no necesita de un PIN. Asimismo, si usted en tipo de programa selecciona "Flota", no le pedira que ingrese un programa de fidelidad.
 
 En segunda instancia, el formulario se completa asignandole la identificación a un vehículo o conductor.
 
@@ -905,10 +891,10 @@ En segunda instancia, el formulario se completa asignandole la identificación a
 La tabla de impuestos muestra:
 
 * ***Código:*** Código del impuesto.
-* ***Descripción:*** Descripción del impuesto
-* ***Tipo:*** Tipo de impuesto (Puede ser un impuesto fijo, un impuesto porcentual o un impuesto fijo por unidad)
-* ***Monto:*** El monto del impuesto (En el caso del impuesto porcentual, el porcentaje)
-* ***Fecha Desde / Fecha Hasta:*** Rango de fechas
+* ***Descripción:*** Descripción del impuesto.
+* ***Tipo:*** Tipo de impuesto (Puede ser un impuesto fijo, un impuesto porcentual o un impuesto fijo por unidad).
+* ***Monto:*** El monto del impuesto (En el caso del impuesto porcentual, el porcentaje).
+* ***Fecha Desde / Fecha Hasta:*** Rango de fechas.
 * ***Opciones:*** Editar el impuesto.
 
 ![Impuestos Administracion](Content/Includes/AN-HomeBase-UserManal-SP/impuestosAdministracion.png)
@@ -917,7 +903,7 @@ La tabla de impuestos muestra:
 
 Para crear un nuevo impuesto, cliquée el botón "Nuevo" que se encuentra en el lado superior izquierdo.
 
-El formulario para crear un nuevo impuesto recibe los siguientes parametros:
+El formulario para crear un nuevo impuesto recibe los siguientes parámetros:
 
 ![Nuevo Impuesto Administracion](Content/Includes/AN-HomeBase-UserManal-SP/crearNuevoImpuestoAdministracion.png) 
 
@@ -929,11 +915,11 @@ El formulario para crear un nuevo impuesto recibe los siguientes parametros:
 
 Luego de llenar los campos de ***Fecha desde*** y ***Monto*** cliquée el botón alta. 
 
-Cuando termine de realizar los cambios, cliquée el botón "Guardar.
+Cuando termine de realizar los cambios, cliquée el botón "Guardar".
 
 #### Métodos de Pago
 
-Los metodos de pago son las formas en las que el conductor puede pagar.?
+Los medios de pago son las distintas formas en las que se puede pagar un compra: efectivo, tarjeta de crédito, tarjeta de debito, gift cards, etc. ATIONET es una herramienta para que que un comerciante cree un medio de pago propio: una tarjeta de pago para combustibles.
 
 ![Metodos De Pago Administracion](Content/Includes/AN-HomeBase-UserManal-SP/metodosDePagoAdministracion.png)
 
@@ -948,11 +934,11 @@ El formulario para crear un nuevo método de pago recibe los siguientes parámet
 * ***Código:*** El código del nuevo método de pago.
 * ***Descripción:*** La descripción del nuevo método de pago.
 
-Cuando termine de realizar los cambios, cliquée el botón "Guardar.
+Cuando termine de realizar los cambios, cliquée el botón "Guardar".
 
 #### Modelos de Identificador
 
-Que son los modelos de identificador?
+Los modelos de identificador varian segun la necesidad del cliente, pueden ser de tipo Tarjeta (Una tarjeta magnética), TAG (Anillo), Chipkey o Entrada Manual (Un código ingresado a mano).
 
 ![Modelos De Identificador Administracion](Content/Includes/AN-HomeBase-UserManal-SP/modelosDeIdentificadorAdministracion.png)
 
@@ -978,7 +964,7 @@ Cuando termine de realizar los cambios, cliquée el botón "Guardar".
 
 #### Programas
 
-Que son los programas?
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
 
 ![Programas Administracion](Content/Includes/AN-HomeBase-UserManal-SP/programasAdministracion.png)
 
@@ -1086,7 +1072,7 @@ El formulario para crear una nueva regla de tipo Combustible es el siguiente:
 
 Ejemplo: Si se le aplica a un vehículo una regla de tipo combustible, siendo el combustible "Premium Diesel", ese vehículo **solamente** podrá cargar el combustible "Premium Diesel".
 
-Cuando termine, cliquée el botoón "Guardar".
+Cuando termine, cliquée el botón "Guardar".
 
 ###### Nueva Regla de tipo Límite por Transacción
 
@@ -1153,13 +1139,13 @@ El formulario para crear una nueva regla de tipo Solicitudes es el siguiente:
 * ***Id Vehículo:*** Si quiere que se requiera el Id del vehículo, chequée esta opción.
 * ***Num. Unidad del camión:*** Si quiere que se requiera el número de unidad del camión, chequée esta opción.
 * ***Num. del remolque:*** Si quiere que se requiera el número del remolque, chequée esta opción.
-* ***Misceláneo:*** ?
-* ***Odómetro actual:*** La cantidad de horas que tiene el odómetro actualmente.?
-* ***Horas de motor actual:*** La cantidad de horas que tiene el motor actualmente?
+* ***Misceláneo:*** Campo libre, para que requiera cualquier tipo de información que usted quiera.
+* ***Odómetro actual:*** La cantidad de horas que tiene el odómetro actualmente.
+* ***Horas de motor actual:*** La cantidad de horas que tiene el motor actualmente
 
 **Aplicar a:** Aplicar la regla a una flota, vehículo, conductor, sitio o combustible.
 
-Ejemplo: Si se chequean las opciones de Conductor PIN y Vehículo PIN, y se ingresa en ***Reintentos*** el valor 2, cuando el conductor quiera realizar la transacción, la terminal le requerirá que ingrese el PIN del conductor y el PIN del vehículo. Si el conductor ingresa bien estos valores correctamente, errando 2? o menos veces, la transacción se realizara, de errar mas 2 dos veces, la transacción se rechazará.
+Ejemplo: Si se chequean las opciones de Conductor PIN y Vehículo PIN, y se ingresa en ***Reintentos*** el valor 2, cuando el conductor quiera realizar la transacción, la terminal le requerirá que ingrese el PIN del conductor y el PIN del vehículo. Si el conductor ingresa bien estos valores correctamente, errando 2 o menos veces, la transacción se realizara, de errar mas 2 dos veces, la transacción se rechazará.
 
 Cuando termine, cliquée el botón "Guardar".
 
@@ -1216,7 +1202,7 @@ El formulario para crear un nuevo sitio recibe los siguientes parámetros:
 * ***Nombre corto:*** El nombre corto del sitio.
 * ***Nombre completo:*** El nombre completo del sitio.
 * ***Calle:*** La calle donde se encuentra el sitio.
-* ***Calle 2:*** ?
+* ***Calle 2:*** La otra calle donde se encuentra el sitio (Si se encontrara en una esquina)
 * ***Zona horaria:*** La zona horaria del sitio.
 * ***Código Postal:*** El código postal del sitio.
 * ***Ciudad:*** Ciudad donde se encuentra el sitio.
@@ -1230,7 +1216,7 @@ El formulario para crear un nuevo sitio recibe los siguientes parámetros:
 * ***Latitud:*** La coordenada de latitud del sitio.
 * ***Longitud:*** La coordenada de longitud del sitio.
 
-Cuando termine de realizar los cambios, cliquée el botón "Guardar.
+Cuando termine de realizar los cambios, cliquée el botón "Guardar".
 
 #### Terminales / Controladores
 
@@ -1258,7 +1244,7 @@ El formulario para crear una nueva terminal recibe los siguientes parámetros:
 * ***Límite máximo de volumen:*** El límite máximo de volumen de la terminal/controlador.
 * ***Límite máximo de monto:*** El límite máximo de monto de la terminal/controlador.
 
-Cuando termine de realizar los cambios, cliquée el botón "Guardar.
+Cuando termine de realizar los cambios, cliquée el botón "Guardar".
 
 #### Tipos de Documentos
 
@@ -1278,7 +1264,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac 
 
 #### Vehículos
 
-Que son los vehículos?
+En esta sección se muestran los vehiculos que usted dio de alta, listados por código, patente e identificación. Se muestra tambien a que flota pertenece el vehículo y la marca del vehículo. En la columna opciones usted puede asignar una identificación, asignar una regla, editar la informacion del vehiculo, o habilitar/deshabilitar el vehiculo.
 
 ![Vehiculos Administracion](Content/Includes/AN-HomeBase-UserManal-SP/vehiculosAdministracion.png)
 
@@ -1286,7 +1272,7 @@ Que son los vehículos?
 
 Para crear un nuevo vehículo, cliquée el botón "Nuevo" que se encuentra en el lado superior izquierdo.
 
-El formulario para crear un nuevo vehículo recibe los siguientes parametros:
+El formulario para crear un nuevo vehículo recibe los siguientes parámetros:
 
 ![Nuevo Vehiculo Administracion](Content/Includes/AN-HomeBase-UserManal-SP/crearNuevoVehiculoAdministracion.png)
 
