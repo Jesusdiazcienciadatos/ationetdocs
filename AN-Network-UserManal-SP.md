@@ -1,5 +1,5 @@
 ![ationetlogo](Content/Images/ATIOnetLogo_250x70.png)
-# ATIONet - Manual de Usuario Autoconsumo
+# ATIONet - Manual de Usuario Network (Suscripción tipo Network)
 
 <table>
 	<tr>
@@ -7,7 +7,7 @@
 	</tr>
 	<tr>
 		<td>Archivo:</td>
-		<td>AN-HomeBase-UserManal-SP</td>
+		<td>AN-Network-UserManal-SP</td>
 	</tr>
 	<tr>
 		<td>Version documento:</td>
@@ -15,7 +15,7 @@
 	</tr>
 	<tr>
 		<td>Fecha:</td>
-		<td>15 Enero 2016</td>
+		<td>2 Agosto 2017</td>
 	</tr>
 	<tr>
 		<td>Autor:</td>
@@ -34,7 +34,7 @@
 	</tr>
 	<tr valign="top">
 		<td>1.0</td>
-		<td>15 Enero 2016</td>
+		<td>2 Agosto 2017</td>
 		<td>Version inicial.</td>
 	</tr>
 </table>
@@ -71,12 +71,9 @@
 	- [Favoritos](#favoritos)	
 	- [Vistas](#vistas)
 		- [Autorizaciones Pendientes](#autorizaciones-pendientes)
-		- [Batch](#batch)
 		- [Conductores](#conductores)
+		- [Cuentas corrientes de Comercio](#cuentas-corrientes-de-comercio)
 		- [Cuentas corrientes de Compañia](#cuentas-corrientes-de-compañía)
-		- [Excepciones](#excepciones)
-		- Rendimiento por Transacción
-		- Rendimiento por Vehículo
 		- [Transacciones](#transacciones)
 		- Transacciones por Conductor
 		- Transacciones por Flota
@@ -87,8 +84,6 @@
 		- [Vehiculos](#vehiculos)
 	- [Reportes](#reportes)
 		- [Conductor](#conductor)
-		- [Detalle de actividad por Vehículo](#detalle-de-actividad-por-vehículo)
-		- [Sitios](#sitios)
 		- [Transacciones](#transacciones)
 		- [Vehiculo](#vehiculos)
 	- Inventario
@@ -97,29 +92,31 @@
 		- Recepciones
 		- Reconciliazión Inventario 
 	- [Administración](#administración)
-		- [Clases de Vehículos](#clases-de-vehículos)
-		- [Combustibles](#combustibles)
+		- [Categorías de SKUs](#categorías-de-skus)
+		- [Comercios](#comercios)
+		- [Compañias](#compañias)
 		- [Conceptos](#conceptos)
-		- [Conductores](#conductores)
-		- [Configuración](#configuración)
 		- [Configuración de Fast Track](#configuración-de-fast-track)
-		- [Contratos de Compañía](#Ccontratos-de-Compañia)
+		- [Contingencia](#contingencia)
+		- [Contratos de Comercios](#contratos-de-comercios)
+		- [Contratos de Compañias](#contratos-de-compañias)
+		- [Cuentas corrientes de Comercio](#cuentas-corrientes-de-comercio)
+		- [Cuentas corrientes de Compañia](#cuentas-corrientes-de-compañia)
+		- [Depositos](#depositos)
 		- [Familias de Conceptos](#familias-de-conceptos)
-		- [Flotas](#flotas)
 		- [Identificaciones Solicitadas](#identificaciones-solicitadas)
-		- [Identificadores](#Identificadores)
+		- [Identificadores](#identificadores)
 		- [Impuestos](#impuestos)
-		- [Metodos de Pago](#metodos-de-pago)
-		- [Modelos de Identificador](#modelo-de-identificador)
+		- [Instalaciones](#instalaciones)
+		- [Métodos de Pago](#metodos-de-pago)
+		- [Modelos de Identificador](#modelos-de-identificador)
 		- [Programas](#programas)
-		- [Reglas](#reglas)
-		- [Sitios](#Sitios)
-		- [Terminales / Controladores](#Terminales/Controladores)
-		- [Tipos de Documentos](#tipos-de-documentos)
+		- [Sitios](#sitios)
+		- [SKUs](#skus)
+		- [Tarjeta de Regalo](#tarjeta-de-regalo)
+		- [Tarjetas de Regalo Solicitadas](#tarjetas-de-regalo-solicitadas)
 		- [Transacciones Desconocidas](#transacciones-desconocidas)
-		- [Transacciones Fuera de Sitio](#transacciones-fuera-de-sitio)
 		- [Usuarios](#usuarios)
-		- [Vehículos](#vehículos)
 - [Mis Filtros](#mis-filtros)
 - [Solución de Problemas](#solucion-de-problemas)
 - [Mis Preferencias](#mis-preferencias)
@@ -328,27 +325,24 @@ Las autorizaciones pendientes son aquellas transacciones que todavía no recibie
 Tenga en cuenta que al momento de pre autorizar, ATIONet congelo el monto de la autorización de la cuenta corriente de la sub cuenta.
 Esta vista presenta todos los campos necesarios para poder identificar la transacción y el vehículo. Si necesita ver mas detalles, al hacer click en el código de autorización lo llevara a la vista de detalles de la transacción.
 
-![Autorizaciones Pendientes](Content/Includes/AN-HomeBase-UserManal-SP/autorizacionesPendientes.png)
+![Autorizaciones Pendientes](Content/Includes/AN-Network-UserManal-SP/autorizacionesPendientes.png)
 
 Si aparecen transacciones pendientes viejas y usted esta seguro que no es un despacho en curso, puede cancelarlas y devolver el saldo a la cuenta corriente.
 Para hacer esto tiene 2 maneras, en forma individual, haciendo click en el ícono de la "X" a la derecha de la grilla o en forma masiva seleccionando las transacciones, desplegar el menú "Acciones en Lote" y seleccionar "Cancelar". Esto cancelara las transacciones y devolverá el saldo a cada una de las cuentas corrientes.
 
-![Autorizaciones Pendientes](Content/Includes/AN-HomeBase-UserManal-SP/autorizacionesPendientes2.png)
+![Autorizaciones Pendientes](Content/Includes/AN-Network-UserManal-SP/autorizacionesPendientes2.png)
 
 (para mas detalles sobre el flujo de transacciones consulte este [documento](AN-Transaction_Flows-TechGuide.md))
-
-#### Batch
-
-El proceso Batch, es un proceso por el cual la terminal se asegura que envió todo lo que proceso y que el host lo recibió. La manera de asegurarse es enviando una transacción de "Cierre de Lote".
-No todas las terminales tienen la capacidad de implementar este mensaje, si la terminal lo soporta en esta vista se listaran todos los  cierres de lote enviados por las terminales. 
-
-![Batch](Content/Includes/AN-HomeBase-UserManal-SP/batch.png)
 
 #### Conductores
 
 En esta vista se listan los conductores que han sido dados de alta. Recuerde que no es obligatorio cargar conductores para poder operar, solo es necesario si usted decide asociar los identificadores a conductores.
 
-![Batch](Content/Includes/AN-HomeBase-UserManal-SP/conductores.png)
+![Conductores](Content/Includes/AN-Network-UserManal-SP/conductores.png)
+
+#### Cuentas corrientes de comercio
+
+Lorem ipsum vac ec nosius exactamentus comus es todus parrafus dil ipsum loren ragnaroc pris miacuerdo qui decia algui comus lorem ipsum doctor sir amet ragnarok tor avec folsiun parim comen pansen napolitanus milanesus de poio lorem sir amet camel progroc comen pansen lorem avec dit emet pol macarni.
 
 #### Cuentas corrientes de compañía
 
@@ -400,14 +394,6 @@ Una vez que selecciono los filtros, presiona ***"Buscar"*** y se listaran todas 
 Algunas transacciones quedan en estado "Revisión" bajo algunas situaciones, como por ejemplo cuando se despacha mas de lo autorizado (por un error en el controlador o el POS). En estos casos es necesario aprobar o rechazar la transacción mediante uno de los 2 íconos a la derecha de cada registro.
 
 ![Cuentas Corrientes](Content/Includes/AN-HomeBase-UserManal-SP/excepciones.png)
-
-#### Rendimiento por Transacción
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
-
-#### Rendimiento por Vehículo
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
 
 #### Transacciones
 
@@ -593,24 +579,6 @@ Este popup posee un botón imprimir que al apretarlo se abre la ventana de impre
 
 ![Drivers](Content/Includes/AN-HomeBase-UserManal-SP/driversReport.png)
 
-#### Detalle de actividad por Vehículo
-
-Este reporte muestra la actividad de cada vehículo. Muestra la lista de transacciones que cada vehículo realizó, ordenadas por fecha. Una vez seleccionado el filtro se presiona el botón ***Imprimir***, esto desplegara un popup con la información seleccionada.
-La información es mostrada con un formato listo para ser impreso, incluyendo el logo de la suscripción y la fecha y la hora de generación del reporte.
-
-Este popup posee un botón imprimir que al apretarlo se abre la ventana de impresión por defecto del navegador de internet.
- 
-
-![Drivers](Content/Includes/AN-HomeBase-UserManal-SP/vehicleDetailedActivity.png)
-
-#### Sitios
-
-Este reporte muestra la lista de sitios. Esta vista no posee un panel de filtros. Al presionar el botón ***Imprimir***, esto desplegara un popup con toda la información.
-La información es mostrada con un formato listo para ser impreso, incluyendo el logo de la suscripción y la fecha y la hora de generación del reporte.
-
-Este popup posee un botón imprimir que al apretarlo se abre la ventana de impresión por defecto del navegador de internet.
-
-![Sites](Content/Includes/AN-HomeBase-UserManal-SP/siteReport.png)
 
 #### Transacciones
 
@@ -640,175 +608,22 @@ Este popup posee un botón imprimir que al apretarlo se abre la ventana de impre
 ![Vehicles](Content/Includes/AN-HomeBase-UserManal-SP/vehiclesReport2.png)
 
 ### Administración
-
-
-#### Clases de Vehículos
-
-Si usted desea tener su flota organizada por clase de vehículo, puede hacerlo utilizando esta funcionalidad de ATIONet. Al hacer click en la opción del menú de navegación le mostrara la pagina con la lista de "Clases de Vehículos".
-
-![Vehicle Class](Content/Includes/AN-HomeBase-UserManal-SP/vehicleClass.png)
-
-Para crear una nueva clase de vehículo, haga click en ***"Nuevo"*** y navegara hasta la pagina de alta de nueva clase de vehículo. En esta pagina deberá cargar los siguientes campos:
-
-* ***Tipo de Vehículo:*** Una lista pre cargada de los tipos de vehículo que se esta cargando. Este campo es obligatorio.
-* ***Consumo teórico:*** El indice de consumo informado por el fabricante  (galones/litros por kilómetro/milla. Este campo es obligatorio.
-* ***Marca:*** La marca del vehículo. Este campos es obligatorio.
-* Modelo (obligatorio)
-* Kilometraje mínimo (hoy son solo informativos)
-* Kilometraje máximo (hoy son solo informativos)
-
-Después existe una sección llamada ***"Combustibles"*** en la que se puede indicar en tipo de combustible que usa el vehículo y también la capacidad del tanque. ***Este ultimo valor se valida en cada transacción del vehículo.*** 
-
-![Vehicle Class](Content/Includes/AN-HomeBase-UserManal-SP/vehicleClass2.png)
-
-Si un vehículo tiene una clase de vehículo asociada y esa clase de vehículo tiene un combustible asociado con su correspondiente capacidad de tanque de 60 litros y llega una pre autorización para el vehículo por 70 litros, la transacción sera rechazada ya que se podría asumir que es un fraude o que el combustible no va a ser entregado en el vehículo configurado. En esta sección se pueden agregar mas de un combustible ya que algunos vehículos cargan mas de 1, como por ejemplo combustible y GNC.
  
-#### Combustibles
+#### Categorías de SKUs
 
-ATIONet posee una tabla de productos maestros codificada en base al estándar NACS. Llegado el caso que su controlador o POS tenga configurado códigos distintos a los estándar o que su red sea multi marca y para un mismo producto, diferentes sitios manejen distintos códigos, ATIONet posee un mecanismo para resolver esta situación. Este mecanismo es el ***"Mapeo de Combustible"***. 
-Cuando un sitio necesita mapear códigos de productos deberá editar el sitio y marcar el tilde ***"Requiere Mapeo de Combustibles"***. 
-Cuando al menos un sitio tiene este parámetro activado se mostrara en el menú de administración la opción ***Combustibles***. 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
 
-***Tenga en cuenta que por defecto los sitios no están marcados con esta opción, por consecuencia la opción "Combustible" en el menú de Administración tampoco se mostrara inicialmente.***
+#### Comercios
 
-![Combustible](Content/Includes/AN-HomeBase-UserManal-SP/combustibles.png)
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
 
+#### Compañias
 
-Al hacer click en la opción Combustibles vera la lista de mapeo de códigos de combustibles. En esta grilla se mostrara el nuevo código asignado, el producto al cual el código mapea y el sitio al cual pertenece este mapeo. 
-
-![Combustible](Content/Includes/AN-HomeBase-UserManal-SP/combustibles2.png)
-
-Para dar de alta un nuevo código de producto, haga click en ***Nuevo***. 
-
-Primero deberá seleccionar el sitio al cual aplicara este mapeo, el producto maestro, y finalmente deberá proveer el código que la terminal o el POS enviara. Tenga en cuenta que no es posible tener el mismo código de mapeo para 2 productos maestros distintos.
-
-![Combustible](Content/Includes/AN-HomeBase-UserManal-SP/combustibles3.png)
-
-
-La tabla maestra de productos de ATIONet es la siguiente:
-
-<table>
-    <tr>
-        <th>
-            C&#243;digo
-        </th>
-        <th>
-            Descripción
-        </th>
-    </tr>
-        <tr>
-            <td>022
-            </td>
-            <td>Compressed Natural Gas
-            </td>
-        </tr>
-        <tr>
-            <td>019
-            </td>
-            <td>Regular Diesel
-            </td>
-        </tr>
-        <tr>
-            <td>399
-            </td>
-            <td>Other Fuel
-            </td>
-        </tr>
-        <tr>
-            <td>003
-            </td>
-            <td>Unleaded Super
-            </td>
-        </tr>
-        <tr>
-            <td>300
-            </td>
-            <td>Kerosene
-            </td>
-        </tr>
-        <tr>
-            <td>023
-            </td>
-            <td>Liquid Propane Gas
-            </td>
-        </tr>
-        <tr>
-            <td>001
-            </td>
-            <td>Unleaded Regular
-            </td>
-        </tr>
-        <tr>
-            <td>020
-            </td>
-            <td>Premium Diesel
-            </td>
-        </tr>
-        <tr>
-            <td>002
-            </td>
-            <td>Unleaded Plus
-            </td>
-        </tr>
-</table>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
 
 #### Conceptos
 
-#### Conductores
-
-Se listan los conductores por código, nombre completo, identificaciones y balance. Por defecto la vista es condensada, como se muestra en la imagen de abajo.
-
-La columna "Habilitado" muestra el estado del conductor; para habilitar o deshabilitar un conductor, haga click en el ícono del candado en la columna "Opciones".
-
-![Conductores Administracion](Content/Includes/AN-HomeBase-UserManal-SP/opcionesConductoresAdministracion.png)
-
-En la columna opciones también puede asignarle una identificación al conductor, haciendo click en el primer ícono, contando de izquierda a derecha; asignarle una regla, haciendo click en el segundo ícono; editar la información del conductor, haciendo click en el tercer ícono, o marcarlo como favorito haciendo click en el ultimo ícono de la fila. Los conductores que marque como favoritos aparecerán en la sección favoritos en el apartado de la izquierda de la página.
-
-![Conductores Administracion](Content/Includes/AN-HomeBase-UserManal-SP/conductoresAdministracion.png)
-
-Para cambiar a una vista detallada de la información de los conductores, haga click en el ultimo ícono de la imagen de abajo.
-
-![Conductores Administracion](Content/Includes/AN-HomeBase-UserManal-SP/botonVistaDetalladaResaltadoConductoresAdministracion.png)
-
-La vista detallada es la siguiente: 
-
-![Conductores Administracion](Content/Includes/AN-HomeBase-UserManal-SP/vistaDetallladaConductoresAdministracion.png)
-
-
-##### Crear un nuevo conductor
-
-Para crear un nuevo conductor, haga click en el botón "Nuevo".
-
-![Conductores Administracion](Content/Includes/AN-HomeBase-UserManal-SP/botonNuevoResaltadoConductoresAdministracion.png)
-
-El formulario para crear un nuevo conductor recibe los siguientes parámetros:
-
-![Conductores Administracion](Content/Includes/AN-HomeBase-UserManal-SP/crearNuevoConductorAdministracion.png)
-
-* ***Código:*** El código de identificacion del conductor.
-* ***Apellidos:*** El apellido o apellidos del conductor.
-* ***Nombre:*** El nombre del conductor.
-* ***Licencia:*** El numero de licencia del conductor.
-* ***Lic. País:*** El país al cual pertenece la licencia.
-* ***Lic. Provincia:*** La provincia a la cual pertenece la licencia.
-* ***Teléfono 1:*** El teléfono del conductor.
-* ***Teléfono 2:*** Otro teléfono del conductor.
-* ***Correo:*** El correo electrónico del conductor.
-* ***Fecha de nacimiento:*** La fecha de nacimiento del conductor.
-
-* **Identificadores:** Para asignarle un identificador, o, crear uno nuevo si no existe y luego cliquear "Alta rápida".
-
-* **Vehículo:** Para asignarle un vehículo ya existente.
-
-* **Reglas:** Para asignarle una regla ya existente.
-
-Cuando termine de realizar los cambios, cliquée el botón "Guardar".
-
-#### Configuración
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitiur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
-
-![Configuracion Administracion](Content/Includes/AN-HomeBase-UserManal-SP/configuracionAdministracion.png)
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
 
 #### Configuración de Fast Track
 
@@ -816,40 +631,37 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac 
 
 ![Configuracion de Fast Track Administracion](Content/Includes/AN-HomeBase-UserManal-SP/configuracionFastTrackAdministracion.png)
 
+#### Contingencia
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+
+#### Contratos de Comercios
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+
 #### Contratos de Compañía
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
 
 ![Contratos de Compañia](Content/Includes/AN-HomeBase-UserManal-SP/contratosDeCompaniaAdministracion.png)
 
-
-
 ![Contratos de Compañia](Content/Includes/AN-HomeBase-UserManal-SP/filtrosContratosDeCompaniaAdministracion.png)
+
+#### Cuentas corrientes de Comercio
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+
+#### Cuentas corrientes de Compañia
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+
+#### Depositos
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
 
 #### Familias de Conceptos
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
-
-#### Flotas
-
-Las flotas son los conjuntos de vehículos de los cual dispone la empresa. Abajo se listan por código y nombre las flotas que tiene. En la columna opciones puede asignarle una regla a la flota, o editarla.
-
-![Flotas Administracion](Content/Includes/AN-HomeBase-UserManal-SP/flotasAdministracion.png)
-
-###### Crear una nueva flota
-
-Para crear una nueva flota, cliquée el botón "Nuevo" que se encuentra en el lado superior izquierdo.
-
-El formulario para crear una nueva flota recibe los siguientes parámetros:
-
-![Flotas Administracion](Content/Includes/AN-HomeBase-UserManal-SP/crearNuevaFlotaAdministracion.png)
-
-* ***Código:*** El código de identificación de la flota.
-* ***Nombre:*** El nombre de la flota.
-
-* ***Reglas:*** Asignarle reglas ya creadas a la flota.
-
-Cuando termine de realizar los cambios, cliquée el botón "Guardar".
 
 #### Identificaciones Solicitadas
 
@@ -885,7 +697,6 @@ Notesé que depende el tipo de identificador, pedirá ciertos ítems. Por ejempl
 
 En segunda instancia, el formulario se completa asignandole la identificación a un vehículo o conductor.
 
-
 #### Impuestos
 
 La tabla de impuestos muestra:
@@ -916,6 +727,10 @@ El formulario para crear un nuevo impuesto recibe los siguientes parámetros:
 Luego de llenar los campos de ***Fecha desde*** y ***Monto*** cliquée el botón alta. 
 
 Cuando termine de realizar los cambios, cliquée el botón "Guardar".
+
+#### Instalaciones
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
 
 #### Métodos de Pago
 
@@ -988,201 +803,6 @@ El formulario para crear un nuevo programa recibe los siguientes parámetros:
 
 Cuando termine de realizar los cambios, cliquée el botón "Guardar".
 
-#### Reglas
-
-Las reglas son, básicamente, limitaciones que se le asignan a vehículos, flotas, combustibles, sitios o conductores. Si no se le aplicara ninguna regla a, por ejemplo, un conductor, el conductor podría, por ejemplo, cargar cualquier combustible en cualquier sitio. En esta sección usted puede ver las reglas que ya creó, listadas por Tipo y Descripción. Si hace click en la descripción, puede ver el detalle de la regla y a que vehículos, flotas, combustibles, sitios o conductores se les ha aplicado la regla. Para editar la regla haga click en el ícono del lápiz que se encuentra en la columna "Opciones"; para eliminar la regla, haga click en el ícono de la cruz que se encuentra en la columna opciones.
-
-![Reglas Administracion](Content/Includes/AN-HomeBase-UserManal-SP/reglasAdministracion.png)
-
-##### Crear una nueva regla
-
-Para crear una nueva regla, cliquée el botón "Nuevo" que se encuentra en el lado superior izquierdo.
-
-El formulario para crear una nueva regla recibe los siguientes parámetros:
-
-![Nueva Regla Administracion](Content/Includes/AN-HomeBase-UserManal-SP/crearNuevaReglaAdministracion.png)
-
-* ***Descripción:*** La descripción de la nueva regla.
-* ***Tipo:*** El tipo de regla. Dependiendo el tipo de regla que seleccione, se carga un distinto tipo de formulario.
-
-###### Nueva regla de tipo Cuota
-
-El formulario para crear una nueva regla de tipo cuota es el siguiente:
-
-![Nueva Regla Cuota](Content/Includes/AN-HomeBase-UserManal-SP/nuevaReglaCuota.png)
-
-* ***Frecuencia:*** La frecuencia se compone de valor (numérico) y de unidad de tiempo (Ej. Días, Semanas). Si, por ejemplo, se introduce 2 - Días, la frecuencia con la que será evaluada toda la regla sera de 2 días.
-
-**Transacciones**
-
-* ***Cantidad:*** La cantidad máxima de transacciones que se pueden realizar en el lapso de tiempo especificado en ***Frecuencia***.
-
-**Volumen**
-
-* ***Cuota:*** La cantidad máxima de combustible que puede cargar en el lapso de tiempo especificado en **Frecuencia**.
-
-**Importe**
-
-* ***Cuota:*** La cantidad máxima de dinero que puede gastar en el lapso de tiempo especificado en **Frecuencia**.
-
-**Aplicar a:** Aplicar la regla a cierta flota, vehículo, conductor, sitio y/o combustible.
-
-Ejemplo: Si se le aplica a una flota una regla de tipo cuota, con una frecuencia de dos semanas, y la cantidad máxima de transacciones que pueden realizar es 120, podrán realizar como máximo 120 transacciones cada dos semanas.
-
-Cuando termine, cliquée el botón "Guardar".
-
-###### Nueva Regla de tipo Rango de Fechas
-
-El formulario para crear una nueva regla de tipo Rango de Fechas es el siguiente:
-
-![Nueva Regla Rango de Fechas](Content/Includes/AN-HomeBase-UserManal-SP/nuevaReglaRangoDeFechas.png)
-
-* ***Fecha desde/Fecha hasta:*** Rango de fechas en las que se podrá realizar una transacción.
-* ***Hora desde/Hora Hasta:*** Rango de horas en las que se podrá realizar una transacción.
-
-**Aplicar a:** Aplicar la regla a cierta flota, vehículo, conductor, sitio y/o combustible.
-
-Ejemplo: Si se le aplica a un combustible una regla de tipo rango de fechas, con un rango de fechas del 10 de Junio del 2017 al 17 de Junio del 2017, ese combustible solo se podrá despachar en dicho rango de fechas.
-
-Cuando termine, cliquée el botón "Guardar".
-
-###### Nueva Regla de tipo Ubicación
-
-El formulario para crear una nueva regla de tipo Ubicación es el siguiente:
-
-![Nueva Regla Ubicacion](Content/Includes/AN-HomeBase-UserManal-SP/nuevaReglaUbicacion.png) 
-
-* ***Sitio:*** El sitio (o sitios) donde **solamente** podrán cargar las flotas, vehículos, etc., a las cuáles se les aplique esta regla.
-
-**Aplicar a:** Aplicar la regla a cierta flota, vehículo, conductor o combustible.
-
-Ejemplo: Si se le aplica a una flota una regla de tipo ubicación, siendo el sitio "ABC", esa flota **solamente** podrá cargar en el sitio ABC.
-
-Cuando termine, cliquée el botón "Guardar".
-
-###### Nueva Regla de tipo Combustible
-
-El formulario para crear una nueva regla de tipo Combustible es el siguiente:
-
-![Nueva Regla Combustible](Content/Includes/AN-HomeBase-UserManal-SP/nuevaReglaCombustible.png)
-
-* ***Combustible:*** El combustible (o combustibles) que **solamente** podrán cargar las flotas, vehículos, etc., a las cuáles se les aplique esta regla.
-
-**Aplicar a:** Aplicar la regla a cierta flota, vehículo, conductor o sitio.
-
-Ejemplo: Si se le aplica a un vehículo una regla de tipo combustible, siendo el combustible "Premium Diesel", ese vehículo **solamente** podrá cargar el combustible "Premium Diesel".
-
-Cuando termine, cliquée el botón "Guardar".
-
-###### Nueva Regla de tipo Límite por Transacción
-
-El formulario para crear una nueva regla de tipo Límite por Transacción es el siguiente:
-
-![Nueva Regla Limite Por Transaccion](Content/Includes/AN-HomeBase-UserManal-SP/nuevaReglaLimitePorTransaccion.png)
-
-**Volumen:**
-
-* ***Cuota:*** La cantidad máxima de combustible que se podrá despachar por transacción.
-
-**Importe** 
-
-* ***Cuota:*** La cantidad máxima de dinero que puede costar una transacción.
-
-**Aplicar a:** Aplicar la regla a cierta flota, vehículo, conductor, sitio o combustible.
-
-Ejemplo: Si un vehículo tiene un límite por transacción de 50 litros, solo podrá cargar 50 litros como máximo en una sola transacción.
-
-Cuando termine, cliquée el botón "Guardar".
-
-###### Nueva Regla de tipo Días
-
-El formulario para crear una nueva regla de tipo Días es el siguiente:
-
-![Nueva Regla Dias](Content/Includes/AN-HomeBase-UserManal-SP/nuevaReglaDias.png)
-
-* ***Días de la semana habilitados:*** Los días de la semana en los que se pueden realizar transacciones.
-
-**Aplicar a:** Aplicar la regla a una flota, vehículo, conductor, sitio o combustible.
-
-Ejemplo: Si se le aplica una regla de tipo días a un combustible, siendo Martes, Jueves y Viernes los días de la semana habilitados, ese combustible solo se podrá despachar los Martes, Jueves y Viernes.
-
-Cuando termine, cliquée el botón "Guardar".
-
-###### Nueva Regla de tipo Días/Horas
-
-El formulario para crear una nueva regla de tipo Días/Horas es el siguiente:
-
-![Nueva Regla Dias/Horas](Content/Includes/AN-HomeBase-UserManal-SP/nuevaReglaDiasHoras.png)
-
-* ***Días de la semana habilitados:*** Los días de la semana en los que se pueden realizar transacciones.
-* ***Hora desde/Hora hasta:*** Rango de horas en el cual se pueden realizar transacciones.
-
-**Aplicar a:** Aplicar la regla a una flota, vehículo, conductor, sitio o combustible.
-
-Ejemplo: Si se le aplica una regla de tipo días/horas a un vehículo, siendo Martes el día de la semana habilitado, y 10:50hs a 14:30hs el rango de horas, ese vehículo solo podrá realizar transacciones los días Martes entre las 10:50hs y las 14:30hs.
-
-Cuando termine, cliquée el botón "Guardar".
-
-###### Nueva Regla de tipo Solicitudes
-
-Antes de completar la transacción, la terminal requerirá el ingreso de cierta información para completarla, como por ejemplo el PIN del Conductor.
-
-El formulario para crear una nueva regla de tipo Solicitudes es el siguiente:
-
-![Nueva Regla Solicitudes](Content/Includes/AN-HomeBase-UserManal-SP/nuevaReglaSolicitudes.png)
-
-* ***Reintentos:*** La cantidad máxima de errores que se le permite al usuario.
-
-* ***Conductor PIN:*** Si quiere que se requiera el PIN del conductor, chequée esta opción.
-* ***Id Conductor:*** Si quiere que se requiera el Id del conductor, chequée esta opción.
-* ***Vehículo PIN:*** Si quiere que se requiera el PIN del vehículo, chequée esta opción.
-* ***Id Vehículo:*** Si quiere que se requiera el Id del vehículo, chequée esta opción.
-* ***Num. Unidad del camión:*** Si quiere que se requiera el número de unidad del camión, chequée esta opción.
-* ***Num. del remolque:*** Si quiere que se requiera el número del remolque, chequée esta opción.
-* ***Misceláneo:*** Campo libre, para que requiera cualquier tipo de información que usted quiera.
-* ***Odómetro actual:*** La cantidad de horas que tiene el odómetro actualmente.
-* ***Horas de motor actual:*** La cantidad de horas que tiene el motor actualmente
-
-**Aplicar a:** Aplicar la regla a una flota, vehículo, conductor, sitio o combustible.
-
-Ejemplo: Si se chequean las opciones de Conductor PIN y Vehículo PIN, y se ingresa en ***Reintentos*** el valor 2, cuando el conductor quiera realizar la transacción, la terminal le requerirá que ingrese el PIN del conductor y el PIN del vehículo. Si el conductor ingresa bien estos valores correctamente, errando 2 o menos veces, la transacción se realizara, de errar mas 2 dos veces, la transacción se rechazará.
-
-Cuando termine, cliquée el botón "Guardar".
-
-###### Nueva Regla de tipo Límite de Producto por Transacción
-
-El formulario para crear una nueva regla de tipo Límite de Producto por Transacción es el siguiente:
-
-![Nueva Regla Limite De Producto Por Transaccion](Content/Includes/AN-HomeBase-UserManal-SP/nuevaReglaLimiteDeProductoPorTransaccion.png)
-
-**Importe**
-
-* ***Cuota:*** Cantidad máxima de dinero en productos secos (Ej. Cigarrillos) que puede haber en una única transacción.
-
-**Aplicar a:** Aplicar la regla a una flota, vehículo, conductor o sitio.
-
-Ejemplo: Si se le aplica una regla de tipo Límite de Producto por Transacción a un conductor, con una cuota de $50, en la factura solo puede haber, como máximo, $50 correspondientes a productos secos, de lo contrario, la transacción sera rechazada.
-
-Cuando termine, cliquee el botón "Guardar".
-
-###### Nueva Regla de tipo Cuota por Producto
-
-El formulario para crear una nueva regla de cuota por producto es el siguiente:
-
-![Nueva Regla Cuota Por Producto](Content/Includes/AN-HomeBase-UserManal-SP/nuevaReglaCuotaPorProducto.png)
-
-* ***Frecuencia:*** La frecuencia se compone de valor (numérico) y de unidad de tiempo (Ej. Días, Semanas). Si, por ejemplo, se introduce 2 - Días, la frecuencia con la que será evaluada toda la regla será de 2 días.
-
-**Importe**
-
-* ***Cuota:*** Cantidad máxima de dinero en productos secos (Ej. Cigarrillos) que puede gastar en el lapso de tiempo especificado en frecuencia.
-
-**Aplicar a:** Aplicar la regla a una flota, vehículo, conductor o sitio.
-
-Ejemplo: Si se le aplica una regla de tipo Cuota por Producto a un conductor, con una cuota de $200, con una frecuencia de 2 semanas, podrá gastar como máximo $200 en productos secos (Ej. Cigarrillos) cada 2 semanas.
-
-Cuando termine, cliquée el botón "Guardar".
-
 #### Sitios
 
 El Sitio representa a la estación de servicio. A un sitio se le asigna la terminal y también puede tener asociadas reglas de Ubicación. En esta sección se listan los sitios ya ingresados en el sistema y sus características. En la columna opciones puede editar el sitio, o asignarle una regla al sitio.
@@ -1218,35 +838,15 @@ El formulario para crear un nuevo sitio recibe los siguientes parámetros:
 
 Cuando termine de realizar los cambios, cliquée el botón "Guardar".
 
-#### Terminales / Controladores
+#### SKUs
 
-La terminal (o controlador) es la representación del controlador de surtidores, que necesita parametrizarse de manera particular según el tipo de terminal. Las terminales que ATIONet maneja son ATIO-NanoCPI, ATIO-Standalone, ATIO-CG, VF-Standalone, VF-Sapphire, VF-Ruby, ControlGas y OPW-FSC3000. En esta seccion se listan las terminales que ya están dadas de alta en el sistema. Puede editarla haciendo click en el ícono del lapiz que se encuentra en la columna opciones.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
 
-![Terminales Administracion](Content/Includes/AN-HomeBase-UserManal-SP/terminalesAdministracion.png)
+#### Tarjeta de Regalo
 
-###### Crear una nueva terminal
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
 
-Para crear una nueva terminal, cliquée el botón "Nuevo" que se encuentra en el lado superior izquierdo.
-
-El formulario para crear una nueva terminal recibe los siguientes parámetros:
-
-![Nueva Terminal Administracion](Content/Includes/AN-HomeBase-UserManal-SP/crearNuevaTerminalAdministracion.png)
-
-* ***Sitio:*** El sitio al que se le asigna esta terminal.
-* ***Terminal/Tipo de controlador:*** La terminal/tipo de controlador.
-* ***Protocolo:*** El protocolo que va a seguir esta terminal.
-* ***Código:*** El código de la terminal/tipo de controlador. Es asignado automáticamente dependiendo de la terminal/tipo de controlador que sea.
-* ***Descripción:*** La descripción de la terminal/controlador.
-* ***Lector de TAG instalado:*** Si tiene un lector de TAG instalado o no.
-* ***Uso del ID del conductor:*** Puede ser ninguno, track secundario o validación de código.
-* ***Uso del ID del vehículo:*** Puede ser ninguno, track secundario o validación de código.
-* ***Combustible:*** El combustible de la terminal/controlador.
-* ***Límite máximo de volumen:*** El límite máximo de volumen de la terminal/controlador.
-* ***Límite máximo de monto:*** El límite máximo de monto de la terminal/controlador.
-
-Cuando termine de realizar los cambios, cliquée el botón "Guardar".
-
-#### Tipos de Documentos
+#### Tarjetas de Regalo Solicitadas
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
 
@@ -1254,67 +854,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac 
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
 
-#### Transacciones Fuera de Sitio
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
-
 #### Usuarios
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
-
-#### Vehículos
-
-En esta sección se muestran los vehiculos que usted dio de alta, listados por código, patente e identificación. Se muestra tambien a que flota pertenece el vehículo y la marca del vehículo. En la columna opciones usted puede asignar una identificación, asignar una regla, editar la informacion del vehículo, o habilitar/deshabilitar el vehículo.
-
-![Vehiculos Administracion](Content/Includes/AN-HomeBase-UserManal-SP/vehiculosAdministracion.png)
-
-###### Crear nuevo vehículo
-
-Para crear un nuevo vehículo, cliquée el botón "Nuevo" que se encuentra en el lado superior izquierdo.
-
-El formulario para crear un nuevo vehículo recibe los siguientes parámetros:
-
-![Nuevo Vehiculo Administracion](Content/Includes/AN-HomeBase-UserManal-SP/crearNuevoVehiculoAdministracion.png)
-
-En primera instancia, la información del vehículo.
-
-![Nuevo Vehiculo Informacion](Content/Includes/AN-HomeBase-UserManal-SP/crearNuevoVehiculoInformacion.png)
-
-* ***Código:*** El código del vehículo.
-* ***Flota:*** La flota a la cual pertenece el vehículo.
-* ***Patente:*** La patente del vehículo.
-* ***Clase de Vehículo:*** La clase de vehículo.
-* ***Tipo:*** El tipo de vehículo (Ej. Auto, Camión, Avioneta).
-* ***Año:*** El año del vehículo.
-* ***Marca:*** La marca del vehículo.
-* ***Color:*** El color del vehículo.
-* ***Tipo de servicio:*** Se puede seleccionar ruta urbana variable, ruta urbana fija, inter urbana, larga distancia o ninguna.
-* ***Descripción de servicio:*** La descripción del servicio.
-* ***Número de motor:*** El número de identificación del motor.
-* ***Número de chasis:*** El número de identificación del chasis.
-* ***Odómetro inicial:*** La cantidad de kilómetros que tiene el vehículo al momento de darlo de alta.
-* ***Odómetro actual:*** La cantidad de kilómetros que tiene el vehículo actualmente. Este campo se va actualizando automáticamente tomando en cuenta los despachos realizados por el vehículo.
-* ***Fecha de último odómetro:*** La fecha de la última vez que se sabe cuantos kilómetros tiene el vehículo.
-* ***Horas de motor actuales:*** La cantidad de horas de motor que tiene el vehículo actualmente. Este campo se va actualizando automáticamente tomando en cuenta los despachos realizados por el vehículo.
-* ***Fecha de ultima hora de motor:*** La fecha de la última vez que se sabe cuántas horas de motor tiene el vehículo.
-
-En segunda instancia, los identificadores del vehículo que se le quieran asignar, o, de no existir, crearlos, haciendo luego click en el botón "Alta rápida"
-
-![Nuevo Vehiculo Identificadores](Content/Includes/AN-HomeBase-UserManal-SP/crearNuevoVehiculoIdentificadores.png)
-
-En tercera instancia, los conductores que se le quieren asignar al vehículo.
-
-![Nuevo Vehiculo Conductores](Content/Includes/AN-HomeBase-UserManal-SP/crearNuevoVehiculoConductores.png)
-
-En cuarta instancia, las reglas que se le quieren asignar al vehículo.
-
-![Nuevo Vehiculo Reglas](Content/Includes/AN-HomeBase-UserManal-SP/crearNuevoVehiculoReglasDeVehiculo.png)
-
-Por último, si las hubiera, se listarán las reglas que están asociadas a la flota a la cual pertenece el vehículo, la cual se seleccionó en ***Flota***.
-
-![Nuevo Vehiculo Reglas De Flota](Content/Includes/AN-HomeBase-UserManal-SP/crearNuevoVehiculoReglasDeFlota.png)
-
-Cuando termine de realizar los cambios, cliquée el botón "Guardar".
 
 ## Mis Filtros
 
