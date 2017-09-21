@@ -11,7 +11,7 @@
 	</tr>
 	<tr>
 		<td>Version documento:</td>
-		<td>1.2</td>
+		<td>1.0</td>
 	</tr>
 	<tr>
 		<td>Fecha:</td>
@@ -134,7 +134,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac 
 
 ### Contrato 
 
-En el tipo de suscripción auto consumo esta opción no es utilizada y no esta disponible.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
 
 ### Sub Cuenta 
 
@@ -144,7 +144,7 @@ Las sub cuentas dependen jerarquicamente del contrato.
 
 ### Compañía 
 
-En el tipo de suscripción auto consumo esta opción no es utilizada y no esta disponible.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
 
 ### Identificador 
 
@@ -177,13 +177,13 @@ Ationet posee un menú de acceso rápido ubicado en la parte izquierda de la pag
 ### Tablero
 
 El Tablero es una pagina donde usted tendrá una visión global de la operación de su red. El tablero posee widgets específicos que lo ayudaran a tomar decisiones preventiva o correctivas según la información y los datos que muestren. Los datos que se muestran en el Tablero, son datos en tiempo real. Algunos de los widgets se refrescan automáticamente.
-Estos se pueden quitar o agregar según las necesidades del usuario. También se pueden acomodar en el tablero según el nivel de visibilidad que le quiera dar a cada uno.
-La lista completa de widgets disponibles para las suscripciones "Autoconsumo" es la siguiente:
+Estos se pueden quitar o agregar según las necesidades del usuario en la ventana mis preferencias. También se pueden acomodar en el tablero según el nivel de visibilidad que le quiera dar a cada uno.
+La lista completa de widgets disponibles para las suscripciones "Network" es la siguiente:
 
 #### Estado General ####
 
 Este widget es de suma importancia al poner en marcha la red. Este widget nos da información de que parámetros necesitamos configurar para quedar operativos. Nos advierte cuando por ejemplo no tenemos vehículos o identificaciones creadas entre otros parámetros.
-Este widget puede mostrar "Advertencias" (ícono amarillo)cuando no esta en juego la operación de la red, pero si muestra una cruz roja indica que la red no esta operativa. 
+Este widget puede mostrar "Advertencias" (ícono amarillo) cuando no esta en juego la operación de la red, pero si muestra una cruz roja indica que la red no esta operativa. 
 
 ![Estado General](Content/Includes/AN-HomeBase-UserManal-SP/estadoGeneral.png)
 ![Estado General](Content/Includes/AN-HomeBase-UserManal-SP/estadoGeneral2.png)
@@ -223,36 +223,24 @@ El siguiente muestra todas las transacciones que fueron rechazadas por cualquier
 
 ![Transacciones Marcadas](Content/Includes/AN-HomeBase-UserManal-SP/transaccionesMarcadasUltimoMes.png)
 
-#### Instalaciones
+#### Contratos sin actividad
 
-Cuando la red utiliza algún medio de identificación que requiera ser instalado (como por ejemplo un anillo o ring tag), Ationet administra la lista de instalaciones. Este widget muestra las instalaciones realizadas en las ultimas 5 semanas
+Muestra la lista de contratos que nunca tuvieron actividad.
 
-![Instalaciones](Content/Includes/AN-HomeBase-UserManal-SP/instalaciones.png)
+![Contrato Sin Actividad](Content/Includes/AN-HomeBase-UserManal-SP/contratosSinActividad.png)
 
 #### Sub-cuentas con excepciones
 
 Este muestra todas las sub cuentas que tengan algo que prestarle atención, como por ejemplo:
 
-1. ***Sin Identificadores:*** Son los vehículos o conductores que no tienen un identificador asociado
-2. ***Con Identificadores inactivos:*** Son subcuentas que que tienen un identificador asociado que ha sido desactivado desde el portal
+1. ***Sin Identificadores:*** Son los vehículos o conductores que no tienen un identificador asociado.
+2. ***Con Identificadores inactivos:*** Son subcuentas que que tienen un identificador asociado que ha sido desactivado desde el portal.
 3. ***Con Identificadores suspendidos:*** Son subcuentas que que tienen un identificador que ha sido suspendido. ***Solo Ationet puede suspender un identificador***.
-4. ***Con conductores o vehículos inactivos:*** Son subcuentas que que tienen un vehículo o conductor que no ha sido desactivado desde el portal
+4. ***Con conductores o vehículos inactivos:*** Son subcuentas que que tienen un vehículo o conductor que no ha sido desactivado desde el portal.
 
 Para mas detalles sobre sub cuentas consulte: [Esta sección](#sub-cuenta)
 
 ![sub Cuentas con Excepciones](Content/Includes/AN-HomeBase-UserManal-SP/subcuentasConExcepciones.png)
-
-#### Actualizaciones de Identificador en ultimo mes
-
-Este widget muestra la actividad de la administración de los identificadores, muestra la cantidad de identificadores que fueron modificados agrupado por estado.
-
-1. ***Asignada:*** La cantidad de identificadores que cambiaron al estado "Asignada"
-2. ***Disponible:*** La cantidad de identificadores que cambiaron al estado "Disponible"
-3. ***Cancelada:*** La cantidad de identificadores que cambiaron al estado "Cancelada"
-4. ***Denunciada:*** La cantidad de identificadores que cambiaron al estado "Denunciada"
-5. ***Suspendida:*** La cantidad de identificadores que cambiaron al estado "Suspendida"
-
-![Actualizaciones de Identificadores](Content/Includes/AN-HomeBase-UserManal-SP/actualizacionIdentificadoresUltimoMes.png)
 
 #### Transacciones recientes
 
@@ -260,11 +248,29 @@ El siguiente muestra las ultimas 20 transacciones finalizadas. Se muestran los d
 
 ![Transacciones Recientes](Content/Includes/AN-HomeBase-UserManal-SP/transaccionesRecientes.png)
 
+#### Listado de contratos con bajo saldo
+
+Muestra la lista de contratos que contengan bajo saldo para operar 4 días mas. Este calculo se hace en base al uso. La columna "Días disponibles" muestra cantidad de días que le quedan al contrato basada en el análisis de uso. Este numero no es exacto y podría variar si el patrón de uso cambia.
+
+![Contrato Bajo Saldo](Content/Includes/AN-HomeBase-UserManal-SP/contratoBajoSaldo.png)
+
 #### Listado de Sub-cuentas con bajo saldo
 
 Muestra la lista de sub cuentas que contengan bajo saldo para operar 4 días mas. Este calculo se hace en base al uso de cada sub cuenta. La columna "Días disponibles" muestra cantidad de días que le quedan a la sub cuenta basada en el análisis de uso. Este numero no es exacto y podría variar si el patrón de uso cambia.
 
 ![Sub Cuentas Bajo Saldo](Content/Includes/AN-HomeBase-UserManal-SP/subcuentasBajoSaldo.png)
+
+#### Actualizaciones de Identificador en ultimo mes
+
+Este widget muestra la actividad de la administración de los identificadores, muestra la cantidad de identificadores que fueron modificados agrupado por estado.
+
+1. ***Asignada:*** La cantidad de identificadores que cambiaron al estado "Asignada".
+2. ***Disponible:*** La cantidad de identificadores que cambiaron al estado "Disponible".
+3. ***Cancelada:*** La cantidad de identificadores que cambiaron al estado "Cancelada".
+4. ***Denunciada:*** La cantidad de identificadores que cambiaron al estado "Denunciada".
+5. ***Suspendida:*** La cantidad de identificadores que cambiaron al estado "Suspendida".
+
+![Actualizaciones de Identificadores](Content/Includes/AN-HomeBase-UserManal-SP/actualizacionIdentificadoresUltimoMes.png)
 
 #### Estado de Terminales
 
@@ -273,18 +279,6 @@ La columna ***"Age"*** muestra la cantidad de minutos que pasaron desde la ultim
 
 ![Estado Terminales](Content/Includes/AN-HomeBase-UserManal-SP/estadoTerminales1.png)
 ![Estado Terminales](Content/Includes/AN-HomeBase-UserManal-SP/estadoTerminales2.png)
-
-#### Contratos sin actividad
-
-Muestra la lista de contratos que nunca tuvieron actividad.
-
-![Contrato Sin Actividad](Content/Includes/AN-HomeBase-UserManal-SP/contratosSinActividad.png)
-
-#### Listado de contratos con bajo saldo
-
-Muestra la lista de contratos que contengan bajo saldo para operar 4 días mas. Este calculo se hace en base al uso. La columna "Días disponibles" muestra cantidad de días que le quedan al contrato basada en el análisis de uso. Este numero no es exacto y podría variar si el patrón de uso cambia.
-
-![Contrato Bajo Saldo](Content/Includes/AN-HomeBase-UserManal-SP/contratoBajoSaldo.png)
 
 ### Favoritos
 
@@ -332,44 +326,58 @@ Para hacer esto tiene 2 maneras, en forma individual, haciendo click en el ícon
 
 ![Autorizaciones Pendientes](Content/Includes/AN-Network-UserManal-SP/autorizacionesPendientes2.png)
 
-(para mas detalles sobre el flujo de transacciones consulte este [documento](AN-Transaction_Flows-TechGuide.md))
+(para más detalles sobre el flujo de transacciones consulte este [documento](AN-Transaction_Flows-TechGuide.md))
 
 #### Conductores
 
-En esta vista se listan los conductores que han sido dados de alta. Recuerde que no es obligatorio cargar conductores para poder operar, solo es necesario si usted decide asociar los identificadores a conductores.
+En esta vista se listan los conductores que han sido dados de alta.
 
 ![Conductores](Content/Includes/AN-Network-UserManal-SP/conductores.png)
 
-#### Cuentas corrientes de comercio
+#### Cuentas corrientes de Comercio
 
-Lorem ipsum vac ec nosius exactamentus comus es todus parrafus dil ipsum loren ragnaroc pris miacuerdo qui decia algui comus lorem ipsum doctor sir amet ragnarok tor avec folsiun parim comen pansen napolitanus milanesus de poio lorem sir amet camel progroc comen pansen lorem avec dit emet pol macarni.
+La vista de Cuentas corrientes de comercio es la vista donde se consultan los balances y movimientos de los comercios.
+En ATIONet el termino comercio se refiere a la empresa dueña de los sitios.
 
-#### Cuentas corrientes de compañía
+Esta vista posee al igual que el resto de las vistas un panel de filtros.
+La primer opción en el panel es el tipo de reporte que queremos ver.
+
+![Cuentas Corrientes de Comercio](Content/Includes/AN-Network-UserManal-SP/cuentasCorrientesDeComercio.png)
+
+#### Cuentas corrientes de Compañía
 
 La vista de Cuentas corrientes de compañía es la vista en donde se consultan los saldos disponibles de las sub cuentas (Recuerde que la sub cuenta es la unión entre un vehículo/conductor y un identificador. Para mas detalles sobre sub cuentas consulte: [Esta sección](#sub-cuenta)).
-En ATIONet el termino compañía se refiere a la empresa dueña de la flota, en una suscripción del tipo auto consumo (home base) la única compañía es la propia empresa suscriptora. Para mas detalles sobre compañías consulte: [Esta sección](#compañía)
+En ATIONet el termino compañía se refiere a la empresa dueña de la flota. Para mas detalles sobre compañías consulte: [Esta sección](#compañía)
 
-Esta  vista posee al igual que el resto de las vistas un panel de filtros.
+Esta vista posee al igual que el resto de las vistas un panel de filtros.
 La primer opción en el panel de filtros es el tipo de reporte que queremos ver:
 
-![Cuentas Corrientes](Content/Includes/AN-HomeBase-UserManal-SP/cuentasCorrientes2.png)
+![Cuentas Corrientes](Content/Includes/AN-Network-UserManal-SP/tiposDeCuentasCorrientesDeCompañia.PNG)
 
-1. ***Lista de Sub-cuentas:*** Esta opción lista las subcuentas con su respectivo saldo, pero no da detalles de los movimientos, es una vista que resume los datos de cada una de las subcuentas.
+1. ***Lista de Contratos:*** Esta opción lista los contratos con su respectivo saldo, pero no da detalles de los movimientos, es una vista que resume los datos de cada una de las subcuentas.
 
-	![Cuentas Corrientes](Content/Includes/AN-HomeBase-UserManal-SP/cuentasCorrientes.png)
+	![Cuentas Corrientes](Content/Includes/AN-Network-UserManal-SP/listaDeContratos.png)
 
-2. ***Movimientos de Sub-cuentas:*** Esta opción de la vista muestra en detalle cada uno de los movimientos de la subcuenta, tanto los créditos como los débitos.   
+2. ***Movimientos de Contratos:*** Esta opción lista las subcuentas con su respectivo saldo, pero no da detalles de los movimientos, es una vista que resume los datos de cada una de las subcuentas.
+
+	![Cuentas Corrientes](Content/Includes/AN-Network-UserManal-SP/movimientosDeContratos.png)
+
+3. ***Lista de Sub-cuentas:*** Esta opción lista las subcuentas con su respectivo saldo, pero no da detalles de los movimientos, es una vista que resume los datos de cada una de las subcuentas.
+
+	![Cuentas Corrientes](Content/Includes/AN-Network-UserManal-SP/listaDeSubCuentas.png)
+
+4. ***Movimientos de Sub-cuentas:*** Esta opción de la vista muestra en detalle cada uno de los movimientos de la subcuenta, tanto los créditos como los débitos.   
 
 	![Cuentas Corrientes](Content/Includes/AN-HomeBase-UserManal-SP/cuentasCorrientes3.png)
 
 Al seleccionar esta segunda opción se habilitan varios filtros mas:
 
 * ***Estado de Cuenta:*** Numero del extracto de cuenta.
-* ***Subcuenta:*** Ingresando uno o varios nombres de subcuenta, solo se listaran los movimientos de esas subcuentas. Tenga en cuenta que este campo es "autocomplete", se completara a medida que escribe, si presiona la barra espaciadora mostrara todas las subcuentas.
+* ***Subcuenta:*** Ingresando uno o varios nombres de subcuenta, solo se listarán los movimientos de esas subcuentas. Tenga en cuenta que este campo es "autocomplete", se completara a medida que escribe, si presiona la barra espaciadora mostrara todas las subcuentas.
 * ***Fecha Desde / Fecha Hasta:*** Ingresando estos valores, filtrara los movimientos entre ambas fechas.
 * ***Hora Desde / Hora Hasta:*** Ingresando estos valores, filtrara los movimientos entre ambas horas.
-* ***Monto Desde / Monto Hasta:*** Ingresando estos valores filtrara, los movimientos cuyo monto este entre ambos valore.
-* ***Especies:*** Se puede filtrar por la especie (Producto)
+* ***Monto Desde / Monto Hasta:*** Ingresando estos valores filtrara, los movimientos cuyo monto este entre ambos valores.
+* ***Especies:*** Se puede filtrar por la especie (Producto).
 * ***Débito / Crédito:*** Se puede seleccionar que tipo de movimientos se desean ver, si los de débito o los de crédito.
 * ***Tipo:*** Que tipo de movimiento genero el movimiento en la cuenta corriente
 * ***Origen:*** Origen del movimiento, ya sea la consola de ATIONet, una aplicación móvil o una llamada a la API desde una aplicación de terceros.
@@ -389,9 +397,9 @@ Esta vista también posee el panel de filtros mencionada anteriormente. Vale la 
 
 ![Cuentas Corrientes](Content/Includes/AN-HomeBase-UserManal-SP/excepciones4.png)
 
-Una vez que selecciono los filtros, presiona ***"Buscar"*** y se listaran todas las transacciones marcadas como Excepciones.
+Una vez que seleccionó los filtros, presione ***"Buscar"*** y se listarán todas las transacciones marcadas como Excepciones.
 
-Algunas transacciones quedan en estado "Revisión" bajo algunas situaciones, como por ejemplo cuando se despacha mas de lo autorizado (por un error en el controlador o el POS). En estos casos es necesario aprobar o rechazar la transacción mediante uno de los 2 íconos a la derecha de cada registro.
+Algunas transacciones quedan en estado "Revisión" bajo algunas situaciones, como por ejemplo cuando se despacha más de lo autorizado (por un error en el controlador o el POS). En estos casos es necesario aprobar o rechazar la transacción mediante uno de los 2 íconos a la derecha de cada registro.
 
 ![Cuentas Corrientes](Content/Includes/AN-HomeBase-UserManal-SP/excepciones.png)
 
@@ -407,7 +415,7 @@ El panel de Filtros posee todos estas posibilidades:
 * ***Vehículo:*** Vehículo o Vehículos (campo autocomplete y de selección múltiple, presionando la barra espaciadora listara los primeros 20 vehículos).
 * ***Flota:*** El nombre de la flota. (campo autocomplete y de selección múltiple)
 * ***Sitio:*** El nombre del sitio. (campo autocomplete y de selección múltiple)
-* ***Fecha Desde / Fecha Hasta:*** Rango de fechas
+* ***Fecha Desde / Fecha Hasta:*** Rango de fechas.
 * ***Hora Desde / Hora Hasta:*** Rango de horas.
 * ***Rendimiento por Periodo:*** [TODO]
 * ***Transacciones Off-line:*** Tildando esta opción también se listaran las transacciones aprobadas en modo Offline. (para mas detalles sobre el modulo Offline consulte esta [sección](#modulo-offline))
@@ -424,7 +432,7 @@ Una vez seleccionado el filtro deseado se presiona ***"Buscar"*** y listara las 
 
 En la grilla se muestran los datos principales de la transacción, en la columna acciones se puede desconocer una transacción y entrara en el proceso de desconocimiento. (para mas detalles sobre el desconocimiento de transacciones consulte esta [sección](#transacciones-desconocidas)).
 
-Si desea ver el detalle de la transacción, haga click en el Código de Autorización, esto lo llevara a una vista con el detalle de la transacción.
+Si desea ver el detalle de la transacción, haga click en el Código de Autorización, esto lo llevará a una vista con el detalle de la transacción.
 
 ![Transacciones](Content/Includes/AN-HomeBase-UserManal-SP/transactions3.png)
  
@@ -449,7 +457,7 @@ El panel de filtros posee las siguientes posibilidades:
 * ***Fecha desde/Fecha hasta:*** Rango de fechas a filtrar.
 * ***Hora desde/Hora hasta:*** Rango de horas a filtrar.
 
-Cuando termine de llenar el formulario, cliquee "Buscar" para aplicar el filtro, o "Crear filtro" para guardar el filtro hecho.
+Cuando termine de llenar el formulario, cliquée "Buscar" para aplicar el filtro, o "Crear filtro" para guardar el filtro hecho.
 
 #### Transacciones por Flota
 
@@ -536,13 +544,13 @@ Una vez que selecciono los filtros, presiona ***"Buscar"*** y se listaran todas 
 Cabe aclarar que existe la posibilidad de que una transacción sea rechazada pero que el combustible haya sido entregado. Esto ocurre cuando el rechazo se produce en la transacción de terminación.
 Algunos de los motivos mas comunes de esta situación los los siguientes:
 
-* La pre autorización esta vencida (mas de 3hs entre la fecha de creación de la pre autorización y la fecha de creación de la terminación. Esto no se relaciona con el tiempo que puede tardar en llegar la terminación en modo offline)
-* No existe una pre autorización existente para esa transacción
-* La pre autorización fue cancelada manualmente
-* La transacción de terminación contiene información invalida (errores en la terminal o controlador)
-* La transacción de terminación se ejecuto con errores en el host
-* La transacción de terminación contiene información diferente a la de pre autorización, como por ejemplo
-* La transacción de terminación informa mas volumen o importe que el que fue autorizado. En este caso se puede aprobar la autorización. 
+* La pre autorización esta vencida (mas de 3hs entre la fecha de creación de la pre autorización y la fecha de creación de la terminación. Esto no se relaciona con el tiempo que puede tardar en llegar la terminación en modo offline).
+* No existe una pre autorización existente para esa transacción.
+* La pre autorización fue cancelada manualmente.
+* La transacción de terminación contiene información invalida (errores en la terminal o controlador).
+* La transacción de terminación se ejecuto con errores en el host.
+* La transacción de terminación contiene información diferente a la de pre autorización, como por ejemplo.
+* La transacción de terminación informa mas volumen o importe que el que fue autorizado. En este caso se puede aprobar la autorización.
 
 #### Transacciones sin Control
 
@@ -557,13 +565,11 @@ En esta vista se listan los vehículos que han sido dados de alta. Recuerde que 
 
 Esta vista posee  el panel de filtros para poder especificar mas la búsqueda. Cabe destacar el filtro "Sin Identificación", seleccionando esta opción, se mostraran solo aquellos vehículos que no han sido asignados a un identificador. 
 
-![Vehicles](Content/Includes/AN-HomeBase-UserManal-SP/vehicles.png)
+![Vehicles](Content/Includes/AN-Network-UserManal-SP/vehiculos.png)
 
 Para ver mas detalles del vehículo, haga click en el código:
 
 ![Vehicles](Content/Includes/AN-HomeBase-UserManal-SP/vehicles2.png)
-
-Al final de la vista encontrara 3 secciones, ***Conductores***, ***Reglas de Vehículos*** y ***Reglas de Flota***. Si el vehículo posee uno o mas conductores asociados se mostraran en la primer sección, y si el vehículo tiene una regla asociada, ya sea en forma directa a o a través de una flota aparecerán en las ultimas 2 secciones.
 
 ### Reportes
 
@@ -572,7 +578,7 @@ En ATIONet los reportes son considerados aquellos listados de información que s
 #### Conductor
 
 El reporte de Conductor se puede filtrar por nombre / código de conductor o por identificación.
-Una vez seleccionado el filtro se presiona el botón ***Imprimir***, esto desplegara un popup con la información seleccionada.
+Una vez seleccionado el filtro se presiona el botón ***Imprimir***, esto desplegará un popup con la información seleccionada.
 La información es mostrada con un formato listo para ser impreso, incluyendo el logo de la suscripción y la fecha y la hora de generación del reporte.
 
 Este popup posee un botón imprimir que al apretarlo se abre la ventana de impresión por defecto del navegador de internet.
@@ -600,7 +606,7 @@ Este reporte muestra la lista de vehículos. Este reporte posee varios filtros p
 
 ![Vehicles](Content/Includes/AN-HomeBase-UserManal-SP/vehiclesReport.png)
 
-Una vez seleccionado el filtro se presiona el botón ***Imprimir***, esto desplegara un popup con la información seleccionada.
+Una vez seleccionado el filtro se presiona el botón ***Imprimir***, esto desplegará un popup con la información seleccionada.
 La información es mostrada con un formato listo para ser impreso, incluyendo el logo de la suscripción y la fecha y la hora de generación del reporte.
 
 Este popup posee un botón imprimir que al apretarlo se abre la ventana de impresión por defecto del navegador de internet.
@@ -619,7 +625,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac 
 
 #### Compañias
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+En ATIONet el termino compañía se refiere a la empresa dueña de la flota. En esta sección puede ver las compañias existentes con sus detalles y editarlas si quiere.
+
+![Compañias](Content/Includes/AN-Network-UserManal-SP/compañias.png)
 
 #### Conceptos
 
@@ -637,15 +645,19 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac 
 
 #### Contratos de Comercios
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+En ATIONet el termino comercio se refiere a la empresa dueña de los sitios. En esta sección usted puede consultar los contratos.
+
+![Contratos de Comercio](Content/Includes/AN-Network-UserManal-SP/contratosDeComercio.png)
 
 #### Contratos de Compañía
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+En ATIONet el termino compañía se refiere a la empresa dueña de la flota. En esta sección usted puede consultar los contratos. 
 
 ![Contratos de Compañia](Content/Includes/AN-HomeBase-UserManal-SP/contratosDeCompaniaAdministracion.png)
 
-![Contratos de Compañia](Content/Includes/AN-HomeBase-UserManal-SP/filtrosContratosDeCompaniaAdministracion.png)
+Para hacer las consultas mas faciles existe una ventana de filtros aplicables. Puede filtrar por el código, la compañia, el modo (credito o debito), la descripción o especies.
+
+![Contratos de Compañia](Content/Includes/AN-Network-UserManal-SP/filtrosContratosDeCompañia.png)
 
 #### Cuentas corrientes de Comercio
 
@@ -734,7 +746,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac 
 
 #### Métodos de Pago
 
-Los medios de pago son las distintas formas en las que se puede pagar un compra: efectivo, tarjeta de crédito, tarjeta de debito, gift cards, etc. ATIONET es una herramienta para que que un comerciante cree un medio de pago propio: una tarjeta de pago para combustibles.
+Los métodos de pago son las distintas formas en las que se puede pagar un compra: efectivo, tarjeta de crédito, tarjeta de debito, gift cards, etc. ATIONET es una herramienta para que que un comerciante cree un medio de pago propio: una tarjeta de pago para combustibles.
 
 ![Metodos De Pago Administracion](Content/Includes/AN-HomeBase-UserManal-SP/metodosDePagoAdministracion.png)
 
@@ -805,38 +817,9 @@ Cuando termine de realizar los cambios, cliquée el botón "Guardar".
 
 #### Sitios
 
-El Sitio representa a la estación de servicio. A un sitio se le asigna la terminal y también puede tener asociadas reglas de Ubicación. En esta sección se listan los sitios ya ingresados en el sistema y sus características. En la columna opciones puede editar el sitio, o asignarle una regla al sitio.
+El Sitio representa a la estación de servicio. A un sitio se le asigna la terminal y también puede tener asociadas reglas de Ubicación. En esta sección se listan los sitios ya ingresados en el sistema y sus características. En la columna opciones puede asignarle un impuesto al sitio.
 
 ![Sitios Administracion](Content/Includes/AN-HomeBase-UserManal-SP/sitiosAdministracion.png)
-
-####### Crear nuevo sitio
-
-Para crear un nuevo sitio, cliquée el botón "Nuevo" que se encuentra en el lado superior izquierdo.
-
-El formulario para crear un nuevo sitio recibe los siguientes parámetros:
-
-![Nuevo Sitio Administracion](Content/Includes/AN-HomeBase-UserManal-SP/crearNuevoSitioAdministracion.png)
-
-* ***Código:*** El código que se le quiere asignar al sitio.
-* ***Idioma:*** El lenguaje de mensajería que se va a usar en el sitio.
-* ***Nombre corto:*** El nombre corto del sitio.
-* ***Nombre completo:*** El nombre completo del sitio.
-* ***Calle:*** La calle donde se encuentra el sitio.
-* ***Calle 2:*** La otra calle donde se encuentra el sitio (Si se encontrara en una esquina)
-* ***Zona horaria:*** La zona horaria del sitio.
-* ***Código Postal:*** El código postal del sitio.
-* ***Ciudad:*** Ciudad donde se encuentra el sitio.
-* ***País:*** País donde se encuentra el sitio.
-* ***Estado:*** Estado donde se encuentra el sitio.
-* ***Teléfono 1:*** Teléfono del sitio.
-* ***Teléfono 2:*** Otro teléfono del sitio.
-* ***Dif. Máxima de volumen permitida:*** La diferencia máxima de volumen permitida entre un despacho y una autorización del sitio.
-* ***Dif. Máxima de importe permitida:*** La diferencia máxima de importe permitida entre un despacho y una autorización del sitio.
-* ***Requiere mapeo de combustible:*** Si requiere mapeo de combustible o no.
-* ***Latitud:*** La coordenada de latitud del sitio.
-* ***Longitud:*** La coordenada de longitud del sitio.
-
-Cuando termine de realizar los cambios, cliquée el botón "Guardar".
 
 #### SKUs
 
@@ -855,6 +838,110 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
 
 #### Usuarios
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+
+### Fidelidad
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+
+#### Ajustes
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+
+#### Clases de Entrada de Servicios
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+
+#### Cliente de Fidelidad
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+
+#### Cuenta Corriente
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+
+#### Grupos de tipo de entrada de servicios
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+
+#### Hojas de Servicio
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+
+#### Programas
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+
+#### Redenciones
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+
+#### Reglas
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+
+#### Tipos de Entrada de Servicio
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+
+#### Transacciones
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+
+#### Transferencias
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+
+#### Unidades
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+
+### Notificaciones
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+
+#### Formatos de Notificacion
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+
+#### Notificaciones
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+
+#### Reglas de Alertas
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+
+### Procesos
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+
+#### Configuracion de tipos de liquidación
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+
+#### Configuración de Procesos
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+
+#### Documentos de Cargos
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+
+#### Documentos de Liquidaciones
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+
+#### Estados de Cuenta
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+
+#### Items Liquidados
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+
+#### Procesos de Liquidación
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
 
