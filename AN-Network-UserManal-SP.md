@@ -124,17 +124,25 @@
 
 <!-- /MarkdownTOC -->
 
+ATIOnet se basa en la premisa de que las comunicaciones online entre sitios y el portal web son posibles, sin embargo, provee solidos procedimientos de contingencia en el caso de que ocurra un error de comunicacion.
+
+La plataforma de ATIOnet es un servicio de administracion de flotas con una innovadora y unica oferta de mercado. Procesamiento en la nube, 100% web-based, acceso multi-usuario, disponibilidad y compartimiento de datos, actualizaciones instantaneas, seguridad, back-up automatico y reduccion de papeleo.
+
+ATIOnet es un portal web para companias de servicios de flotas que permite el procesamiento de transacciones desde cualquier aplicacion de punto de venta mediante una interfaz simple y confiable. 
+
+ATIOnet puede ser instalado en cualquier estacion de servicio con uno o multiples programas de servicios de flotas. El portal web le permite a los administradores de flotas acceso total a la informacion de sus vehiculos.
+
+ATIOnet hace posible que el administrador de flota opere, monitoree, cambie y edite la informacion de la flota en tiempo real.
+
 ## Visión General
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
 
 ## Definiciones
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
-
 ### Contrato 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+El contrato es la relacion que existe entre la network y el cliente, en el que se pauta, por ejemplo, si sera de importe o volumen, el precio al que se le va a vender el combustible, en que sitios puede cargar, entre otros.
 
 ### Sub Cuenta 
 
@@ -144,7 +152,7 @@ Las sub cuentas dependen jerarquicamente del contrato.
 
 ### Compañía 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+En ATIOnet, la compañia se refiere a la empresa dueña de la flota.
 
 ### Identificador 
 
@@ -330,7 +338,7 @@ Para hacer esto tiene 2 maneras, en forma individual, haciendo click en el ícon
 
 #### Conductores
 
-En esta vista se listan los conductores que han sido dados de alta.
+En esta vista se listan los conductores que han sido dados de alta. Puede filtrarlos por nombre, identificacion, compañia, regla de alerta o estatus. Tambien, en la columna de opciones que se encuentra a la derecha, puede elegir asignar una identificacion, editarla o marcar al conductor como favorito.
 
 ![Conductores](Content/Includes/AN-Network-UserManal-SP/conductores.png)
 
@@ -621,11 +629,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac 
 
 #### Comercios
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+En ATIOnet el termino comercio se refiere a la empresa dueña de los sitios. En esta sección puede ver los comercios existentes con sus detalles y editarlas si quiere.
+
+![Comercios](Content/Includes/AN-Network-UserManal-SP/comerciosAdministracion.png)
 
 #### Compañias
 
-En ATIONet el termino compañía se refiere a la empresa dueña de la flota. En esta sección puede ver las compañias existentes con sus detalles y editarlas si quiere.
+En ATIOnet el termino compañía se refiere a la empresa dueña de la flota. En esta sección puede ver las compañias existentes con sus detalles y editarlas si quiere. Tambien puede filtrarlas por nombre y/o codigo.
 
 ![Compañias](Content/Includes/AN-Network-UserManal-SP/compañias.png)
 
