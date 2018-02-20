@@ -990,7 +990,7 @@ Cuando termine de realizar los cambios, cliquée el botón "Guardar".
 
 #### Reglas
 
-Las reglas son, básicamente, limitaciones que se le asignan a vehículos, flotas, combustibles, sitios o conductores. Si no se le aplicara ninguna regla a, por ejemplo, un conductor, el conductor podría, por ejemplo, cargar cualquier combustible en cualquier sitio. En esta sección usted puede ver las reglas que ya creó, listadas por Tipo y Descripción. Si hace click en la descripción, puede ver el detalle de la regla y a que vehículos, flotas, combustibles, sitios o conductores se les ha aplicado la regla. Para editar la regla haga click en el ícono del lápiz que se encuentra en la columna "Opciones"; para eliminar la regla, haga click en el ícono de la cruz que se encuentra en la columna opciones.
+Las reglas son, limitaciones que se le asignan a vehículos, flotas, combustibles, sitios o conductores. Si no se le aplicara ninguna regla a, por ejemplo, un conductor, el conductor podría, por ejemplo, cargar cualquier combustible en cualquier sitio. En esta sección usted puede ver las reglas que ya creó, listadas por Tipo y Descripción. Si hace click en la descripción, puede ver el detalle de la regla y a que vehículos, flotas, combustibles, sitios o conductores se les ha aplicado la regla. Para editar la regla haga click en el ícono del lápiz que se encuentra en la columna "Opciones"; para eliminar la regla, haga click en el ícono de la cruz que se encuentra en la columna opciones.
 
 ![Reglas Administracion](Content/Includes/AN-HomeBase-UserManal-SP/reglasAdministracion.png)
 

@@ -103,6 +103,18 @@
 			<br> - Add Original Data tables</p>	
 		</td>
 	</tr>
+	<tr valign="top">
+		<td>
+			<p>1.3</p>
+		</td>
+		<td>
+			<p>5/Dec/2017</p>
+		</td>
+		<td>
+			<p>1.3  Protocol version changes
+			<br> - Update Response Codes table </p>	
+		</td>
+	</tr>
 </table>
 
 ##Contents##
@@ -680,23 +692,6 @@ Refer to Original Data Table in the Reference Tables section for a complete list
 		</tr>
 		<tr valign="top">
 			<td>
-				<p align="left">MessageFormatVersion</p>
-			</td>
-			<td>
-				<p align="left">3</p>
-			</td>
-			<td>
-				<p align="left">string</p>
-			</td>
-			<td>
-				<p align="left">Required</p>
-			</td>
-			<td>
-				<p align="left">Current Host Message Version = “1.2”</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
 				<p align="left">TerminalIdentification</p>
 			</td>
 			<td>
@@ -730,40 +725,6 @@ Refer to Original Data Table in the Reference Tables section for a complete list
 				<br>“2” = Outdoor Payment Terminal
 				<br>“3” = Card Reader in Dispenser
 				<br>“4” = Other Self-Service</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">SystemModel</p>
-			</td>
-			<td>
-				<p align="left">10</p>
-			</td>
-			<td>
-				<p align="left">string</p>
-			</td>
-			<td>
-				<p align="left">Required</p>
-			</td>
-			<td>
-				<p align="left">Refer to System Model and System Version in Field Description section</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">SystemVersion</p>
-			</td>
-			<td>
-				<p align="left">10</p>
-			</td>
-			<td>
-				<p align="left">string</p>
-			</td>
-			<td>
-				<p align="left">Required</p>
-			</td>
-			<td>
-				<p align="left">Refer to System Model and System Version in Field Description section</p>
 			</td>
 		</tr>
 		<tr valign="top">
@@ -1312,6 +1273,23 @@ Refer to Original Data Table in the Reference Tables section for a complete list
 				<p align="left">Idem Response Code</p>
 			</td>
 		</tr>
+		<tr valign="top">
+			<td>
+				<p align="left">LongResponseText</p>
+			</td>
+			<td>
+				<p align="left">200</p>
+			</td>
+			<td>
+				<p align="left">string</p>
+			</td>
+			<td>
+				<p align="left">Conditional</p>
+			</td>
+			<td>
+				<p align="left">Idem Response Code</p>
+			</td>
+		</tr>
 	</tbody>
 </table>	
   
@@ -1765,23 +1743,6 @@ Refer to Original Data Table in the Reference Tables section for a complete list
 		</tr>
 		<tr valign="top">
 			<td>
-				<p align="left">ReceiptData</p>
-			</td>
-			<td>
-				<p align="left">Var</p>
-			</td>
-			<td>
-				<p align="left">string</p>
-			</td>
-			<td>
-				<p align="left">Conditional</p>
-			</td>
-			<td>
-				<p align="left"></p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
 				<p align="left">ResponseCode</p>
 			</td>
 			<td>
@@ -1812,6 +1773,40 @@ Refer to Original Data Table in the Reference Tables section for a complete list
 			</td>
 			<td>
 				<p align="left">Message from the Network</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<p align="left">ReceiptData</p>
+			</td>
+			<td>
+				<p align="left">Var</p>
+			</td>
+			<td>
+				<p align="left">string</p>
+			</td>
+			<td>
+				<p align="left">Conditional</p>
+			</td>
+			<td>
+				<p align="left"></p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<p align="left">LongResponseText</p>
+			</td>
+			<td>
+				<p align="left">200</p>
+			</td>
+			<td>
+				<p align="left">string</p>
+			</td>
+			<td>
+				<p align="left">Conditional</p>
+			</td>
+			<td>
+				<p align="left"></p>
 			</td>
 		</tr>
 	</tbody>
@@ -2766,1457 +2761,3191 @@ Refer to ISO 4217 Currency Codes standard (<http://en.wikipedia.org/wiki/ISO_421
 <table>
 	<thead>
 		<tr valign="top">
-			<th align="left">
-				ResponseCode
-			</th>
-			<th align="left">
-				ResponseMessage
-			</th>
-		</tr>
+            <th>
+                <p align="left">Code</p>
+            </th>
+            <th>
+                <p align="left">Response Message</p>
+            </th>
+            <th>
+                <p align="left">Long Response Message</p>
+            </th>
+            <th>
+                <p align="left">Description</p>
+            </th>
+        </tr>
 	</thead>
 	<tbody>
-		<tr valign="top">
-			<td>
-				<p align="left">00000</p>
-			</td>
-			<td>
-				<p align="left">Authorized</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left"><b>Validations</b></p>
-			</td>
-			<td></td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">10000</p>
-			</td>
-			<td>
-				<p align="left">Date Invalid</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">10001</p>
-			</td>
-			<td>
-				<p align="left">Time Invalid</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">10002</p>
-			</td>
-			<td>
-				<p align="left">Seq Num Invalid</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">10003</p>
-			</td>
-			<td>
-				<p align="left">Term does not exist</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">10004</p>
-			</td>
-			<td>
-				<p align="left">Netw does not exist</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">10005</p>
-			</td>
-			<td>
-				<p align="left">Id does not exist</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">10006</p>
-			</td>
-			<td>
-				<p align="left">SecId does not exist</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">10007</p>
-			</td>
-			<td>
-				<p align="left">Fuel does not exist</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">10008</p>
-			</td>
-			<td>
-				<p align="left">Merch not found</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">10009</p>
-			</td>
-			<td>
-				<p align="left">Site not found</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">10010</p>
-			</td>
-			<td>
-				<p align="left">Prot not found</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">10011</p>
-			</td>
-			<td>
-				<p align="left">TType not found</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">10012</p>
-			</td>
-			<td>
-				<p align="left">Comp not found</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">10013</p>
-			</td>
-			<td>
-				<p align="left">Contr not found</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">10014</p>
-			</td>
-			<td>
-				<p align="left">Subacc not found</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">10015</p>
-			</td>
-			<td>
-				<p align="left">SecSubacc not found</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">10016</p>
-			</td>
-			<td>
-				<p align="left">Empty subaccount</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">10017</p>
-			</td>
-			<td>
-				<p align="left">Empty sec subaccount</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">10018</p>
-			</td>
-			<td>
-				<p align="left">Ids both veh</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">10019</p>
-			</td>
-			<td>
-				<p align="left">Ids both driv</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">10020</p>
-			</td>
-			<td>
-				<p align="left">Subacc in diff cont</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">10021</p>
-			</td>
-			<td>
-				<span lang=EN-US style='color:black'>Dri or Veh not found</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">10022</p>
-			</td>
-			<td>
-				<p align="left">Id is not active</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">10023</p>
-			</td>
-			<td>
-				<p align="left">SecId is not active</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">10024</p>
-			</td>
-			<td>
-				<p align="left">Id has expired</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">10025</p>
-			</td>
-			<td>
-				<p align="left">SecId has expired</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">10026</p>
-			</td>
-			<td>
-				<p align="left">Vehicle not enabled</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">10027</p>
-			</td>
-			<td>
-				<p align="left">Driver not enabled</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">10028</p>
-			</td>
-			<td>
-				<p align="left">Contract has expired</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">10029</p>
-			</td>
-			<td>
-				<p align="left">Site not in contr</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">10030</p>
-			</td>
-			<td>
-				<p align="left">Fuel not in contr</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">10031</p>
-			</td>
-			<td>
-				<p align="left">Fuel not in vehclas</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">10032</p>
-			</td>
-			<td>
-				<p align="left">Driver not related</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">10033</p>
-			</td>
-			<td>
-				<p align="left">Vehicle not related</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">10034</p>
-			</td>
-			<td>
-				<p align="left">Sec Track needed</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">10035</p>
-			</td>
-			<td>
-				<p align="left">Fuel needed</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">10036</p>
-			</td>
-			<td>
-				<p align="left">Fuel mapping needed</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">10037</p>
-			</td>
-			<td>
-				<p align="left">Already completed</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">10038</p>
-			</td>
-			<td>
-				<p align="left">NetComp not found</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">10039</p>
-			</td>
-			<td>
-				<p align="left">NetMerch not found</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">10040</p>
-			</td>
-			<td>
-				<p align="left">Auth does not exists</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">10041</p>
-			</td>
-			<td>
-				<p align="left">Auth not authorized</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">10042</p>
-			</td>
-			<td>
-				<p align="left">Auth with diff fuel</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">10043</p>
-			</td>
-			<td>
-				<p align="left">Auth with diff PPU</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">10044</p>
-			</td>
-			<td>
-				<p align="left">Auth amount exceeded</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">10045</p>
-			</td>
-			<td>
-				<p align="left">Auth qty exceeded</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">10046</p>
-			</td>
-			<td>
-				<p align="left">Auth with diff id</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">10047</p>
-			</td>
-			<td>
-				<p align="left">Auth with diff secid</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">10048</p>
-			</td>
-			<td>
-				<p align="left">Auth with diff term</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">10049</p>
-			</td>
-			<td>
-				<p align="left">Auth with diff netw</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">10050</p>
-			</td>
-			<td>
-				<p align="left">Auth with diff merch</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">10051</p>
-			</td>
-			<td>
-				<p align="left">Auth with diff nwmr</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">10052</p>
-			</td>
-			<td>
-				<p align="left">Auth with diff site</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">10053</p>
-			</td>
-			<td>
-				<p align="left">Auth with diff prot</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">10054</p>
-			</td>
-			<td>
-				<p align="left">Auth with diff tt</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">10055</p>
-			</td>
-			<td>
-				<p align="left">Auth with diff comp</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">10056</p>
-			</td>
-			<td>
-				<p align="left">Auth with diff nwcp</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">10057</p>
-			</td>
-			<td>
-				<p align="left">Auth with diff contr</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">10058</p>
-			</td>
-			<td>
-				<p align="left">Auth with diff subacc</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">10059</p>
-			</td>
-			<td>
-				<span lang=EN-US style='color:black'>Auth with diff sec sa</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">10060</p>
-			</td>
-			<td>
-				<p align="left">Auth with diff vehicle</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">10061</p>
-			</td>
-			<td>
-				<p align="left">Auth with diff driver</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">10062</p>
-			</td>
-			<td>
-				<p align="left">Proc Code Not Supp</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">10063</p>
-			</td>
-			<td>
-				<p align="left">TType qty exceded</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">10064</p>
-			</td>
-			<td>
-				<p align="left">TType amount exceded</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">10065</p>
-			</td>
-			<td>
-				<p align="left">Tag PIN Invalid</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left"><b>LocationRule</b></p>
-			</td>
-			<td></td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40100</p>
-			</td>
-			<td>
-				<p align="left">Site not authorized</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40101</p>
-			</td>
-			<td>
-				<p align="left">Site not authorized</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40102</p>
-			</td>
-			<td>
-				<p align="left">Site not authorized</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40103</p>
-			</td>
-			<td>
-				<p align="left">Site not authorized</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left"><b>FuelRule</b></p>
-			</td>
-			<td></td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40200</p>
-			</td>
-			<td>
-				<p align="left">Product not authorized</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40201</p>
-			</td>
-			<td>
-				<p align="left">Product not authorized</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40202</p>
-			</td>
-			<td>
-				<p align="left">Product not authorized</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40203</p>
-			</td>
-			<td>
-				<p align="left">Product not authorized</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left"><b>TransactionRule</b></p>
-			</td>
-			<td></td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">20300</p>
-			</td>
-			<td>
-				<p align="left">Quota not set</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40300</p>
-			</td>
-			<td>
-				<p align="left">Veh money excedeed</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40301</p>
-			</td>
-			<td>
-				<p align="left">Driv money excedeed</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40302</p>
-			</td>
-			<td>
-				<p align="left">Prod money excedeed</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40303</p>
-			</td>
-			<td>
-				<p align="left">Site money excedeed</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40304</p>
-			</td>
-			<td>
-				<p align="left">Fleet money excedeed</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40305</p>
-			</td>
-			<td>
-				<p align="left">Veh fuel excedeed</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40306</p>
-			</td>
-			<td>
-				<p align="left">Driv fuel excedeed</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40307</p>
-			</td>
-			<td>
-				<p align="left">Prod fuel excedeed</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40308</p>
-			</td>
-			<td>
-				<p align="left">Site fuel excedeed</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40309</p>
-			</td>
-			<td>
-				<p align="left">Fleet fuel excedeed</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left"><b>QuotaRule</b></p>
-			</td>
-			<td></td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">20400</p>
-			</td>
-			<td>
-				<p align="left">Quota not set</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40400</p>
-			</td>
-			<td>
-				<p align="left">Veh money excedeed</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40401</p>
-			</td>
-			<td>
-				<p align="left">Driv money excedeed</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40402</p>
-			</td>
-			<td>
-				<p align="left">Prod money excedeed</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40403</p>
-			</td>
-			<td>
-				<p align="left">Site money excedeed</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40404</p>
-			</td>
-			<td>
-				<p align="left">Fleet money excedeed</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40405</p>
-			</td>
-			<td>
-				<p align="left">Veh fuel excedeed</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40406</p>
-			</td>
-			<td>
-				<p align="left">Driv fuel excedeed</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40407</p>
-			</td>
-			<td>
-				<p align="left">Prod fuel excedeed</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40408</p>
-			</td>
-			<td>
-				<p align="left">Site fuel excedeed</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40409</p>
-			</td>
-			<td>
-				<p align="left">Fleet fuel excedeed</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40410</p>
-			</td>
-			<td>
-				<p align="left">Veh tran excedeed</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40411</p>
-			</td>
-			<td>
-				<p align="left">Driv tran excedeed</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40412</p>
-			</td>
-			<td>
-				<p align="left">Prod tran excedeed</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40413</p>
-			</td>
-			<td>
-				<p align="left">Site tran excedeed</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40414</p>
-			</td>
-			<td>
-				<p align="left">Fleet tran excedeed</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left"><b>PromptingRule</b></p>
-			</td>
-			<td></td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">20500</p>
-			</td>
-			<td>
-				<p align="left">Retries exceded</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40500</p>
-			</td>
-			<td>
-				<p align="left">Prompting needed</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40501</p>
-			</td>
-			<td>
-				<p align="left">Pri PIN needed</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40502</p>
-			</td>
-			<td>
-				<p align="left">Sec PIN needed</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40503</p>
-			</td>
-			<td>
-				<p align="left">Pri PIN invalid</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40504</p>
-			</td>
-			<td>
-				<p align="left">Sec PIN invalid</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left"><b>DaysRule</b></p>
-			</td>
-			<td></td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">20600</p>
-			</td>
-			<td>
-				<p align="left">Week days not set</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40600</p>
-			</td>
-			<td>
-				<p align="left">Day not authorized</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40601</p>
-			</td>
-			<td>
-				<p align="left">Day not authorized</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40602</p>
-			</td>
-			<td>
-				<p align="left">Day not authorized</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40603</p>
-			</td>
-			<td>
-				<p align="left">Day not authorized</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40604</p>
-			</td>
-			<td>
-				<p align="left">Day not authorized</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left"><b>DateTimeRule</b></p>
-			</td>
-			<td></td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">20700</p>
-			</td>
-			<td>
-				<p align="left">DateTime not set</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40700</p>
-			</td>
-			<td>
-				<p align="left">DateTime not auth</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40701</p>
-			</td>
-			<td>
-				<p align="left">DateTime not auth</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40702</p>
-			</td>
-			<td>
-				<p align="left">DateTime not auth</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40703</p>
-			</td>
-			<td>
-				<p align="left">DateTime not auth</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40704</p>
-			</td>
-			<td>
-				<p align="left">DateTime not auth</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40705</p>
-			</td>
-			<td>
-				<p align="left">DateTime not auth</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40706</p>
-			</td>
-			<td>
-				<p align="left">DateTime not auth</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40707</p>
-			</td>
-			<td>
-				<p align="left">DateTime not auth</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40708</p>
-			</td>
-			<td>
-				<p align="left">DateTime not auth</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40709</p>
-			</td>
-			<td>
-				<p align="left">DateTime not auth</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40710</p>
-			</td>
-			<td>
-				<p align="left">DateTime not auth</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40711</p>
-			</td>
-			<td>
-				<p align="left">DateTime not auth</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40712</p>
-			</td>
-			<td>
-				<p align="left">DateTime not auth</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40713</p>
-			</td>
-			<td>
-				<p align="left">DateTime not auth</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40714</p>
-			</td>
-			<td>
-				<p align="left">DateTime not auth</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40715</p>
-			</td>
-			<td>
-				<p align="left">DateTime not auth</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40716</p>
-			</td>
-			<td>
-				<p align="left">DateTime not auth</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40717</p>
-			</td>
-			<td>
-				<p align="left">DateTime not auth</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40718</p>
-			</td>
-			<td>
-				<p align="left">DateTime not auth</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40719</p>
-			</td>
-			<td>
-				<p align="left">DateTime not auth</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40720</p>
-			</td>
-			<td>
-				<p align="left">DateTime not auth</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40721</p>
-			</td>
-			<td>
-				<p align="left">DateTime not auth</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40722</p>
-			</td>
-			<td>
-				<p align="left">DateTime not auth</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40723</p>
-			</td>
-			<td>
-				<p align="left">DateTime not auth</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40724</p>
-			</td>
-			<td>
-				<p align="left">DateTime not auth</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40725</p>
-			</td>
-			<td>
-				<p align="left">DateTime not auth</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40726</p>
-			</td>
-			<td>
-				<p align="left">DateTime not auth</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40727</p>
-			</td>
-			<td>
-				<p align="left">DateTime not auth</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40728</p>
-			</td>
-			<td>
-				<p align="left">DateTime not auth</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40729</p>
-			</td>
-			<td>
-				<p align="left">DateTime not auth</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left"><b>DaysTimeRule</b></p>
-			</td>
-			<td></td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">20800</p>
-			</td>
-			<td>
-				<p align="left">Week days not set</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">20801</p>
-			</td>
-			<td>
-				<p align="left">Time not set</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40800</p>
-			</td>
-			<td>
-				<p align="left">Day not authorized</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40801</p>
-			</td>
-			<td>
-				<p align="left">Day not authorized</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40802</p>
-			</td>
-			<td>
-				<p align="left">Day not authorized</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40803</p>
-			</td>
-			<td>
-				<p align="left">Day not authorized</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40804</p>
-			</td>
-			<td>
-				<p align="left">Day not authorized</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40805</p>
-			</td>
-			<td>
-				<p align="left">DaysTime not auth</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40806</p>
-			</td>
-			<td>
-				<p align="left">DaysTime not auth</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40807</p>
-			</td>
-			<td>
-				<p align="left">DaysTime not auth</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40808</p>
-			</td>
-			<td>
-				<p align="left">DaysTime not auth</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40809</p>
-			</td>
-			<td>
-				<p align="left">DaysTime not auth</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40810</p>
-			</td>
-			<td>
-				<p align="left">DaysTime not auth</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40811</p>
-			</td>
-			<td>
-				<p align="left">DaysTime not auth</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40812</p>
-			</td>
-			<td>
-				<p align="left">DaysTime not auth</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40813</p>
-			</td>
-			<td>
-				<p align="left">DaysTime not auth</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40814</p>
-			</td>
-			<td>
-				<p align="left">DaysTime not auth</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left"><b>EstablishLimits</b></p>
-			</td>
-			<td></td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">20900</p>
-			</td>
-			<td>
-				<p align="left">Unit price needed</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">20901</p>
-			</td>
-			<td>
-				<p align="left">Max quota not set</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40900</p>
-			</td>
-			<td>
-				<p align="left">CA quota exceeded</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">40901</p>
-			</td>
-			<td>
-				<p align="left">Offline lim exceeded</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left"><b>Warnings</b></p>
-			</td>
-			<td>
-				<p align="left">&nbsp;</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">30000</p>
-			</td>
-			<td>
-				<p align="left">Pim Track not match</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">30001</p>
-			</td>
-			<td>
-				<p align="left">Sec Track not match</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">30002</p>
-			</td>
-			<td>
-				<p align="left">Fuels not match</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">30003</p>
-			</td>
-			<td>
-				<p align="left">PPU not match</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left"><b>AplicationError</b></p>
-			</td>
-			<td></td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<p align="left">50000</p>
-			</td>
-			<td>
-				<p align="left">App Error</p>
-			</td>
-		</tr>	
+        <tr valing="top">
+           <td colspan="4">
+                <p align="left"><b>Authorized</b></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">00000</p>
+            </td>
+            <td>
+                <p align="left">Authorized</p>
+            </td>
+            <td>
+                <p align="left">Authorized</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valing="top">
+           <td colspan="4">
+                <p align="left"><b>Request Validations</b></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">10000</p>
+            </td>
+            <td>
+                <p align="left">Invalid date </p>
+            </td>
+            <td>
+                <p align="left">Invalid date </p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">10001</p>
+            </td>
+            <td>
+                <p align="left">Invalid time </p>
+            </td>
+            <td>
+                <p align="left">Invalid time </p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">10002</p>
+            </td>
+            <td>
+                <p align="left">Invalid seq num</p>
+            </td>
+            <td>
+                <p align="left">Invalid sequence number</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">10003</p>
+            </td>
+            <td>
+                <p align="left">Invalid acc type</p>
+            </td>
+            <td>
+                <p align="left">Invalid account type</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">10004</p>
+            </td>
+            <td>
+                <p align="left">Invalid app type</p>
+            </td>
+            <td>
+                <p align="left">Invalid application type</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">10005</p>
+            </td>
+            <td>
+                <p align="left">Invalid proc mode</p>
+            </td>
+            <td>
+                <p align="left">Invalid processing mode</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">10006</p>
+            </td>
+            <td>
+                <p align="left">Invalid mess format</p>
+            </td>
+            <td>
+                <p align="left">Invalid message format</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">10007</p>
+            </td>
+            <td>
+                <p align="left">Invalid dev type</p>
+            </td>
+            <td>
+                <p align="left">Invalid device type</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">10008</p>
+            </td>
+            <td>
+                <p align="left">Invalid sys model</p>
+            </td>
+            <td>
+                <p align="left">Invalid system model</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">10009</p>
+            </td>
+            <td>
+                <p align="left">Invalid sys ver</p>
+            </td>
+            <td>
+                <p align="left">Invalid system version</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">10010</p>
+            </td>
+            <td>
+                <p align="left">Invalid entry method</p>
+            </td>
+            <td>
+                <p align="left">Invalid entry method</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">10011</p>
+            </td>
+            <td>
+                <p align="left">Invalid unit code</p>
+            </td>
+            <td>
+                <p align="left">Invalid unit code</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">10012</p>
+            </td>
+            <td>
+                <p align="left">Invalid unit code</p>
+            </td>
+            <td>
+                <p align="left">Invalid datetime</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">10013</p>
+            </td>
+            <td>
+                <p align="left">Invalid pri track</p>
+            </td>
+            <td>
+                <p align="left">Invalid primary track</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">10014</p>
+            </td>
+            <td>
+                <p align="left">Invalid prod data</p>
+            </td>
+            <td>
+                <p align="left">Invalid product data</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">10015</p>
+            </td>
+            <td>
+                <p align="left">Prod data req</p>
+            </td>
+            <td>
+                <p align="left">Product data required</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">10016</p>
+            </td>
+            <td>
+                <p align="left">Invalid batch number</p>
+            </td>
+            <td>
+                <p align="left">Invalid batch number</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">10017</p>
+            </td>
+            <td>
+                <p align="left">Invalid respone code</p>
+            </td>
+            <td>
+                <p align="left">Invalid respone code</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">10018</p>
+            </td>
+            <td>
+                <p align="left">Invalid terminal </p>
+            </td>
+            <td>
+                <p align="left">Invalid terminal </p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">10019</p>
+            </td>
+            <td>
+                <p align="left">Invalid old PIN</p>
+            </td>
+            <td>
+                <p align="left">Invalid old PIN</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">10020</p>
+            </td>
+            <td>
+                <p align="left">Invalid new PIN</p>
+            </td>
+            <td>
+                <p align="left">Invalid new PIN</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">10021</p>
+            </td>
+            <td>
+                <p align="left">Invalid orig data</p>
+            </td>
+            <td>
+                <p align="left">Invalid original data</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valing="top">
+           <td colspan="4">
+                <p align="left"><b>Integrity Validations</b></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">11000</p>
+            </td>
+            <td>
+                <p align="left">Merch not found</p>
+            </td>
+            <td>
+                <p align="left">Merchant not found</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">11001</p>
+            </td>
+            <td>
+                <p align="left">NetMerch not found</p>
+            </td>
+            <td>
+                <p align="left">Network merchant not found</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">11002</p>
+            </td>
+            <td>
+                <p align="left">Site not found</p>
+            </td>
+            <td>
+                <p align="left">Site not found</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">11003</p>
+            </td>
+            <td>
+                <p align="left">Prot not found</p>
+            </td>
+            <td>
+                <p align="left">Protocol not found</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">11004</p>
+            </td>
+            <td>
+                <p align="left">TType not found</p>
+            </td>
+            <td>
+                <p align="left">Terminal type not found</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">11005</p>
+            </td>
+            <td>
+                <p align="left">Fuel mapping needed</p>
+            </td>
+            <td>
+                <p align="left">Fuel mapping needed</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">11006</p>
+            </td>
+            <td>
+                <p align="left">Fuel not found</p>
+            </td>
+            <td>
+                <p align="left">Fuel not found</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">11007</p>
+            </td>
+            <td>
+                <p align="left">Comp not found</p>
+            </td>
+            <td>
+                <p align="left">Company not found</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">11008</p>
+            </td>
+            <td>
+                <p align="left">NetComp not found</p>
+            </td>
+            <td>
+                <p align="left">Network company not found</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">11009</p>
+            </td>
+            <td>
+                <p align="left">Contr not found</p>
+            </td>
+            <td>
+                <p align="left">Contract not found</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">11010</p>
+            </td>
+            <td>
+                <p align="left">Subacc not found</p>
+            </td>
+            <td>
+                <p align="left">Sub account not found</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">11011</p>
+            </td>
+            <td>
+                <p align="left">SecSubacc not found</p>
+            </td>
+            <td>
+                <p align="left">Secondary sub account not found</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">11012</p>
+            </td>
+            <td>
+                <p align="left">Veh or dri not found</p>
+            </td>
+            <td>
+                <p align="left">Vehicle or driver not found</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">11013</p>
+            </td>
+            <td>
+                <p align="left">Empty subaccount</p>
+            </td>
+            <td>
+                <p align="left">Empty sub account</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">11014</p>
+            </td>
+            <td>
+                <p align="left">Empty sec subaccount</p>
+            </td>
+            <td>
+                <p align="left">Empty secondary sub account</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">11015</p>
+            </td>
+            <td>
+                <p align="left">Fuel needed</p>
+            </td>
+            <td>
+                <p align="left">Fuel needed</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">11016</p>
+            </td>
+            <td>
+                <p align="left">Fuel not in contr</p>
+            </td>
+            <td>
+                <p align="left">Fuel not in contract</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">11017</p>
+            </td>
+            <td>
+                <p align="left">Fuel not in vehclas</p>
+            </td>
+            <td>
+                <p align="left">Fuel not in vehicle class</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">11018</p>
+            </td>
+            <td>
+                <p align="left">Comp money needed</p>
+            </td>
+            <td>
+                <p align="left">Company money needed</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">11019</p>
+            </td>
+            <td>
+                <p align="left">Merch money needed</p>
+            </td>
+            <td>
+                <p align="left">Merchant money needed</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">11020</p>
+            </td>
+            <td>
+                <p align="left">Comp qty needed</p>
+            </td>
+            <td>
+                <p align="left">Company quantity needed</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">11021</p>
+            </td>
+            <td>
+                <p align="left">Merch qty needed</p>
+            </td>
+            <td>
+                <p align="left">Merchant quantity needed</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">11022</p>
+            </td>
+            <td>
+                <p align="left">Fleet not found</p>
+            </td>
+            <td>
+                <p align="left">Fleet not found</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">11023</p>
+            </td>
+            <td>
+                <p align="left">Trans not found</p>
+            </td>
+            <td>
+                <p align="left">Transaction not found</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valing="top">
+           <td colspan="4">
+                <p align="left"><b>To Review Validations</b></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">12000</p>
+            </td>
+            <td>
+                <p align="left">Auth amount exceeded</p>
+            </td>
+            <td>
+                <p align="left">Authorized amount exceeded</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">12001</p>
+            </td>
+            <td>
+                <p align="left">Auth qty exceeded</p>
+            </td>
+            <td>
+                <p align="left">Authorized quantity exceeded</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">12002</p>
+            </td>
+            <td>
+                <p align="left">Auth with diff PPU</p>
+            </td>
+            <td>
+                <p align="left">Authorization with different PPU</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">12003</p>
+            </td>
+            <td>
+                <p align="left">Tr amount exceeded</p>
+            </td>
+            <td>
+                <p align="left">Transaction amount exceeded</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valing="top">
+           <td colspan="4">
+                <p align="left"><b>Unlawful Validations</b></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">13000</p>
+            </td>
+            <td>
+                <p align="left">Term does not exist</p>
+            </td>
+            <td>
+                <p align="left">Terminal does not exist</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">13001</p>
+            </td>
+            <td>
+                <p align="left">Netw does not exist</p>
+            </td>
+            <td>
+                <p align="left">Network does not exist</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">13002</p>
+            </td>
+            <td>
+                <p align="left">Id does not exist</p>
+            </td>
+            <td>
+                <p align="left">Id does not exist</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">13003</p>
+            </td>
+            <td>
+                <p align="left">SecId does not exist</p>
+            </td>
+            <td>
+                <p align="left">Secondary Id does not exist</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">13004</p>
+            </td>
+            <td>
+                <p align="left">Both veh ids</p>
+            </td>
+            <td>
+                <p align="left">Both are vehicle identifications</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">13005</p>
+            </td>
+            <td>
+                <p align="left">Both driv ids  </p>
+            </td>
+            <td>
+                <p align="left">Both are driver identifications</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">13006</p>
+            </td>
+            <td>
+                <p align="left">Subacc in diff cont</p>
+            </td>
+            <td>
+                <p align="left">Sub account in different contract</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">13007</p>
+            </td>
+            <td>
+                <p align="left">Id is not active</p>
+            </td>
+            <td>
+                <p align="left">Identification is not active</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">13008</p>
+            </td>
+            <td>
+                <p align="left">Id has expired</p>
+            </td>
+            <td>
+                <p align="left">Identification has expired</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">13009</p>
+            </td>
+            <td>
+                <p align="left">SecId is not active</p>
+            </td>
+            <td>
+                <p align="left">Secondary identification is not active</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">13010</p>
+            </td>
+            <td>
+                <p align="left">SecId has expired</p>
+            </td>
+            <td>
+                <p align="left">Secondary identification has expired</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">13011</p>
+            </td>
+            <td>
+                <p align="left">Vehicle not enabled</p>
+            </td>
+            <td>
+                <p align="left">Vehicle not enabled</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">13012</p>
+            </td>
+            <td>
+                <p align="left">Driver not enabled</p>
+            </td>
+            <td>
+                <p align="left">Driver not enabled</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">13013</p>
+            </td>
+            <td>
+                <p align="left">Contract has expired</p>
+            </td>
+            <td>
+                <p align="left">Contract has expired</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">13014</p>
+            </td>
+            <td>
+                <p align="left">Site not in contr</p>
+            </td>
+            <td>
+                <p align="left">Site not in contract</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">13015</p>
+            </td>
+            <td>
+                <p align="left">Driver Needed</p>
+            </td>
+            <td>
+                <p align="left">Driver needed</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">13016</p>
+            </td>
+            <td>
+                <p align="left">Driver not related</p>
+            </td>
+            <td>
+                <p align="left">Driver not related</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">13017</p>
+            </td>
+            <td>
+                <p align="left">Vehicle Needed</p>
+            </td>
+            <td>
+                <p align="left">Vehicle needed</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">13018</p>
+            </td>
+            <td>
+                <p align="left">Vehicle not related</p>
+            </td>
+            <td>
+                <p align="left">Vehicle not related</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">13019</p>
+            </td>
+            <td>
+                <p align="left">Duplicate TSN</p>
+            </td>
+            <td>
+                <p align="left">Duplicate TSN</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">13020</p>
+            </td>
+            <td>
+                <p align="left">Retry does not match</p>
+            </td>
+            <td>
+                <p align="left">Retry does not match</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">13021</p>
+            </td>
+            <td>
+                <p align="left">Auth does not exist</p>
+            </td>
+            <td>
+                <p align="left">Authorization does not exist</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">13022</p>
+            </td>
+            <td>
+                <p align="left">Auth not authorized</p>
+            </td>
+            <td>
+                <p align="left">Authorization not authorized</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">13023</p>
+            </td>
+            <td>
+                <p align="left">Auth with diff secid</p>
+            </td>
+            <td>
+                <p align="left">Authorization with different secondary id</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">13024</p>
+            </td>
+            <td>
+                <p align="left">Auth with diff id</p>
+            </td>
+            <td>
+                <p align="left">Authorization with different id</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">13025</p>
+            </td>
+            <td>
+                <p align="left">Auth with diff fuel</p>
+            </td>
+            <td>
+                <p align="left">Authorization with different fuel</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">13026</p>
+            </td>
+            <td>
+                <p align="left">Auth with diff term</p>
+            </td>
+            <td>
+                <p align="left">Authorization with different terminal</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">13027</p>
+            </td>
+            <td>
+                <p align="left">Auth with diff netw</p>
+            </td>
+            <td>
+                <p align="left">Authorization with different network</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">13028</p>
+            </td>
+            <td>
+                <p align="left">Auth with diff merch</p>
+            </td>
+            <td>
+                <p align="left">Authorization with different merchant</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">13029</p>
+            </td>
+            <td>
+                <p align="left">Auth with diff nwmr</p>
+            </td>
+            <td>
+                <p align="left">Authorization with different network-merchant</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">13030</p>
+            </td>
+            <td>
+                <p align="left">Auth with diff site</p>
+            </td>
+            <td>
+                <p align="left">Authorization with different site</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">13031</p>
+            </td>
+            <td>
+                <p align="left">Auth with diff prot</p>
+            </td>
+            <td>
+                <p align="left">Authorization with diff protocol</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">13032</p>
+            </td>
+            <td>
+                <p align="left">Auth with diff tt</p>
+            </td>
+            <td>
+                <p align="left">Authorization with different terminal type</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">13033</p>
+            </td>
+            <td>
+                <p align="left">Auth with diff comp</p>
+            </td>
+            <td>
+                <p align="left">Authorization with different company</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">13034</p>
+            </td>
+            <td>
+                <p align="left">Auth with diff nwcp</p>
+            </td>
+            <td>
+                <p align="left">Authorization with diff network-company</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">13035</p>
+            </td>
+            <td>
+                <p align="left">Auth with dif contr</p>
+            </td>
+            <td>
+                <p align="left">Authorization with different contract</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">13036</p>
+            </td>
+            <td>
+                <p align="left">Auth with diff subacc</p>
+            </td>
+            <td>
+                <p align="left">Authorization with different sub account</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">13037</p>
+            </td>
+            <td>
+                <p align="left">Auth with dif sec sa</p>
+            </td>
+            <td>
+                <p align="left">Authorization with different secondary sub account</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">13038</p>
+            </td>
+            <td>
+                <p align="left">Auth with diff vehicle</p>
+            </td>
+            <td>
+                <p align="left">Authorization with different vehicle</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">13039</p>
+            </td>
+            <td>
+                <p align="left">Auth with diff driver</p>
+            </td>
+            <td>
+                <p align="left">Authorization with different driver</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">13040</p>
+            </td>
+            <td>
+                <p align="left">Not contingency Auth </p>
+            </td>
+            <td>
+                <p align="left">Not a contingency authorization</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">13041</p>
+            </td>
+            <td>
+                <p align="left">Invalid driver code</p>
+            </td>
+            <td>
+                <p align="left">Invalid driver code</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">13042</p>
+            </td>
+            <td>
+                <p align="left">Invalid vehicle code</p>
+            </td>
+            <td>
+                <p align="left">Invalid vehicle code</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">13043</p>
+            </td>
+            <td>
+                <p align="left">Network not enabled</p>
+            </td>
+            <td>
+                <p align="left">Network not enabled</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">13044</p>
+            </td>
+            <td>
+                <p align="left">Company not enabled</p>
+            </td>
+            <td>
+                <p align="left">Company not enabled</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">13045</p>
+            </td>
+            <td>
+                <p align="left">Merchant not enabled</p>
+            </td>
+            <td>
+                <p align="left">Merchant not enabled</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">13046</p>
+            </td>
+            <td>
+                <p align="left">Invalid sec ident</p>
+            </td>
+            <td>
+                <p align="left">Invalid secondary identification</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">13047</p>
+            </td>
+            <td>
+                <p align="left">Invalid sec ident</p>
+            </td>
+            <td>
+                <p align="left">Invalid secondary identification</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valing="top">
+           <td colspan="4">
+                <p align="left"><b>Current Account Validations</b></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">14000</p>
+            </td>
+            <td>
+                <p align="left">CA movement declined</p>
+            </td>
+            <td>
+                <p align="left">Current account movement declined</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">14001</p>
+            </td>
+            <td>
+                <p align="left">Merchant CA mov dec</p>
+            </td>
+            <td>
+                <p align="left">Merchant current account movement declined</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valing="top">
+           <td colspan="4">
+                <p align="left"><b>Establish Limits</b></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">20000</p>
+            </td>
+            <td>
+                <p align="left">Unit price needed</p>
+            </td>
+            <td>
+                <p align="left">Unit price needed</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">20001</p>
+            </td>
+            <td>
+                <p align="left">Max quota not set</p>
+            </td>
+            <td>
+                <p align="left">Maximum quiota not set</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40000</p>
+            </td>
+            <td>
+                <p align="left">Insufficient balance</p>
+            </td>
+            <td>
+                <p align="left">Insufficient balance</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40001</p>
+            </td>
+            <td>
+                <p align="left">Unable prods auth</p>
+            </td>
+            <td>
+                <p align="left">Unable to authorize by product</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40002</p>
+            </td>
+            <td>
+                <p align="left">Veh-class qty exc</p>
+            </td>
+            <td>
+                <p align="left">Vahicle class tank capacity excedeed</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40003</p>
+            </td>
+            <td>
+                <p align="left">TType qty exc</p>
+            </td>
+            <td>
+                <p align="left">Terminal type quantity excedeed</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40004</p>
+            </td>
+            <td>
+                <p align="left">Term qty excedeed</p>
+            </td>
+            <td>
+                <p align="left">Terminal quantity excedeed</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40005</p>
+            </td>
+            <td>
+                <p align="left">Term money excedeed</p>
+            </td>
+            <td>
+                <p align="left">Terminal money excedeed</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40006</p>
+            </td>
+            <td>
+                <p align="left">Offline lim excedeed</p>
+            </td>
+            <td>
+                <p align="left">Offline limit excedeed</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valing="top">
+           <td colspan="4">
+                <p align="left"><b>Location Rule</b></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40100</p>
+            </td>
+            <td>
+                <p align="left">Site not authorized</p>
+            </td>
+            <td>
+                <p align="left">Site not authorized</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40101</p>
+            </td>
+            <td>
+                <p align="left">Site not authorized</p>
+            </td>
+            <td>
+                <p align="left">Site not authorized</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40102</p>
+            </td>
+            <td>
+                <p align="left">Site not authorized</p>
+            </td>
+            <td>
+                <p align="left">Site not authorized</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40103</p>
+            </td>
+            <td>
+                <p align="left">Site not authorized</p>
+            </td>
+            <td>
+                <p align="left">Site not authorized</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valing="top">
+           <td colspan="4">
+                <p align="left"><b>Fuel Rule</b></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40200</p>
+            </td>
+            <td>
+                <p align="left">Fuel not authorized</p>
+            </td>
+            <td>
+                <p align="left">Fuel not authorized</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40201</p>
+            </td>
+            <td>
+                <p align="left">Fuel not authorized</p>
+            </td>
+            <td>
+                <p align="left">Fuel not authorized</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40202</p>
+            </td>
+            <td>
+                <p align="left">Fuel not authorized</p>
+            </td>
+            <td>
+                <p align="left">Fuel not authorized</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40203</p>
+            </td>
+            <td>
+                <p align="left">Fuel not authorized</p>
+            </td>
+            <td>
+                <p align="left">Fuel not authorized</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valing="top">
+           <td colspan="4">
+                <p align="left"><b>Transaction Rule</b></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">20300</p>
+            </td>
+            <td>
+                <p align="left">Quota not set</p>
+            </td>
+            <td>
+                <p align="left">Quota not set</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40300</p>
+            </td>
+            <td>
+                <p align="left">Veh money excedeed</p>
+            </td>
+            <td>
+                <p align="left">Vehicle money excedeed</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40301</p>
+            </td>
+            <td>
+                <p align="left">Driv money excedeed</p>
+            </td>
+            <td>
+                <p align="left">Driver money excedeed</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40302</p>
+            </td>
+            <td>
+                <p align="left">Fuel money excedeed</p>
+            </td>
+            <td>
+                <p align="left">Fuel money excedeed</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40303</p>
+            </td>
+            <td>
+                <p align="left">Site money excedeed</p>
+            </td>
+            <td>
+                <p align="left">Site money excedeed</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40304</p>
+            </td>
+            <td>
+                <p align="left">Fleet money excedeed</p>
+            </td>
+            <td>
+                <p align="left">Fleet money excedeed</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40305</p>
+            </td>
+            <td>
+                <p align="left">Veh qty excedeed</p>
+            </td>
+            <td>
+                <p align="left">Veh quantity excedeed</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40306</p>
+            </td>
+            <td>
+                <p align="left">Driv qty excedeed</p>
+            </td>
+            <td>
+                <p align="left">Driv quantity excedeed</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40307</p>
+            </td>
+            <td>
+                <p align="left">Fuel qty excedeed</p>
+            </td>
+            <td>
+                <p align="left">Fuel quantity excedeed</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40308</p>
+            </td>
+            <td>
+                <p align="left">Site qty excedeed</p>
+            </td>
+            <td>
+                <p align="left">Site quantity excedeed</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40309</p>
+            </td>
+            <td>
+                <p align="left">Fleet qty excedeed</p>
+            </td>
+            <td>
+                <p align="left">Fleet quantity excedeed</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valing="top">
+           <td colspan="4">
+                <p align="left"><b>Quota Rule</b></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">20400</p>
+            </td>
+            <td>
+                <p align="left">Quota not set</p>
+            </td>
+            <td>
+                <p align="left">Quota not set</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40400</p>
+            </td>
+            <td>
+                <p align="left">Veh money excedeed</p>
+            </td>
+            <td>
+                <p align="left">Vehicle money excedeed</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40401</p>
+            </td>
+            <td>
+                <p align="left">Driv money excedeed</p>
+            </td>
+            <td>
+                <p align="left">Driver money excedeed</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40402</p>
+            </td>
+            <td>
+                <p align="left">Fuel money excedeed</p>
+            </td>
+            <td>
+                <p align="left">Fuel money excedeed</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40403</p>
+            </td>
+            <td>
+                <p align="left">Site money excedeed</p>
+            </td>
+            <td>
+                <p align="left">Site money excedeed</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40404</p>
+            </td>
+            <td>
+                <p align="left">Fleet money excedeed</p>
+            </td>
+            <td>
+                <p align="left">Fleet money excedeed</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40405</p>
+            </td>
+            <td>
+                <p align="left">Veh qty excedeed</p>
+            </td>
+            <td>
+                <p align="left">Veh quantity excedeed</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40406</p>
+            </td>
+            <td>
+                <p align="left">Driv qty excedeed</p>
+            </td>
+            <td>
+                <p align="left">Driv quantity excedeed</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40407</p>
+            </td>
+            <td>
+                <p align="left">Fuel qty excedeed</p>
+            </td>
+            <td>
+                <p align="left">Fuel quantity excedeed</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40408</p>
+            </td>
+            <td>
+                <p align="left">Site qty excedeed</p>
+            </td>
+            <td>
+                <p align="left">Site quantity excedeed</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40409</p>
+            </td>
+            <td>
+                <p align="left">Fleet qty excedeed</p>
+            </td>
+            <td>
+                <p align="left">Fleet quantity excedeed</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40410</p>
+            </td>
+            <td>
+                <p align="left">Veh tran excedeed</p>
+            </td>
+            <td>
+                <p align="left">Vehicle transactions excedeed</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40411</p>
+            </td>
+            <td>
+                <p align="left">Driv tran excedeed</p>
+            </td>
+            <td>
+                <p align="left">Driv transactions excedeed</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40412</p>
+            </td>
+            <td>
+                <p align="left">Prod tran excedeed</p>
+            </td>
+            <td>
+                <p align="left">Prod transactions excedeed</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40413</p>
+            </td>
+            <td>
+                <p align="left">Site tran excedeed</p>
+            </td>
+            <td>
+                <p align="left">Site transactions excedeed</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40414</p>
+            </td>
+            <td>
+                <p align="left">Fleet tran excedeed</p>
+            </td>
+            <td>
+                <p align="left">Fleet transactions excedeed</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valing="top">
+           <td colspan="4">
+                <p align="left"><b>Prompting Rule</b></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">20500</p>
+            </td>
+            <td>
+                <p align="left">Retries exceeded</p>
+            </td>
+            <td>
+                <p align="left">Retries exceeded</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40500</p>
+            </td>
+            <td>
+                <p align="left">Prompting needed</p>
+            </td>
+            <td>
+                <p align="left">Prompting needed</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40501</p>
+            </td>
+            <td>
+                <p align="left">Pri PIN needed</p>
+            </td>
+            <td>
+                <p align="left">Primary PIN needed</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40502</p>
+            </td>
+            <td>
+                <p align="left">Sec PIN needed</p>
+            </td>
+            <td>
+                <p align="left">Secondary PIN needed</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40503</p>
+            </td>
+            <td>
+                <p align="left">Invalid  pri PIN</p>
+            </td>
+            <td>
+                <p align="left">Invalid primary PIN</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40504</p>
+            </td>
+            <td>
+                <p align="left">Invalid sec PIN</p>
+            </td>
+            <td>
+                <p align="left">Invalid secondary PIN</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40505</p>
+            </td>
+            <td>
+                <p align="left">Sec Track needed</p>
+            </td>
+            <td>
+                <p align="left">Secondary track needed</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40506</p>
+            </td>
+            <td>
+                <p align="left">Invalid odometer</p>
+            </td>
+            <td>
+                <p align="left">Invalid odometer</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40507</p>
+            </td>
+            <td>
+                <p align="left">Invalid eng hours</p>
+            </td>
+            <td>
+                <p align="left">Invalid engine hours</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valing="top">
+           <td colspan="4">
+                <p align="left"><b>Days Rule</b></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">20600</p>
+            </td>
+            <td>
+                <p align="left">Week days not set</p>
+            </td>
+            <td>
+                <p align="left">Week days not set</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40600</p>
+            </td>
+            <td>
+                <p align="left">Day not authorized</p>
+            </td>
+            <td>
+                <p align="left">Day not authorized</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40601</p>
+            </td>
+            <td>
+                <p align="left">Day not authorized</p>
+            </td>
+            <td>
+                <p align="left">Day not authorized</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40602</p>
+            </td>
+            <td>
+                <p align="left">Day not authorized</p>
+            </td>
+            <td>
+                <p align="left">Day not authorized</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40603</p>
+            </td>
+            <td>
+                <p align="left">Day not authorized</p>
+            </td>
+            <td>
+                <p align="left">Day not authorized</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40604</p>
+            </td>
+            <td>
+                <p align="left">Day not authorized</p>
+            </td>
+            <td>
+                <p align="left">Day not authorized</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valing="top">
+           <td colspan="4">
+                <p align="left"><b>DateTime Rule</b></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">20700</p>
+            </td>
+            <td>
+                <p align="left">DateTime not set</p>
+            </td>
+            <td>
+                <p align="left">DateTime not set</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40700</p>
+            </td>
+            <td>
+                <p align="left">DateTime not auth</p>
+            </td>
+            <td>
+                <p align="left">DateTime not auth</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40701</p>
+            </td>
+            <td>
+                <p align="left">DateTime not auth</p>
+            </td>
+            <td>
+                <p align="left">DateTime not auth</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40702</p>
+            </td>
+            <td>
+                <p align="left">DateTime not auth</p>
+            </td>
+            <td>
+                <p align="left">DateTime not auth</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40703</p>
+            </td>
+            <td>
+                <p align="left">DateTime not auth</p>
+            </td>
+            <td>
+                <p align="left">DateTime not auth</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40704</p>
+            </td>
+            <td>
+                <p align="left">DateTime not auth</p>
+            </td>
+            <td>
+                <p align="left">DateTime not auth</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40705</p>
+            </td>
+            <td>
+                <p align="left">DateTime not auth</p>
+            </td>
+            <td>
+                <p align="left">DateTime not auth</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40706</p>
+            </td>
+            <td>
+                <p align="left">DateTime not auth</p>
+            </td>
+            <td>
+                <p align="left">DateTime not auth</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40707</p>
+            </td>
+            <td>
+                <p align="left">DateTime not auth</p>
+            </td>
+            <td>
+                <p align="left">DateTime not auth</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40708</p>
+            </td>
+            <td>
+                <p align="left">DateTime not auth</p>
+            </td>
+            <td>
+                <p align="left">DateTime not auth</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40709</p>
+            </td>
+            <td>
+                <p align="left">DateTime not auth</p>
+            </td>
+            <td>
+                <p align="left">DateTime not auth</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40710</p>
+            </td>
+            <td>
+                <p align="left">DateTime not auth</p>
+            </td>
+            <td>
+                <p align="left">DateTime not auth</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40711</p>
+            </td>
+            <td>
+                <p align="left">DateTime not auth</p>
+            </td>
+            <td>
+                <p align="left">DateTime not auth</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40712</p>
+            </td>
+            <td>
+                <p align="left">DateTime not auth</p>
+            </td>
+            <td>
+                <p align="left">DateTime not auth</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40713</p>
+            </td>
+            <td>
+                <p align="left">DateTime not auth</p>
+            </td>
+            <td>
+                <p align="left">DateTime not auth</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40714</p>
+            </td>
+            <td>
+                <p align="left">DateTime not auth</p>
+            </td>
+            <td>
+                <p align="left">DateTime not auth</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40715</p>
+            </td>
+            <td>
+                <p align="left">DateTime not auth</p>
+            </td>
+            <td>
+                <p align="left">DateTime not auth</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40716</p>
+            </td>
+            <td>
+                <p align="left">DateTime not auth</p>
+            </td>
+            <td>
+                <p align="left">DateTime not auth</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40717</p>
+            </td>
+            <td>
+                <p align="left">DateTime not auth</p>
+            </td>
+            <td>
+                <p align="left">DateTime not auth</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40718</p>
+            </td>
+            <td>
+                <p align="left">DateTime not auth</p>
+            </td>
+            <td>
+                <p align="left">DateTime not auth</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40719</p>
+            </td>
+            <td>
+                <p align="left">DateTime not auth</p>
+            </td>
+            <td>
+                <p align="left">DateTime not auth</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40720</p>
+            </td>
+            <td>
+                <p align="left">DateTime not auth</p>
+            </td>
+            <td>
+                <p align="left">DateTime not auth</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40721</p>
+            </td>
+            <td>
+                <p align="left">DateTime not auth</p>
+            </td>
+            <td>
+                <p align="left">DateTime not auth</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40722</p>
+            </td>
+            <td>
+                <p align="left">DateTime not auth</p>
+            </td>
+            <td>
+                <p align="left">DateTime not auth</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40723</p>
+            </td>
+            <td>
+                <p align="left">DateTime not auth</p>
+            </td>
+            <td>
+                <p align="left">DateTime not auth</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40724</p>
+            </td>
+            <td>
+                <p align="left">DateTime not auth</p>
+            </td>
+            <td>
+                <p align="left">DateTime not auth</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40725</p>
+            </td>
+            <td>
+                <p align="left">DateTime not auth</p>
+            </td>
+            <td>
+                <p align="left">DateTime not auth</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40726</p>
+            </td>
+            <td>
+                <p align="left">DateTime not auth</p>
+            </td>
+            <td>
+                <p align="left">DateTime not auth</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40727</p>
+            </td>
+            <td>
+                <p align="left">DateTime not auth</p>
+            </td>
+            <td>
+                <p align="left">DateTime not auth</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40728</p>
+            </td>
+            <td>
+                <p align="left">DateTime not auth</p>
+            </td>
+            <td>
+                <p align="left">DateTime not auth</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40729</p>
+            </td>
+            <td>
+                <p align="left">DateTime not auth</p>
+            </td>
+            <td>
+                <p align="left">DateTime not auth</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valing="top">
+           <td colspan="4">
+                <p align="left"><b>DaysTime Rule</b></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">20800</p>
+            </td>
+            <td>
+                <p align="left">Week days not set</p>
+            </td>
+            <td>
+                <p align="left">Week days not set</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">20801</p>
+            </td>
+            <td>
+                <p align="left">Time not set</p>
+            </td>
+            <td>
+                <p align="left">Time not set</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40800</p>
+            </td>
+            <td>
+                <p align="left">Day not authorized</p>
+            </td>
+            <td>
+                <p align="left">Day not authorized</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40801</p>
+            </td>
+            <td>
+                <p align="left">Day not authorized</p>
+            </td>
+            <td>
+                <p align="left">Day not authorized</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40802</p>
+            </td>
+            <td>
+                <p align="left">Day not authorized</p>
+            </td>
+            <td>
+                <p align="left">Day not authorized</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40803</p>
+            </td>
+            <td>
+                <p align="left">Day not authorized</p>
+            </td>
+            <td>
+                <p align="left">Day not authorized</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40804</p>
+            </td>
+            <td>
+                <p align="left">Day not authorized</p>
+            </td>
+            <td>
+                <p align="left">Day not authorized</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40805</p>
+            </td>
+            <td>
+                <p align="left">DaysTime not auth</p>
+            </td>
+            <td>
+                <p align="left">Day not authorized</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40806</p>
+            </td>
+            <td>
+                <p align="left">DaysTime not auth</p>
+            </td>
+            <td>
+                <p align="left">Day not authorized</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40807</p>
+            </td>
+            <td>
+                <p align="left">DaysTime not auth</p>
+            </td>
+            <td>
+                <p align="left">Day not authorized</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40808</p>
+            </td>
+            <td>
+                <p align="left">DaysTime not auth</p>
+            </td>
+            <td>
+                <p align="left">Day not authorized</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40809</p>
+            </td>
+            <td>
+                <p align="left">DaysTime not auth</p>
+            </td>
+            <td>
+                <p align="left">Day not authorized</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40810</p>
+            </td>
+            <td>
+                <p align="left">DaysTime not auth</p>
+            </td>
+            <td>
+                <p align="left">Day not authorized</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40811</p>
+            </td>
+            <td>
+                <p align="left">DaysTime not auth</p>
+            </td>
+            <td>
+                <p align="left">Day not authorized</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40812</p>
+            </td>
+            <td>
+                <p align="left">DaysTime not auth</p>
+            </td>
+            <td>
+                <p align="left">Day not authorized</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40813</p>
+            </td>
+            <td>
+                <p align="left">DaysTime not auth</p>
+            </td>
+            <td>
+                <p align="left">Day not authorized</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40814</p>
+            </td>
+            <td>
+                <p align="left">DaysTime not auth</p>
+            </td>
+            <td>
+                <p align="left">Day not authorized</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valing="top">
+           <td colspan="4">
+                <p align="left"><b>Dry Transaction Rule</b></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">20900</p>
+            </td>
+            <td>
+                <p align="left">Quota Not Set</p>
+            </td>
+            <td>
+                <p align="left">Quota not set</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40900</p>
+            </td>
+            <td>
+                <p align="left">Veh money exceeded</p>
+            </td>
+            <td>
+                <p align="left">Vehicle money exceeded</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40901</p>
+            </td>
+            <td>
+                <p align="left">Driv money exceeded</p>
+            </td>
+            <td>
+                <p align="left">Driver money exceeded</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40902</p>
+            </td>
+            <td>
+                <p align="left">Site money exceeded</p>
+            </td>
+            <td>
+                <p align="left">Site money exceeded</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">40903</p>
+            </td>
+            <td>
+                <p align="left">Fleet money exceeded</p>
+            </td>
+            <td>
+                <p align="left">Fleet money exceeded</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valing="top">
+           <td colspan="4">
+                <p align="left"><b>Dry Quota Rule</b></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">21000</p>
+            </td>
+            <td>
+                <p align="left">Quota not set</p>
+            </td>
+            <td>
+                <p align="left">Quota not set</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">41000</p>
+            </td>
+            <td>
+                <p align="left">Veh money exceeded</p>
+            </td>
+            <td>
+                <p align="left">Vehicle money exceeded</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">41001</p>
+            </td>
+            <td>
+                <p align="left">Driv money exceeded</p>
+            </td>
+            <td>
+                <p align="left">Driver money exceeded</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">41002</p>
+            </td>
+            <td>
+                <p align="left">Site money exceeded</p>
+            </td>
+            <td>
+                <p align="left">Site money exceeded</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">41003</p>
+            </td>
+            <td>
+                <p align="left">Fleet money exceeded</p>
+            </td>
+            <td>
+                <p align="left">Fleet money exceeded</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valing="top">
+           <td colspan="4">
+                <p align="left"><b>Process Messages</b></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">50000</p>
+            </td>
+            <td>
+                <p align="left">App error</p>
+            </td>
+            <td>
+                <p align="left">Application error</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <p align="left">50001</p>
+            </td>
+            <td>
+                <p align="left">Not available in off</p>
+            </td>
+            <td>
+                <p align="left">Not available in offline mode</p>
+            </td>
+            <td>
+                <p align="left"></p>
+            </td>
+        </tr>
 	</tbody>
 </table>
 
