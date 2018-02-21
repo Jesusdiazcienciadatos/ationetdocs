@@ -125,11 +125,48 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac 
 
 ### Cliente de Fidelidad
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+En esta seccion, usted puede crear nuevos clientes de fidelidad. Lo primero que debe seleccionar es el Programa de Fidelidad al cual va a pertenecer este nuevo cliente de fidelidad. Luego, llenar los siguientes campos:
 
 ![Cliente de Fidelidad](Content/Includes/AN-Loyalty-UserManal-SP/ClienteDeFidelidad1.png)
+
+* ***Licencia***: Ingrese el numero de licencia del conductor.
+* ***Codigo***: Ingrese el codigo del conductor.
+* ***Apellidos***: Ingrese el o los apellidos del conductor.
+* ***Nombre***: Ingrese el nombre del conductor.
+* ***Correo***: Ingrese el correo electronico del conductor.
+* ***Telefono 1***: Ingrese un numero de telefono de contacto del conductor.
+
+Haga click en "Datos extendidos" si quiere agregar mas informacion.
+
+* ***Lic. Pais***: Seleccione el pais de origen de la licencia del conductor.
+* ***Lic. Provincia***: Seleccione la provincia de origen de la licencia del conductor.
+* ***Fecha de Nacimiento***: Ingrese la fecha de nacimiento del conductor.
+* ***Telefono 2***: Ingrese otro numero de telefono de contacto del conductor si lo tuviere.
+
+Cuando termine de llenar estos campos, haga click el boton "Next" para agregar la informacion del vehiculo.
+ 
 ![Cliente de Fidelidad](Content/Includes/AN-Loyalty-UserManal-SP/ClienteDeFidelidad2.png)
+
+* ***Patente***: Ingrese la patente del vehiculo.
+* ***Codigo***: Ingrese el codigo del vehiculo.
+* ***Marca***: Ingrese la marca del vehiculo.
+* ***Modelo***: Ingrese el modelo del vehiculo.
+* ***Color***: Ingrese el color del vehiculo.
+* ***Año***: Ingrese el año del vehiculo.
+
+Haga click en "Datos extendidos" si quiere agregar mas informacion".
+
+* ***Tipo***: Seleccione el tipo de vehiculo que esta registrando.
+* ***Numero Chasis***: Ingrese el numero de chasis.
+* ***Numero motor***: Ingrese el numero de motor.
+* ***Odometro Actual***: Ingrese el numero del odometro actualmente.
+
+Cuando termine de llenar estos campos, haga click en el boton "Next" para agregar la informacion del identificador.
+
 ![Cliente de Fidelidad](Content/Includes/AN-Loyalty-UserManal-SP/ClienteDeFidelidad3.png)
+
+
+
 ![Cliente de Fidelidad](Content/Includes/AN-Loyalty-UserManal-SP/ClienteDeFidelidad4.png)
 
 ### Conciliaciones
