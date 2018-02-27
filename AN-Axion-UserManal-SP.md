@@ -7,7 +7,7 @@
 	</tr>
 	<tr>
 		<td>Archivo:</td>
-		<td>AN-Loyalty-UserManal-SP</td>
+		<td>AN-Axion-UserManal-SP</td>
 	</tr>
 	<tr>
 		<td>Version documento:</td>
@@ -31,7 +31,8 @@
 		<td>Ver.</td>
 		<td>Fecha</td>
 		<td>Detalle cambio</td>
-	</tr>
+	</
+tr>
 	<tr valign="top">
 		<td>1.0</td>
 		<td>15 Febrero 2018</td>
@@ -53,7 +54,7 @@
 	- [Vehículo](#vehículo)
 	- [Conductor](#conductor)
 	- [Modulo offline](#modulo-offline)
-	- [Terminal] (#terminal)
+	- [Terminal](#terminal)
 - [Fidelidad](#fidelidad)
 	- [Ajustes](#ajustes)
 	- [Cliente de Fidelidad](#cliente-de-fidelidad)
@@ -117,63 +118,111 @@ La terminal (o controlador) es la representación del controlador de surtidores,
 
 ### Ajustes
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis quam ac ligula maximus, vitae dictum lorem consequat. Curabitur interdum pretium cursus. Vestibulum pharetra sodales enim, ut vestibulum dui semper quis. Aliquam convallis nulla eu neque vestibulum eleifend. Nam feugiat leo a bibendum rutrum. Duis quis augue et dui vulputate rhoncus. Sed vitae felis fringilla, lacinia est vel, imperdiet leo. Sed suscipit neque risus, eu pharetra dolor rhoncus ac.
+En esta vista usted puede consultar los ajustes de fidelidad que se realizaron. Un ajuste de fidelidad se refiere a la quita o suma de puntos en una cuenta de fidelidad.
+
+Los ajustes están listados por Sitio, Fecha, Hora, la cuenta de Fidelidad a la cual se le sumo o quito puntos, la cantidad de puntos sumados o restados, el código de respuesta y el mensaje de respuesta.
+
+Para hacer las consultas mas faciles, usted cuenta con un panel de filtros. Los campos disponibles para filtrar son los siguientes:
+
+* ***Vehículo***: Ingrese el vehículo por el cual desea filtrar.
+* ***Conductor***: Ingrese el conductor por el cual desea filtrar.
+* ***Sitio***: Ingrese el sitio por el cual desea filtrar.
+* ***Terminal/Controlador***: Ingrese la terminal/controlador por el cual desea filtrar.
+* ***Fecha Desde/Fecha Hasta***: Ingrese el rango de fechas por el cual desea filtrar.
+* ***Hora Desde/Hora Hasta***: Ingrese el rango horario por el cual desea filtrar.
+
+Cuando termine de llenar los campos, haga click en el botón "Crear Filtro" si quiere guardarlo, o simplemente haga click en el botón "Nuevo" para realizar la búsqueda.
 
 ![Ajustes](Content/Includes/AN-Loyalty-UserManal-SP/Ajustes.png)
 
+#### Crear Ajuste de Fidelidad
+
+Para crear un nuevo ajuste de fidelidad, haga click en el botón "Nuevo" que se encuentra en el extremo superior izquierdo de la vista.
+
+Los campos a completar son los siguientes:
+
 ![Ajustes](Content/Includes/AN-Loyalty-UserManal-SP/ajustesNuevo.png)
+
+* ***Descripcion***: Ingrese una descripción del nuevo ajuste de fidelidad.
+* ***Fecha***: Ingrese la fecha en la que esta realizando el nuevo ajuste de fidelidad.
+* ***Hora***: Ingrese la hora en la que esta realizando el nuevo ajuste de fidelidad.
+* ***Sitio***: Ingrese el sitio en el que esta realizando el nuevo ajuste de fidelidad.
+* ***Terminal/Controlador***: Ingrese la terminal/controlador con el que se esta realizando el nuevo ajuste de fidelidad.
+* ***Programa de Fidelidad***: Ingrese el programa de fidelidad al cual esta relacionado el nuevo ajuste de fidelidad que esta creando.
+* ***Cuenta de Fidelidad***: Ingrese la cuenta de fidelidad al cual esta relacionado el nuevo ajuste de fidelidad que esta creando.
+* ***Monto***: Ingrese la cantidad de puntos a sumar o quitar.
+
+Cuando termine de llenar todos los campos haga click en el botón "Guardar".
 
 ### Cliente de Fidelidad
 
-En esta seccion, usted puede crear nuevos clientes de fidelidad. Lo primero que debe seleccionar es el Programa de Fidelidad al cual va a pertenecer este nuevo cliente de fidelidad. Luego, llenar los siguientes campos:
+En esta sección, usted puede crear nuevos clientes de fidelidad. Lo primero que debe seleccionar es el Programa de Fidelidad al cual va a pertenecer este nuevo cliente de fidelidad. Luego, llenar los siguientes campos:
 
 ![Cliente de Fidelidad](Content/Includes/AN-Loyalty-UserManal-SP/ClienteDeFidelidad1.png)
 
 * ***Licencia***: Ingrese el numero de licencia del conductor.
-* ***Codigo***: Ingrese el codigo del conductor.
+* ***Código***: Ingrese el código del conductor.
 * ***Apellidos***: Ingrese el o los apellidos del conductor.
 * ***Nombre***: Ingrese el nombre del conductor.
-* ***Correo***: Ingrese el correo electronico del conductor.
-* ***Telefono 1***: Ingrese un numero de telefono de contacto del conductor.
+* ***Correo***: Ingrese el correo electrónico del conductor.
+* ***Teléfono 1***: Ingrese un numero de teléfono de contacto del conductor.
 
-Haga click en "Datos extendidos" si quiere agregar mas informacion.
+Haga click en "Datos extendidos" si quiere agregar mas información.
 
-* ***Lic. Pais***: Seleccione el pais de origen de la licencia del conductor.
+* ***Lic. País***: Seleccione el país de origen de la licencia del conductor.
 * ***Lic. Provincia***: Seleccione la provincia de origen de la licencia del conductor.
 * ***Fecha de Nacimiento***: Ingrese la fecha de nacimiento del conductor.
-* ***Telefono 2***: Ingrese otro numero de telefono de contacto del conductor si lo tuviere.
+* ***Teléfono 2***: Ingrese otro numero de teléfono de contacto del conductor si lo tuviere.
 
-Cuando termine de llenar estos campos, haga click el boton "Next" para agregar la informacion del vehiculo.
+Cuando termine de llenar estos campos, haga click el botón "Next" para agregar la información del vehículo.
  
 ![Cliente de Fidelidad](Content/Includes/AN-Loyalty-UserManal-SP/ClienteDeFidelidad2.png)
 
-* ***Patente***: Ingrese la patente del vehiculo.
-* ***Codigo***: Ingrese el codigo del vehiculo.
-* ***Marca***: Ingrese la marca del vehiculo.
-* ***Modelo***: Ingrese el modelo del vehiculo.
-* ***Color***: Ingrese el color del vehiculo.
-* ***Año***: Ingrese el año del vehiculo.
+* ***Patente***: Ingrese la patente del vehículo.
+* ***Código***: Ingrese el código del vehículo.
+* ***Marca***: Ingrese la marca del vehículo.
+* ***Modelo***: Ingrese el modelo del vehículo.
+* ***Color***: Ingrese el color del vehículo.
+* ***Año***: Ingrese el año del vehículo.
 
-Haga click en "Datos extendidos" si quiere agregar mas informacion".
+Haga click en "Datos extendidos" si quiere agregar mas información".
 
-* ***Tipo***: Seleccione el tipo de vehiculo que esta registrando.
+* ***Tipo***: Seleccione el tipo de vehículo que esta registrando.
 * ***Numero Chasis***: Ingrese el numero de chasis.
 * ***Numero motor***: Ingrese el numero de motor.
 * ***Odometro Actual***: Ingrese el numero del odometro actualmente.
 
-Cuando termine de llenar estos campos, haga click en el boton "Next" para agregar la informacion del identificador.
+Cuando termine de llenar estos campos, haga click en el botón "Next" para agregar la información del identificador.
 
 ![Cliente de Fidelidad](Content/Includes/AN-Loyalty-UserManal-SP/ClienteDeFidelidad3.png)
 
+* ***Etiqueta***: La etiqueta es, por ejemplo, el nombre que aparece en el dorso de una Tarjeta. Ingrese
+* ***PAN***: Ingrese el PAN del identificador.
+* ***Track***: Usted puede personalizar la segunda parte del track del identificador. Ingrese aquí lo que quiere que este en el track.
+* ***Tipo***: Seleccione si el identificador es de tipo Tarjeta, TAG, Chipkey, Entrada Manual, Tarjeta ATIONet o ATIONet TAG.
+* ***Modelo***: Seleccione el modelo dependiendo del tipo de identificador que haya elegido.
 
+Cuando termine de llenar estos campos, haga click en el botón "Next" para agregar la información de entrada de Servicios.
 
 ![Cliente de Fidelidad](Content/Includes/AN-Loyalty-UserManal-SP/ClienteDeFidelidad4.png)
 
+* ***Código de Hoja de Servicio***: Ingrese el código que quiere asignarle a la entrada de servicio.
+* ***Grupo de tipo de entrada de servicios***: Ingrese el grupo de entrada de servicio.
+* ***Tipo de entrada de servicios***: Ingrese el tipo de entrada de servicio.
+* ***Ingreso***: La fecha en la que entro el vehículo para realizarle un servicio.
+* ***Fecha de Expiración***: La fecha de expiración del servicio.
+* ***Odometro***: Ingrese el odometro actual.
+* ***Horas de motor***: Ingrese las horas de motor actuales.
+* ***Servicios***: Ingrese los servicios realizados.
+* ***Comentario***: Ingrese un comentario de la entrada de servicios.
+
+Cuando termine de llenar todos los campos, puede cliquear en el botón "Guardar" para guardar los cambios.
+
 ### Conciliaciones
 
-En ATIONet, las conciliaciones son ?
+La vista de conciliaciones muestra el resultado del proceso de ATIONet contra el resultado del proceso del host de fidelidad externo.
 
-En esta vista puede ver todas las conciliaciones listadas por Código de Autorización de la misma, la cuenta de Fidelidad relacionada a la excepción, la fecha, hora y sitio donde ocurre la conciliación; el monto, la cantidad de puntos, el código de respuesta de la misma con el mensaje; los puntos externos de la conciliación, su código de respuesta y el mensaje. También cuenta con un botón para descargar una plantilla con los datos de las conciliaciones.
+En esta vista puede ver todas las conciliaciones listadas por Código de Autorización de la misma, la cuenta de Fidelidad relacionada a la conciliación, la fecha, hora y sitio donde ocurre la transaccion; el monto, la cantidad de puntos, el código de respuesta de la misma con el mensaje; los puntos externos de la conciliación, su código de respuesta y el mensaje. También cuenta con un botón para descargar una plantilla con los datos de las conciliaciones.
 
 Para hacer las consultas mas fáciles, esta vista cuenta con un panel de filtros.
 
@@ -195,8 +244,6 @@ Cuando termine de llenar los campos que quiera, puede cliquear en "Crear Filtro"
 ![Conciliaciones](Content/Includes/AN-Loyalty-UserManal-SP/Conciliaciones.png)
 
 ### Cuenta Corriente
-
-En ATIONet, las cuentas corrientes son ?
 
 En esta vista puede ver todas las cuentas corrientes listadas por Compañía, Programa de Fidelidad, Subcuenta, Balance y si esta Habilitada o no.
 
@@ -245,7 +292,7 @@ Cuando termine de llenar los campos que quiera, puede cliquear en "Crear Filtro"
 
 ### Programas
 
-En ATIONet, los programas son ?
+En esta vista puede consultar los programas listados por Código, Descripcion, Compañia y Tipo de Miembros. También puede editar el programa haciendo click en el icono del lápiz que se encuentra en la columna opciones.
 
 ![Programas](Content/Includes/AN-Loyalty-UserManal-SP/programas.png)
 
@@ -266,14 +313,22 @@ Los campos a completar son los siguientes:
 * ***Fecha Inicio***: Ingrese la fecha en la que entra en vigencia el contrato.
 * ***Duración***: Ingrese la duración del contrato.
 * ***Compañía***: Ingrese la compañía con la cual esta relacionada el contrato.
-* ***Grupo de tipo de entrada de servicios***: ?
+* ***Grupo de tipo de entrada de servicios***: Seleccione el grupo de tipo de entrada de servicios.
 * ***Unidades***: Seleccione en que unidad quiere que sea el contrato.
-* ***Monto Inicial***: ?
-* ***Encuesta Inicial***: ?
-* ***Sitios***: ?
-* ***Tipo de Expiración***: ?
-* ***Periodicidad***: ?
-* ***Días de Gracia***: ?
+* ***Monto Inicial***: La cantidad de puntos que se le van a asignar a cada usuario que se de alta en el programa por única vez y al comienzo del mismo.
+* ***Encuesta Inicial***: Tilde esta opción si requiere confirmar que se haya llenado la planilla de entrada de grupo de servicio.
+* ***Sitios***: Los sitios en donde el cliente puede realizar transacciones.
+* ***Tipo de Expiración***: Seleccione el tipo de expiración de los puntos del programa. Los distintos tipos de expiración son los siguientes:
+	1. ***Sin Expiración***: Los puntos no expiran nunca.
+	2. ***Expiración individual de puntos pasado el período de retención. No Renovable***: Cada punto vence pasado la cantidad de tiempo que indica el periodo.
+	3. ***Expiración individual de puntos. Renovables***: Cada vez que se realiza una suma de puntos se estira el vencimiento la cantidad de tiempo que indica el periodo.
+	4. ***Expiración en batch de los puntos del período. Período del Programa***: Al finalizar el periodo del programa, expiraran todos los puntos anteriores al periodo que acaba de terminar, es decir, los puntos adquiridos en este ultimo periodo quedaran. 
+	5. ***Expiración en batch de todos los puntos. Período del Programa***: Al finalizar el periodo del programa, expiraran todos los puntos que la cuenta tenga.
+	6. ***Expiración en batch de los puntos del período. Período del Miembro***: Al finalizar el periodo del miembro (La periodicidad de acuerdo a la creación de la cuenta), expiraran todos los puntos anteriores al periodo que acaba de terminar, es decir, los puntos adquiridos en este ultimo periodo quedaran.
+	7. ***Expiración en batch de todos los puntos. Período del Miembro***: Al finalizar el periodo del miembro (La periodicidad de acuerdo a la creación de la cuenta), expiraran todos los puntos que la cuenta tenga.
+	8. ***Expiración mensual de todos los puntos. Período del Miembro***: Todos los puntos expiran el ultimo día del mes en el que termina el periodo.
+* ***Periodicidad***: La periodicidad del programa. Puede ser en días, semanas o meses.
+* ***Días de Gracia***: La cantidad de días de gracia que tiene el cliente para canjear los puntos una vez vencidos los mismos.
 
 Cuando termine de llenar todos los campos, haga click en el botón "Guardar".
 
@@ -338,8 +393,8 @@ Los campos a completar son los siguientes:
 * ***Descripcion***: La descripción de la nueva regla.
 * ***Tipo***: Seleccione el tipo de regla que puede ser de Monto de Transacción, SKU, Categoría de SKU, Método de Pago, Monto de Transacción y Método de Pago, SKU y Método de Pago o Categoría de SKU y Método de Pago.
 * ***Puntos***: La cantidad de puntos que entrega la regla.
-* ***Unidades/Monto***: ?
-* ***Monto***: ?
+* ***Unidades/Monto***: Ingrese si la unidad/monto se va a sumar completo o redondeado. Si es completo, una transaccion que sume 28.67 puntos, va a sumar 28.67 puntos; en redondeado, va a sumar 29 puntos.
+* ***Monto***: La cantidad de dinero/millas/kilómetros necesarios para sumar los puntos.
 * ***Fecha Desde/Hasta***: Ingrese el rango de fechas en el cual estará activa la regla.
 * ***Hora Desde/Hasta***: Ingrese el rango horario en el cual estará activa la regla.
 * ***Días de la semana habilitados***: Ingrese los días de la semana en los cuales estará activa la regla.
@@ -374,10 +429,10 @@ En esta vista usted puede consultar las transacciones realizadas, listadas por S
 
 Esta vista cuenta con un panel de filtros para hacer mas faciles las consultas. Los campos que tiene disponibles para filtrar son los siguientes:
 
-* ***Vehículo***: ?
-* ***Conductor***: ?
-* ***Sitio***:
-* ***Terminal/Controlador***:
+* ***Vehículo***: Filtre por el vehículo que realizo la transferencia.
+* ***Conductor***: Ingrese el conductor por el cual quiere filtrar transferencias.
+* ***Sitio***: El sitio donde se realizo la transferencia.
+* ***Terminal/Controlador***: La terminal/controlador con la cual se realizo la transferencia.
 * ***Fecha Desde/Fecha Hasta***: Ingrese el rango de fechas por el cual quiere filtrar transferencias.
 * ***Hora Desde/Hora Hasta***: Ingrese el rango horario por el cual quiere filtrar transacciones.
 
@@ -385,20 +440,37 @@ Cuando termine de llenar los campos que quiera, puede cliquear en "Crear Filtro"
 
 ![Transferencias](Content/Includes/AN-Loyalty-UserManal-SP/transferencias.png)
 
+#### Crear una nueva transferencia
+
+Para crear una nueva transferencia haga click en el botón "Nuevo" que se encuentra en el extremo superior izquierdo de la pantalla.
+
+Los campos a completar son los siguientes:
+
+* ***Descripcion***: Ingrese una descripción de la transferencia.
+* ***Fecha y Hora***: Ingrese la fecha en la que se realizo la transferencia.
+* ***Sitio***: Ingrese el sitio donde se esta realizando la transferencia.
+* ***Terminal/Controlador***: Ingrese la terminal/controlador que esta realizando la transferencia.
+* ***Programa de Fidelidad***: Ingrese el programa de fidelidad que esta relacionado con la transacción.
+* ***Cuenta de Fidelidad***: Ingrese la cuenta de fidelidad que esta relacionado con la transaccion.
+* ***Cuenta Secundaria***: Ingrese la cuenta secundaria que esta relacionada con la transaccion.
+* ***Puntos***: Ingrese la cantidad de puntos a transferir.
+
+![Transferencias](Content/Includes/AN-Loyalty-UserManal-SP/nuevaTransferencia.png)
+
 ### Unidades
 
-En ATIONet, las unidades son ?
+En ATIONet, con unidades se refiere a la unidad de medida en la que se define su programa de fidelidad, ya sea puntos, kilómetros, millas, etc.
 
 ![Unidades](Content/Includes/AN-Loyalty-UserManal-SP/unidades.png)
 
 #### Crear una nueva unidad
 
-Para crear una nueva unidad haga click en el botón "Nuevo" que se encuentra en el extremo superior izquierdo de la pantalla".
+Para crear una nueva unidad haga click en el botón "Nuevo" que se encuentra en el extremo superior izquierdo de la pantalla.
 
-Los campos  completar son los siguientes:
+Los campos a completar son los siguientes:
 
 ![Unidades](Content/Includes/AN-Loyalty-UserManal-SP/nuevoUnidades.png)
 
 * ***Código***: El código que le quiere asignar a la nueva unidad.
 * ***Nombre***: El nombre que le quiere asignar a la nueva unidad.
-* ***Código de Moneda***: ?
+* ***Código de Moneda***: Si la unidad de medida que elige es una moneda, seleccione el código de moneda de la misma.
