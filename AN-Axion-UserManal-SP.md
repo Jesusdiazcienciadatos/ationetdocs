@@ -133,7 +133,7 @@ Para hacer las consultas mas faciles, usted cuenta con un panel de filtros. Los 
 
 Cuando termine de llenar los campos, haga click en el botón "Crear Filtro" si quiere guardarlo, o simplemente haga click en el botón "Nuevo" para realizar la búsqueda.
 
-![Ajustes](Content/Includes/AN-Loyalty-UserManal-SP/Ajustes.png)
+![Ajustes](Content/Includes/AN-Loyalty-UserManal-SP/ajustes.png)
 
 #### Crear Ajuste de Fidelidad
 
@@ -379,7 +379,7 @@ En ATIONet las reglas son la forma en la que se computan los puntos en el sistem
 
 En esta vista usted puede consultar las reglas listadas por Código, Descripcion, Puntos, Fecha y Hora Desde/Hasta. También puede editar la regla haciendo click en el icono del lápiz que se encuentra en la columna opciones.
 
-![Reglas](Content/Includes/AN-Loyalty-UserManal-SP/reglas.png)
+![Reglas](Content/Includes/AN-Loyalty-UserManal-SP/Reglas.png)
 
 #### Crear una nueva regla
 
