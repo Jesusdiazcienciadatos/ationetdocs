@@ -19,7 +19,7 @@
 	</tr>
 	<tr>
 		<td>Autor:</td>
-		<td>ATIO International LLC</td>
+		<td>ATIOnet LLC</td>
 	</tr>
 </table>
 
@@ -31,12 +31,11 @@
 		<td>Ver.</td>
 		<td>Fecha</td>
 		<td>Detalle cambio</td>
-	</
-tr>
+	</tr>
 	<tr valign="top">
 		<td>1.0</td>
-		<td>15 Febrero 2018</td>
-		<td>Version inicial.</td>
+		<td>9 Marzo 2018</td>
+		<td>1.0</td>
 	</tr>
 </table>
 
@@ -154,6 +153,47 @@ Los campos a completar son los siguientes:
 
 Cuando termine de llenar todos los campos haga click en el botón "Guardar".
 
+### Canjes
+
+Los canjes son cuando se hace el canje de puntos por un producto. En esta vista puede consultar los canjes listados por Sitio, Fecha y Hora, la cuenta de Fidelidad que realizo el canje, la cantidad de puntos que se usaron en la transacción, el código de respuesta y el mensaje de respuesta.
+
+Esta vista cuenta con un panel de filtros para hacer mas faciles las consultas.
+
+Los campos disponibles para filtrar son los siguientes:
+
+* ***Vehículo***: El vehículo por el cual se quiere filtrar.
+* ***Conductor***: El conductor por el cual se quiere filtrar.
+* ***Sitio***: El sitio por el cual se quiere filtrar.
+* ***Terminal/Controlador***: La terminal/controlador por el cual se quiere filtrar.
+* ***Fecha Desde/Fecha Hasta***: Ingrese el rango de fechas por el cual quiere filtrar canjes.
+* ***Hora Desde/Hora Hasta***: Ingrese el rango horario por el cual quiere filtrar canjes.
+
+Cuando termine de llenar los campos que quiera, puede cliquear en "Crear Filtro" para guardarlo para futuras ocasiones, o simplemente en "Buscar" para filtrar los resultados.
+
+![Canjes](Content/Includes/AN-Loyalty-UserManal-SP/redenciones.png)
+
+#### Crear un nuevo canje
+
+Para crear un nuevo canje, haga click en el botón "Nuevo" que se encuentra en el extremo superior izquierdo de la vista.
+
+Los campos a completar son los siguientes:
+
+![Canjes](Content/Includes/AN-Loyalty-UserManal-SP/nuevoRedenciones.png)
+
+* ***Descripción***: Ingrese una descripción del canje.
+* ***Fecha y Hora***: Ingrese la fecha y hora en la que ocurre el canje.
+* ***Sitio***: Ingrese el sitio en donde ocurre el canje.
+* ***Terminal/Controlador***: Ingrese la terminal/controlador con la que se realiza el canje.
+* ***Programa de Fidelidad***: Ingrese el programa de fidelidad asociado a el canje.
+* ***Cuenta de Fidelidad***: Ingrese la cuenta de fidelidad asociada a el canje.
+
+* ***Producto***: Ingrese el SKU del producto.
+* ***Cantidad***: Ingrese la cantidad de unidades del canje.
+
+Cuando termine de llenar esos dos campos, haga click el botón de "Alta" para confirmar.
+
+Cuando termine de llenar todos los campos, haga click en botón "Guardar".
+
 ### Cliente de Fidelidad
 
 En esta sección, usted puede crear nuevos clientes de fidelidad. Lo primero que debe seleccionar es el Programa de Fidelidad al cual va a pertenecer este nuevo cliente de fidelidad. Luego, llenar los siguientes campos:
@@ -220,28 +260,53 @@ Cuando termine de llenar todos los campos, puede cliquear en el botón "Guardar"
 
 ### Conciliaciones
 
+Esta vista solo se mostrara si el programa procesa host externo.
+
 La vista de conciliaciones muestra el resultado del proceso de ATIONet contra el resultado del proceso del host de fidelidad externo.
 
-En esta vista puede ver todas las conciliaciones listadas por Código de Autorización de la misma, la cuenta de Fidelidad relacionada a la conciliación, la fecha, hora y sitio donde ocurre la transaccion; el monto, la cantidad de puntos, el código de respuesta de la misma con el mensaje; los puntos externos de la conciliación, su código de respuesta y el mensaje. También cuenta con un botón para descargar una plantilla con los datos de las conciliaciones.
+En esta vista puede ver todas las conciliaciones listadas por Código de Autorización de la misma, la fecha, hora y sitio donde ocurre la transaccion; la cuenta de Fidelidad relacionada a la conciliación, el monto, la cantidad de puntos, los puntos externos de la conciliación, el estado de la transaccion y el estado de la conciliación. También cuenta con un botón para descargar una planilla con los datos de las conciliaciones.
 
 Para hacer las consultas mas fáciles, esta vista cuenta con un panel de filtros.
 
 Los campos disponibles para filtrar son los siguientes:
 
+* ***Compañía***: Filtre por compañía.
+* ***Diferencias de Conciliacion***:
+* ***Estado de Conciliacion***: Seleccione si quiere filtrar las sin procesar, las reconciliadas, las que difieren, error, excluidas.
 * ***Cod. Autorización***: Filtre por el código de autorización de la conciliación.
 * ***Tipo***: Filtre por el tipo de transacción que se realizo.
-* ***Compañía***: Filtre por compañía.
+* ***Sitio***: Filtre por el sitio donde ocurrió la conciliación.
+* ***Terminal/Controlador***: Filtre por la terminal/controlador que realizo la conciliación.
+* ***Lote***: Ingrese el lote por el cual desea filtrar.
+* ***Numero de Comprobante***: Ingrese el numero de comprobante.
 * ***Programa de Fidelidad***: Filtre por el programa de fidelidad asociado a la conciliación.
 * ***Cuenta de Fidelidad***: Filtre por la cuenta de fidelidad asociada a la conciliación.
 * ***Fecha Desde/Fecha Hasta***: Ingrese el rango de fechas por el cual quiere filtrar.
 * ***Hora Desde/Hora Hasta***: Ingrese el rango horario por el cual quiere filtrar.
 * ***Monto Desde/Monto Hasta***: Ingrese el rango de montos por el cual quiere filtrar.
-* ***Sitio***: Filtre por el sitio donde ocurrió la conciliación.
-* ***Terminal/Controlador***: Filtre por la terminal/controlador que realizo la conciliación.
 
 Cuando termine de llenar los campos que quiera, puede cliquear en "Crear Filtro" para guardarlo para futuras ocasiones, o simplemente en "Buscar" para filtrar los resultados.
 
 ![Conciliaciones](Content/Includes/AN-Loyalty-UserManal-SP/Conciliaciones.png)
+
+### Contingencia
+
+En esta vista puede ver todas las contingencias listadas por Sitio, Lote, Fecha, Hora, Cuenta de Fidelidad, Monto, Puntos Ationet, el Codigo de Respuesta y el mensaje de respuesta.
+
+Para hacer las consultas mas faciles, esta vista cuenta con un panel de filtros.
+
+Los campos disponibles para filtrar son los siguientes:
+
+* ***Vehiculo***: Ingrese el vehiculo por el cual desea filtrar.
+* ***Conductor***: Ingrese el conductor por el cual desea filtrar.
+* ***Sitio***: Ingrese el sitio por el cual desea filtrar.
+* ***Terminal/Controlador***: Ingrese la terminal/controlador por el cual desea filtrar.
+* ***Fecha Desde/Fecha Hasta***: Ingrese el rango de fechas por el cual desea filtrar.
+* ***Hora Desde/Hora Hasta***: Ingrese el rango de horas por el cual desea filtrar.
+
+Cuando termine de llenar los campos que quiera, puede cliquear en "Crear Filtro" para guardarlo para futuras ocasiones, o simplemente en "Buscar" para filtrar los resultados.
+
+![Cuenta Corriente](Content/Includes/AN-Loyalty-UserManal-SP/Contingencias.png)
 
 ### Cuenta Corriente
 
@@ -269,7 +334,7 @@ Cuando termine de llenar los campos que quiera, puede cliquear en "Crear Filtro"
 
 En ATIONet, las excepciones son aquellas transacciones que fueron rechazadas por algún motivo.
 
-En esta vista puede ver todas las excepciones listadas por Estado, Código de Autorización, la Cuenta de Fidelidad relacionada con la excepción; la Fecha, Hora y el Sitio donde ocurrió la excepción, la cantidad de puntos, el monto y el motivo de la excepción. También cuenta con un botón para descargar una plantilla con los datos de las excepciones.
+En esta vista puede ver todas las excepciones listadas por Estado, Código de Autorización, la Fecha, Hora y el Sitio donde ocurrió la excepción; la Cuenta de Fidelidad relacionada con la excepción la cantidad de puntos, el monto, los puntos y el motivo de la excepción tanto de Ationet como del Host Externo (Las columnas que involucren al host externo solo se mostraran si el programa tiene habilitada la opcion de que procese host externo). También cuenta con un botón para descargar una planilla con los datos de las excepciones.
 
 Para hacer las consultas mas faciles, esta vista cuenta con un panel de filtros.
 
@@ -332,47 +397,6 @@ Los campos a completar son los siguientes:
 
 Cuando termine de llenar todos los campos, haga click en el botón "Guardar".
 
-### Redenciones
-
-Las redenciones son cuando se hace el canje de puntos por un producto. En esta vista puede consultar las redenciones listadas por Sitio, Fecha y Hora, la cuenta de Fidelidad que realizo la redención, la cantidad de puntos que se usaron en la transacción, el código de respuesta y el mensaje de respuesta.
-
-Esta vista cuenta con un panel de filtros para hacer mas faciles las consultas.
-
-Los campos disponibles para filtrar son los siguientes:
-
-* ***Vehículo***: El vehículo por el cual se quiere filtrar.
-* ***Conductor***: El conductor por el cual se quiere filtrar.
-* ***Sitio***: El sitio por el cual se quiere filtrar.
-* ***Terminal/Controlador***: La terminal/controlador por el cual se quiere filtrar.
-* ***Fecha Desde/Fecha Hasta***: Ingrese el rango de fechas por el cual quiere filtrar redenciones.
-* ***Hora Desde/Hora Hasta***: Ingrese el rango horario por el cual quiere filtrar redenciones.
-
-Cuando termine de llenar los campos que quiera, puede cliquear en "Crear Filtro" para guardarlo para futuras ocasiones, o simplemente en "Buscar" para filtrar los resultados.
-
-![Redenciones](Content/Includes/AN-Loyalty-UserManal-SP/redenciones.png)
-
-#### Crear una nueva redención
-
-Para crear una nueva redención, haga click en el botón "Nuevo" que se encuentra en el extremo superior izquierdo de la vista.
-
-Los campos a completar son los siguientes:
-
-![Redenciones](Content/Includes/AN-Loyalty-UserManal-SP/nuevoRedenciones.png)
-
-* ***Descripción***: Ingrese una descripción de la redención.
-* ***Fecha y Hora***: Ingrese la fecha y hora en la que ocurre la redención.
-* ***Sitio***: Ingrese el sitio en donde ocurre la redención.
-* ***Terminal/Controlador***: Ingrese la terminal/controlador con la que se realiza la redención.
-* ***Programa de Fidelidad***: Ingrese el programa de fidelidad asociado a la redención.
-* ***Cuenta de Fidelidad***: Ingrese la cuenta de fidelidad asociada a la redención.
-
-* ***SKU***: Ingrese el código del SKU de la redención.
-* ***Cantidad***: Ingrese la cantidad de unidades de la redención.
-
-Cuando termine de llenar esos dos campos, haga click el botón de "Alta" para confirmar.
-
-Cuando termine de llenar todos los campos, haga click en botón "Guardar".
-
 ### Reglas
 
 En ATIONet las reglas son la forma en la que se computan los puntos en el sistema de fidelidad. 
@@ -404,20 +428,20 @@ Cuando termine de llenar los campos cliquée el botón "Guardar".
 
 ### Transacciones
 
-En esta vista usted puede consultar las transacciones realizadas, listadas por Código de Autorización, la Cuenta de Fidelidad a la que esta asociada la transacción; La fecha, la hora y el sitio donde ocurrió la transacción, la cantidad de puntos que fueron otorgados por esa transacción, y el monto de la transacción. También cuenta con un botón para descargar una plantilla con los datos de las transacciones.
+En esta vista usted puede consultar las transacciones realizadas, listadas por Código de Autorización, el sitio donde ocurrió la transacción, el lote, la fecha y hora en la que ocurrio la transaccion, la Cuenta de Fidelidad a la que esta asociada la transacción; el monto de la transacción y la cantidad de puntos que fueron otorgados por esa transacción. También cuenta con un botón para descargar una planilla con los datos de las transacciones.
 
 Esta vista cuenta con un panel de filtros para hacer mas faciles las consultas. Los campos que tiene disponibles para filtrar son los siguientes:
 
+* ***Compañía***: Ingrese el nombre de la compañía el cual quiere buscar transacciones relacionadas a ella.
 * ***Cod. Autorización***: El código de autorización de la transacción.
 * ***Tipo***: El tipo de transacción (Puede ser de Acumulación, Redención, Transferencia, Ajuste o Devolución).
-* ***Compañía***: Ingrese el nombre de la compañía el cual quiere buscar transacciones relacionadas a ella.
+* ***Sitio***: Ingrese el sitio por el cual quiere filtrar transacciones.
+* ***Terminal/Controlador***: Ingrese la terminal/controlador por el cual quiere filtrar transacciones.
 * ***Programa de Fidelidad***: Ingrese el nombre del programa de fidelidad el cual quiere buscar transacciones relacionadas a ella.
 * ***Cuenta de Fidelidad***: Ingrese el nombre de la cuenta de fidelidad el cual quiere buscar transacciones relacionadas a ella.
 * ***Fecha Desde/Fecha Hasta***: Ingrese el rango de fechas por el cual quiere filtrar transacciones.
 * ***Hora Desde/Hora Hasta***: Ingrese el rango horario por el cual quiere filtrar transacciones.
 * ***Monto Desde/Monto Hasta***: Ingrese el rango de montos por el cual quiere filtrar transacciones.
-* ***Sitio***: Ingrese el sitio por el cual quiere filtrar transacciones.
-* ***Terminal/Controlador***: Ingrese la terminal/controlador por el cual quiere filtrar transacciones.
 
 Cuando termine de llenar los campos que quiera, puede cliquear en "Crear Filtro" para guardarlo para futuras ocasiones, o simplemente en "Buscar" para filtrar los resultados.
 
