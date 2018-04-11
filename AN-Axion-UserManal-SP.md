@@ -271,8 +271,8 @@ Para hacer las consultas mas fáciles, esta vista cuenta con un panel de filtros
 Los campos disponibles para filtrar son los siguientes:
 
 * ***Compañía***: Filtre por compañía.
-* ***Diferencias de Conciliacion***:
-* ***Estado de Conciliacion***: Seleccione si quiere filtrar las sin procesar, las reconciliadas, las que difieren, error, excluidas.
+* ***Diferencias de Conciliación***:
+* ***Estado de Conciliación***: Seleccione si quiere filtrar las sin procesar, las reconciliadas, las que difieren, error, excluidas.
 * ***Cod. Autorización***: Filtre por el código de autorización de la conciliación.
 * ***Tipo***: Filtre por el tipo de transacción que se realizo.
 * ***Sitio***: Filtre por el sitio donde ocurrió la conciliación.
@@ -297,7 +297,7 @@ Para hacer las consultas mas faciles, esta vista cuenta con un panel de filtros.
 
 Los campos disponibles para filtrar son los siguientes:
 
-* ***Vehiculo***: Ingrese el vehiculo por el cual desea filtrar.
+* ***Vehículo***: Ingrese el vehículo por el cual desea filtrar.
 * ***Conductor***: Ingrese el conductor por el cual desea filtrar.
 * ***Sitio***: Ingrese el sitio por el cual desea filtrar.
 * ***Terminal/Controlador***: Ingrese la terminal/controlador por el cual desea filtrar.
@@ -334,7 +334,7 @@ Cuando termine de llenar los campos que quiera, puede cliquear en "Crear Filtro"
 
 En ATIONet, las excepciones son aquellas transacciones que fueron rechazadas por algún motivo.
 
-En esta vista puede ver todas las excepciones listadas por Estado, Código de Autorización, la Fecha, Hora y el Sitio donde ocurrió la excepción; la Cuenta de Fidelidad relacionada con la excepción la cantidad de puntos, el monto, los puntos y el motivo de la excepción tanto de Ationet como del Host Externo (Las columnas que involucren al host externo solo se mostraran si el programa tiene habilitada la opcion de que procese host externo). También cuenta con un botón para descargar una planilla con los datos de las excepciones.
+En esta vista puede ver todas las excepciones listadas por Estado, Código de Autorización, la Fecha, Hora y el Sitio donde ocurrió la excepción; la Cuenta de Fidelidad relacionada con la excepción la cantidad de puntos, el monto, los puntos y el motivo de la excepción tanto de Ationet como del Host Externo (Las columnas que involucren al host externo solo se mostraran si el programa tiene habilitada la opción de que procese host externo). También cuenta con un botón para descargar una planilla con los datos de las excepciones.
 
 Para hacer las consultas mas faciles, esta vista cuenta con un panel de filtros.
 
@@ -428,7 +428,7 @@ Cuando termine de llenar los campos cliquée el botón "Guardar".
 
 ### Transacciones
 
-En esta vista usted puede consultar las transacciones realizadas, listadas por Código de Autorización, el sitio donde ocurrió la transacción, el lote, la fecha y hora en la que ocurrio la transaccion, la Cuenta de Fidelidad a la que esta asociada la transacción; el monto de la transacción y la cantidad de puntos que fueron otorgados por esa transacción. También cuenta con un botón para descargar una planilla con los datos de las transacciones.
+En esta vista usted puede consultar las transacciones realizadas, listadas por Código de Autorización, el sitio donde ocurrió la transacción, el lote, la fecha y hora en la que ocurrió la transaccion, la Cuenta de Fidelidad a la que esta asociada la transacción; el monto de la transacción y la cantidad de puntos que fueron otorgados por esa transacción. También cuenta con un botón para descargar una planilla con los datos de las transacciones.
 
 Esta vista cuenta con un panel de filtros para hacer mas faciles las consultas. Los campos que tiene disponibles para filtrar son los siguientes:
 
