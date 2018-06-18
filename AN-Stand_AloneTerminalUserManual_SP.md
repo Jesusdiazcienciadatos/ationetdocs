@@ -22,7 +22,7 @@
 		 Version documento:
 		</td>
 		<td>
-		 1.0
+		 1.2
 		</td>
 	</tr>
 	<tr>
@@ -80,6 +80,17 @@
 		</td>
 		<td>
 			<p>Se agrego seccion de parametros de terminal</p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td>
+			<p>1.2</p>
+		</td>
+		<td>
+			<p>14 Jun 2018</p>
+		</td>
+		<td>
+			<p>Se agrego seccion de ping, terminal information y productos.</p>
 		</td>
 	</tr>
 </table>
@@ -158,7 +169,7 @@ d) Display
 	</tr>
 	<tr>
 		<td colspan=2 align="center">
-               Para cambiar el rollo de papel proceda como se indica a continuación:	
+               Para cambiar el rollo de papel proceda como se indica continuación:	
 		</td>
 	</tr>
 	<tr>
@@ -208,8 +219,7 @@ d) Display
 			b) Corte el papel en la banda metálica dentada de la impresora.
 		</td>
 	</tr>
-</table> 
-
+</table>
 
 ## Ingreso de caracteres Alfabéticos (Letras)
 
@@ -283,7 +293,7 @@ Durante toda la operación de la TPV se utilizan las teclas inferiores de color 
 
 ## Configuración de parámetros
 
-Antes de empezar a operar la terminal es necesario configurar algunos parámetros. Para cambiar los parámetros de la terminal siga estos pasos:
+Antes de empezar a operar la terminal es necesario configurar algunos parámetros. Los parametros que empiezan con un asterisco son propios del sistema operativo y no deben ser cambiados. Para cambiar los parámetros de la terminal siga estos pasos:
 
 <table>
 	<tr>
@@ -311,7 +321,7 @@ Antes de empezar a operar la terminal es necesario configurar algunos parámetro
 			<img src="Content/Images/standAloneTerminal/66.png">
 		</td>
 		<td> 
-			Presione F2
+			Presione 1 o navegue con las teclas F7 y F8 hasta estar sobre la opcion de editar parametros y luego presione enter.
 		</td>
 	</tr>	
 	<tr>
@@ -319,7 +329,7 @@ Antes de empezar a operar la terminal es necesario configurar algunos parámetro
 			<img src="Content/Images/standAloneTerminal/67.png">
 		</td>
 		<td> 
-			Presione Enter
+			Presione Enter.
 		</td>
 	</tr>
 	<tr>
@@ -368,6 +378,14 @@ Antes de empezar a operar la terminal es necesario configurar algunos parámetro
 		<td>Habilita el pinpad. Los valores posibles son 1 o 0</td>
 	</tr>
 	<tr>
+		<td>#TERM_PINPAD_BAUDRATE</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>#TERM_PINPAD_IDLE</td>
+		<td></td>
+	</tr>
+	<tr>
 		<td>#TERM_TRACK1</td>
 		<td>Habilita la impresion del track 1 en el ticket. Los valores posibles son 1 o 0</td>
 	</tr>
@@ -398,6 +416,26 @@ Antes de empezar a operar la terminal es necesario configurar algunos parámetro
 	<tr>
 		<td>#TERM_DNSSEC</td>
 		<td>DNS secundario</td>
+	</tr>
+	<tr>
+		<td>#TERM_RECEIPT_NUMBER</td>
+		<td>El tipo de ticket que se imprimira en las ventas</td>
+	</tr>
+	<tr>
+		<td>#SITE_CODE</td>
+		<td>El codigo del sitio</td>
+	</tr>
+	<tr>
+		<td>#SITE_ADDRESS</td>
+		<td>La direccion del sitio</td>
+	</tr>
+	<tr>
+		<td>#SITE_NAME</td>
+		<td>El nombre del sitio</td>
+	</tr>
+	<tr>
+		<td>#SITE_CUIT</td>
+		<td>El CUIT del sitio si lo tuviera</td>
 	</tr>
 	<tr>
 		<td>#AN_DEFAULTPROMPT</td>
@@ -448,20 +486,12 @@ Antes de empezar a operar la terminal es necesario configurar algunos parámetro
 		<td>URL de la API Ationet. Los valores posibles pueden ser native.ationet.com , native-beta.ationet.com o native-test.ationet.com </td>
 	</tr>
 	<tr>
-		<td>#AN_PORT</td>
-		<td>Puerto de la API. Este valor <b>DEBE</b> ser 80</td>
-	</tr>
-	<tr>
 		<td>#AN_TERMINALID</td>
 		<td>El id de la terminal configurado en el portal Ationet</td>
 	</tr>
 	<tr>
 		<td>#AN_LOCALAGENT</td>
 		<td>Habilita la conexion con el Local Agent. Los valores posibles son 1 o 0</td>
-	</tr>
-	<tr>
-		<td>#AN_LAPORT</td>
-		<td>El puerto del Local Agent. Este valor <b>DEBE</b> ser 33173</td>
 	</tr>
 	<tr>
 		<td>#AN_LAIP</td>
@@ -688,7 +718,6 @@ Si por alguna circunstancia se ha realizado una o más pre-autorizaciones y no s
 			A continuación el TPV ofrecerá imprimir una segunda copia para el cliente. Presione la tecla verde para imprimir o la tecla roja para no hacerlo.
 		</td>
 	</tr>
-
 </table>
 
 ### Consulta de Saldo:
@@ -725,7 +754,14 @@ Si por alguna circunstancia se ha realizado una o más pre-autorizaciones y no s
 	</tr>
 </table>
 
+### Estado de Terminales
+
+En el archivo CONFIG.SYS, existe un parametro llamado #TERM_PING. Ese parametro se puede setear en 3, 5 o 15 y simboliza cada cuantos minutos la terminal va a intentar comunicarse con ATIONet. Si se ingresa un numero que no sea 3, 5 o 15, la terminal va a intentar comunicarse cada 15 minutos. Si ATIONet recibe esa comunicacion de la terminal, se mostrara en el widget de la consola un tic al lado del codigo de dicha terminal. Si en vez de un tic, hay una cruz, eso significa que ATIONet no recibio comunicacion en las ultimas 5 horas.
+
+<img src="Content/Images/standAloneTerminal/estadoDeTerminales.png">
+
 ### Menú de Mantenimiento:
+
  El Menú de mantenimiento permite acceder a operaciones del sistema que no están directamente relacionadas con la operación transaccional del mismo. Es decir, operaciones que no se hacen con la misma frecuencia que aquellas destinadas a procesar transacciones en el sistema. En este menú encontramos cuatro opciones:<br>
 <br>
 
@@ -733,7 +769,9 @@ Si por alguna circunstancia se ha realizado una o más pre-autorizaciones y no s
 1.Cierre de Lote <br>
 2.Reimprimir Último <br>
 3.Anular transacción <br>
-8.Configuración del Sistema: Desde esta opción del menú se configuran parámetros de funcionamiento del sistema. <br>
+4.Activar giftcard <br>
+<br>
+Para ingresar al Menú de Configuración presione la opción (8) en el menú de mantenimiento. <br>
 
 <table>
 	<tr>
@@ -834,13 +872,17 @@ Si por alguna circunstancia se ha realizado una o más pre-autorizaciones y no s
 	</tr>
 </table>
 
+### Activar Giftcard
+
+Para activar una giftcard, elija la opcion 4 en el menu de mantenimiento. Luego de eso, la terminal le pedira la contraseña del administrador. Ingrese la contraseña y despues deslice la tarjeta por el lector.
+
 ## Menú de Configuración:
- El Menú de Configuración permite acceder a funciones de programación de parámetros de la TPV. Estas operaciones no son habituales y requieren en todos los casos clave de Supervisor. En este menú encontramos dos opciones:<br>
+ El Menú de Configuración permite acceder a funciones de programación de parámetros de la TPV. Estas operaciones no son habituales y requieren en todos los casos clave de Supervisor. En este menú encontramos tres opciones:<br>
 <br>
 1) Clave Supervisor<br>
 2) Otros Productos<br>
 
-Para ingresar al Menú de Configuración presione la opción (8) en el menú de mantenimiento.
+Para ingresar al menu de informacion de la app, presione la tecla 8.
 
 ### Clave Supervisor:
  Si desea cambiar la Clave de Supervisor asignada presione la tecla (1) en el Menú de Configuración y siga las siguientes instrucciones:  
@@ -870,10 +912,9 @@ Para ingresar al Menú de Configuración presione la opción (8) en el menú de 
 	</tr>
 </table>
 
-<!---
 ### Otros Productos:
  ATIONET permite trabajar también con productos no combustibles como aditivos, lubricantes, productos secos e incluso adelantos de efectivo. Para poder enviar al Servidor Central transacciones de autorización por estos productos primero hay que crear los mismos en el maestro de productos del TPV y asignarles un código de equivalencia con el código centralizado que se utiliza para ese producto a nivel de red.<br>
- <br> 
+ <br>
  Para dar de alta, modificar o borrar dichos productos a nivel TPV será necesario ingresar a la opción 2 del menú de configuración y mantener desde allí el maestro de otros productos. Es importante resaltar que esta modalidad de servicio depende de que la red a nivel central este configurada para aceptar estos productos y que se conozcan con precisión las equivalencias entre los productos locales en la estación y sus pares centrales a nivel de red.<br> 
  <br>
  Si desea crear, modificar o borrar alguno de estos productos presione la tecla (2) en el menú de configuración y siga las siguientes instrucciones:
@@ -928,7 +969,7 @@ Para ingresar al Menú de Configuración presione la opción (8) en el menú de 
 		</td>
 	</tr>
 </table>
- 
+
 ### Editar Productos:
  Para editar un producto en el catálogo local haga scroll con las teclas inferiores hasta que el producto a modificar se vea en pantalla y luego presione la tecla lateral de la pantalla correspondiente y sigas las instrucciones siguientes:
 
@@ -966,4 +1007,38 @@ Para ingresar al Menú de Configuración presione la opción (8) en el menú de 
 		</td>
 	</tr>
 </table>
--->
+
+### Informacion de la app
+ En este menu usted puede consultar los datos de la terminal, del sitio y de la comunicacion. Tambien puede imprimir un ticket con la informacion de la terminal presionando la tecla F8 (la de mas a la derecha) en cualquiera de las tres pantallas.
+
+<table>
+	<tr>
+		<td width=50%>Imagen</td>
+		<td width=50%>Descripción</td>
+	</tr>
+	<tr>
+		<td><img src="Content/Images/standAloneTerminal/terminalInformation.png"></td>
+		<td> 
+			En esta pantalla, se muestra la version de la terminal, la IP de la terminal, el ID de la terminal y el gateway de la terminal. Para cambiar de pantalla presione la tecla F5 o F6.
+		</td>
+	</tr>
+	<tr>
+		<td><img src="Content/Images/standAloneTerminal/siteInformation.png"></td>
+		<td> 
+			En esta pantalla, se muestra el codigo del sitio, la direccion del sitio y el nombre del sitio. Para cambiar de pantalla presione la tecla F5 o F6.
+		</td>
+	</tr>
+	<tr>
+		<td><img src="Content/Images/standAloneTerminal/communicationInformation.png"></td>
+		<td> 
+			En esta pantalla, se muestra la URL a la cual apunta la terminal. Para cambiar de pantalla presione la tecla F5 o F6.
+		</td>
+	</tr>
+	<tr>
+		<td><img src="Content/Images/standAloneTerminal/terminalInformationTicket.png"></td>
+		<td>
+			El ticket de informacion de terminal se puede obtener presionando la tecla F8, que es la que se encuentra abajo de la P que aparece en pantalla. El ticket se imprimira mostrando la fecha y la hora, y luego la informacion de terminal, sitio y comunicacion.
+		</td>
+	</tr>
+</table>
+

@@ -37,6 +37,11 @@
 		<td>9 Marzo 2018</td>
 		<td>1.0</td>
 	</tr>
+	<tr valign="top">
+		<td>1.1</td>
+		<td>20 Abril 2018</td>
+		<td>Cambio de nombre Redenciones a Canjes, cambio de columnas en la vista de Transacciones y Conciliaciones. Agregado seccion Contingencia. </td>
+	</tr>
 </table>
 
 ## Contents
