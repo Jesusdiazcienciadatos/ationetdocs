@@ -269,6 +269,11 @@ You can download a fully functional sample code from here: https://github.com/at
             <td></td>
             <td>This method downloads a contracts balances list</td>
         </tr>
+		<tr>
+          	<td>FastTrackDownload</td>
+            <td></td>
+            <td>This method downloads a fast track list</td>
+        </tr>
         <tr>
           	<td>GetDeliveries</td>
             <td></td>

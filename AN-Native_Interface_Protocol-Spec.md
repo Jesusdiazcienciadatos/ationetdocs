@@ -131,6 +131,19 @@
 			<p>- Include &ldquo;ResponseError&rdquo; in response record for actions intended to post a command</p>
 		</td>
 	</tr>
+	<tr valign="top">
+		<td>
+			<p>1.4</p>
+		</td>
+		<td>
+			<p>27/11/2018</p>
+		</td>
+		<td>
+			<p><b>FastTrack</b>
+			<br> - Added Action 971 Request insertion of new FastTrack</p>
+			<p>- Added Action 972 Request FastTrack list download</p>
+		</td>
+	</tr>
 </table>
 
 ##Contents##
@@ -157,19 +170,25 @@
 	- [7.2 Transactions Download (POST) – Body Section Format Request](#72-transactions-download-post--body-section-format-request)
 	- [7.3 Transactions Download (POST) – Body Section Format Response](#73-transactions-download-post--body-section-format-response)
 
-- [8 Account Enquiries](#8-account-enquiries)
+- [8 FastTracks Interface](#8-fasttracks-interface)
 	- [8.1 Action Codes](#81-action-codes)
-	- [8.2 Identification](#82-identification)
-	- [8.3 Account Enquiry (POST) – Body Section Record Format Request](#83-account-enquiry-post--body-section-record-format-request)
-	- [8.4 Account Enquiry (POST) – Body Section Record Format Response](#84-account-enquiry-post--body-section-record-format-response)
-
-- [9 Account Downloads](#9-account-downloads)
+	- [8.2 FastTracks Order Insert (POST) – Body Section Format Request](#82-fasttracks-order-insert-post--body-section-format-request)
+	- [8.3 FastTracks Download (POST) – Body Section Format Request](#82-fasttracks-download-post--body-section-format-request)
+	- [8.4 FastTracks Download (POST) – Body Section Format Response](#83-fasttracks-download-post--body-section-format-response)
+	
+- [9 Account Enquiries](#9-account-enquiries)
 	- [9.1 Action Codes](#91-action-codes)
-	- [9.2 Account Download (POST) – Body Section Format Request](#92-account-download-post--body-section-format-request)
-	- [9.3 Account Download (POST) – Body Section Format Response](#93-account-download-post--body-section-format-response)
+	- [9.2 Identification](#92-identification)
+	- [9.3 Account Enquiry (POST) – Body Section Record Format Request](#93-account-enquiry-post--body-section-record-format-request)
+	- [9.4 Account Enquiry (POST) – Body Section Record Format Response](#94-account-enquiry-post--body-section-record-format-response)
 
-- [10 Examples](#10-examples)
-	- [10.1 C# example](#101-c-example)
+- [10 Account Downloads](#10-account-downloads)
+	- [10.1 Action Codes](#101-action-codes)
+	- [10.2 Account Download (POST) – Body Section Format Request](#102-account-download-post--body-section-format-request)
+	- [10.3 Account Download (POST) – Body Section Format Response](#103-account-download-post--body-section-format-response)
+
+- [11 Examples](#11-examples)
+	- [11.1 C# example](#111-c-example)
 
 ##Overview##
 
@@ -2603,7 +2622,1285 @@ transactions to download.
 	</tbody>
 </table>
 
-##8 Account Enquiries##
+##8 FastTrack Interface##
+
+The FastTrack interface includes actions to either insert a new FastTrack creation
+request, or to demand the list of all FastTrack from ATIONet, or all that fulfill 
+certain criteria according to the user filter parameters, such as Driver, Vehicle 
+or such.
+
+Depending on the particular Action Code, one of these actions is selected.
+Request not passing this validation will be rejected.
+
+The download can be limited by dates (from and to), but are not required necessarily
+included in the request
+
+###8.1 Action Codes###
+
+The Action Code specifies the type of record transaction to be
+retrieved; this differentiation is based on which action the user
+needs requesting (Insert or Download), which in turn defines which
+additional parameters are needed for the request to be fulfilled.
+
+<table>
+	<tr valign="top">
+		<th align="left">
+			Action Code
+		</th>
+		<th colspan="2" align="left">
+			Description
+		</th>
+	</tr>
+	<tr valign="top">
+		<td rowspan="4">
+			<p>971</p>
+		</td>
+		<td>
+			<p>Title:</p>
+		</td>
+		<td>
+			<p>Insert FastTrack Order</p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td>
+			<p>Function:</p>
+		</td>
+		<td>
+			<p>Adds a new FastTrack to ATIONet</p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td>
+			<p>Allowed for:</p>
+		</td>
+		<td>
+			<p>Subscribers and Fleet Companies</p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td>
+			<p>Identification:</p>
+		</td>
+		<td>
+			<p>Subscriber Code</p>
+			<p>Company Code (Optional, unless user is a Company)</p>
+			<p>Amount</p>
+			<p>Vehicle Code, Driver Code, Vehicle Plate, IdSubaccount, Identifier (Only one is necessary)</p>
+			<p>Site Code(Optional)</p>
+			<p>FuelMaster Code, Currency Code (Only one is necessary)</p>
+			<p>Description(Optional)</p>
+			<p>Order Number(Optional)</p>
+			<p>DateFrom (Optional)</p>
+			<p>DateTo (Optional)</p>
+			<p>Custom Parameters (Optional)</p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td rowspan="4">
+			<p>972</p>
+		</td>
+		<td>
+			<p>Title:</p>
+		</td>
+		<td>
+			<p>FastTracks Download</p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td>
+			<p>Function:</p>
+		</td>
+		<td>
+			<p>Download FastTrack records</p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td>
+			<p>Allowed for:</p>
+		</td>
+		<td>
+			<p>Subscriber and Fleet Companies</p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td>
+			<p>Identification:</p>
+		</td>
+		<td>
+			<p>Subscriber Code</p>
+			<p>Filter Parameters (Optional)</p>
+		</td>
+	</tr>
+</table>
+
+
+###8.2 FastTracks Order Insert (POST) – Body Section Format *Request*###
+
+<table>
+	<thead>
+		<tr valign="top">
+			<th align="left">
+				Field Name
+			</th>
+			<th align="left">
+				Size
+			</th>
+			<th align="left">
+				Type
+			</th>
+			<th align="left">
+				Condition
+			</th>
+			<th align="left">
+				Descriptions/Field Value(s)
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr valign="top">
+			<td>
+				<p align="left">SubscriberCode</p>
+			</td>
+			<td>
+				<p align="left">3</p>
+			</td>
+			<td>
+				<p align="left">A/N</p>
+			</td>
+			<td>
+				<p align="left">Required</p>
+			</td>
+			<td>
+				<p align="left">Fixed. To be assigned by ATIONet</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<p align="left">ActionCode</p>
+			</td>
+			<td>
+				<p align="left">3</p>
+			</td>
+			<td>
+				<p align="left">N</p>
+			</td>
+			<td>
+				<p align="left">Required</p>
+			</td>
+			<td>
+				<p align="left">See Action Codes section above</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<p align="left">CompanyCode</p>
+			</td>
+			<td>
+				<p align="left">30</p>
+			</td>
+			<td>
+				<p align="left">A/N</p>
+			</td>
+			<td>
+				<p align="left">Conditional</p>
+			</td>
+			<td>
+				<p align="left">Filter by company code</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<p align="left">ContractCode</p>
+			</td>
+			<td>
+				<p align="left">20</p>
+			</td>
+			<td>
+				<p align="left">A/N</p>
+			</td>
+			<td>
+				<p align="left">Optional</p>
+			</td>
+			<td>
+				<p align="left">See Action Codes section above</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<p align="left">DriverCode</p>
+			</td>
+			<td>
+				<p align="left">50</p>
+			</td>
+			<td>
+				<p align="left">A/N</p>
+			</td>
+			<td>
+				<p align="left">Optional</p>
+			</td>
+			<td>
+				<p align="left">Is used to find SubAccount to link</p>
+				<p align="left"> the new FastTrack</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<p align="left">VehicleCode</p>
+			</td>
+			<td>
+				<p align="left">50</p>
+			</td>
+			<td>
+				<p align="left">A/N</p>
+			</td>
+			<td>
+				<p align="left">Required</p>
+			</td>
+			<td>
+				<p align="left">Is used to find SubAccount to link</p>
+				<p align="left"> the new FastTrack</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<p align="left">VehiclePlate</p>
+			</td>
+			<td>
+				<p align="left">50</p>
+			</td>
+			<td>
+				<p align="left">A/N</p>
+			</td>
+			<td>
+				<p align="left">Optional</p>
+			</td>
+			<td>
+				<p align="left">Is used to find SubAccount to link</p>
+				<p align="left"> the new FastTrack</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<p align="left">Identifier</p>
+			</td>
+			<td>
+				<p align="left">50</p>
+			</td>
+			<td>
+				<p align="left">A/N</p>
+			</td>
+			<td>
+				<p align="left">Optional</p>
+			</td>
+			<td>
+				<p align="left">Is used to find SubAccount to link</p>
+				<p align="left"> the new FastTrack</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<p align="left">SubAccountId</p>
+			</td>
+			<td>
+				<p align="left">50</p>
+			</td>
+			<td>
+				<p align="left">A/N</p>
+			</td>
+			<td>
+				<p align="left">Optional</p>
+			</td>
+			<td>
+				<p align="left">Is used to find SubAccount to link</p>
+				<p align="left"> the new FastTrack</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<p align="left">SiteCode</p>
+			</td>
+			<td>
+				<p align="left">50</p>
+			</td>
+			<td>
+				<p align="left">A/N</p>
+			</td>
+			<td>
+				<p align="left">Optional</p>
+			</td>
+			<td>
+				<p align="left">Limits where FastTrack can be used</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<p align="left">MasterFuelCode</p>
+			</td>
+			<td>
+				<p align="left">50</p>
+			</td>
+			<td>
+				<p align="left">A/N</p>
+			</td>
+			<td>
+				<p align="left">Required if no Currency Code</p>
+			</td>
+			<td>
+				<p align="left">Sets whether FastTrack amount corresponds</p>
+				<p align="left">to fuel volume, and which one</p>
+			</td>
+		</tr><tr valign="top">
+			<td>
+				<p align="left">CurrencyCode</p>
+			</td>
+			<td>
+				<p align="left">50</p>
+			</td>
+			<td>
+				<p align="left">A/N</p>
+			</td>
+			<td>
+				<p align="left">Required if no Fuel Master Code</p>
+			</td>
+			<td>
+				<p align="left">Sets whether FastTrack amount corresponds</p>
+				<p align="left">to fuel value, and which one</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<p align="left">Amount</p>
+			</td>
+			<td>
+				<p align="left">50</p>
+			</td>
+			<td>
+				<p align="left">N</p>
+			</td>
+			<td>
+				<p align="left">Required</p>
+			</td>
+			<td>
+				<p align="left">To date to filter transactions</p>
+				<p align="left">&ldquo;yyyy/MM/dd hh:mm:ss&rdquo;</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<p align="left">OrderNumber</p>
+			</td>
+			<td>
+				<p align="left">50</p>
+			</td>
+			<td>
+				<p align="left">A/N</p>
+			</td>
+			<td>
+				<p align="left">Optional</p>
+			</td>
+			<td>
+				<p align="left">Order number for user to set</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<p align="left">DateFrom</p>
+			</td>
+			<td>
+				<p align="left">19</p>
+			</td>
+			<td>
+				<p align="left">A/N</p>
+			</td>
+			<td>
+				<p align="left">Optional</p>
+			</td>
+			<td>
+				<p align="left">From date to activate FastTrack</p>
+				<p align="left">&ldquo;yyyy/MM/dd hh:mm:ss&rdquo;</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<p align="left">DateTo</p>
+			</td>
+			<td>
+				<p align="left">19</p>
+			</td>
+			<td>
+				<p align="left">A/N</p>
+			</td>
+			<td>
+				<p align="left">Optional</p>
+			</td>
+			<td>
+				<p align="left">To date to end FastTrack</p>
+				<p align="left">&ldquo;yyyy/MM/dd hh:mm:ss&rdquo;</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<p align="left">Custom* (0-9)</p>
+			</td>
+			<td>
+				<p align="left">50</p>
+			</td>
+			<td>
+				<p align="left">A/N</p>
+			</td>
+			<td>
+				<p align="left">Optional</p>
+			</td>
+			<td>
+				<p align="left">Additional parameters set by user</p>
+				<p align="left">&ldquo;yyyy/MM/dd hh:mm:ss&rdquo;</p>
+			</td>
+		</tr>
+		
+	</tbody>
+</table>
+
+###8.3 FastTracks Download (POST) – Body Section Format *Request*###
+
+<table>
+	<thead>
+		<tr valign="top">
+			<th align="left">
+				Field Name
+			</th>
+			<th align="left">
+				Size
+			</th>
+			<th align="left">
+				Type
+			</th>
+			<th align="left">
+				Condition
+			</th>
+			<th align="left">
+				Descriptions/Field Value(s)
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr valign="top">
+			<td>
+				<p align="left">SubscriberCode</p>
+			</td>
+			<td>
+				<p align="left">3</p>
+			</td>
+			<td>
+				<p align="left">A/N</p>
+			</td>
+			<td>
+				<p align="left">Required</p>
+			</td>
+			<td>
+				<p align="left">Fixed. To be assigned by ATIONet</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<p align="left">ActionCode</p>
+			</td>
+			<td>
+				<p align="left">3</p>
+			</td>
+			<td>
+				<p align="left">N</p>
+			</td>
+			<td>
+				<p align="left">Required</p>
+			</td>
+			<td>
+				<p align="left">See Action Codes section above</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<p align="left">CompanyCode</p>
+			</td>
+			<td>
+				<p align="left">30</p>
+			</td>
+			<td>
+				<p align="left">A/N</p>
+			</td>
+			<td>
+				<p align="left">Optional</p>
+			</td>
+			<td>
+				<p align="left">Used to filter FastTrack by company</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<p align="left">OrderNumber</p>
+			</td>
+			<td>
+				<p align="left">50</p>
+			</td>
+			<td>
+				<p align="left">A/N</p>
+			</td>
+			<td>
+				<p align="left">Optional</p>
+			</td>
+			<td>
+				<p align="left">Find by order number</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<p align="left">SubAccountsIds</p>
+			</td>
+			<td>
+				<p align="left"></p>
+			</td>
+			<td>
+				<p align="left">A/N</p>
+			</td>
+			<td>
+				<p align="left">Optional</p>
+			</td>
+			<td>
+				<p align="left">Filter by SubAccount Ids</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<p align="left">SiteId</p>
+			</td>
+			<td>
+				<p align="left">30</p>
+			</td>
+			<td>
+				<p align="left">A/N</p>
+			</td>
+			<td>
+				<p align="left">Optional</p>
+			</td>
+			<td>
+				<p align="left">Filter by Site Id</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<p align="left">SiteName</p>
+			</td>
+			<td>
+				<p align="left">50</p>
+			</td>
+			<td>
+				<p align="left">A/N</p>
+			</td>
+			<td>
+				<p align="left">Optional</p>
+			</td>
+			<td>
+				<p align="left">Filter by Site Name</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<p align="left">Site Code</p>
+			</td>
+			<td>
+				<p align="left">50</p>
+			</td>
+			<td>
+				<p align="left">A/N</p>
+			</td>
+			<td>
+				<p align="left">Optional</p>
+			</td>
+			<td>
+				<p align="left">Filter by Site Code</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<p align="left">FuelMasterId</p>
+			</td>
+			<td>
+				<p align="left">30</p>
+			</td>
+			<td>
+				<p align="left">A/N</p>
+			</td>
+			<td>
+				<p align="left">Optional</p>
+			</td>
+			<td>
+				<p align="left">Filter by FuelMaster Id</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<p align="left">FuelMasterCode</p>
+			</td>
+			<td>
+				<p align="left">50</p>
+			</td>
+			<td>
+				<p align="left">A/N</p>
+			</td>
+			<td>
+				<p align="left">Optional</p>
+			</td>
+			<td>
+				<p align="left">Filter by Fuel Master Code</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<p align="left">IdentifierLabel</p>
+			</td>
+			<td>
+				<p align="left">50</p>
+			</td>
+			<td>
+				<p align="left">A/N</p>
+			</td>
+			<td>
+				<p align="left">Optional</p>
+			</td>
+			<td>
+				<p align="left">Filter by Identifier Label</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<p align="left">CurrencyCode</p>
+			</td>
+			<td>
+				<p align="left">50</p>
+			</td>
+			<td>
+				<p align="left">A/N</p>
+			</td>
+			<td>
+				<p align="left">Optional</p>
+			</td>
+			<td>
+				<p align="left">Filter by Currency Code</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<p align="left">VehicleCode</p>
+			</td>
+			<td>
+				<p align="left">50</p>
+			</td>
+			<td>
+				<p align="left">A/N</p>
+			</td>
+			<td>
+				<p align="left">Optional</p>
+			</td>
+			<td>
+				<p align="left">Filter by Vehicle Code</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<p align="left">VehiclePlate</p>
+			</td>
+			<td>
+				<p align="left">50</p>
+			</td>
+			<td>
+				<p align="left">A/N</p>
+			</td>
+			<td>
+				<p align="left">Optional</p>
+			</td>
+			<td>
+				<p align="left">Filter by VehiclePlate</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<p align="left">DriverCode</p>
+			</td>
+			<td>
+				<p align="left">50</p>
+			</td>
+			<td>
+				<p align="left">A/N</p>
+			</td>
+			<td>
+				<p align="left">Optional</p>
+			</td>
+			<td>
+				<p align="left">Filter by Driver Code</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<p align="left">ContractCode</p>
+			</td>
+			<td>
+				<p align="left">50</p>
+			</td>
+			<td>
+				<p align="left">A/N</p>
+			</td>
+			<td>
+				<p align="left">Optional</p>
+			</td>
+			<td>
+				<p align="left">Filter by Contract Code</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<p align="left">DateFrom</p>
+			</td>
+			<td>
+				<p align="left">19</p>
+			</td>
+			<td>
+				<p align="left">A/N</p>
+			</td>
+			<td>
+				<p align="left">Optional</p>
+			</td>
+			<td>
+				<p align="left">From date of Fast Track creation</p>
+				<p align="left">&ldquo;yyyy/MM/dd hh:mm:ss&rdquo;</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<p align="left">DateTo</p>
+			</td>
+			<td>
+				<p align="left">19</p>
+			</td>
+			<td>
+				<p align="left">A/N</p>
+			</td>
+			<td>
+				<p align="left">Optional</p>
+			</td>
+			<td>
+				<p align="left">To date of Fast Track creation</p>
+				<p align="left">&ldquo;yyyy/MM/dd hh:mm:ss&rdquo;</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<p align="left">ValidFrom</p>
+			</td>
+			<td>
+				<p align="left">19</p>
+			</td>
+			<td>
+				<p align="left">A/N</p>
+			</td>
+			<td>
+				<p align="left">Optional</p>
+			</td>
+			<td>
+				<p align="left">From date of Fast Track enabled</p>
+				<p align="left">&ldquo;yyyy/MM/dd hh:mm:ss&rdquo;</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<p align="left">DateTo</p>
+			</td>
+			<td>
+				<p align="left">19</p>
+			</td>
+			<td>
+				<p align="left">A/N</p>
+			</td>
+			<td>
+				<p align="left">Optional</p>
+			</td>
+			<td>
+				<p align="left">To date of Fast Track finalization</p>
+				<p align="left">&ldquo;yyyy/MM/dd hh:mm:ss&rdquo;</p>
+			</td>
+		</tr>
+		
+		
+	</tbody>
+</table>
+
+
+###8.4 FastTracks Download (POST) – Body Section Format *Response*###
+
+<table>
+	<thead>
+		<tr valign="top">
+			<th align="left">
+				Field Name
+			</th>
+			<th align="left">
+				Size
+			</th>
+			<th align="left">
+				Type
+			</th>
+			<th align="left">
+				Descriptions/Field Value(s)
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr valign="top">
+			<td>
+				<p align="left">FastTrackId</p>
+			</td>
+			<td>
+				<p align="left">30</p>
+			</td>
+			<td>
+				<p align="left">A/N</p>
+			</td>
+			<td>
+				<p align="left">FastTrack Id in ATIONet</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<p align="left">SubscriberCode</p>
+			</td>
+			<td>
+				<p align="left">3</p>
+			</td>
+			<td>
+				<p align="left">A/N</p>
+			</td>
+			<td>
+				<p align="left">Fixed. To be assigned by ATIONet</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<p align="left">SubscriberName</p>
+			</td>
+			<td>
+				<p align="left">50</p>
+			</td>
+			<td>
+				<p align="left">A/N</p>
+			</td>
+			<td>
+				<p align="left">User network's name</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<p align="left">ResponseCode</p>
+			</td>
+			<td>
+				<p align="left">50</p>
+			</td>
+			<td>
+				<p align="left">A/N</p>
+			</td>
+			<td>
+				<p align="left">Response code from when FastTrack</p>
+				<p align="left">was inserted</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<p align="left">ResponseMessage</p>
+			</td>
+			<td>
+				<p align="left">50</p>
+			</td>
+			<td>
+				<p align="left">A/N</p>
+			</td>
+			<td>
+				<p align="left">Response message from when FastTrack</p>
+				<p align="left">was inserted</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<p align="left">Status</p>
+			</td>
+			<td>
+				<p align="left">1</p>
+			</td>
+			<td>
+				<p align="left">N</p>
+			</td>
+			<td>
+				<p align="left">FastTrack's current status</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<p align="left">SiteCode</p>
+			</td>
+			<td>
+				<p align="left">50</p>
+			</td>
+			<td>
+				<p align="left">A/N</p>
+			</td>
+			<td>
+				<p align="left">FastTrack site's code (if any)</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<p align="left">SiteName</p>
+			</td>
+			<td>
+				<p align="left">50</p>
+			</td>
+			<td>
+				<p align="left">A/N</p>
+			</td>
+			<td>
+				<p align="left">FastTrack site's full name (if any)</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<p align="left">Amount</p>
+			</td>
+			<td>
+				<p align="left">18</p>
+			</td>
+			<td>
+				<p align="left">N</p>
+			</td>
+			<td>
+				<p align="left">FastTrack's value amount (currency/volume)</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<p align="left">FuelMasterCode</p>
+			</td>
+			<td>
+				<p align="left">50</p>
+			</td>
+			<td>
+				<p align="left">A/N</p>
+			</td>
+			<td>
+				<p align="left">FastTrack fuel master's code (if any)</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<p align="left">FuelMasterDescription</p>
+			</td>
+			<td>
+				<p align="left">50</p>
+			</td>
+			<td>
+				<p align="left">A/N</p>
+			</td>
+			<td>
+				<p align="left">FastTrack fuel master's name (if any)</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<p align="left">CompanyName</p>
+			</td>
+			<td>
+				<p align="left">50</p>
+			</td>
+			<td>
+				<p align="left">A/N</p>
+			</td>
+			<td>
+				<p align="left">FastTrack company's name</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<p align="left">CompanyCode</p>
+			</td>
+			<td>
+				<p align="left">50</p>
+			</td>
+			<td>
+				<p align="left">A/N</p>
+			</td>
+			<td>
+				<p align="left">FastTrack company's code</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<p align="left">ContractCode</p>
+			</td>
+			<td>
+				<p align="left">50</p>
+			</td>
+			<td>
+				<p align="left">A/N</p>
+			</td>
+			<td>
+				<p align="left">FastTrack contract's code</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<p align="left">ContractDescription</p>
+			</td>
+			<td>
+				<p align="left">50</p>
+			</td>
+			<td>
+				<p align="left">A/N</p>
+			</td>
+			<td>
+				<p align="left">FastTrack contract's description</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<p align="left">SubAccountId</p>
+			</td>
+			<td>
+				<p align="left">30</p>
+			</td>
+			<td>
+				<p align="left">A/N</p>
+			</td>
+			<td>
+				<p align="left">FastTrack sub account's Id</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<p align="left">CurrencyCode</p>
+			</td>
+			<td>
+				<p align="left">50</p>
+			</td>
+			<td>
+				<p align="left">A/N</p>
+			</td>
+			<td>
+				<p align="left">FastTrack currency's code (if any)</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<p align="left">CurrencyDescription</p>
+			</td>
+			<td>
+				<p align="left">50</p>
+			</td>
+			<td>
+				<p align="left">A/N</p>
+			</td>
+			<td>
+				<p align="left">FastTrack currency's description (if any)</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<p align="left">CurrencyCountryDescription</p>
+			</td>
+			<td>
+				<p align="left">50</p>
+			</td>
+			<td>
+				<p align="left">A/N</p>
+			</td>
+			<td>
+				<p align="left">FastTrack currency's country description</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<p align="left">MessageFormatVersion</p>
+			</td>
+			<td>
+				<p align="left">50</p>
+			</td>
+			<td>
+				<p align="left">A/N</p>
+			</td>
+			<td>
+				<p align="left">Message version of FastTrack insert request</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<p align="left">SystemModel</p>
+			</td>
+			<td>
+				<p align="left">50</p>
+			</td>
+			<td>
+				<p align="left">A/N</p>
+			</td>
+			<td>
+				<p align="left">System's model of FastTrack insert request</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<p align="left">DriverCode</p>
+			</td>
+			<td>
+				<p align="left">50</p>
+			</td>
+			<td>
+				<p align="left">A/N</p>
+			</td>
+			<td>
+				<p align="left">FastTrack driver's code (if any)</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<p align="left">VehicleCode</p>
+			</td>
+			<td>
+				<p align="left">50</p>
+			</td>
+			<td>
+				<p align="left">A/N</p>
+			</td>
+			<td>
+				<p align="left">FastTrack vehicle's code (if any)</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<p align="left">VehiclePlate</p>
+			</td>
+			<td>
+				<p align="left">50</p>
+			</td>
+			<td>
+				<p align="left">A/N</p>
+			</td>
+			<td>
+				<p align="left">FastTrack vehicle's plate (if any)</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<p align="left">Identifier</p>
+			</td>
+			<td>
+				<p align="left">50</p>
+			</td>
+			<td>
+				<p align="left">A/N</p>
+			</td>
+			<td>
+				<p align="left">FastTrack identifier</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<p align="left">ValidFrom</p>
+			</td>
+			<td>
+				<p align="left">19</p>
+			</td>
+			<td>
+				<p align="left">A/N</p>
+			</td>
+			<td>
+				<p align="left">Optional</p>
+			</td>
+			<td>
+				<p align="left">Date since FastTrack is enabled</p>
+				<p align="left">&ldquo;yyyy/MM/dd hh:mm:ss&rdquo;</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<p align="left">ValidUntil</p>
+			</td>
+			<td>
+				<p align="left">19</p>
+			</td>
+			<td>
+				<p align="left">A/N</p>
+			</td>
+			<td>
+				<p align="left">Optional</p>
+			</td>
+			<td>
+				<p align="left">Date until FastTrack is disabled</p>
+				<p align="left">&ldquo;yyyy/MM/dd hh:mm:ss&rdquo;</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<p align="left">CreationDate</p>
+			</td>
+			<td>
+				<p align="left">19</p>
+			</td>
+			<td>
+				<p align="left">A/N</p>
+			</td>
+			<td>
+				<p align="left">Optional</p>
+			</td>
+			<td>
+				<p align="left">Date when FastTrack was created (UTC)</p>
+				<p align="left">&ldquo;yyyy/MM/dd hh:mm:ss&rdquo;</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<p align="left">CreationDateNetwork</p>
+			</td>
+			<td>
+				<p align="left">19</p>
+			</td>
+			<td>
+				<p align="left">A/N</p>
+			</td>
+			<td>
+				<p align="left">Optional</p>
+			</td>
+			<td>
+				<p align="left">Date when FastTrack was created (Network's timezone)</p>
+				<p align="left">&ldquo;yyyy/MM/dd hh:mm:ss&rdquo;</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<p align="left">Custom* (0-9)</p>
+			</td>
+			<td>
+				<p align="left">50</p>
+			</td>
+			<td>
+				<p align="left">A/N</p>
+			</td>
+			<td>
+				<p align="left">Optional</p>
+			</td>
+			<td>
+				<p align="left">Additional parameters set by user</p>
+				<p align="left">&ldquo;yyyy/MM/dd hh:mm:ss&rdquo;</p>
+			</td>
+		</tr>
+		
+	</tbody>
+</table>
+
+##9 Account Enquiries##
 
 The Account Enquiries messages retrieve data from ATIONet, specific to a
 Contract or Sub-Account (Vehicle or Driver types).
@@ -2611,7 +3908,7 @@ Contract or Sub-Account (Vehicle or Driver types).
 Depending on the type of enquiry, this message might be used by one or
 the other party of the contract (the subscriber or the fleet company).
 
-###8.1 Action Codes###
+###9.1 Action Codes###
 
 The Action Code specifies the type of enquiry requested. The submitted
 code must match one of the pre-defined operation types. Not all
@@ -2650,7 +3947,7 @@ contract terms with ATIONet.
 	</tr>
 </table>
 
-###8.2 Identification###
+###9.2 Identification###
 
 When an Account Enquiry is received, ATIONet will try to identify the
 Company and the Identifier of the sub-account (Vehicle or Driver), this
@@ -2666,7 +3963,7 @@ on the body of the message:
 3.  Company Code + Contract Code + (Driver Code or Vehicle Code or
     Vehicle Plate)
 
-###8.3 Account Enquiry (POST) – Body Section Record Format *Request*###
+###9.3 Account Enquiry (POST) – Body Section Record Format *Request*###
 
 <table>
 	<thead>
@@ -2864,7 +4161,7 @@ on the body of the message:
 	</tbody>
 </table>
 
-###8.4 Account Enquiry (POST) – Body Section Record Format *Response*###
+###9.4 Account Enquiry (POST) – Body Section Record Format *Response*###
 
 <table>
 	<thead>
@@ -3100,7 +4397,7 @@ on the body of the message:
 	</tbody>
 </table>
 
-##9 Account Downloads##
+##10 Account Downloads##
 
 The Account Download messages are POST actions to recover all the
 currents accounts movements processed by ATIONet for a given Company
@@ -3113,7 +4410,7 @@ rejected.
 The download will be limited by dates (from and to), which must be
 included in the request
 
-###9.1 Action Codes###
+###10.1 Action Codes###
 
 The Action Code specifies the type of record transaction to be
 retrieved; this differentiation is based on the different roles on an
@@ -3168,7 +4465,7 @@ transactions to download.
 	</tr>
 </table>
 
-###9.2 Account Download (POST) – Body Section Format *Request*###
+###10.2 Account Download (POST) – Body Section Format *Request*###
 
 <table>
 	<thead>
@@ -3281,7 +4578,7 @@ transactions to download.
 	</tbody>
 </table>
 
-###9.3 Account Download (POST) – Body Section Format *Response*###
+###10.3 Account Download (POST) – Body Section Format *Response*###
 
 <table>
 	<thead>
@@ -3616,9 +4913,9 @@ transactions to download.
 	</tbody>
 </table>
 
-##10 Examples##
+##11 Examples##
 
-###10.1 C# example###
+###11.1 C# example###
 
 ```C#
 using System.IO;
