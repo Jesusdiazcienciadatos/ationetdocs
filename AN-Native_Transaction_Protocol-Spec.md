@@ -6031,7 +6031,7 @@ Refer to ISO 4217 Currency Codes standard (<http://en.wikipedia.org/wiki/ISO_421
 	</tbody>
 </table>
  
-###11.9 Original Data###
+###11.9 Original Data
 
 <table>
 	<thead>
@@ -6067,4 +6067,4 @@ Refer to ISO 4217 Currency Codes standard (<http://en.wikipedia.org/wiki/ISO_421
 
 ## Appendix A - Native Authorization Protocol Messages
 
-Check this [document](AN-SDK-Reference.md) to have detailed information about each field in each message under the Native Authorization Protocol 
+Check this [document](AN-Native_Auth_Protocol_Messages.md) to have detailed information about each field in each message under the Native Authorization Protocol 
