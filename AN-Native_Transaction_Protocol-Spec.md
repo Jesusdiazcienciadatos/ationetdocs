@@ -169,6 +169,7 @@
 	- [11.7 Authorization Codes](#117-authorization-codes)
 	- [11.8 Response Codes](#118-response-codes)
 	- [11.9 Original Data](#119-original-data)
+- [Appendix A - Native Authorization Protocol Messages](#appendix-a---native-authorization-protocol-messages)
 
 ##Overview##
 
@@ -6063,3 +6064,7 @@ Refer to ISO 4217 Currency Codes standard (<http://en.wikipedia.org/wiki/ISO_421
 		</tr>
 	</tbody>
 </table>
+
+## Appendix A - Native Authorization Protocol Messages
+
+Check this [document](AN-SDK-Reference.md) to have detailed information about each field in each message under the Native Authorization Protocol 

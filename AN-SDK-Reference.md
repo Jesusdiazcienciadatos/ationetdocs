@@ -399,4 +399,4 @@ You can download a fully functional sample code from here: https://github.com/at
 
 ## Appendix A - Native Authorization Protocol Messages
 
-Check this [document](\AN-SDK-Reference.md) to have detailed information about each field in each message under the Native Authorization Protocol 
+Check this [document](AN-SDK-Reference.md) to have detailed information about each field in each message under the Native Authorization Protocol 
