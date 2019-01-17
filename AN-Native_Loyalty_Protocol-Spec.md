@@ -36,7 +36,7 @@
 			Author:
 		</td>
 		<td>
-			ATIO International LLC
+			ATIOnet LLC
 		</td>
 	</tr>
 </table>
