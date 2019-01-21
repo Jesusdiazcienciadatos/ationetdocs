@@ -270,7 +270,7 @@ You can download a fully functional sample code from here: https://github.com/at
             <td>This method downloads a contracts balances list</td>
         </tr>
 		<tr>
-          	<td>FastTrackDownload</td>
+          	<td>FastTrackDownload</td>	
             <td></td>
             <td>This method downloads a fast track list</td>
         </tr>
@@ -314,10 +314,20 @@ You can download a fully functional sample code from here: https://github.com/at
             <td></td>
             <td>This method downloads fleet transactions</td>
         </tr>
+		<tr>
+          	<td>GetTransactionsDisputes</td>
+            <td></td>
+            <td>This method downloads fleet transactions which are or were disputed</td>
+        </tr>
         <tr>
           	<td>GetUncontrolledTransactions</td>
             <td></td>
             <td>This method downloads uncontrolled transactions</td>
+        </tr>
+		<tr>
+          	<td>InsertFastTrackOrder</td>
+            <td></td>
+            <td>This method inserts fast tracks (trip orders)</td>
         </tr>
         <tr>
           	<td>InsertFastTrackOrder</td>
