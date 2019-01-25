@@ -117,7 +117,7 @@
 	</tr>
 </table>
 
-##Contents##
+## Contents ##
 
 - [1 ATIOnet Integration Documentation Scope](#1-ationet-integration-documentation-scope)
 
@@ -171,13 +171,13 @@
 	- [11.9 Original Data](#119-original-data)
 - [Appendix A - Native Authorization Protocol Messages](#appendix-a---native-authorization-protocol-messages)
 
-##Overview##
+## Overview
 
-###Introduction###
+### Introduction
 
 This specification is intended to document ATIONet’s Native Protocol messaging format and related features required for the systems applying for integration with ATIONet. The following sections provide descriptions of the messages themselves, the expected behaviour for each supported transaction type and a common ground for the functionality of each relevant item.
 
-###Definitions###
+### Definitions
 
 ####Host
 A computer system that is accessed by a user working at a remote location. In this document, Host is always the ATIONet Host.
