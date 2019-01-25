@@ -179,45 +179,45 @@ This specification is intended to document ATIONet’s Native Protocol messaging
 
 ### Definitions
 
-####Host
+#### Host
 A computer system that is accessed by a user working at a remote location. In this document, Host is always the ATIONet Host.
 
-####Terminal
+#### Terminal
 An electronic merchant card processing device responsible for transaction capture, display output to the cashier and/or to the cardholder on screen and/or print format.
 
-####Controller
+#### Controller
 A client system that can send or receive data to and from ATIONet’s Host. A Controller controls or includes one or more terminal. When there is only one Terminal connected to a Controller, Terminal and Controller are equivalent.
 
-####TREQ
+#### TREQ
 Transaction Request.
 
-####TRESP
+#### TRESP
 Transaction Response.
 
-##1 ATIOnet Integration Documentation Scope##
+## 1 ATIOnet Integration Documentation Scope
 
 Third-party systems integrate with ATIOnet via a set of APIs (Application Programming Interfaces). Each ATIOnet’s API is described on a separate Protocol Specification. The complete documentation of ATIOnet API’s is comprised of:
 
-####ATIOnet Native Transactions Protocol Specification: 
+#### ATIOnet Native Transactions Protocol Specification: 
 Covers financial transactions for transaction capture systems (payment terminals, site controllers and point of sale systems), including sales and refunds.
 
-####ATIOnet Administrative Transactions Protocol Specification: 
+#### ATIOnet Administrative Transactions Protocol Specification: 
 Describes a set of functions complementing the transaction-capture business, for example Batch or Shift Close. These functions enhance the capabilities of the integration but their implementation is not mandatory.
 
-####ATIOnet Native Interface Protocol Specification: 
+#### ATIOnet Native Interface Protocol Specification: 
 Covers system-to-system integration capabilities of ATIOnet, designed to interact with third-party back-end systems, for example downloading transactions data or sending current-accounts movements to ATIOnet. This API is reserved and requires ATIOnet and Subscriber permissions.
 
-####ATIOnet Maintenance Interface Protocol Specification: 
+#### ATIOnet Maintenance Interface Protocol Specification: 
 List a set of functions designed to help in the maintenance and support of a network of capture terminals, for example checking terminal’s status via a Keep-alive message. This API is designed to support ATIOnet’s own line of capture and gateway devices and thus is a reserved protocol.
 
 In addition to one or more protocol specifications, Integration Projects must have an “Integration Scope Document” detailing the feature-set to be implemented by the capture system, which also defines the acceptance criteria for the project.
 
-##2 Scope##
+## 2 Scope
 
 Version 1.2 of this document covers a particular version of ATIONet’s Host protocol. Although feature’s descriptions are generally not related to a particular version of the protocol, some changes may apply which would be specifically commented and identified on each feature’s
 description paragraph.
 
-###2.1 Scope Details###
+### 2.1 Scope Details
 
 Protocol: ATIONet Native Transaction Protocol
 
@@ -225,7 +225,7 @@ Version: Version 1.2
 
 API URI: native.ationet.com/v1/auth
 
-###2.2 Supported Transactions###
+### 2.2 Supported Transactions
 
 <table>
 	<thead>
@@ -349,7 +349,7 @@ API URI: native.ationet.com/v1/auth
 	</tbody>
 </table>
 
-##3 Data Security##
+## 3 Data Security
 
 To validate the source of transactions and data encryption, the ATIONet Native Transaction Protocol relies on a SSL connection between the Site’s Terminal or Site’s Controller and the ATIONet Host. The SSL connection is established for each request/response pair, using a certificate property of ATIONet, meaning that each request must include a system-type user and password on the Header. The user will be matched against the related ATIONet actor for each message.
 
@@ -357,7 +357,7 @@ Users to be used on the Transaction Protocol messaging will be created by author
 
 At this time there is no provisioning to distribute or update certificates or thumbprints thru a system interface. This information will be provided at request of the Controller’s vendor during the integration project.
 
-##4 Message Structure##
+## 4 Message Structure
 
 All Transaction API messages share the same structure, what change from message to message are the Transaction Code, which indicates the actual transaction function, the value fields sent and received, and the HTTP action (POST, GET, REQUEST) which changes depending on the Transaction Code.
 
@@ -365,7 +365,7 @@ Both, requests and responses use a JSON format.
 
 Only one request is accepted on each message.
 
-###Request Format###
+### Request Format
 
 *Header:*
 
@@ -376,7 +376,7 @@ Only one request is accepted on each message.
 *Body:*
 	{“Fieldname”:”StringValue”,”FieldName”:”StringValue”,”FieldName”:Value}
 
-###Response###
+### Response
 
 *Header:*
 
@@ -403,30 +403,30 @@ Refer to Response Codes Table in the Reference Tables section for a complete lis
 
 This section details the purpose and expected behavior on the Controller system for relevant items on the protocol.
 
-####System Model and System Version####
+#### System Model and System Version
 Brand/Model and Firmware/Software version of the client system. Format and content will be assigned for each vendor during the Integration project.
 
-####Pump Authorization Values####
+#### Pump Authorization Values
 Pre-sale Authorizations processed by ATIONet might be (a) Fully-authorized, (b) Partially-authorized, or (c) Declined. Full and partial authorizations may have the same Authorized codes, but a partial authorization only allows to sale a fraction of the requested amount. Controllers must always check the Authorized Amount/Quantity on approved transactions.
 
 The second value relevant for the authorization value is the local authorization limit that can be enforced locally. On any case, the preset sent to the gas pump must be the lesser value between the Authorized Amount/Quantity and the DCR Cutoff Amount.
 
-####Terminal Identification####
+#### Terminal Identification
 Terminal ID is a system-wide unique ID for the Controller or Terminal device on the capture side. Terminal ID should be configured on the client system during manual installation. The length of the TID’s code depends on the controller.
 
-####Device Type Identifier####
+#### Device Type Identifier
 A single digit field, informed by the Controller system, that identifies the type of capture device. (Manned/Unmanned, Indoor/Outdoor). In case the Controller system doesn’t have the capability to inform this distinction, “4 – Other self-service” should be always informed.
 
-####Transaction Sequence Number####
+#### Transaction Sequence Number
 The Transaction number is a fixed-length integer value from 1 to 999999 and it is assigned and incremented for each transaction sent to the Host, regardless of the result. It must be reset back to 1 every time it reaches the limit.
 
-####Entry Method####
+#### Entry Method
 The Entry Method code indicates whether the customer identification was manually typed-in, read from a card swipe or any other automatic identification mechanism.
 
-####Processing Mode####
+#### Processing Mode
 Indicates whether the Host must apply an alternative process to the request. Regular transactions must inform “1 = Host processing required”
 
-####Track Data####
+#### Track Data
 This field identifies the account of the transaction.
 
 Track Data field must contain the whole identifier’s information (for example, complete Track 2 data on a magnetic card, or all the TAG’s fields on an AVI capture).
@@ -435,21 +435,21 @@ There are two Tracks and PINs field pairs, the Primary and Secondary, on the Pri
 
 The Primary identification will mandate the sub-account to be charged for the transaction, the Secondary will be used for rules validation but will not be affected on its balance.
 
-####Batch Number####
+#### Batch Number
 Optional information, if informed, ATIONet will use this field for report filtering and queries.
 
 If used, data must be formatted as an 11 digit number: yyyymmddbbb. Year (4 digits), Month (2 digits), Day (2 digits), Batch/Shift number (3 digits, padded with zeros). Date part must be the starting date of the batch. Batch number must wrap-around to 1 after reaching 999.
 
 If there is no batch functionality at all, the recommended format is Transaction Date plus 3 zeros.
 
-####Shift Number####
+#### Shift Number
 Optional information, if informed, ATIONet will use this field for report filtering and queries.
 
 The Controller application can manage the Shift Number and meaning as needed. It may be day’s shift number, weekly batches, split-batches, etc., although this is a fixed length field, therefore the format must be maintained.
 
 If there is no batch or shift functionality at all, the recommended format is the business date of the transaction followed of 3 zeros.
 
-####Product Fields####
+#### Product Fields
 Transaction messages include a list of Product fields, plus a Product Taxes compound field plus and a Product Data compound field, the later will be used only on multi-product transactions.
 
 On single product messages, like a simple fueling transaction, product’s amount and other details must be sent on the fields included in the main body of the message. When the sale includes more than one product, the first one must be sent on the main body and rest on the Product Data structure. Fuel presets will only work for the product in the main body; therefore, first product in the list should be the fuel sale if there is any.
