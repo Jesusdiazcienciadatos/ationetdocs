@@ -7,7 +7,7 @@
 - [Native Transaction Protocol API messages](AN-Native_Auth_Protocol_Messages.md)
 
 ## Loyalty API
-- [Native Loyalty Protocol API](AN-Native_Loyalty_Protocol-Spec.md)
+- [Native Loyalty Protocol API description](AN-Native_Loyalty_Protocol-Spec.md)
 
 ## .NET SDK
 - [.NET SDK Reference](AN-SDK-Reference.md)
