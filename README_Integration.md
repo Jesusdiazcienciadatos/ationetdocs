@@ -1,5 +1,5 @@
 ![ationetlogo](Content/Images/ATIOnetLogo_250x70.png) 
-# ATIOnet Integration Help Center
+# ATIONet Integration Help Center
 
 
 ## Authorization API
