@@ -387,7 +387,7 @@ Only one request is accepted on each message.
 
 Note: Alphanumeric fields, stated as Type “A/N” in record format tables below show the maximum possible length as the Size, although in JSON-formatted strings they will be represented with trailing spaces trimmed.
 
-##5 Error Handling##
+## 5 Error Handling
 
 Success/failure exits on the Native Transaction Protocol will be handled via HTTP status codes.
 
@@ -399,7 +399,7 @@ Failure to process the request will be indicated by an HTTP 400’s range status
 
 Refer to Response Codes Table in the Reference Tables section for a complete list of supported codes.
 
-##6 Field Descriptions##
+## 6 Field Descriptions
 
 This section details the purpose and expected behavior on the Controller system for relevant items on the protocol.
 
