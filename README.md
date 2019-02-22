@@ -2,6 +2,6 @@
 # ATIOnet Integration Help Center
 
 
-- [API Integrations](README_Integration.md)
+- [Integrations](README_Integration.md)
 - [User Manuals]()
 - [Technical documentation]()

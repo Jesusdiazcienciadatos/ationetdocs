@@ -1,5 +1,5 @@
 ![ationetlogo](Content/Images/ATIOnetLogo_250x70.png) 
-# ATIOnet Integration Help Center
+# ATIONet Help Center
 
 
 - [Authorization Engine API description](AN-Native_Transaction_Protocol-Spec.md)
