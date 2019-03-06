@@ -1,9 +1,6 @@
 ![ationetlogo](Content/Images/ATIOnetLogo_250x70.png) 
-<<<<<<< HEAD
-# ATIONet Help Center
-=======
+
 # ATIONet Integration Help Center
->>>>>>> 5cef57d855962f8464521c309b90a437702648cf
 
 
 ## Authorization API
