@@ -1,5 +1,5 @@
 ![ationetlogo](Content/Images/ATIOnetLogo_250x70.png)
-# ATIONet - Native Loyalty Protocol Specification v1.0
+# ATIONet - Native Device Updater Protocol Specification v1.0
 
 <table>
 	<tr>
@@ -12,7 +12,7 @@
 			File:
 		</td>
 		<td>
-			ATIONet-Native_Loyalty_Protocol-Spec
+			AN-Native_DeviceUpdater_Protocol-Spec
 		</td>
 	</tr>
 	<tr>
@@ -20,7 +20,7 @@
 			Doc Version:
 		</td>
 		<td>
-			1.2
+			1.0
 		</td>
 	</tr>
 	<tr>
@@ -28,7 +28,7 @@
 			Release Date:
 		</td>
 		<td>
-			04, Nov 2014
+			21, Feb 2019
 		</td>
 	</tr>
 	<tr>
@@ -36,7 +36,7 @@
 			Author:
 		</td>
 		<td>
-			ATIOnet LLC
+			ATIONet LLC
 		</td>
 	</tr>
 </table>
@@ -63,7 +63,7 @@
 			<p>1.0</p>
 		</td>
 		<td>
-			<p>04/Nov/2014</p>
+			<p>21/Feb/2019</p>
 		</td>
 		<td>
 			<p>Initial version.</p>
@@ -105,42 +105,28 @@
 
 ### Introduction
 
-This specification is intended to document ATIONet’s Native Protocol messaging format and related features required for the systems applying for integration with ATIONet. The following sections provide descriptions of the messages themselves, the expected behaviour for each supported transaction type and a common ground for the functionality of each relevant item.
+El objetivo de esta documentación es especificar el formato de mensajería de protocolo nativo de la API de mantenimiento de Terminals Management y las funcionalidades requeridas para los sistemas que solicitan integración con la herramienta. Las siguientes secciones proporcionan descripciones de los mensajes y el comportamiento esperado para cada tipo de operación.
 
 ### Definitions
 
-#### Host
-A computer system that is accessed by a user working at a remote location. In this document, Host is always the ATIONet Host.
-
 #### Terminal
-An electronic merchant card processing device responsible for transaction capture, display output to the cashier and/or to the cardholder on screen and/or print format.
+Dispositivo al cual serán aplicadas de forma remota actualizaciones de firmwares, parámetros o recursos descritos en una agenda programada, y del que se llevara un control o monitoreo del estado de operatividad y localización física en la cual se encuentra.
 
-#### Controller
-A client system that can send or receive data to and from ATIONet’s Host. A Controller controls or includes one or more terminal. When there is only one Terminal connected to a Controller, Terminal and Controller are equivalent.
+#### Agenda
+Cronograma programado de actualización de terminal, en el que se agrupan terminales para aplicar una actualización requerida por el usuario en una fecha y hora especifica; en ella se encuentra definido los detalles de la actualización a efectuar (tipo, modo, definición de parámetros, recursos necesarios). 
 
-#### LREQ
-Transaction Request.
+#### Parámetros
+Valores necesarios de configuración de la terminal para poder operar satisfactoriamente con la herramienta.
 
-#### LRESP
-Transaction Response.
+#### Novedades
+Mensaje que contiene la información o donde obtener la información de la actualización a aplicar en la terminal.
 
-## ATIOnet Integration Documentation Scope
 
-Third-party systems integrate with ATIOnet via a set of APIs (Application Programming Interfaces). Each ATIOnet’s API is described on a separate Protocol Specification. The complete documentation of ATIOnet API’s is comprised of:
+## Documentation Scope
 
-#### ATIOnet Native Transactions Protocol Specification: 
-Covers financial transactions for transaction capture systems (payment terminals, site controllers and point of sale systems), including sales and refunds.
+Los sistemas de terceros se integran con Terminals Mangement a través de una API.
 
-#### ATIOnet Administrative Transactions Protocol Specification: 
-Describes a set of functions complementing the transaction-capture business, for example Batch or Shift Close. These functions enhance the capabilities of the integration but their implementation is not mandatory.
-
-#### ATIOnet Native Interface Protocol Specification: 
-Covers system-to-system integration capabilities of ATIOnet, designed to interact with third-party back-end systems, for example downloading transactions data or sending current-accounts movements to ATIOnet. This API is reserved and requires ATIOnet and Subscriber permissions.
-
-#### ATIOnet Maintenance Interface Protocol Specification: 
-List a set of functions designed to help in the maintenance and support of a network of capture terminals, for example checking terminal’s status via a Keep-alive message. This API is designed to support ATIOnet’s own line of capture and gateway devices and thus is a reserved protocol.
-
-In addition to one or more protocol specifications, Integration Projects must have an “Integration Scope Document” detailing the feature-set to be implemented by the capture system, which also defines the acceptance criteria for the project.
+El presente documento del protocolo de la API de Terminals Management especifica el protocolo de interfaz de mantenimiento, el cual lista un conjunto de mensajes para ayudar al mantenimiento y soporte de una red de terminales; por ejemplo, verificar el estado de las terminales mediante un mensaje denominado KeepAlive, obtener novedades para las terminales registradas en la herramienta y el reporte de parámetros actuales.
 
 ## Scope
 
@@ -149,13 +135,13 @@ description paragraph.
 
 ### Scope Details
 
-Protocol: ATIONet Native Transaction Protocol
+**Protocol:** ATIONet Native Transaction Protocol
 
-Version: Version 1.0
+**Version:** Version 1.0
 
-API URI: native.ationet.com/v1/loyalty
+**API URI:** native.ationet.com/v1/loyalty
 
-### Supported Transactions
+### Messages
 
 <table>
 	<thead>
